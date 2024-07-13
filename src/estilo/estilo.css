@@ -244,14 +244,122 @@
 
 .wave-bar {
     width: 100%;
-    height: 15px; /* Ajuste a altura conforme necessário */
+    height: 15px;
+    /* Ajuste a altura conforme necessário */
     background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
     background-size: 300%;
     animation: wave 3s infinite;
-  }
-  
-  @keyframes wave {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*AQUI COMEÇA A PARTE DE CADASTRO DA EMPRESA*/
+
+.tela_cad {
+    margin: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 190px;
+}
+
+.card_cad {
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #392ca7;
+    width: 700px;
+    padding: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cad_conta_google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    color: #392ca7;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cad_conta_google:hover {
+    background-color: #ececec;
+}
+
+.box_button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.box_input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box_input input,
+.box_input select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.box_input select {
+    appearance: none;
+    background: #fff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2Ij48cGF0aCBkPSJNNSA2TDAgMEwxMCAweiIgZmlsbD0iI2NjYyIvPjwvc3ZnPg==') no-repeat right 10px center;
+    background-size: 10px 6px;
+}
+
+h1, h2, h3 {
+    color: #fff;
+    margin: 10px 0;
+}
+
+.card_cad h2:last-of-type {
+    margin-top: 30px;
+}
+
+.box_accept {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.accept_button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: #1900ff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accept_button:hover {
+    background-color: #ececec;
+}
