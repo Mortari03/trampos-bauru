@@ -270,9 +270,8 @@
 .tela_cad {
     margin: 90px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 190px;
+    justify-content: flex-end; 
+    padding-right: 20px;
 }
 
 .card_cad {
@@ -362,4 +361,38 @@ h1, h2, h3 {
 
 .accept_button:hover {
     background-color: #ececec;
+}
+
+.Button_Cad{ 
+    cursor: pointer;
+    background-color: #beaddf;
+    border-radius: 10px;
+    width: 170px;
+    height: 30px;
+}
+
+.Button_Cad:hover{
+    background-color: #ffffff;
+}
+
+.Botao-Voltar_cand{
+
+}
+
+.Voltar_Cand{
+    border-radius: 50px;
+    background-color: #b32272;
+}
+
+/*Aqui fica a imagem da tela de cadastro*/
+
+.imagem_cad {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.img_ilus {
+    max-width: 200px;
+    height: auto;
 }
