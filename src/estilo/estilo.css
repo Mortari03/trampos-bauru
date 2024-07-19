@@ -303,7 +303,6 @@
     justify-content: center;
     margin: 5%; 
 }
-
 /* Telas pequenas */
 @media (max-width: 768px) {
     .imagem {
@@ -348,7 +347,11 @@
 /* Telas médias */
 @media (min-width: 769px) and (max-width: 1024px) {
     .imagem {
-        padding: 10px;
+        padding: 15px 20px;
+    }
+
+    .infos-cab li {
+        margin: 0 20px;
     }
 
     .Logo {
@@ -357,6 +360,8 @@
 
     .Logo-cadastro {
         width: 120px;
+        top: 15px;
+        right: 15px;
     }
 
     .Titulo-Cadastro {
@@ -364,8 +369,8 @@
     }
 
     .Botao-Cadastro {
-        width: 180px;
-        height: 180px;
+        width: 175px;
+        height: 175px;
     }
 
     .Candidato,
@@ -375,9 +380,48 @@
 }
 
 /* Telas grandes */
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
     .imagem {
-        padding: 20px;
+        padding: 20px 30px;
+    }
+
+    .infos-cab li {
+        margin: 0 30px;
+    }
+
+    .Logo {
+        height: 65px;
+    }
+
+    .Logo-cadastro {
+        width: 140px;
+        top: 18px;
+        right: 18px;
+    }
+
+    .Titulo-Cadastro {
+        margin-top: 95px;
+    }
+
+    .Botao-Cadastro {
+        width: 190px;
+        height: 190px;
+    }
+
+    .Candidato,
+    .Empresas {
+        font-size: 21px;
+    }
+}
+
+/* Telas muito grandes */
+@media (min-width: 1441px) {
+    .imagem {
+        padding: 25px 40px;
+    }
+
+    .infos-cab li {
+        margin: 0 35px;
     }
 
     .Logo {
@@ -386,6 +430,8 @@
 
     .Logo-cadastro {
         width: 150px;
+        top: 20px;
+        right: 20px;
     }
 
     .Titulo-Cadastro {
@@ -402,5 +448,3 @@
         font-size: 22px;
     }
 }
-
-
