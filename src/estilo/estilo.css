@@ -396,3 +396,28 @@ h1, h2, h3 {
     max-width: 200px;
     height: auto;
 }
+
+
+
+/*Pagina de Trampos*/
+
+.Trampos{
+    background-color: #000000;
+    text-align: center;
+}
+
+
+/*Pagina de suporte*/
+
+.Suporte{
+    background-color: #000000;
+    text-align: center;
+}
+
+
+/*Pagina de Carreiras*/
+
+.Carreiras{
+    background-color: #000000;
+    text-align: center;
+}

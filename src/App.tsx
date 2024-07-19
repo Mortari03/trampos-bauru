@@ -6,6 +6,10 @@ import Candidato from './paginas/candidato';
 import Empresa from './paginas/empresa';
 import Detalhesobre from '../src/paginas/detalhesobre'
 import './estilo/estilo.css';
+import Trampos from './paginas/trampos';
+import Suporte from './paginas/suporte';
+import Carreiras from './paginas/carreiras';
+
 function App() {
   return (
     <div>
@@ -13,14 +17,17 @@ function App() {
 
         < Route path="/" element={< Home />} />
 
-        <Route path="/Cadastro" element={< Cadastro/>} />
+        <Route path="/Cadastro" element={< Cadastro />} />
 
-        <Route path="/Candidato" element={< Candidato/>} />
+        <Route path="/Candidato" element={< Candidato />} />
 
-        <Route path="/Empresa" element={< Empresa/>} />
-        
-      
+        <Route path="/Empresa" element={< Empresa />} />
 
+        <Route path='/Trampos' element= {< Trampos />} />
+
+        <Route path='/Suporte' element= {< Suporte />} />
+
+        <Route path='/Carreiras' element= {< Carreiras />} />
       </Routes>
     </div>
   );
