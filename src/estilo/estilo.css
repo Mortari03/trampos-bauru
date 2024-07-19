@@ -1,6 +1,6 @@
 /* Cabeçalho fixo */
 .div-conteiner {
-    width: 100%;
+    width: 100vh;
     position: fixed;
     top: 0;
     background-color: #fff;
