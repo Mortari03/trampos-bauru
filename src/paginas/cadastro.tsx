@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser,faUsers } from "@fortawesome/free-solid-svg-icons";
 
 function Cadastro() {
     return (
@@ -20,11 +21,13 @@ function Cadastro() {
                 </h1>
                 <div className="Centro-Cadastro">
                     <Link to="/candidato" className="Botao-Cadastro">
-                        <img className="Perfil-Solo" src="/img/Perfil-solo.png" alt="Perfil Solo" />
+                        < FontAwesomeIcon icon = {faUser}/>
                         <h1 className="Candidato">Cadastre-se como Candidato</h1>
                     </Link>
                     <Link to="/empresa" className="Botao-Cadastro">
-                        <img className="Perfil-Grupo" src="/img/Perfil-Grupo.png" alt="Perfil Grupo" />
+
+                    <FontAwesomeIcon className="icone-empresas" icon= {faUsers} />
+
                         <h1 className="Empresas">Cadastre-se como Empresa</h1>
                     </Link>
                 </div>
