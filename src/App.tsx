@@ -9,6 +9,7 @@ import './estilo/estilo.css';
 import Trampos from './paginas/trampos';
 import Suporte from './paginas/suporte';
 import Carreiras from './paginas/carreiras';
+import Porquenos from './paginas/porquenos';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
         <Route path='/Suporte' element= {< Suporte />} />
 
         <Route path='/Carreiras' element= {< Carreiras />} />
+
+        <Route path='/porquenos' element= {< Porquenos />} />
 
       </Routes>
     </div>
