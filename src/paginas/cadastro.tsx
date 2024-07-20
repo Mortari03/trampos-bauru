@@ -29,6 +29,7 @@ function Cadastro() {
                         <h1 className="Empresas">Cadastre-se como Empresa</h1>
                     </Link>
                 </div>
+                
                 <div className="Titulo-Final">
                     <h1>
                         Você é novo no Trampos <span className="Palavra-Destaque">Fácil</span>
@@ -37,6 +38,7 @@ function Cadastro() {
                         Cadastre-se como <Link to="/candidato">Candidato</Link> ou <Link to="/empresa">Empresa</Link>
                     </h2>
                 </div>
+
             </div>
         </div>
     );
