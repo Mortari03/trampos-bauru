@@ -16,7 +16,7 @@ function Empresa() {
 
                     <div>
 
-                        <Link to="/" className="Botao-Voltar_cand">
+                        <Link to="/cadastro" className="Botao-Voltar_cand">
 
                             <img className="Voltar_Cand" src="/img/Voltar.png" alt="Voltar" />
 

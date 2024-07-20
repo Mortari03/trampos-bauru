@@ -357,6 +357,8 @@
     justify-content: flex-start ;
     align-items: center;
     overflow-y: auto;
+    height: 100vh;
+    height: auto;
     /* Permitir rolagem no card se necessário */
 }
 
@@ -501,13 +503,13 @@
 }
 
 .Button_Cad_emp {
-    margin-top: 20px;
-    padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .Button_Cad_emp:hover{
