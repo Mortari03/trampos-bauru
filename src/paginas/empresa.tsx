@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../estilo/carreira.css";
+import "../estilo/cadempresa.css";
 
 function Empresa() {
   return (
@@ -76,4 +76,3 @@ function Empresa() {
   );
 }
 export default Empresa;
-
