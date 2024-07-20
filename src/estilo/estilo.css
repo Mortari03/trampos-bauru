@@ -77,7 +77,7 @@
 
 .Conteiner-Cadastro {
 
-    background: linear-gradient(to right, #d2d6f3, #8e83ec, #392ca7, #da2afd);
+    background-color: rgba(235, 230, 230, 0.63);
 
     display: flex;
 
@@ -105,7 +105,8 @@
     position: relative;
     background-color: rgba(255, 255, 255, 0.88);
     padding: 0;
-    overflow: hidden; /* Adicione isso se quiser esconder o overflow dentro desse contêiner */
+    overflow: hidden;
+    /* Adicione isso se quiser esconder o overflow dentro desse contêiner */
 }
 
 
@@ -169,12 +170,14 @@
 }
 
 .Botao-Voltar {
-    background-color: rgba(250, 8, 8, 0.315);
+    background-color: rgba(0, 17, 255, 0.479);
     border-radius: 50%;
     margin: 5%;
     box-shadow: 4.5px 10px 10px black;
-    width: 6vh; /* Ajuste conforme necessário */
-    height: 6vh; /* Ajuste conforme necessário */
+    width: 6vh;
+    /* Ajuste conforme necessário */
+    height: 6vh;
+    /* Ajuste conforme necessário */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,17 +271,17 @@
     .Empresas {
         font-size: 3vw;
         /* Ajuste conforme necessário */
-    
-        }
+
+    }
 }
 
 /* Parte do projeto onde faz a onda no cabeçalho */
 
 .wave-bar {
     width: 100%;
-    height: 2vh; 
+    height: 2vh;
     background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
-     /* Use vh para altura flexível */
+    /* Use vh para altura flexível */
 }
 
 
@@ -297,7 +300,7 @@
     }
 }
 
-/* AQUI COMEÇA A PARTE DE CADASTRO DA EMPRESA */
+/* AQUI COMEÇA A PARTE DE CADASTRO DE CANDIDATO E ALGUMAS FUNÇÕES COMPARTILHAS NA CLASSNAME COM EMPRESA*/
 /*-------------------------------------------------------*/
 * {
     margin: 0;
@@ -312,7 +315,8 @@
     min-height: 100vh;
     background-color: #f5f5f5;
     padding: 20px;
-    overflow: hidden; /* Remover a barra de rolagem */
+    overflow: hidden;
+    /* Remover a barra de rolagem */
 }
 
 .conteiner {
@@ -323,7 +327,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     max-width: 90vw;
-    max-height: 90vh; /* Limitar a altura para caber na tela */
+    max-height: 90vh;
+    /* Limitar a altura para caber na tela */
     width: 100%;
     height: 100%;
 }
@@ -341,13 +346,17 @@
     height: auto;
 }
 
+
+
 .card_cad {
     flex: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start ;
     align-items: center;
-    overflow-y: auto; /* Permitir rolagem no card se necessário */
+    overflow-y: auto;
+    /* Permitir rolagem no card se necessário */
 }
 
 .Botao-Voltar_cand {
@@ -363,9 +372,24 @@
     height: 30px;
 }
 
-.t1, .t2, .t3, .box_button, .text_bot_cand, .Button_Cad {
+.accept_checkbox_cand {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transform: scale(1);
+    /* Ajusta o tamanho do checkbox */
+}
+
+.t1,
+.t2,
+.t3,
+.box_button {
     margin-bottom: 20px;
     text-align: center;
+}
+
+.Button_Cad {
+    margin: 20px;
 }
 
 .box_button {
@@ -375,13 +399,15 @@
 }
 
 .box_input {
+    margin: 15px 0px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
 }
 
-.box_input input, .box_input select {
+.box_input input,
+.box_input select {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -426,18 +452,68 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+
 }
 
+
+/*AQUI COMEÇA A TELA DE CADASTRO DE EMPRESAS*/
 /*tela de cadastro da empresa*/
 
-.Button_Cad_emp {
+.accept_checkbox_emp {
+    display: flex;
+    justify-content: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transform: scale(1.5);
+    /* Ajusta o tamanho do checkbox */
+    
+}
+.texto_emp {
+    justify-content: flex-start;
+    margin: 100px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
+    align-self: flex-start; /* Alinha o próprio item no início do eixo cruzado */
+    margin-bottom: 20px; /* Adiciona um espaço entre o texto e os inputs */
 }
 
-  /* Estilização para o rodapé */
+.T1_emp {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -60px;
+    text-align: start;
+    align-self: flex-start;
+}
+
+.box_input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.text_bot_emp {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.Button_Cad_emp {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Button_Cad_emp:hover{
+    background-color: #0056b3;
+}
+
+/* Estilização para o rodapé */
 .text_bot_emp {
     display: flex;
     flex-direction: column;
@@ -445,7 +521,11 @@
     background-color: #f8f9fa;
     text-align: center;
 }
+
 /*--------------------------------------------------------------------*/
+
+
+
 
 
 /* Telas pequenas */

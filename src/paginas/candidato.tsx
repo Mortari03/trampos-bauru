@@ -42,8 +42,19 @@ function Candidato() {
                     </div>
 
                     <div className="text_bot_cand">
-                        <h3><button className="accept_button"></button> Li e concordo com as condições legais e a política de privacidade.</h3>
-                        <h3><button className="accept_button"></button> Autorizo o Trampos Facil a enviar comunicações comerciais sobre produtos, serviços e eventos dos seus parceiros e colaboradores.</h3>
+
+                        <h3>
+                            <input type="checkbox" className="accept_checkbox_cand" id="conditions" />
+                            <label htmlFor="conditions">Li e concordo com as condições legais e a política de privacidade.</label>
+                        </h3>
+
+                        <br />
+                        <br />
+                        <h3>
+                            <input type="checkbox" className="accept_checkbox_cand" id="communications" />
+                            <label htmlFor="communications">Autorizo o Trampos Facil a enviar comunicações comerciais sobre produtos, serviços e eventos dos seus parceiros e colaboradores.</label>
+                        </h3>
+
                     </div>
 
                     <div>
