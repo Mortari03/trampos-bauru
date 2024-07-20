@@ -75,14 +75,23 @@
 }
 
 /* Contêiner principal da tela de cadastro */
+
 .Conteiner-Cadastro {
+
     background: linear-gradient(to right, #d2d6f3, #8e83ec, #392ca7, #da2afd);
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     height: 100vh;
-    padding: 5%;
+
+    padding: 0;
+
     /* Use porcentagens para o padding */
+
 }
 
 .Tela-cadastro {
@@ -91,16 +100,15 @@
     width: 90%;
     max-width: 1000px;
     height: auto;
-    /* Mantido auto */
-    /* Ajusta a altura máxima conforme necessário */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     background-color: rgba(255, 255, 255, 0.88);
-    padding: 5%;
-    /* Use porcentagens para o padding */
+    padding: 0;
+    overflow: hidden; /* Adicione isso se quiser esconder o overflow dentro desse contêiner */
 }
+
 
 .Logo-cadastro {
     padding: 5%;
@@ -162,12 +170,12 @@
 }
 
 .Botao-Voltar {
-    background-color: rgba(165, 165, 165, 0.2);
+    background-color: rgba(250, 8, 8, 0.315);
     border-radius: 50%;
     margin: 5%;
     box-shadow: 4.5px 10px 10px black;
-    width: 6vw; /* Ajuste conforme necessário */
-    height: 6vw; /* Ajuste conforme necessário */
+    width: 6vh; /* Ajuste conforme necessário */
+    height: 6vh; /* Ajuste conforme necessário */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,58 +299,155 @@
 }
 
 /* AQUI COMEÇA A PARTE DE CADASTRO DA EMPRESA */
+/*-------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .tela_cad {
-    margin: 5%;
-    /* Use porcentagens para o margin */
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2%;
-    /* Use porcentagens para o padding */
-}
-
-.card_cad {
-    border-radius: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #392ca7;
-    width: 80%;
-    /* Use porcentagens para largura flexível */
-    max-width: 700px;
-    /* Use max-width para limitar o tamanho */
-    padding: 5%;
-    /* Use porcentagens para o padding */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.cad_conta_google {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    /* Use porcentagens para largura flexível */
-    max-width: 150px;
-    /* Use max-width para limitar o tamanho */
-    height: 5vh;
-    /* Use vh para altura flexível */
-    background-color: #fff;
-    color: #392ca7;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    overflow: hidden; /* Remover a barra de rolagem */
 }
 
-.cad_conta_google:hover {
-    background-color: #ececec;
+.conteiner {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 90vw;
+    max-height: 90vh; /* Limitar a altura para caber na tela */
+    width: 100%;
+    height: 100%;
+}
+
+.imagem_cad {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.img_ilus {
+    max-width: 100%;
+    height: auto;
+}
+
+.card_cad {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Permitir rolagem no card se necessário */
+}
+
+.Botao-Voltar_cand {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.Voltar_Cand {
+    background-color: black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.t1, .t2, .t3, .box_button, .text_bot_cand, .Button_Cad {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .box_button {
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 5%;
 }
+
+.box_input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.box_input input, .box_input select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.cad_conta_google {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cad_conta_google:hover {
+    background-color: #357ae8;
+}
+
+.accept_button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.Button_Cad {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Button_Cad:hover {
+    background-color: #0056b3;
+}
+
+.text_bot_cand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/*tela de cadastro da empresa*/
+
+.Button_Cad_emp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+  /* Estilização para o rodapé */
+.text_bot_emp {
+    display: flex;
+    flex-direction: column;
+    padding: 29px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+/*--------------------------------------------------------------------*/
+
 
 /* Telas pequenas */
 @media (max-width: 768px) {
