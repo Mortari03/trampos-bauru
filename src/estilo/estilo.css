@@ -91,7 +91,6 @@
     max-width: 1000px;
     height: auto;
     /* Mantido auto */
-    max-height: 80vh;
     /* Ajusta a altura máxima conforme necessário */
     display: flex;
     flex-direction: column;
