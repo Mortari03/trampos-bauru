@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Cabecalho from "../componentes/cabecalho";
-
+import '../estilo/porquenos.css';
 
 function Porquenos() {
     return (
