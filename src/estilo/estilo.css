@@ -12,12 +12,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2% 5%; /* Use porcentagens para o padding */
+    padding: 2% 5%;
+    /* Use porcentagens para o padding */
 }
 
 .Logo {
-    height: auto; /* Alterado para auto */
-    max-height: 10vh; /* Ajusta a altura máxima conforme necessário */
+    height: auto;
+    /* Alterado para auto */
+    max-height: 10vh;
+    /* Ajusta a altura máxima conforme necessário */
 }
 
 .tags-li {
@@ -43,13 +46,15 @@
 }
 
 .botao-config {
-    padding-right: 5%; /* Use porcentagens para o padding */
+    padding-right: 5%;
+    /* Use porcentagens para o padding */
     display: flex;
     align-items: center;
 }
 
 .botao-cabecalho {
-    padding: 2% 5%; /* Use porcentagens para o padding */
+    padding: 2% 5%;
+    /* Use porcentagens para o padding */
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -63,7 +68,8 @@
 
 .cor-cabecalho {
     width: 100%;
-    height: 1.5vh; /* Use vh para altura flexível */
+    height: 1.5vh;
+    /* Use vh para altura flexível */
     background: linear-gradient(to right, #d2d6f3, #8e83ec, #392ca7, #da2afd);
 }
 
@@ -74,7 +80,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 5%; /* Use porcentagens para o padding */
+    padding: 5%;
+    /* Use porcentagens para o padding */
 }
 
 .Tela-cadastro {
@@ -82,32 +89,39 @@
     border-radius: 50px;
     width: 90%;
     max-width: 1000px;
-    height: auto; /* Mantido auto */
-    max-height: 80vh; /* Ajusta a altura máxima conforme necessário */
+    height: auto;
+    /* Mantido auto */
+    max-height: 80vh;
+    /* Ajusta a altura máxima conforme necessário */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     background-color: rgba(255, 255, 255, 0.88);
-    padding: 5%; /* Use porcentagens para o padding */
+    padding: 5%;
+    /* Use porcentagens para o padding */
 }
 
 .Logo-cadastro {
-    padding: 5%; /* Use porcentagens para o padding */
+    padding: 5%;
+    /* Use porcentagens para o padding */
     position: absolute;
     top: 2%;
     right: 2%;
-    max-width: 15vw; /* Use vw para a largura máxima */
+    max-width: 15vw;
+    /* Use vw para a largura máxima */
 }
 
 .Titulo-Cadastro {
-    margin-top: 10%; /* Ajustado para porcentagens */
+    margin-top: 10%;
+    /* Ajustado para porcentagens */
     text-align: center;
     width: 100%;
 }
 
 .Titulo-Final {
-    margin-top: 2%; /* Ajustado para porcentagens */
+    margin-top: 2%;
+    /* Ajustado para porcentagens */
     text-align: center;
     width: 100%;
 }
@@ -118,7 +132,8 @@
 }
 
 .Palavra-Destaque {
-    color: #0059ff; /* Ajuste a cor conforme necessário */
+    color: #0059ff;
+    /* Ajuste a cor conforme necessário */
 }
 
 .Titulo-Final a:hover {
@@ -149,10 +164,13 @@
 .Botao-Voltar {
     background-color: rgba(165, 165, 165, 0.2);
     border-radius: 50px;
-    margin: 5%; /* Use porcentagens para o margin */
+    margin: 5%;
+    /* Use porcentagens para o margin */
     box-shadow: 4.5px 10px 10px black;
-    width: 10vw; /* Use vw para largura flexível */
-    height: 10vw; /* Use vw para altura flexível */
+    width: 10vw;
+    /* Use vw para largura flexível */
+    height: 10vw;
+    /* Use vw para altura flexível */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,10 +184,13 @@
 .Botao-Cadastro {
     background-color: rgba(165, 165, 165, 0.2);
     border-radius: 50px;
-    margin: 5%; /* Use porcentagens para o margin */
+    margin: 5%;
+    /* Use porcentagens para o margin */
     box-shadow: 4.5px 10px 10px black;
-    width: 20vw; /* Use vw para largura flexível */
-    height: 20vw; /* Use vw para altura flexível */
+    width: 20vw;
+    /* Use vw para largura flexível */
+    height: 20vw;
+    /* Use vw para altura flexível */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,14 +204,17 @@
     transform: scale(1.05);
 }
 
-.Perfil-Solo,
-.Perfil-Grupo {
-    width: 10vw; /* Use vw para largura flexível */
+.icone-cadastro {
+    margin-bottom: 10px;
+    /* Espaço entre o ícone e o texto */
+    font-size: 3vw;
+    /* Ajuste o tamanho conforme necessário */
 }
 
 .Candidato,
 .Empresas {
-    font-size: 2vw; /* Use vw para tamanho de fonte flexível */
+    font-size: 2vw;
+    /* Use vw para tamanho de fonte flexível */
     text-align: center;
 }
 
@@ -207,42 +231,51 @@
     }
 
     .infos-cab li {
-        margin: 5px 0; /* Ajustado para porcentagens */
+        margin: 5px 0;
+        /* Ajustado para porcentagens */
     }
 
     .Logo {
-        max-height: 5vh; /* Ajusta a altura máxima conforme necessário */
+        max-height: 5vh;
+        /* Ajusta a altura máxima conforme necessário */
     }
 
     .Logo-cadastro {
-        max-width: 10vw; /* Ajuste conforme necessário */
+        max-width: 10vw;
+        /* Ajuste conforme necessário */
         top: 1%;
         right: 1%;
     }
 
     .Titulo-Cadastro {
-        margin-top: 8%; /* Ajustado para porcentagens */
+        margin-top: 8%;
+        /* Ajustado para porcentagens */
     }
 
     .Botao-Cadastro {
-        width: 15vw; /* Use vw para largura flexível */
-        height: 15vw; /* Use vw para altura flexível */
+        width: 15vw;
+        /* Use vw para largura flexível */
+        height: 15vw;
+        /* Use vw para altura flexível */
     }
 
     .Candidato,
     .Empresas {
-        font-size: 3vw; /* Ajuste conforme necessário */
+        font-size: 3vw;
+        /* Ajuste conforme necessário */
     }
 }
 
 /* Parte do projeto onde faz a onda no cabeçalho */
 .wave-bar {
     width: 100%;
-    height: 2vh; /* Use vh para altura flexível */
+    height: 2vh; 
     background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
-    background-size: 300%;
-    animation: wave 3s infinite;
+    background-size:
+     /* Use vh para altura flexível */
 }
+
+
 
 @keyframes wave {
     0% {
@@ -260,10 +293,12 @@
 
 /* AQUI COMEÇA A PARTE DE CADASTRO DA EMPRESA */
 .tela_cad {
-    margin: 5%; /* Use porcentagens para o margin */
+    margin: 5%;
+    /* Use porcentagens para o margin */
     display: flex;
-    justify-content: flex-end; 
-    padding-right: 2%; /* Use porcentagens para o padding */
+    justify-content: flex-end;
+    padding-right: 2%;
+    /* Use porcentagens para o padding */
 }
 
 .card_cad {
@@ -273,9 +308,12 @@
     justify-content: center;
     flex-direction: column;
     background-color: #392ca7;
-    width: 80%; /* Use porcentagens para largura flexível */
-    max-width: 700px; /* Use max-width para limitar o tamanho */
-    padding: 5%; /* Use porcentagens para o padding */
+    width: 80%;
+    /* Use porcentagens para largura flexível */
+    max-width: 700px;
+    /* Use max-width para limitar o tamanho */
+    padding: 5%;
+    /* Use porcentagens para o padding */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -283,9 +321,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%; /* Use porcentagens para largura flexível */
-    max-width: 150px; /* Use max-width para limitar o tamanho */
-    height: 5vh; /* Use vh para altura flexível */
+    width: 30%;
+    /* Use porcentagens para largura flexível */
+    max-width: 150px;
+    /* Use max-width para limitar o tamanho */
+    height: 5vh;
+    /* Use vh para altura flexível */
     background-color: #fff;
     color: #392ca7;
     border: none;
@@ -301,8 +342,9 @@
 .box_button {
     display: flex;
     justify-content: center;
-    margin: 5%; 
+    margin: 5%;
 }
+
 /* Telas pequenas */
 @media (max-width: 768px) {
     .imagem {
@@ -358,8 +400,8 @@
         height: 60px;
     }
 
-    
-    .icone-empresa{
+
+    .icone-empresa {
         width: 100px;
         height: 100px;
     }

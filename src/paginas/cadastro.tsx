@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser,faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 function Cadastro() {
     return (
@@ -21,13 +21,11 @@ function Cadastro() {
                 </h1>
                 <div className="Centro-Cadastro">
                     <Link to="/candidato" className="Botao-Cadastro">
-                        < FontAwesomeIcon icon = {faUser}/>
+                        <FontAwesomeIcon icon={faUser} className="icone-cadastro" />
                         <h1 className="Candidato">Cadastre-se como Candidato</h1>
                     </Link>
                     <Link to="/empresa" className="Botao-Cadastro">
-
-                    <FontAwesomeIcon className="icone-empresas" icon= {faUsers} />
-
+                        <FontAwesomeIcon icon={faUsers} className="icone-cadastro" />
                         <h1 className="Empresas">Cadastre-se como Empresa</h1>
                     </Link>
                 </div>
