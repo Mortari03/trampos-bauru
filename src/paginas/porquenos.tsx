@@ -15,7 +15,7 @@ function Porquenos() {
 
             <div className="porque_nos">
                 <h1>
-                    Pagina do Porque Nós ?
+                    Pagina do Quem somos?
                 </h1>
             </div>
 
