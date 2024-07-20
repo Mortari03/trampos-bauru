@@ -91,7 +91,6 @@
     max-width: 1000px;
     height: auto;
     /* Mantido auto */
-    max-height: 80vh;
     /* Ajusta a altura máxima conforme necessário */
     display: flex;
     flex-direction: column;
@@ -261,15 +260,17 @@
     .Empresas {
         font-size: 3vw;
         /* Ajuste conforme necessário */
-    }
+    
+        }
 }
 
 /* Parte do projeto onde faz a onda no cabeçalho */
+
 .wave-bar {
     width: 100%;
     height: 2vh; 
     background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
-    background-size: 0;     /* Use vh para altura flexível */
+     /* Use vh para altura flexível */
 }
 
 
