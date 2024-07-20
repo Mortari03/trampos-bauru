@@ -1,0 +1,148 @@
+/* Contêiner principal da tela de cadastro */
+
+.Conteiner-Cadastro {
+    background-color: rgba(235, 230, 230, 0.63);
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    height: 100vh;
+  
+    padding: 0;
+  
+    /* Use porcentagens para o padding */
+  }
+  
+  .Tela-cadastro {
+    box-shadow: 5px 10px 10px black;
+    border-radius: 50px;
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.88);
+    padding: 0;
+    overflow: hidden;
+    /* Adicione isso se quiser esconder o overflow dentro desse contêiner */
+  }
+  
+  .Logo-cadastro {
+    padding: 5%;
+    /* Use porcentagens para o padding */
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    max-width: 15vw;
+    /* Use vw para a largura máxima */
+  }
+  
+  .Titulo-Cadastro {
+    margin-top: 10%;
+    /* Ajustado para porcentagens */
+    text-align: center;
+    width: 100%;
+  }
+  
+  .Titulo-Final {
+    margin-top: 2%;
+    /* Ajustado para porcentagens */
+    text-align: center;
+    width: 100%;
+  }
+  
+  .Titulo-Final a {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  .Palavra-Destaque {
+    color: #0059ff;
+    /* Ajuste a cor conforme necessário */
+  }
+  
+  .Titulo-Final a:hover {
+    color: #0059ff;
+  }
+  
+  .Centro-Cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .Centro-Cadastro a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+  
+  .Voltar {
+    width: inherit;
+  }
+  
+  .Botao-Voltar {
+    background-color: rgba(0, 17, 255, 0.479);
+    border-radius: 50%;
+    margin: 5%;
+    box-shadow: 4.5px 10px 10px black;
+    width: 6vh;
+    /* Ajuste conforme necessário */
+    height: 6vh;
+    /* Ajuste conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 2%;
+    left: 2%;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .Botao-Cadastro {
+    background-color: rgba(165, 165, 165, 0.2);
+    border-radius: 50px;
+    margin: 5%;
+    /* Use porcentagens para o margin */
+    box-shadow: 4.5px 10px 10px black;
+    width: 20vw;
+    /* Use vw para largura flexível */
+    height: 20vw;
+    /* Use vw para altura flexível */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .Botao-Cadastro:hover {
+    transform: scale(1.05);
+  }
+  
+  .icone-cadastro {
+    margin-bottom: 10px;
+    /* Espaço entre o ícone e o texto */
+    font-size: 3vw;
+    /* Ajuste o tamanho conforme necessário */
+  }
+  
+  .Candidato,
+  .Empresas {
+    font-size: 2vw;
+    /* Use vw para tamanho de fonte flexível */
+    text-align: center;
+  }

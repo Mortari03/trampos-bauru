@@ -1,0 +1,151 @@
+/* Cabeçalho fixo */
+.div-conteiner {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .imagem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 2% 5%;
+    /* Use porcentagens para o padding */
+  }
+  
+  .Logo {
+    height: auto;
+    /* Alterado para auto */
+    max-height: 10vh;
+    /* Ajusta a altura máxima conforme necessário */
+  }
+  
+  .tags-li {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .infos-cab {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .infos-cab li {
+    margin: 0 2%;
+  }
+  
+  .infos-cab li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .botao-config {
+    padding-right: 5%;
+    /* Use porcentagens para o padding */
+    display: flex;
+    align-items: center;
+  }
+  
+  .botao-cabecalho {
+    padding: 2% 5%;
+    /* Use porcentagens para o padding */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .botao-cabecalho:hover {
+    background-color: #0056b3;
+  }
+  
+  .cor-cabecalho {
+    width: 100%;
+    height: 1.5vh;
+    /* Use vh para altura flexível */
+    background: linear-gradient(to right, #d2d6f3, #8e83ec, #392ca7, #da2afd);
+  }
+                 /*****************************FIM DO CABEÇALHO******************************************/
+  
+  
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .imagem {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .infos-cab {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .infos-cab li {
+      margin: 5px 0;
+      /* Ajustado para porcentagens */
+    }
+  
+    .Logo {
+      max-height: 5vh;
+      /* Ajusta a altura máxima conforme necessário */
+    }
+  
+    .Logo-cadastro {
+      max-width: 10vw;
+      /* Ajuste conforme necessário */
+      top: 1%;
+      right: 1%;
+    }
+  
+    .Titulo-Cadastro {
+      margin-top: 8%;
+      /* Ajustado para porcentagens */
+    }
+  
+    .Botao-Cadastro {
+      width: 15vw;
+      /* Use vw para largura flexível */
+      height: 15vw;
+      /* Use vw para altura flexível */
+    }
+  
+    .Candidato,
+    .Empresas {
+      font-size: 3vw;
+      /* Ajuste conforme necessário */
+    }
+  }
+  
+  /* Parte do projeto onde faz a onda no cabeçalho */
+  
+  .wave-bar {
+    width: 100%;
+    height: 2vh;
+    background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
+    /* Use vh para altura flexível */
+  }
+  
+  @keyframes wave {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
