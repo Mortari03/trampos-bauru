@@ -163,14 +163,11 @@
 
 .Botao-Voltar {
     background-color: rgba(165, 165, 165, 0.2);
-    border-radius: 50px;
+    border-radius: 50%;
     margin: 5%;
-    /* Use porcentagens para o margin */
     box-shadow: 4.5px 10px 10px black;
-    width: 10vw;
-    /* Use vw para largura flexível */
-    height: 10vw;
-    /* Use vw para altura flexível */
+    width: 6vw; /* Ajuste conforme necessário */
+    height: 6vw; /* Ajuste conforme necessário */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,6 +177,7 @@
     cursor: pointer;
     transition: transform 0.3s;
 }
+
 
 .Botao-Cadastro {
     background-color: rgba(165, 165, 165, 0.2);
