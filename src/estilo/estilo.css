@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     padding: 2% 5%;
     /* Use porcentagens para o padding */
 }
@@ -486,5 +487,78 @@
     .Candidato,
     .Empresas {
         font-size: 22px;
+    }
+}
+/*Pagina de suporte*/
+
+.Sup, .Faq {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.DivCentro {
+    display: flex;
+    justify-content: center;
+}
+
+.FAQContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.FAQColumn {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.FAQItem {
+    background-color: #6A1B9A; /* Cor do fundo das barras */
+    color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.FAQItem:hover {
+    background-color: #8E24AA; /* Cor ao passar o mouse */
+}
+
+.FAQQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.FAQAnswer {
+    margin-top: 10px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.rodape {
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .FAQContainer {
+        flex-direction: column;
+    }
+
+    .FAQColumn {
+        width: 100%;
+    }
+
+    .FAQItem {
+        width: calc(100% - 20px);
     }
 }
