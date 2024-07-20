@@ -35,7 +35,7 @@ function Cadastro() {
                         Você é novo no Trampos <span className="Palavra-Destaque">Fácil</span>
                     </h1>
                     <h2 className="classe-mudavel">
-                        Cadastre-se como <Link to="/candidato">Candidato</Link> ou <Link to="/empresa">Empresa</Link>adlfhaslfhasilhfn
+                        Cadastre-se como <Link to="/candidato">Candidato</Link> ou <Link to="/empresa">Empresa</Link>
                     </h2>
                 </div>
 

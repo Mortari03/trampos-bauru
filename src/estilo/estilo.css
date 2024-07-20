@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     padding: 2% 5%;
     /* Use porcentagens para o padding */
 }
@@ -74,14 +75,23 @@
 }
 
 /* Contêiner principal da tela de cadastro */
+
 .Conteiner-Cadastro {
-    background: linear-gradient(to right, #d2d6f3, #8e83ec, #392ca7, #da2afd);
+
+    background-color: rgba(235, 230, 230, 0.63);
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     height: 100vh;
-    padding: 5%;
+
+    padding: 0;
+
     /* Use porcentagens para o padding */
+
 }
 
 .Tela-cadastro {
@@ -90,16 +100,16 @@
     width: 90%;
     max-width: 1000px;
     height: auto;
-    /* Mantido auto */
-    /* Ajusta a altura máxima conforme necessário */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     background-color: rgba(255, 255, 255, 0.88);
-    padding: 5%;
-    /* Use porcentagens para o padding */
+    padding: 0;
+    overflow: hidden;
+    /* Adicione isso se quiser esconder o overflow dentro desse contêiner */
 }
+
 
 .Logo-cadastro {
     padding: 5%;
@@ -161,12 +171,14 @@
 }
 
 .Botao-Voltar {
-    background-color: rgba(165, 165, 165, 0.2);
+    background-color: rgba(0, 17, 255, 0.479);
     border-radius: 50%;
     margin: 5%;
     box-shadow: 4.5px 10px 10px black;
-    width: 6vw; /* Ajuste conforme necessário */
-    height: 6vw; /* Ajuste conforme necessário */
+    width: 6vh;
+    /* Ajuste conforme necessário */
+    height: 6vh;
+    /* Ajuste conforme necessário */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -260,17 +272,17 @@
     .Empresas {
         font-size: 3vw;
         /* Ajuste conforme necessário */
-    
-        }
+
+    }
 }
 
 /* Parte do projeto onde faz a onda no cabeçalho */
 
 .wave-bar {
     width: 100%;
-    height: 2vh; 
+    height: 2vh;
     background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
-     /* Use vh para altura flexível */
+    /* Use vh para altura flexível */
 }
 
 
@@ -289,59 +301,235 @@
     }
 }
 
-/* AQUI COMEÇA A PARTE DE CADASTRO DA EMPRESA */
+/* AQUI COMEÇA A PARTE DE CADASTRO DE CANDIDATO E ALGUMAS FUNÇÕES COMPARTILHAS NA CLASSNAME COM EMPRESA*/
+/*-------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .tela_cad {
-    margin: 5%;
-    /* Use porcentagens para o margin */
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2%;
-    /* Use porcentagens para o padding */
-}
-
-.card_cad {
-    border-radius: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #392ca7;
-    width: 80%;
-    /* Use porcentagens para largura flexível */
-    max-width: 700px;
-    /* Use max-width para limitar o tamanho */
-    padding: 5%;
-    /* Use porcentagens para o padding */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.cad_conta_google {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    /* Use porcentagens para largura flexível */
-    max-width: 150px;
-    /* Use max-width para limitar o tamanho */
-    height: 5vh;
-    /* Use vh para altura flexível */
-    background-color: #fff;
-    color: #392ca7;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    overflow: hidden;
+    /* Remover a barra de rolagem */
 }
 
-.cad_conta_google:hover {
-    background-color: #ececec;
+.conteiner {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 90vw;
+    max-height: 90vh;
+    /* Limitar a altura para caber na tela */
+    width: 100%;
+    height: 100%;
+}
+
+.imagem_cad {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.img_ilus {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.card_cad {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start ;
+    align-items: center;
+    overflow-y: auto;
+    height: 100vh;
+    height: auto;
+    /* Permitir rolagem no card se necessário */
+}
+
+.Botao-Voltar_cand {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.Voltar_Cand {
+    background-color: black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.accept_checkbox_cand {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transform: scale(1);
+    /* Ajusta o tamanho do checkbox */
+}
+
+.t1,
+.t2,
+.t3,
+.box_button {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Button_Cad {
+    margin: 20px;
 }
 
 .box_button {
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 5%;
 }
+
+.box_input {
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.box_input input,
+.box_input select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.cad_conta_google {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cad_conta_google:hover {
+    background-color: #357ae8;
+}
+
+.accept_button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.Button_Cad {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Button_Cad:hover {
+    background-color: #0056b3;
+}
+
+.text_bot_cand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+
+/*AQUI COMEÇA A TELA DE CADASTRO DE EMPRESAS*/
+/*tela de cadastro da empresa*/
+
+.accept_checkbox_emp {
+    display: flex;
+    justify-content: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transform: scale(1.5);
+    /* Ajusta o tamanho do checkbox */
+    
+}
+.texto_emp {
+    justify-content: flex-start;
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start; /* Alinha o próprio item no início do eixo cruzado */
+    margin-bottom: 20px; /* Adiciona um espaço entre o texto e os inputs */
+}
+
+.T1_emp {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -60px;
+    text-align: start;
+    align-self: flex-start;
+}
+
+.box_input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.text_bot_emp {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.Button_Cad_emp {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Button_Cad_emp:hover{
+    background-color: #0056b3;
+}
+
+/* Estilização para o rodapé */
+.text_bot_emp {
+    display: flex;
+    flex-direction: column;
+    padding: 29px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------*/
+
+
+
+
 
 /* Telas pequenas */
 @media (max-width: 768px) {
@@ -488,6 +676,7 @@
         font-size: 22px;
     }
 }
+<<<<<<< HEAD
 
 /* PÁGINA PORQUE NOS */
 /* div principal da função */
@@ -496,3 +685,78 @@
     color: #fff;
 }
 
+=======
+/*Pagina de suporte*/
+
+.Sup, .Faq {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.DivCentro {
+    display: flex;
+    justify-content: center;
+}
+
+.FAQContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.FAQColumn {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.FAQItem {
+    background-color: #6A1B9A; /* Cor do fundo das barras */
+    color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.FAQItem:hover {
+    background-color: #8E24AA; /* Cor ao passar o mouse */
+}
+
+.FAQQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.FAQAnswer {
+    margin-top: 10px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.rodape {
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .FAQContainer {
+        flex-direction: column;
+    }
+
+    .FAQColumn {
+        width: 100%;
+    }
+
+    .FAQItem {
+        width: calc(100% - 20px);
+    }
+}
+>>>>>>> cf71ff3cbf5b7ae795f3093b283598b73d6b4fe3

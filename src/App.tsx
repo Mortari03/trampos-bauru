@@ -4,7 +4,6 @@ import { Routes, Route } from 'react-router-dom';
 import Cadastro from './paginas/cadastro';
 import Candidato from './paginas/candidato';
 import Empresa from './paginas/empresa';
-import Detalhesobre from '../src/paginas/detalhesobre'
 import './estilo/estilo.css';
 import Trampos from './paginas/trampos';
 import Suporte from './paginas/suporte';
