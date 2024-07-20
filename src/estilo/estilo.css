@@ -12,11 +12,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 2% 5%;
+    /* Use porcentagens para o padding */
 }
 
 .Logo {
-    height: 70px;
+    height: auto;
+    /* Alterado para auto */
+    max-height: 10vh;
+    /* Ajusta a altura máxima conforme necessário */
 }
 
 .tags-li {
@@ -33,7 +37,7 @@
 }
 
 .infos-cab li {
-    margin: 0 25px;
+    margin: 0 2%;
 }
 
 .infos-cab li a {
@@ -42,13 +46,15 @@
 }
 
 .botao-config {
-    padding-right: 100px;
+    padding-right: 5%;
+    /* Use porcentagens para o padding */
     display: flex;
     align-items: center;
 }
 
 .botao-cabecalho {
-    padding: 10px 20px;
+    padding: 2% 5%;
+    /* Use porcentagens para o padding */
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -62,7 +68,8 @@
 
 .cor-cabecalho {
     width: 100%;
-    height: 9px;
+    height: 1.5vh;
+    /* Use vh para altura flexível */
     background: linear-gradient(to right, #d2d6f3, #8e83ec, #392ca7, #da2afd);
 }
 
@@ -73,7 +80,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 20px;
+    padding: 5%;
+    /* Use porcentagens para o padding */
 }
 
 .Tela-cadastro {
@@ -82,31 +90,38 @@
     width: 90%;
     max-width: 1000px;
     height: auto;
-    max-height: 800px;
+    /* Mantido auto */
+    max-height: 80vh;
+    /* Ajusta a altura máxima conforme necessário */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: #ffffff88;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.88);
+    padding: 5%;
+    /* Use porcentagens para o padding */
 }
 
 .Logo-cadastro {
-    padding: 40px;
+    padding: 5%;
+    /* Use porcentagens para o padding */
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 150px;
+    top: 2%;
+    right: 2%;
+    max-width: 15vw;
+    /* Use vw para a largura máxima */
 }
 
 .Titulo-Cadastro {
-    margin-top: 100px;
+    margin-top: 10%;
+    /* Ajustado para porcentagens */
     text-align: center;
     width: 100%;
 }
 
 .Titulo-Final {
-    margin-top: 20px;
+    margin-top: 2%;
+    /* Ajustado para porcentagens */
     text-align: center;
     width: 100%;
 }
@@ -139,11 +154,7 @@
 }
 
 .material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 .Voltar {
@@ -152,29 +163,32 @@
 
 .Botao-Voltar {
     background-color: rgba(165, 165, 165, 0.2);
-    border-radius: 50px;
-    margin: 50px;
+    border-radius: 50%;
+    margin: 5%;
     box-shadow: 4.5px 10px 10px black;
-    width: 50px;
-    height: 50px;
+    width: 6vw; /* Ajuste conforme necessário */
+    height: 6vw; /* Ajuste conforme necessário */
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 20px;
-    left: 20px;
+    top: 2%;
+    left: 2%;
     position: absolute;
-    /*Position absolute segue esse principio para posicionar o botão de forma rapida*/
     cursor: pointer;
     transition: transform 0.3s;
 }
 
+
 .Botao-Cadastro {
     background-color: rgba(165, 165, 165, 0.2);
     border-radius: 50px;
-    margin: 50px;
+    margin: 5%;
+    /* Use porcentagens para o margin */
     box-shadow: 4.5px 10px 10px black;
-    width: 200px;
-    height: 200px;
+    width: 20vw;
+    /* Use vw para largura flexível */
+    height: 20vw;
+    /* Use vw para altura flexível */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -188,18 +202,148 @@
     transform: scale(1.05);
 }
 
-.Perfil-Solo,
-.Perfil-Grupo {
-    width: 100px;
+.icone-cadastro {
+    margin-bottom: 10px;
+    /* Espaço entre o ícone e o texto */
+    font-size: 3vw;
+    /* Ajuste o tamanho conforme necessário */
 }
 
 .Candidato,
 .Empresas {
-    font-size: 21px;
+    font-size: 2vw;
+    /* Use vw para tamanho de fonte flexível */
     text-align: center;
 }
 
 /* Estilos responsivos */
+@media (max-width: 768px) {
+    .imagem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .infos-cab {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .infos-cab li {
+        margin: 5px 0;
+        /* Ajustado para porcentagens */
+    }
+
+    .Logo {
+        max-height: 5vh;
+        /* Ajusta a altura máxima conforme necessário */
+    }
+
+    .Logo-cadastro {
+        max-width: 10vw;
+        /* Ajuste conforme necessário */
+        top: 1%;
+        right: 1%;
+    }
+
+    .Titulo-Cadastro {
+        margin-top: 8%;
+        /* Ajustado para porcentagens */
+    }
+
+    .Botao-Cadastro {
+        width: 15vw;
+        /* Use vw para largura flexível */
+        height: 15vw;
+        /* Use vw para altura flexível */
+    }
+
+    .Candidato,
+    .Empresas {
+        font-size: 3vw;
+        /* Ajuste conforme necessário */
+    }
+}
+
+/* Parte do projeto onde faz a onda no cabeçalho */
+.wave-bar {
+    width: 100%;
+    height: 2vh; 
+    background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
+    background-size:
+     /* Use vh para altura flexível */
+}
+
+
+
+@keyframes wave {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* AQUI COMEÇA A PARTE DE CADASTRO DA EMPRESA */
+.tela_cad {
+    margin: 5%;
+    /* Use porcentagens para o margin */
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2%;
+    /* Use porcentagens para o padding */
+}
+
+.card_cad {
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #392ca7;
+    width: 80%;
+    /* Use porcentagens para largura flexível */
+    max-width: 700px;
+    /* Use max-width para limitar o tamanho */
+    padding: 5%;
+    /* Use porcentagens para o padding */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cad_conta_google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    /* Use porcentagens para largura flexível */
+    max-width: 150px;
+    /* Use max-width para limitar o tamanho */
+    height: 5vh;
+    /* Use vh para altura flexível */
+    background-color: #fff;
+    color: #392ca7;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cad_conta_google:hover {
+    background-color: #ececec;
+}
+
+.box_button {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+/* Telas pequenas */
 @media (max-width: 768px) {
     .imagem {
         flex-direction: column;
@@ -240,251 +384,107 @@
     }
 }
 
-/* Parte do projeto onde faz a onda no cabeçalho*/
-
-.wave-bar {
-    width: 100%;
-    height: 15px;
-    /* Ajuste a altura conforme necessário */
-    background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
-    background-size: 300%;
-    animation: wave 3s infinite;
-}
-
-@keyframes wave {
-    0% {
-        background-position: 0% 50%;
+/* Telas médias */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .imagem {
+        padding: 15px 20px;
     }
 
-    50% {
-        background-position: 100% 50%;
+    .infos-cab li {
+        margin: 0 20px;
     }
 
-    100% {
-        background-position: 0% 50%;
+    .Logo {
+        height: 60px;
+    }
+
+
+    .icone-empresa {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Titulo-Cadastro {
+        margin-top: 90px;
+    }
+
+    .Botao-Cadastro {
+        width: 175px;
+        height: 175px;
+    }
+
+    .Candidato,
+    .Empresas {
+        font-size: 20px;
     }
 }
 
-/*AQUI COMEÇA A PARTE DE CADASTRO DA EMPRESA*/
+/* Telas grandes */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .imagem {
+        padding: 20px 30px;
+    }
 
-.tela_cad {
-    margin: 90px;
-    display: flex;
-    justify-content: flex-end; 
-    padding-right: 20px;
+    .infos-cab li {
+        margin: 0 30px;
+    }
+
+    .Logo {
+        height: 65px;
+    }
+
+    .Logo-cadastro {
+        width: 140px;
+        top: 18px;
+        right: 18px;
+    }
+
+    .Titulo-Cadastro {
+        margin-top: 95px;
+    }
+
+    .Botao-Cadastro {
+        width: 190px;
+        height: 190px;
+    }
+
+    .Candidato,
+    .Empresas {
+        font-size: 21px;
+    }
 }
 
-.card_cad {
-    border-radius: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #392ca7;
-    width: 700px;
-    padding: 40px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
+/* Telas muito grandes */
+@media (min-width: 1441px) {
+    .imagem {
+        padding: 25px 40px;
+    }
 
-.cad_conta_google {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 40px;
-    background-color: #fff;
-    color: #392ca7;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    .infos-cab li {
+        margin: 0 35px;
+    }
 
-.cad_conta_google:hover {
-    background-color: #ececec;
-}
+    .Logo {
+        height: 70px;
+    }
 
-.box_button {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
+    .Logo-cadastro {
+        width: 150px;
+        top: 20px;
+        right: 20px;
+    }
 
-.box_input {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+    .Titulo-Cadastro {
+        margin-top: 100px;
+    }
 
-.box_input input,
-.box_input select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-}
+    .Botao-Cadastro {
+        width: 200px;
+        height: 200px;
+    }
 
-.box_input select {
-    appearance: none;
-    background: #fff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2Ij48cGF0aCBkPSJNNSA2TDAgMEwxMCAweiIgZmlsbD0iI2NjYyIvPjwvc3ZnPg==') no-repeat right 10px center;
-    background-size: 10px 6px;
-}
-
-h1, h2, h3 {
-    color: #fff;
-    margin: 10px 0;
-}
-
-.card_cad h2:last-of-type {
-    margin-top: 30px;
-}
-
-.box_accept {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.accept_button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff0000;
-    color: #1900ff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.accept_button:hover {
-    background-color: #ececec;
-}
-
-.Button_Cad{ 
-    cursor: pointer;
-    background-color: #beaddf;
-    border-radius: 10px;
-    width: 170px;
-    height: 30px;
-}
-
-.Button_Cad:hover{
-    background-color: #ffffff;
-}
-
-
-
-.Voltar_Cand{
-    border-radius: 50px;
-    background-color: #b32272;
-}
-
-/*Aqui fica a imagem da tela de cadastro*/
-
-.imagem_cad {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-}
-
-.img_ilus {
-    max-width: 200px;
-    height: auto;
-}
-
-
-
-/*Pagina de Trampos*/
-
-.Trampos{
-    background-color: #000000;
-    text-align: center;
-}
-
-
-/*Pagina de suporte*/
-
-
-.Sup h2 {
-    display: flex;
-    justify-content: center;
-    text-decoration: underline;
-    color: #000;
-  
-  
-  }
-  
-  .Faq h2{
-    display: flex;
-    text-decoration: underline;
-    justify-content: center;
-    color: #000;
-  
-  
-  }
-  
-  .Barra1 {
-    background-color: rgb(101, 22, 175);
-    border-radius: 50px;
-    margin: 10px;
-    padding: 10px;
-    width: 300px;
-    height: 35px;
-    text-align: center;
-    color: aliceblue;
-  
-  
-  }
-  
-  
-  
-  .DivCentro {
-    width: 100%;
-    height: 270px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  
-  }
-  
-  .Quadro1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: right;
-  
-  
-  }
-  
-  .f7 {
-  
-    width: 300px;
-  
-  }
-  
-  
-  .rodape {
-  
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  
-  }
-  
-  h4{
-   margin: 100px;
-  
-  }
-
-
-
-/*Pagina de Carreiras*/
-
-.Carreiras{
-    background-color: #000000;
-    text-align: center;
+    .Candidato,
+    .Empresas {
+        font-size: 22px;
+    }
 }
