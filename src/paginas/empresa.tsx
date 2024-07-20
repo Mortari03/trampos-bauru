@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../estilo/carreira.css";
+import "../estilo/cadempresa.css";
 
 function Empresa() {
   return (
@@ -76,17 +76,3 @@ function Empresa() {
   );
 }
 export default Empresa;
-
-<div className="text_bot_emp">
-  <h3>
-    <button className="accept_button_emp"></button> Li e concordo com as
-    condições legais e a política de privacidade.
-  </h3>
-  <br />
-  <br />
-  <h3>
-    <button className="accept_button_emp"></button> Autorizo o Trampos Facil a
-    enviar comunicações comerciais sobre produtos, serviços e eventos dos seus
-    parceiros e colaboradores.
-  </h3>
-</div>;
