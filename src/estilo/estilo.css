@@ -1,762 +1,735 @@
 /* Cabeçalho fixo */
 .div-conteiner {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .imagem {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    padding: 2% 5%;
-    /* Use porcentagens para o padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2% 5%;
+  /* Use porcentagens para o padding */
 }
 
 .Logo {
-    height: auto;
-    /* Alterado para auto */
-    max-height: 10vh;
-    /* Ajusta a altura máxima conforme necessário */
+  height: auto;
+  /* Alterado para auto */
+  max-height: 10vh;
+  /* Ajusta a altura máxima conforme necessário */
 }
 
 .tags-li {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .infos-cab {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .infos-cab li {
-    margin: 0 2%;
+  margin: 0 2%;
 }
 
 .infos-cab li a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .botao-config {
-    padding-right: 5%;
-    /* Use porcentagens para o padding */
-    display: flex;
-    align-items: center;
+  padding-right: 5%;
+  /* Use porcentagens para o padding */
+  display: flex;
+  align-items: center;
 }
 
 .botao-cabecalho {
-    padding: 2% 5%;
-    /* Use porcentagens para o padding */
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 2% 5%;
+  /* Use porcentagens para o padding */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .botao-cabecalho:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .cor-cabecalho {
-    width: 100%;
-    height: 1.5vh;
-    /* Use vh para altura flexível */
-    background: linear-gradient(to right, #d2d6f3, #8e83ec, #392ca7, #da2afd);
+  width: 100%;
+  height: 1.5vh;
+  /* Use vh para altura flexível */
+  background: linear-gradient(to right, #d2d6f3, #8e83ec, #392ca7, #da2afd);
 }
 
 /* Contêiner principal da tela de cadastro */
 
 .Conteiner-Cadastro {
+  background-color: rgba(235, 230, 230, 0.63);
 
-    background-color: rgba(235, 230, 230, 0.63);
+  display: flex;
 
-    display: flex;
+  justify-content: center;
 
-    justify-content: center;
+  align-items: center;
 
-    align-items: center;
+  height: 100vh;
 
-    height: 100vh;
+  padding: 0;
 
-    padding: 0;
-
-    /* Use porcentagens para o padding */
-
+  /* Use porcentagens para o padding */
 }
 
 .Tela-cadastro {
-    box-shadow: 5px 10px 10px black;
-    border-radius: 50px;
-    width: 90%;
-    max-width: 1000px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.88);
-    padding: 0;
-    overflow: hidden;
-    /* Adicione isso se quiser esconder o overflow dentro desse contêiner */
+  box-shadow: 5px 10px 10px black;
+  border-radius: 50px;
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.88);
+  padding: 0;
+  overflow: hidden;
+  /* Adicione isso se quiser esconder o overflow dentro desse contêiner */
 }
 
-
 .Logo-cadastro {
-    padding: 5%;
-    /* Use porcentagens para o padding */
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    max-width: 15vw;
-    /* Use vw para a largura máxima */
+  padding: 5%;
+  /* Use porcentagens para o padding */
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  max-width: 15vw;
+  /* Use vw para a largura máxima */
 }
 
 .Titulo-Cadastro {
-    margin-top: 10%;
-    /* Ajustado para porcentagens */
-    text-align: center;
-    width: 100%;
+  margin-top: 10%;
+  /* Ajustado para porcentagens */
+  text-align: center;
+  width: 100%;
 }
 
 .Titulo-Final {
-    margin-top: 2%;
-    /* Ajustado para porcentagens */
-    text-align: center;
-    width: 100%;
+  margin-top: 2%;
+  /* Ajustado para porcentagens */
+  text-align: center;
+  width: 100%;
 }
 
 .Titulo-Final a {
-    color: #0056b3;
-    text-decoration: none;
+  color: #0056b3;
+  text-decoration: none;
 }
 
 .Palavra-Destaque {
-    color: #0059ff;
-    /* Ajuste a cor conforme necessário */
+  color: #0059ff;
+  /* Ajuste a cor conforme necessário */
 }
 
 .Titulo-Final a:hover {
-    color: #0059ff;
+  color: #0059ff;
 }
 
 .Centro-Cadastro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .Centro-Cadastro a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 .Voltar {
-    width: inherit;
+  width: inherit;
 }
 
 .Botao-Voltar {
-    background-color: rgba(0, 17, 255, 0.479);
-    border-radius: 50%;
-    margin: 5%;
-    box-shadow: 4.5px 10px 10px black;
-    width: 6vh;
-    /* Ajuste conforme necessário */
-    height: 6vh;
-    /* Ajuste conforme necessário */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 2%;
-    left: 2%;
-    position: absolute;
-    cursor: pointer;
-    transition: transform 0.3s;
+  background-color: rgba(0, 17, 255, 0.479);
+  border-radius: 50%;
+  margin: 5%;
+  box-shadow: 4.5px 10px 10px black;
+  width: 6vh;
+  /* Ajuste conforme necessário */
+  height: 6vh;
+  /* Ajuste conforme necessário */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 2%;
+  left: 2%;
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-
 .Botao-Cadastro {
-    background-color: rgba(165, 165, 165, 0.2);
-    border-radius: 50px;
-    margin: 5%;
-    /* Use porcentagens para o margin */
-    box-shadow: 4.5px 10px 10px black;
-    width: 20vw;
-    /* Use vw para largura flexível */
-    height: 20vw;
-    /* Use vw para altura flexível */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s;
+  background-color: rgba(165, 165, 165, 0.2);
+  border-radius: 50px;
+  margin: 5%;
+  /* Use porcentagens para o margin */
+  box-shadow: 4.5px 10px 10px black;
+  width: 20vw;
+  /* Use vw para largura flexível */
+  height: 20vw;
+  /* Use vw para altura flexível */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .Botao-Cadastro:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .icone-cadastro {
-    margin-bottom: 10px;
-    /* Espaço entre o ícone e o texto */
-    font-size: 3vw;
-    /* Ajuste o tamanho conforme necessário */
+  margin-bottom: 10px;
+  /* Espaço entre o ícone e o texto */
+  font-size: 3vw;
+  /* Ajuste o tamanho conforme necessário */
 }
 
 .Candidato,
 .Empresas {
-    font-size: 2vw;
-    /* Use vw para tamanho de fonte flexível */
-    text-align: center;
+  font-size: 2vw;
+  /* Use vw para tamanho de fonte flexível */
+  text-align: center;
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-    .imagem {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .imagem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .infos-cab {
-        flex-direction: column;
-        align-items: center;
-    }
+  .infos-cab {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .infos-cab li {
-        margin: 5px 0;
-        /* Ajustado para porcentagens */
-    }
+  .infos-cab li {
+    margin: 5px 0;
+    /* Ajustado para porcentagens */
+  }
 
-    .Logo {
-        max-height: 5vh;
-        /* Ajusta a altura máxima conforme necessário */
-    }
+  .Logo {
+    max-height: 5vh;
+    /* Ajusta a altura máxima conforme necessário */
+  }
 
-    .Logo-cadastro {
-        max-width: 10vw;
-        /* Ajuste conforme necessário */
-        top: 1%;
-        right: 1%;
-    }
+  .Logo-cadastro {
+    max-width: 10vw;
+    /* Ajuste conforme necessário */
+    top: 1%;
+    right: 1%;
+  }
 
-    .Titulo-Cadastro {
-        margin-top: 8%;
-        /* Ajustado para porcentagens */
-    }
+  .Titulo-Cadastro {
+    margin-top: 8%;
+    /* Ajustado para porcentagens */
+  }
 
-    .Botao-Cadastro {
-        width: 15vw;
-        /* Use vw para largura flexível */
-        height: 15vw;
-        /* Use vw para altura flexível */
-    }
+  .Botao-Cadastro {
+    width: 15vw;
+    /* Use vw para largura flexível */
+    height: 15vw;
+    /* Use vw para altura flexível */
+  }
 
-    .Candidato,
-    .Empresas {
-        font-size: 3vw;
-        /* Ajuste conforme necessário */
-
-    }
+  .Candidato,
+  .Empresas {
+    font-size: 3vw;
+    /* Ajuste conforme necessário */
+  }
 }
 
 /* Parte do projeto onde faz a onda no cabeçalho */
 
 .wave-bar {
-    width: 100%;
-    height: 2vh;
-    background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
-    /* Use vh para altura flexível */
+  width: 100%;
+  height: 2vh;
+  background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
+  /* Use vh para altura flexível */
 }
 
-
-
 @keyframes wave {
-    0% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
 
-    50% {
-        background-position: 100% 50%;
-    }
+  50% {
+    background-position: 100% 50%;
+  }
 
-    100% {
-        background-position: 0% 50%;
-    }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* AQUI COMEÇA A PARTE DE CADASTRO DE CANDIDATO E ALGUMAS FUNÇÕES COMPARTILHAS NA CLASSNAME COM EMPRESA*/
 /*-------------------------------------------------------*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .tela_cad {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-    padding: 20px;
-    overflow: hidden;
-    /* Remover a barra de rolagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  overflow: hidden;
+  /* Remover a barra de rolagem */
 }
 
 .conteiner {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 90vw;
-    max-height: 90vh;
-    /* Limitar a altura para caber na tela */
-    width: 100%;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 90vw;
+  max-height: 90vh;
+  /* Limitar a altura para caber na tela */
+  width: 100%;
+  height: 100%;
 }
 
 .imagem_cad {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
 }
 
 .img_ilus {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-
-
 .card_cad {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start ;
-    align-items: center;
-    overflow-y: auto;
-    height: 100vh;
-    height: auto;
-    /* Permitir rolagem no card se necessário */
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+  height: 100vh;
+  height: auto;
+  /* Permitir rolagem no card se necessário */
 }
 
 .Botao-Voltar_cand {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .Voltar_Cand {
-    background-color: black;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
 }
 
 .accept_checkbox_cand {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    transform: scale(1);
-    /* Ajusta o tamanho do checkbox */
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  transform: scale(1);
+  /* Ajusta o tamanho do checkbox */
 }
 
 .t1,
 .t2,
 .t3,
 .box_button {
-    margin-bottom: 20px;
-    text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .Button_Cad {
-    margin: 20px;
+  margin: 20px;
 }
 
 .box_button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .box_input {
-    margin: 15px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+  margin: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 }
 
 .box_input input,
 .box_input select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
 }
 
 .cad_conta_google {
-    background-color: #4285F4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .cad_conta_google:hover {
-    background-color: #357ae8;
+  background-color: #357ae8;
 }
 
 .accept_button {
-    margin-right: 10px;
-    cursor: pointer;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .Button_Cad {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .Button_Cad:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .text_bot_cand {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
-
 
 /*AQUI COMEÇA A TELA DE CADASTRO DE EMPRESAS*/
 /*tela de cadastro da empresa*/
 
 .accept_checkbox_emp {
-    display: flex;
-    justify-content: left;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    transform: scale(1.5);
-    /* Ajusta o tamanho do checkbox */
-    
+  display: flex;
+  justify-content: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  transform: scale(1.5);
+  /* Ajusta o tamanho do checkbox */
 }
 .texto_emp {
-    justify-content: flex-start;
-    margin: 100px;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start; /* Alinha o próprio item no início do eixo cruzado */
-    margin-bottom: 20px; /* Adiciona um espaço entre o texto e os inputs */
+  justify-content: flex-start;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start; /* Alinha o próprio item no início do eixo cruzado */
+  margin-bottom: 20px; /* Adiciona um espaço entre o texto e os inputs */
 }
 
 .T1_emp {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: -60px;
-    text-align: start;
-    align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -60px;
+  text-align: start;
+  align-self: flex-start;
 }
 
 .box_input {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 }
 
 .text_bot_emp {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .Button_Cad_emp {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.Button_Cad_emp:hover{
-    background-color: #0056b3;
+.Button_Cad_emp:hover {
+  background-color: #0056b3;
 }
 
 /* Estilização para o rodapé */
 .text_bot_emp {
-    display: flex;
-    flex-direction: column;
-    padding: 29px;
-    background-color: #f8f9fa;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 29px;
+  background-color: #f8f9fa;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------------*/
 
-
-
-
-
 /* Telas pequenas */
 @media (max-width: 768px) {
-    .imagem {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .imagem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .infos-cab {
-        flex-direction: column;
-        align-items: center;
-    }
+  .infos-cab {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .infos-cab li {
-        margin: 10px 0;
-    }
+  .infos-cab li {
+    margin: 10px 0;
+  }
 
-    .Logo {
-        height: 50px;
-    }
+  .Logo {
+    height: 50px;
+  }
 
-    .Logo-cadastro {
-        width: 100px;
-        top: 10px;
-        right: 10px;
-    }
+  .Logo-cadastro {
+    width: 100px;
+    top: 10px;
+    right: 10px;
+  }
 
-    .Titulo-Cadastro {
-        margin-top: 80px;
-    }
+  .Titulo-Cadastro {
+    margin-top: 80px;
+  }
 
-    .Botao-Cadastro {
-        width: 150px;
-        height: 150px;
-    }
+  .Botao-Cadastro {
+    width: 150px;
+    height: 150px;
+  }
 
-    .Candidato,
-    .Empresas {
-        font-size: 18px;
-    }
+  .Candidato,
+  .Empresas {
+    font-size: 18px;
+  }
 }
 
 /* Telas médias */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .imagem {
-        padding: 15px 20px;
-    }
+  .imagem {
+    padding: 15px 20px;
+  }
 
-    .infos-cab li {
-        margin: 0 20px;
-    }
+  .infos-cab li {
+    margin: 0 20px;
+  }
 
-    .Logo {
-        height: 60px;
-    }
+  .Logo {
+    height: 60px;
+  }
 
+  .icone-empresa {
+    width: 100px;
+    height: 100px;
+  }
 
-    .icone-empresa {
-        width: 100px;
-        height: 100px;
-    }
+  .Titulo-Cadastro {
+    margin-top: 90px;
+  }
 
-    .Titulo-Cadastro {
-        margin-top: 90px;
-    }
+  .Botao-Cadastro {
+    width: 175px;
+    height: 175px;
+  }
 
-    .Botao-Cadastro {
-        width: 175px;
-        height: 175px;
-    }
-
-    .Candidato,
-    .Empresas {
-        font-size: 20px;
-    }
+  .Candidato,
+  .Empresas {
+    font-size: 20px;
+  }
 }
 
 /* Telas grandes */
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .imagem {
-        padding: 20px 30px;
-    }
+  .imagem {
+    padding: 20px 30px;
+  }
 
-    .infos-cab li {
-        margin: 0 30px;
-    }
+  .infos-cab li {
+    margin: 0 30px;
+  }
 
-    .Logo {
-        height: 65px;
-    }
+  .Logo {
+    height: 65px;
+  }
 
-    .Logo-cadastro {
-        width: 140px;
-        top: 18px;
-        right: 18px;
-    }
+  .Logo-cadastro {
+    width: 140px;
+    top: 18px;
+    right: 18px;
+  }
 
-    .Titulo-Cadastro {
-        margin-top: 95px;
-    }
+  .Titulo-Cadastro {
+    margin-top: 95px;
+  }
 
-    .Botao-Cadastro {
-        width: 190px;
-        height: 190px;
-    }
+  .Botao-Cadastro {
+    width: 190px;
+    height: 190px;
+  }
 
-    .Candidato,
-    .Empresas {
-        font-size: 21px;
-    }
+  .Candidato,
+  .Empresas {
+    font-size: 21px;
+  }
 }
 
 /* Telas muito grandes */
 @media (min-width: 1441px) {
-    .imagem {
-        padding: 25px 40px;
-    }
+  .imagem {
+    padding: 25px 40px;
+  }
 
-    .infos-cab li {
-        margin: 0 35px;
-    }
+  .infos-cab li {
+    margin: 0 35px;
+  }
 
-    .Logo {
-        height: 70px;
-    }
+  .Logo {
+    height: 70px;
+  }
 
-    .Logo-cadastro {
-        width: 150px;
-        top: 20px;
-        right: 20px;
-    }
+  .Logo-cadastro {
+    width: 150px;
+    top: 20px;
+    right: 20px;
+  }
 
-    .Titulo-Cadastro {
-        margin-top: 100px;
-    }
+  .Titulo-Cadastro {
+    margin-top: 100px;
+  }
 
-    .Botao-Cadastro {
-        width: 200px;
-        height: 200px;
-    }
+  .Botao-Cadastro {
+    width: 200px;
+    height: 200px;
+  }
 
-    .Candidato,
-    .Empresas {
-        font-size: 22px;
-    }
+  .Candidato,
+  .Empresas {
+    font-size: 22px;
+  }
 }
-<<<<<<< HEAD
-
-/* PÁGINA PORQUE NOS */
-/* div principal da função */
-.porquenos {
-    background-color: #000000;
-    color: #fff;
-}
-
-=======
 /*Pagina de suporte*/
 
-.Sup, .Faq {
-    text-align: center;
-    margin-bottom: 20px;
+.Sup,
+.Faq {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .DivCentro {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .FAQContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .FAQColumn {
-    display: flex;
-    flex-direction: column;
-    width: 48%;
+  display: flex;
+  flex-direction: column;
+  width: 48%;
 }
 
 .FAQItem {
-    background-color: #6A1B9A; /* Cor do fundo das barras */
-    color: white;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #6a1b9a; /* Cor do fundo das barras */
+  color: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .FAQItem:hover {
-    background-color: #8E24AA; /* Cor ao passar o mouse */
+  background-color: #8e24aa; /* Cor ao passar o mouse */
 }
 
 .FAQQuestion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
 }
 
 .FAQAnswer {
-    margin-top: 10px;
-    font-size: 14px;
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .rodape {
-    text-align: center;
-    margin-top: 40px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 @media (max-width: 600px) {
-    .FAQContainer {
-        flex-direction: column;
-    }
+  .FAQContainer {
+    flex-direction: column;
+  }
 
-    .FAQColumn {
-        width: 100%;
-    }
+  .FAQColumn {
+    width: 100%;
+  }
 
-    .FAQItem {
-        width: calc(100% - 20px);
-    }
+  .FAQItem {
+    width: calc(100% - 20px);
+  }
 }
->>>>>>> cf71ff3cbf5b7ae795f3093b283598b73d6b4fe3
