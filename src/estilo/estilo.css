@@ -269,8 +269,7 @@
     width: 100%;
     height: 2vh; 
     background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
-    background-size:
-     /* Use vh para altura flexível */
+    background-size: 0;     /* Use vh para altura flexível */
 }
 
 

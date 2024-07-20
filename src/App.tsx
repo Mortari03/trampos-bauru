@@ -28,6 +28,7 @@ function App() {
         <Route path='/Suporte' element= {< Suporte />} />
 
         <Route path='/Carreiras' element= {< Carreiras />} />
+
       </Routes>
     </div>
   );
