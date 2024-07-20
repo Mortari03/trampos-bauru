@@ -8,7 +8,7 @@ import './estilo/estilo.css';
 import Trampos from './paginas/trampos';
 import Suporte from './paginas/suporte';
 import Carreiras from './paginas/carreiras';
-import Porquenos from './paginas/porquenos';
+import Quemsomos from './paginas/quemsomos';
 
 function App() {
   return (
@@ -17,19 +17,19 @@ function App() {
       
         < Route path="/" element={< Home />} />
 
-        <Route path="/Cadastro" element={< Cadastro />} />
+        <Route path="/cadastro" element={< Cadastro />} />
 
-        <Route path="/Candidato" element={< Candidato />} />
+        <Route path="/candidato" element={< Candidato />} />
 
-        <Route path="/Empresa" element={< Empresa />} />
+        <Route path="/empresa" element={< Empresa />} />
 
-        <Route path='/Trampos' element= {< Trampos />} />
+        <Route path='/trampos' element= {< Trampos />} />
 
-        <Route path='/Suporte' element= {< Suporte />} />
+        <Route path='/suporte' element= {< Suporte />} />
 
-        <Route path='/Carreiras' element= {< Carreiras />} />
+        <Route path='/carreiras' element= {< Carreiras />} />
 
-        <Route path='/porquenos' element= {< Porquenos />} />
+        <Route path='/quemsomos' element= {< Quemsomos />} />
 
       </Routes>
     </div>
