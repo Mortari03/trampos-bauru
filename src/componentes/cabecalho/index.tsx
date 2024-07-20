@@ -12,7 +12,7 @@ function Cabecalho() {
                             <ul className="infos-cab">
                                 <li> <strong><Link to="/trampos">TRAMPOS</Link></strong></li>
                                 <li> <strong><Link to="/carreiras">CARREIRAS</Link></strong></li>
-                                <li> <strong><Link to="/porque-nos">POR QUE NÓS?</Link></strong></li>
+                                <li> <strong><Link to="/porquenos">POR QUE NÓS?</Link></strong></li>
                                 <li> <strong><Link to="/suporte">SUPORTE</Link></strong></li>
                             </ul>
                         </nav>
