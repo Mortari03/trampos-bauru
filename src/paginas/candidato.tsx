@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "estilo/candidato.css"
 
 function Candidato() {
     return (

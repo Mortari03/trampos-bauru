@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "estilo/Trampos.css"
 
 function Trampos() {
     return (

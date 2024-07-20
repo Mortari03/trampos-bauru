@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-
+import "estilo/suporte.css"
 
 const Suporte: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
