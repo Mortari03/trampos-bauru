@@ -16,7 +16,7 @@ function CadastroEmpresa() {
         </div>
         <div className="card_cad">
           <div>
-            <Link to="/cadastro" className="Botao-Voltar_cand">
+            <Link to="/prelogin" className="Botao-Voltar_cand">
               <img className="Voltar_Cand" src="/img/Voltar.png" alt="Voltar" />
             </Link>
           </div>

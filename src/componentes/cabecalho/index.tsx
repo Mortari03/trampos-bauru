@@ -31,7 +31,7 @@ function Cabecalho() {
                 <li>
                   {" "}
                   <strong>
-                    <Link to="/porquenos">QUEM SOMOS?</Link>
+                    <Link to="#">POR QUE NÓS ?</Link>
                   </strong>
                 </li>
                 <li>

@@ -27,13 +27,13 @@ function PreLogin() {
           parte da Nossa Equipe
         </h1>
         <div className="Centro-Cadastro">
-          <Link to="/candidato" className="Botao-Cadastro">
+          <Link to="/login_candidato" className="Botao-Cadastro">
             <FontAwesomeIcon icon={faUser} className="icone-cadastro" />
-            <h1 className="Candidato">Cadastre-se como Candidato</h1>
+            <h1 className="Candidato">Entrar como Candidato</h1>
           </Link>
-          <Link to="/empresa" className="Botao-Cadastro">
+          <Link to="/login_empresa" className="Botao-Cadastro">
             <FontAwesomeIcon icon={faUsers} className="icone-cadastro" />
-            <h1 className="Empresas">Cadastre-se como Empresa</h1>
+            <h1 className="Empresas">Entrar como Empresa</h1>
           </Link>
         </div>
 
@@ -43,8 +43,8 @@ function PreLogin() {
             <span className="Palavra-Destaque">Fácil</span>
           </h1>
           <h2 className="classe-mudavel">
-            Cadastre-se como <Link to="/candidato">Candidato</Link> ou{" "}
-            <Link to="/empresa">Empresa</Link>
+            Cadastre-se como <Link to="/cadastro_candidatos">Candidato</Link> ou{" "}
+            <Link to="/cadastro_empresas">Empresa</Link>
           </h2>
         </div>
       </div>
