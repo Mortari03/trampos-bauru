@@ -1,12 +1,12 @@
+//Importes do React
 import React from "react";
+//Importes do Router-Dom
+//Importes de Icones
+//Importes de CSS
+//Importes de Paginas
 
-function rodape() {
-    return(
-
-        <div>
-            
-        </div>
-    )
+function Rodape() {
+  return <div></div>;
 }
 
-export default rodape;
+export default Rodape;

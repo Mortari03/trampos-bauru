@@ -1,10 +1,15 @@
+//Importes do React
 import React from "react";
+//Importes do Router-Dom
 import { Link } from "react-router-dom";
+//Importes de Icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
+//Importes de CSS
 import "../estilo/prelogin.css";
+//Importes de Paginas
 
-function Cadastro() {
+function PreLogin() {
   return (
     <div className="Conteiner-Cadastro">
       <div className="Tela-cadastro">
@@ -47,4 +52,4 @@ function Cadastro() {
   );
 }
 
-export default Cadastro;
+export default PreLogin;

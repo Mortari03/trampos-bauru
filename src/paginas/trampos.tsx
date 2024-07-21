@@ -1,11 +1,18 @@
+//Importes do React
 import React from "react";
-import { Link } from "react-router-dom";
-import "../estilo/trampos.css";
+//Importes do Router-Dom
+//Importes de Icones
+//Importes de CSS
+import "../estilo/estilo.css";
+//Importes de Paginas
+import Cabecalho from "../componentes/cabecalho";
+import Rodape from "../componentes/rodape";
 
 function Trampos() {
   return (
-    <div className="Trampos">
-      <h1>Pagina De Trampos</h1>
+    <div>
+      <Cabecalho />
+      <Rodape />
     </div>
   );
 }

@@ -1,8 +1,13 @@
+//Importes do React
 import React from "react";
+//Importes do Router-Dom
 import { Link } from "react-router-dom";
-import "../estilo/cadempresa.css";
+//Importes de Icones
+//Importes de CSS
+import "../estilo/cadastro_empresa.css";
+//Importes de Paginas
 
-function Empresa() {
+function CadastroEmpresa() {
   return (
     <div className="tela_cad">
       <div className="conteiner">
@@ -75,4 +80,4 @@ function Empresa() {
     </div>
   );
 }
-export default Empresa;
+export default CadastroEmpresa;

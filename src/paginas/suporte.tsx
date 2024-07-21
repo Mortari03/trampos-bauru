@@ -1,8 +1,12 @@
+//Importes do React
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+//Importes do Router-Dom
+//Importes de Icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+//Importes de CSS
 import "../estilo/suporte.css";
+//Importes de Paginas
 
 const Suporte: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);

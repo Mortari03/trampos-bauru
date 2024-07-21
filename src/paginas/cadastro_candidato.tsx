@@ -1,8 +1,13 @@
+//Importes do React
 import React from "react";
+//Importes do Router-Dom
 import { Link } from "react-router-dom";
-import "../estilo/cadcandidato.css";
+//Importes de Icones
+//Importes de CSS
+import "../estilo/cadastro_candidato.css";
+//Importes de Paginas
 
-function Candidato() {
+function CadastroCandidatos() {
   return (
     <div className="tela_cad">
       <div className="conteiner">
@@ -12,7 +17,7 @@ function Candidato() {
 
         <div className="card_cad">
           <div>
-            <Link to="/cadastro" className="Botao-Voltar_cand">
+            <Link to="/prelogin" className="Botao-Voltar_cand">
               <img className="Voltar_Cand" src="/img/Voltar.png" alt="Voltar" />
             </Link>
           </div>
@@ -83,4 +88,4 @@ function Candidato() {
   );
 }
 
-export default Candidato;
+export default CadastroCandidatos;

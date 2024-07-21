@@ -1,10 +1,14 @@
+//Importes do React
 import React from "react";
-import { Link } from "react-router-dom";
+//Importes do Router-Dom
+//Importes de Icones
+//Importes de CSS
+//Importes de Paginas
 import "../estilo/carreira.css";
 
 function Carreiras() {
   return (
-    <div className="Carreiras">
+    <div>
       <h1>Pagina De Carreiras</h1>
     </div>
   );
