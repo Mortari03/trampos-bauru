@@ -7,6 +7,9 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 //Importes de CSS
 import "../estilo/suporte.css";
 //Importes de Paginas
+import { Link } from "react-router-dom";
+//importes do Router-Dom
+
 
 const Suporte: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -14,6 +17,7 @@ const Suporte: React.FC = () => {
   const toggleDropdown = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
 
   const faqs = [
     { question: "Como fazer meu cadastro?", answer: "Lorem ipsum sit amet." },
@@ -50,6 +54,7 @@ const Suporte: React.FC = () => {
   ];
 
   return (
+
     <div>
       <div className="Sup">
         <h2>Suporte</h2>
@@ -109,6 +114,12 @@ const Suporte: React.FC = () => {
           nos mande um e-mail em suporte@trampofacil.com
         </h4>
         <br />
+      </div>
+
+      <div>
+        <Link to="/" className="Botao-Voltar">
+          <img className="Voltar" src="/img/Voltar.png" alt="Voltar" />
+        </Link>
       </div>
     </div>
   );

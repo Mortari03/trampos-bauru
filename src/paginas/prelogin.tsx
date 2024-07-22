@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 //Importes de CSS
 import "../estilo/prelogin.css";
-//Importes de Paginas
 
 function PreLogin() {
   return (

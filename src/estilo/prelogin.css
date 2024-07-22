@@ -5,7 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
+  width: auto;
   padding: 0;
 
   /* Use porcentagens para o padding */
@@ -15,7 +16,7 @@
   box-shadow: 5px 10px 10px black;
   border-radius: 50px;
   width: 90%;
-  max-width: 1000px;
+  max-width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
