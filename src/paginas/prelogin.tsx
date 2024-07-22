@@ -1,11 +1,11 @@
-//Importes do React
+// Importes do React
 import React from "react";
-//Importes do Router-Dom
+// Importes do Router-Dom
 import { Link } from "react-router-dom";
-//Importes de Icones
+// Importes de Icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
-//Importes de CSS
+// Importes de CSS
 import "../estilo/prelogin.css";
 
 function PreLogin() {
@@ -35,7 +35,6 @@ function PreLogin() {
             <h1 className="Empresas">Entrar como Empresa</h1>
           </Link>
         </div>
-
         <div className="Titulo-Final">
           <h1>
             Você é novo no Trampos{" "}

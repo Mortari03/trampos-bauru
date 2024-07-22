@@ -1,36 +1,31 @@
 /* Contêiner principal da tela de cadastro */
-
 .Conteiner-Cadastro {
   background-color: rgba(235, 230, 230, 0.63);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
-  width: auto;
+  height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
+  width: 100%; /* Garante que o contêiner ocupe toda a largura da tela */
   padding: 0;
-
-  /* Use porcentagens para o padding */
 }
 
 .Tela-cadastro {
   box-shadow: 5px 10px 10px black;
   border-radius: 50px;
   width: 90%;
-  max-width: auto;
+  max-width: 600px; /* Defina um valor máximo para a largura, ajuste conforme necessário */
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.88);
-  padding: 0;
+  background-color: rgba(255, 255, 255, 0.88); /* Alterei a cor de fundo para maior contraste */
+  padding: 20px;
   overflow: hidden;
-  /* Adicione isso se quiser esconder o overflow dentro desse contêiner */
 }
 
 .Logo-cadastro {
   padding: 5%;
-  /* Use porcentagens para o padding */
   position: absolute;
   top: 2%;
   right: 2%;
@@ -39,14 +34,12 @@
 
 .Titulo-Cadastro {
   margin-top: 10%;
-  /* Ajustado para porcentagens */
   text-align: center;
   width: 100%;
 }
 
 .Titulo-Final {
   margin-top: 2%;
-  /* Ajustado para porcentagens */
   text-align: center;
   width: 100%;
 }
@@ -58,7 +51,6 @@
 
 .Palavra-Destaque {
   color: #0059ff;
-  /* Ajuste a cor conforme necessário */
 }
 
 .Titulo-Final a:hover {
@@ -70,7 +62,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Altere de wrap para nowrap */
+  gap: 5%; /* Adicione um espaço entre os botões */
 }
 
 .Centro-Cadastro a {
@@ -92,9 +85,7 @@
   margin: 5%;
   box-shadow: 4.5px 10px 10px black;
   width: 6vh;
-  /* Ajuste conforme necessário */
   height: 6vh;
-  /* Ajuste conforme necessário */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,13 +99,9 @@
 .Botao-Cadastro {
   background-color: rgba(165, 165, 165, 0.2);
   border-radius: 50px;
-  margin: 5%;
-  /* Use porcentagens para o margin */
   box-shadow: 4.5px 10px 10px black;
   width: 20vw;
-  /* Use vw para largura flexível */
   height: 20vw;
-  /* Use vw para altura flexível */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,14 +117,32 @@
 
 .icone-cadastro {
   margin-bottom: 10px;
-  /* Espaço entre o ícone e o texto */
   font-size: 3vw;
-  /* Ajuste o tamanho conforme necessário */
 }
 
 .Candidato,
 .Empresas {
   font-size: 2vw;
-  /* Use vw para tamanho de fonte flexível */
   text-align: center;
+}
+
+/* Estilos específicos para telas grandes */
+@media (min-width: 1921px) {
+  .Centro-Cadastro {
+    gap: 2%; /* Ajuste o espaço entre os botões para telas muito grandes */
+  }
+
+  .Botao-Cadastro {
+    width: 15vw; /* Ajuste o tamanho dos botões conforme necessário */
+    height: 15vw;
+  }
+
+  .icone-cadastro {
+    font-size: 2.5vw; /* Ajuste o tamanho do ícone conforme necessário */
+  }
+
+  .Candidato,
+  .Empresas {
+    font-size: 1.5vw; /* Ajuste o tamanho do texto conforme necessário */
+  }
 }
