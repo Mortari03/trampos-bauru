@@ -28,11 +28,11 @@ function PreLogin() {
         <div className="Centro-Cadastro">
           <Link to="/login_candidato" className="Botao-Cadastro">
             <FontAwesomeIcon icon={faUser} className="icone-cadastro" />
-            <h1 className="Candidato">Entrar como Candidato</h1>
+            <h1 className="Candidato">CANDIDATO</h1>
           </Link>
           <Link to="/login_empresa" className="Botao-Cadastro">
             <FontAwesomeIcon icon={faUsers} className="icone-cadastro" />
-            <h1 className="Empresas">Entrar como Empresa</h1>
+            <h1 className="Empresas">EMPRESA</h1>
           </Link>
         </div>
         <div className="Titulo-Final">

@@ -30,6 +30,7 @@
   top: 2%;
   right: 2%;
   width: auto;
+  max-width: inherit ;
 }
 
 .Titulo-Cadastro {
@@ -61,7 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: auto;
   flex-wrap: nowrap; /* Altere de wrap para nowrap */
   gap: 5%; /* Adicione um espaço entre os botões */
 }
@@ -100,8 +101,12 @@
   background-color: rgba(165, 165, 165, 0.2);
   border-radius: 50px;
   box-shadow: 4.5px 10px 10px black;
-  width: 20vw;
-  height: 20vw;
+  max-height: 250px;
+  margin: 1.5%;
+  padding: 5%;
+  max-width: 35%;
+  width: 20vh;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,7 +117,7 @@
 }
 
 .Botao-Cadastro:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 
 .icone-cadastro {
