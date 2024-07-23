@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 //Importes de Icones
 //Importes de CSS
-import "../../estilo/home.css";
+import "../../estilo/cabecalho.css";
 //Importes de Paginas
 
 function Cabecalho() {

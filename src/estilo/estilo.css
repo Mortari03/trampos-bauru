@@ -178,11 +178,3 @@
   }
 }
 
-/* Rodapé */
-.rodape-box-geral {
-  display: flex;
-  justify-content: end;
-  background-color: #ff0000;
-  padding: 10px;
-  width: 100%;
-}

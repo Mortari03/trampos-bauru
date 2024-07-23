@@ -4,7 +4,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 //Importes de Icones
 //Importes de CSS
-import "./estilo/home.css";
+import "./estilo/cabecalho.css";
 //Importes de Paginas
 import Trampos from "./paginas/trampos";
 import Carreiras from "./paginas/carreiras";

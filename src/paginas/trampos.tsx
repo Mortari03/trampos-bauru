@@ -9,13 +9,21 @@ import Cabecalho from "../componentes/cabecalho";
 import Rodape from "../componentes/rodape";
 
 function Trampos() {
+
   return (
+
     <div className="pagina">
 
       <Cabecalho />
-      <Rodape  />
-    
-    </div >
+
+      <div className="conteudo">
+
+
+      </div>
+
+        <Rodape />
+        
+    </div>
   );
 }
 
