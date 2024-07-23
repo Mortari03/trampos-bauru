@@ -13,7 +13,6 @@ function Trampos() {
   return (
 
     <div className="pagina">
-
       <Cabecalho />
 
       <div className="conteudo">
