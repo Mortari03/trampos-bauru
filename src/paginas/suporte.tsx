@@ -57,12 +57,45 @@ const Suporte: React.FC = () => {
 
     <div>
       <div className="Sup">
-        <h2>Suporte</h2>
+        <h1>Suporte</h1>
+
+        <h3>Estamos aqui para te ajudar! Se você tiver alguma
+        dúvida, entre em contato conosco</h3>
+        
+        <div className="DadosSup">
+
+        <input type="text" placeholder="Nome"/> 
+
+        <br />
+
+        <input type="Email" placeholder="Email"/>
+
+        <br />
+        
+        <input type="textarea" placeholder="Digite sua mensagem   "/>
+
+        </div>
+
+        <div className="AreaImagem">
+          imagem
+        </div>
+
+        <div className="botao_login">
+          <button>ENVIAR</button>
+        </div>
+        
       </div>
       <div className="Faq">
-        <h2>FAQ</h2>
-      </div>
 
+        <h1>Perguntas frequentes FAQ</h1>
+
+        <div>
+          <h2 className="ImgCandidatos">imagem candidatos</h2>  
+          <h2 className="imgEmpresas">imagem empresa</h2>
+        </div>
+
+      </div>
+        
       <div className="DivCentro">
         <div className="FAQContainer">
           <div className="FAQColumn">
