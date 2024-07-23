@@ -1,17 +1,61 @@
-//Importes do React
 import React from "react";
-//Importes do Router-Dom
-//Importes de Icones
-//Importes de CSS
-import "../estilo/quemsomos.css";
-//Importes de Paginas
+import { Link } from "react-router-dom";
+import '../estilo/quemsomos.css';
+import Cabecalho from "../componentes/cabecalho";
+import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 
-function QuemSomos() {
+function Quemsomos() {
   return (
     <div>
-      <h1>PAGINA QUEM SOMOS</h1>
+      <Cabecalho />
+
+      <div className="sobreo">
+        <h1>Sobre o <span className="tramposfacil">Trampos Fácil</span></h1>
+      </div>
+
+      <div className="sobrenoscontainer1">
+        <div className="textobemvindos">
+          <h4>Bem-vindo ao Trampos Fácil! Somos uma equipe de estudantes do curso de Desenvolvimento Full Stack do Senac Bauru, unindo esforços para criar uma plataforma inovadora que facilita a busca por empregos na nossa cidade. Nosso objetivo é conectar candidatos a oportunidades de trabalho de forma eficiente e segura.</h4>
+        </div>
+        <div className="imagemsobrenos"></div>
+      </div>
+
+      <div className="sobrenoscontainer2">
+        <div className="nossamissao">
+          <h4>Facilitar o acesso a oportunidades de emprego para os cidadãos, promovendo uma experiência intuitiva e segura tanto para os candidatos quanto para as empresas.</h4>
+        </div>
+        <div className="nossavisao">
+          <h4>Ser a principal plataforma de busca de empregos em Bauru, reconhecida pela sua eficácia e impacto positivo na comunidade.</h4>
+        </div>
+      </div>
+
+      <div className="sobrenostitulo2">
+        <h1>Nossos <span className="valores">Valores</span></h1>
+      </div>
+      
+      <div className="sobrenoscontainer3">
+        <div className="inovacao">
+          <h4>Inovação: Buscamos constantemente melhorias e soluções criativas.</h4>
+        </div>
+        <div className="transparencia">
+          <h4>Transparência: Valorizamos a honestidade e a clareza em todas as interações.</h4>
+        </div>
+        <div className="inclusao">
+          <h4>Inclusão: Acreditamos que todos merecem acesso a oportunidades justas.</h4>
+        </div>
+      </div>
+      <div className="sobrenostitulo3">
+        <h1>Nossa <span className="equipe">Equipe</span></h1>
+      </div>
+      <div className="sobrenostitulo4">
+        <h1>Impacto <span className="esperado">Esperado</span></h1>
+      </div>
+      <div className="textoimpacto">
+        O Trampo Fácil tem o potencial de revolucionar a forma como os bauruenses encontram emprego, contribuindo para a redução do desemprego local e promovendo o desenvolvimento econômico da região.
+      </div>
     </div>
   );
 }
 
-export default QuemSomos;
+export default Quemsomos;
+
