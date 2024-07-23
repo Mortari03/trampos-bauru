@@ -73,8 +73,8 @@ body {
   background-color: #ffffff;
   color:  #3354a8;
   text-decoration: none;
-  width: 100px;
-  height: 100px;
+  width: 170px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,11 +83,14 @@ body {
 }
 
 .icone-cadastro {
+  padding: 20px;
   font-size: 2em;
   margin-bottom: 10px;
 }
 
 .texto-cadastro {
+  color: black;
+  text-decoration: none;
   margin: 0;
   font-size: 1em;
 }

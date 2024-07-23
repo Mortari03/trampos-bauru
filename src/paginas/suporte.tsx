@@ -8,6 +8,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "../estilo/suporte.css";
 //Importes de Paginas
 import { Link } from "react-router-dom";
+import Rodape from "../componentes/rodape";
 //importes do Router-Dom
 
 
@@ -154,6 +155,7 @@ const Suporte: React.FC = () => {
           <img className="Voltar" src="/img/Voltar.png" alt="Voltar" />
         </Link>
       </div>
+      <Rodape />
     </div>
   );
 };

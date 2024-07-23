@@ -16,7 +16,7 @@
   align-items: center;
   padding: 20px;
   border: 1px solid #ccc; /* Apenas para visualização, pode ser removido */
-  border-radius: 5px; /* Apenas para visualização, pode ser removido */
+  border-radius: 11px; /* Apenas para visualização, pode ser removido */
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8); /* Apenas para visualização, pode ser removido */
   min-height: 300px; /* Define uma altura mínima */
   min-width: 300px; /* Define uma largura mínima */
