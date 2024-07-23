@@ -1,4 +1,5 @@
-.tela_cad {
+/* Contêiner principal */
+.Conteiner_Login_Empre {
   background-color: #f0f4f8;
   display: flex;
   justify-content: center;
@@ -6,61 +7,111 @@
   height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
 }
 
-.conteiner {
-  display: flex;
+/* Estrutura do contêiner */
+.Box_Login_Empre {
   background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  max-width: 1000px; /* Ajuste conforme necessário */
-  position: relative; /* Adicionado para posicionar o botão de voltar */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc; /* Apenas para visualização, pode ser removido */
+  border-radius: 5px; /* Apenas para visualização, pode ser removido */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8); /* Apenas para visualização, pode ser removido */
+  min-height: 300px; /* Define uma altura mínima */
+  min-width: 300px; /* Define uma largura mínima */
 }
 
-.Botao-Voltar_cand {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+/* Cabeçalho do login */
+.header-login {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Ajuste conforme necessário */
 }
 
-.Voltar_Cand {
+/* Botão de voltar */
+.botao-voltar img {
   height: 40px; /* Ajuste conforme necessário */
 }
 
-.imagem_cad {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Logo */
+.logo-cadastro {
+  height: 50px; /* Ajuste conforme necessário */
 }
 
-.img_ilus {
-  max-width: 100%;
-  height: auto;
-}
-
-.card_cad {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-}
-
-.texto_emp {
-  text-align: center;
-  margin-bottom: 20px; /* Ajuste conforme necessário */
-}
-
-.box_input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px; /* Ajuste conforme necessário */
-}
-
-.box_input input[type="text"],
-.box_input input[type="email"],
-.box_input input[type="password"],
-.box_input input[type="text"] {
+/* Ícone de cadastro */
+.icone-cadastro {
+  font-size: 2rem; /* Ajuste conforme necessário */
+  color: #007bff; /* Ajuste conforme necessário */
   margin-bottom: 10px; /* Ajuste conforme necessário */
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+  border-radius: 7px;
+  border-color: #0056b3;
+  margin: 10px 0;
   padding: 10px;
+  width: 100%;
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+/* Botões */
+.botao_login {
+  padding: 10px;
+  margin-top: auto; /* Garante que o botão fique no final */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Links */
+.link-esqueci-senha {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.esqueci_senha {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.esqueci_senha:hover {
+  text-decoration: underline;
+}
+
+.ponto_de_email {
+  text-align: center; /* Ajuste conforme necessário */
+  margin: 10px 0; /* Ajuste conforme necessário */
+}
+
+.email-link {
+  color: #007bff; /* Ajuste conforme necessário */
+  text-decoration: none; /* Ajuste conforme necessário */
+}
+
+.email-link:hover {
+  text-decoration: underline; /* Ajuste conforme necessário */
+}
+
+.texto_final_empr {
+  color: #0056b3;
 }
