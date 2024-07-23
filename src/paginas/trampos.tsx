@@ -11,11 +11,9 @@ import Rodape from "../componentes/rodape";
 function Trampos() {
   return (
     <div className="pagina">
-
       <Cabecalho />
-      <Rodape  />
-    
-    </div >
+      <Rodape />
+    </div>
   );
 }
 
