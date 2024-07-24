@@ -1,12 +1,21 @@
 /*Pagina de suporte*/
 
-.Sup,
-.Faq {
+.Sup, .Faq {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 30px;
+  color:  #132144;
 }
 
+.TagSup{
+  color:  #132144 ;
+  font-size: 35px;
+}
+
+.TagPrincipal{
+  color:    #202538;
+  font-size: 23px;
+}
 .DivCentro {
   display: flex;
   justify-content: center;
@@ -33,7 +42,54 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
 }
+
+.ContainerSup{
+  display: flex; /* Alinha os itens em linha */
+  justify-content: space-around; /* Espaço igual entre os itens */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  gap: 20px; /* Espaço entre as divs (opcional) */
+}
+.DadosSup{
+  height: 200px;
+  width: 50%;
+}
+
+.BarraNome{
+  width: 50px; 
+  padding: 8px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.BarraEmail{
+  width: 300px; 
+  padding: 8px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.AreaImagem{
+  align-self:center
+  
+}
+.ContainerFaq{
+  display: flex; 
+  justify-content: space-around; /* Espaço igual entre os itens */
+  align-items: center; 
+  gap: 20px;
+}
+
+.imgCandidatos{
+  width: 100%; /* Ajuste a largura das imagens conforme necessário */
+  max-width: 300px; /* Largura máxima das imagens para manter proporção */
+  height: auto; /* Mantém a proporção das imagens */
+  display: block; /* Remove espaços em branco abaixo das imagens */
+}
+.ImgEmpresas{}
 
 .FAQItem:hover {
   background-color: #8e24aa; /* Cor ao passar o mouse */
@@ -75,7 +131,7 @@
 }
 
 .Botao-Voltar {
-  background-color: rgba(0, 17, 255, 0.479);
+  background-color: rgba(0, 0, 255, 0.418);
   border-radius: 50%;
   margin: 5%;
   box-shadow: 4.5px 10px 10px black;
@@ -85,10 +141,10 @@
   /* Ajuste conforme necessário */
   display: flex;
   justify-content: center;
-  align-items: center;
-  top: 2%;
-  left: 2%;
+  top: -6%;
+  left: 7%;
   position: absolute;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s; 
+
 }
