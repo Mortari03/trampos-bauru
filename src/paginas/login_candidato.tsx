@@ -39,6 +39,7 @@ function LoginCandidato() {
           <br />
         </div>
       </div>
+      
     </div>
   );
 }

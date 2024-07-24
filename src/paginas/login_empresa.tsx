@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "../estilo/login_empresa.css";
+import Rodape from "../componentes/rodape";
 
 function LoginEmpresa() {
   return (

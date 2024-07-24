@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import '../estilo/quemsomos.css';
 import Cabecalho from "../componentes/cabecalho";
 import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
+import Rodape from "../componentes/rodape";
 
 function Quemsomos() {
   return (
@@ -53,6 +54,7 @@ function Quemsomos() {
       <div className="textoimpacto">
         O Trampo Fácil tem o potencial de revolucionar a forma como os bauruenses encontram emprego, contribuindo para a redução do desemprego local e promovendo o desenvolvimento econômico da região.
       </div>
+      < Rodape />
     </div>
   );
 }

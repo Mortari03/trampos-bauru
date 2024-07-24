@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 import "../estilo/prelogin.css";
+import Rodape from "../componentes/rodape";
 
 function PreLogin() {
   return (

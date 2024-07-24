@@ -155,6 +155,7 @@ const Suporte: React.FC = () => {
           <img className="Voltar" src="/img/Voltar.png" alt="Voltar" />
         </Link>
       </div>
+      < Rodape />
     </div>
   );
 };
