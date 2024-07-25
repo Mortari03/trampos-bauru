@@ -69,14 +69,14 @@ const Suporte: React.FC = () => {
           <div className="DadosSup">
 
 
-            <input className="BarraNome" type="Text" placeholder="Nome" />
+            <div className="Nomebarra"> <input type="Text" placeholder="Digite seu nome " /> </div>
 
             <br />
 
             <input className="BarraEmail" type="Email" placeholder="Email" />
             <br />
-            <br />
-            <textarea placeholder="Digite sua mensagem" className="BarraEmail"></textarea>
+            
+            <input placeholder="Digite sua mensagem" className="BarraMensagem"></input> 
             <br />
             <div className="botao_login">
               <button>ENVIAR</button>
