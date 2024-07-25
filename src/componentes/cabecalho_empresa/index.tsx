@@ -31,7 +31,7 @@ function Cabecalho_Empresa() {
 
                             </li>
                                 
-                            <li>
+                            <li >
 
                                 <strong>
 
@@ -49,7 +49,7 @@ function Cabecalho_Empresa() {
 
             </div>
 
-            <div className="botao_empresa_pag_login">
+            <div>
 
                 <Link to="/empresas_configuracao">
 

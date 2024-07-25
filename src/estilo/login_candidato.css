@@ -89,18 +89,8 @@ button:hover {
   text-decoration: underline;
 }
 
-.ponto_de_email {
-  text-align: center; /* Ajuste conforme necessário */
-  margin: 10px 0; /* Ajuste conforme necessário */
-}
-
-.email-link {
-  color: #007bff; /* Ajuste conforme necessário */
-  text-decoration: none; /* Ajuste conforme necessário */
-}
-
-.email-link:hover {
-  text-decoration: underline; /* Ajuste conforme necessário */
+.texto_email{
+  color: #0056b3;
 }
 
 .texto_final_cand{

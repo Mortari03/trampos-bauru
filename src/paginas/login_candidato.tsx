@@ -18,7 +18,7 @@ function LoginCandidato() {
         <br />
         <button>GOOGLE</button>
         <br />
-        <h3 className="ponto_de_email">Ou Insira Seus <Link to="/pagina-a-linkar" className="email-link">Email</Link></h3>
+        <h3>Ou Insira Seu</h3> <h3 className="texto_email">Email</h3>
         <br />
         <input type="text" placeholder="EMAIL" />
         <br />
