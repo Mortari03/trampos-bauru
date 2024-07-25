@@ -10,6 +10,11 @@ function EmpresasConfiguracao() {
   return (
     <div>
       <h1>Configurações Empresa</h1>
+      <br />
+      <br />
+      <div className=""> infos da pag</div>
+      <br />
+      <br />
       < Rodape />
     </div>
   );
