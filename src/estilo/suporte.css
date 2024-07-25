@@ -57,11 +57,13 @@
 }
 
 .BarraNome{
-  width: 50px; 
-  padding: 8px; 
-  border: 1px solid #ccc;
-  border-radius: 4px; /* Bordas arredondadas */
-  font-size: 16px; /* Tamanho da fonte */
+  border-radius: 7px;
+  border-color: #0056b3;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+
 }
 
 .BarraEmail{
