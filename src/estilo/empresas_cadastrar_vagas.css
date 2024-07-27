@@ -3,7 +3,8 @@
 
   
 .container-princ {
-    display: flex;  
+    display: flex;
+    background-color: #f0f4f8;  
   }
 
 .h2 {
