@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.conteudo {
+    flex: 1;
+}
+
+.rodape_padrao{
+    background-color: #132144;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Mudei para center para centralizar verticalmente */
+}
+
+.twitter{
+    width: 100px;
+    height: 50px;
+}
+
+.facebook{
+    width: 100px;
+    height: 50px;
+}
+
+.instagram{
+    width: 100px;
+    height: 50px;
+}

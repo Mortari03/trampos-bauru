@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #f0f4f8;
 }
 
 /* Estilização da Tela de Cadastro */
@@ -19,10 +19,19 @@ body {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ box-shadow: 10px 10px 20px rgba( 0 , 0 , 0 , 0.8);
   text-align: center;
   max-width: 500px;
   width: 100%;
+  position: relative;
+}
+
+/* Cabeçalho de Cadastro */
+.cabecalho-cadastro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 /* Botão Voltar */
@@ -38,9 +47,8 @@ body {
 
 /* Logo */
 .logo-cadastro {
-  width: 150px;
+  width: 100px;
   height: auto;
-  margin-bottom: 20px;
 }
 
 /* Título Cadastro */
@@ -50,7 +58,7 @@ body {
 }
 
 .palavra-destaque {
-  color: #ff6347;
+  color:  #005bb3;
 }
 
 /* Centro Cadastro */
@@ -62,22 +70,29 @@ body {
 }
 
 .botao-cadastro {
-  background-color: #007bff;
-  color: white;
+  background-color: #ffffff;
+  color:  #3354a8;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  width: 170px;
+  height: 160px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .icone-cadastro {
-  font-size: 1.5em;
+  padding: 20px;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
-.candidato, .empresa {
+.texto-cadastro {
+  color: black;
+  text-decoration: none;
   margin: 0;
+  font-size: 1em;
 }
 
 /* Título Final */
@@ -86,7 +101,7 @@ body {
 }
 
 .classe-mudavel a {
-  color: #007bff;
+  color: #005bb3;
   text-decoration: none;
 }
 

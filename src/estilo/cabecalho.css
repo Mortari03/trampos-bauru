@@ -1,7 +1,7 @@
 /* Cabeçalho fixo */
 .div-conteiner {
   width: 100%;
-  position: fixed;
+  position: flex;
   top: 0;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -73,6 +73,56 @@
   /* Use vh para altura flexível */
   background: linear-gradient(to right, #d2d6f3, #8e83ec, #392ca7, #da2afd);
 }
+
+
+/* Estiliza o botão do menu */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Container para o dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estiliza o conteúdo do dropdown */
+.dropdown-content {
+  border-radius: 20px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(0, 60, 255);
+  z-index: 1;
+}
+
+/* Links dentro do dropdown */
+.dropdown-content a {
+  border-radius: 20px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Muda a cor dos links quando passamos o mouse sobre eles */
+.dropdown-content a:hover {background-color: #ffffff}
+
+/* Mostra o dropdown ao passar o mouse sobre o botão */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Muda a cor do botão ao passar o mouse sobre ele */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
 /*****************************FIM DO CABEÇALHO******************************************/
 
 /* Estilos responsivos */
@@ -125,22 +175,22 @@
 
 /* Parte do projeto onde faz a onda no cabeçalho */
 
+
 .wave-bar {
   width: 100%;
-  height: 2vh;
-  background: linear-gradient(90deg, #02d9ff, #008cff, #ff00ea);
-  /* Use vh para altura flexível */
+  height: 2vh; /* Aumenta a altura para melhor visibilidade */
+  background: linear-gradient(70deg, #7debff, #1495ff, #c300ff);
+  animation: wave 3s linear infinite; /* Ajusta a animação para repetir continuamente */
+  background-size: 200% 100%; /* Ajusta o tamanho do fundo para criar o efeito de onda */
 }
 
 @keyframes wave {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }

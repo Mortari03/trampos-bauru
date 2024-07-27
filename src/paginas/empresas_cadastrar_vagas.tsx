@@ -4,11 +4,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 //Importes de Icones
 //Importes de CSS
+import Rodape from "../componentes/rodape";
 import "../estilo/empresas_cadastrar_vagas.css";
 //Importes de Paginas
 
 function EmpresasCadastrarVagas() {
   return (
+<<<<<<< HEAD
     <div className="conteiner-princ">
        
       <form className="form">
@@ -64,6 +66,11 @@ function EmpresasCadastrarVagas() {
 
       
 
+=======
+    <div>
+      <h1>Cadastrar Vagas Empresa</h1>
+      < Rodape />
+>>>>>>> ab5ec181b582533ec3b4d13a7a051f7070dbd7ca
     </div>
   );
 }
