@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import '../../estilo/menu_empresa.css';
+import '../../estilo/menu_candidato.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 
-function Cabecalho_Empresa() {
+function Cabecalho_Candidato() {
 
     return (
-        <div className="conteiner_barra_empresa">
+        <div className="conteiner_barra_candidato">
 
             <div className="imagem">
 
@@ -19,7 +19,7 @@ function Cabecalho_Empresa() {
 
                         <nav>
 
-                            <ul className="cabecalho_empresa_infor">
+                            <ul className="cabecalho_candidato_infor">
 
                                 <li>
 
@@ -35,12 +35,34 @@ function Cabecalho_Empresa() {
 
                                     <strong>
 
-                                        <Link to="/suporte">CARREIRAS</Link>
+                                        <Link to="/carreiras">CARREIRAS</Link>
 
                                     </strong>
 
                                 </li>
-                                
+
+
+                                <li >
+
+                                    <strong>
+
+                                        <Link to="/quemsomos">QUEM SOMOS</Link>
+
+                                    </strong>
+
+                                </li>
+
+
+                                <li >
+
+                                    <strong>
+
+                                        <Link to="/suporte">SUPORTE</Link>
+
+                                    </strong>
+
+                                </li>
+
                             </ul>
 
                         </nav>
@@ -51,9 +73,9 @@ function Cabecalho_Empresa() {
 
                 <div>
 
-                    <Link to="/empresas_configuracao">
+                    <Link to="/Candidato_configuracao">
 
-                        <button className="config_perfil_empresa"><FontAwesomeIcon icon={faUsers} className="icone_empresa" /></button>
+                        <button className="config_perfil_candidato"><FontAwesomeIcon icon={faUser} className="icone_candidato" /></button>
 
                     </Link>
 
@@ -68,4 +90,4 @@ function Cabecalho_Empresa() {
     );
 }
 
-export default Cabecalho_Empresa;
+export default Cabecalho_Candidato;

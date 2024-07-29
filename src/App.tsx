@@ -26,7 +26,7 @@ import EmpresasPerfil from "./paginas/empresas_perfil";
 import EmpresasVagas from "./paginas/empresas_vagas";
 import EmpresasConfiguracao from "./paginas/empresas_configuracao";
 import Cabecalho_Empresa from "./componentes/cabecalho_empresa";
-
+import Cabecalho_Candidato from "./componentes/cabecalho_candidato";
 
 function App() {
   return (
@@ -74,6 +74,9 @@ function App() {
           
         <Route path="/empresas_configuracao" element={<EmpresasConfiguracao />} />
         { /*configuraçao do cabecalho de empresas*/ }
+
+        <Route path="cabecalho_candidato" element={<Cabecalho_Candidato />} />
+        {/*Configuração do cabecalho candidato*/}
 
         <Route
           path="/empresa_cadastrar_vagas"
