@@ -6,66 +6,66 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 function Cabecalho_Empresa() {
 
-    return (
-        <div className="conteiner_barra_empresa">
+    return(
+    <div className="conteiner_barra_empresa">
 
-            <div className="imagem">
+        <div className="imagem">
 
-                <img className="Logo" src="/img/Logo.png" alt="Logo" />
+            <img className="Logo" src="/img/Logo.png" alt="Logo" />
 
-                <div>
+            <div>
 
-                    <div className="tag_barra">
+                <div className="tag_barra">
 
-                        <nav>
+                    <nav>
 
-                            <ul className="cabecalho_empresa_infor">
+                        <ul className="cabecalho_empresa_infor">
 
-                                <li>
+                            <li>
 
-                                    <strong>
+                                <strong>
 
-                                        <Link to="/#">TRAMPOS</Link>
+                                    <Link to="/#">NOSSOS PRODUTOS</Link>
 
-                                    </strong>
+                                </strong>
 
-                                </li>
-
-                                <li >
-
-                                    <strong>
-
-                                        <Link to="/suporte">CARREIRAS</Link>
-
-                                    </strong>
-
-                                </li>
+                            </li>
                                 
-                            </ul>
+                            <li >
 
-                        </nav>
+                                <strong>
 
-                    </div>
+                                    <Link to="/suporte">SUPORTE</Link>
 
-                </div>
+                                </strong>
 
-                <div>
+                            </li>
 
-                    <Link to="/empresas_configuracao">
+                        </ul>
 
-                        <button className="config_perfil_empresa"><FontAwesomeIcon icon={faUsers} className="icone_empresa" /></button>
-
-                    </Link>
+                    </nav>
 
                 </div>
 
             </div>
 
-            <div className="wave-bar"></div>
+            <div>
+
+                <Link to="/empresas_configuracao">
+
+                    <button className="config_perfil_empresa"><FontAwesomeIcon icon={faUsers} className="icone_empresa" /></button>
+
+                </Link>
+
+            </div>
 
         </div>
+
+        <div className="wave-bar"></div>
+
+     </div>
 
     );
 }
 
-export default Cabecalho_Empresa;
+ export default Cabecalho_Empresa;
