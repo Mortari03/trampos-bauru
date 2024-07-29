@@ -92,8 +92,12 @@ const Suporte: React.FC = () => {
       </div>
       <div className="Faq">
 
-        <h1 className="TagPrincipal">Perguntas frequentes FAQ</h1>
+        <br />
+        <br />
 
+        <h1 className="TagPrincipal">Perguntas frequentes FAQ</h1>
+          <br />
+          <br />
         <div className="ContainerFaq">
           
             <div><h2 className="ImgCandidatos">imagem candidatos</h2>

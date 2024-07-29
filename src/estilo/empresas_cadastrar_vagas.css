@@ -1,0 +1,85 @@
+
+
+
+  
+.container-princ {
+    display: flex;
+    background-color: #f0f4f8;  
+  }
+
+.h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  .form {
+    width: 80%;
+    
+  }
+  
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+.regiao {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.modalidade-modelo {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.beneficio1 {
+    display: flex;
+    gap: 10px;
+  }
+  
+.beneficio {
+    flex: 1;
+  }
+  
+.btn-remover {
+    align-self: flex-end;
+    margin-bottom: 16px;
+  }
+  
+button { 
+    background-color: #3354A8;
+    color: white; 
+    border-radius: 4px;
+    cursor: pointer;  
+  }
+
+button:hover {
+    background: #005BB3;
+  }
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid;
+    border-radius: 4px;
+  }
+
+.ocultar-informacao {
+    display: flex;
+    
+}
+
+
+.btn-confirmacao-final {
+    display: flex;
+    justify-content: space-around;
+  }
+ 
+  
+  
+
+  

@@ -1,0 +1,35 @@
+.Container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .BordaEsquerda {
+    width: 250px;
+    background-color: #273141;
+    color: white;
+    padding: 20px;
+  }
+  
+  .ContentWrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #f0f2f5;
+  }
+  
+  .MainContent {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .AreaBio, .Section {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background-color: #273141;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+  }
