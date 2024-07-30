@@ -27,57 +27,48 @@ import EmpresasVagas from "./paginas/empresas_vagas";
 import EmpresasConfiguracao from "./paginas/empresas_configuracao";
 import Cabecalho_Empresa from "./componentes/cabecalho_empresa";
 import Cabecalho_Candidato from "./componentes/cabecalho_candidato";
+import Candidato_Dashboard from "./paginas/candidato_dashboard";
+import Empresas_Dashboard from "./paginas/empresas_dashboard";
 
 function App() {
   return (
     <div>
-
       <Routes>
         {/* Rotas do Menu */}
         <Route path="/" element={<Trampos />} />
         <Route path="/carreiras" element={<Carreiras />} />
         <Route path="/suporte" element={<Suporte />} />
+
         {/* Rotas do Porque Nos ? */}
-
-
         <Route path="/quemsomos" element={<QuemSomos />} />
         <Route path="/paraempresas" element={<ParaEmpresas />} />
         <Route path="/paracandidatos" element={<ParaCandidato />} />
+
         {/* Rotas de Login */}
-
-
         <Route path="/prelogin" element={<PreLogin />} />
         <Route path="/login_empresa" element={<LoginEmpresa />} />
         <Route path="/login_candidato" element={<LoginCandidato />} />
+
         {/* Rotas de Cadastro */}
-
-
         <Route path="/cadastro_candidatos" element={<CadastroCandidatos />} />
         <Route path="/cadastro_empresas" element={<CadastroEmpresa />} />
+
         {/* Rota de Esqueci a Senha */}
-
-
         <Route path="/esqueci_senha" element={<Senha />} />
+
         {/* Rota de Perfil Candidatos */}
-
-
+        <Route path="cabecalho_candidato" element={<Cabecalho_Candidato />} />
+        <Route path="/candidato_dashboard" element={<Candidato_Dashboard />} />
         <Route path="/candidato_vagas" element={<CandidatoVagas />} />
         <Route path="/candidato_perfil" element={<CandidatoPerfil />} />
         <Route
           path="/candidato_configuracao"
           element={<CandidatoConfiguracao />}
         />
+
         {/* Rota de Perfil Empresa */}
-
         <Route path="/cabecalho_empresa" element={<Cabecalho_Empresa />} />
-        {/*importe de cabeçalho de empresa logada*/}
-          
-        <Route path="/empresas_configuracao" element={<EmpresasConfiguracao />} />
-        { /*configuraçao do cabecalho de empresas*/ }
-
-        <Route path="cabecalho_candidato" element={<Cabecalho_Candidato />} />
-        {/*Configuração do cabecalho candidato*/}
-
+        <Route path="/empresa_dashboard" element={<Empresas_Dashboard />} />
         <Route
           path="/empresa_cadastrar_vagas"
           element={<EmpresasCadastrarVagas />}
@@ -88,11 +79,6 @@ function App() {
           path="/empresa_configuracao"
           element={<EmpresasConfiguracao />}
         />
-    
-
-
-
-
       </Routes>
     </div>
   );
