@@ -1,0 +1,189 @@
+/*Div ParaContainer1 contendo 2 filhas*/
+.paracontainer1 {
+    display: flex;
+    margin-top: 150px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/*Div Porquenos texto*/
+.porquenos {
+    max-width: 700px;
+    margin: 0 10px;
+    justify-content: center;
+    align-items: center;
+}
+/*Span da div Porquenos texto*/
+.maisfacilidade {
+    color: blueviolet;
+}
+/*Div Paraimagem 1 ao lado do texto*/
+.paraimagem1 {
+    margin: 10px;
+    width: 350px;
+    height: 400px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*DIVS dos Containers que Vão ter 5 Divs Filhas*/
+.paracontainer2,
+.paracontainer3,
+.paracontainer4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/*DIVS Quadrado dos Containers que Vão ter 4 Divs Filhas*/
+.quadrado2,
+.quadrado3,
+.quadrado4 {
+    width: 500px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+}
+/*DIVS Quadrado que é a IMAGEM */
+.paraimagem2,
+.paraimagem3,
+.paraimagem4 {
+    height: 100px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+}
+/*DIVS Quadrado que é o Icone */
+.paraicone2,
+.paraicone3,
+.paraicone4 {
+    font-size: 32px;
+    color: #6a1b9a;
+    height: 100px;
+    background-color: rgb(5, 39, 112);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+}
+/*DIVS Quadrado que é o texto plataformaamigavel */
+.plataformaamigavel2,
+.plataformaamigavel3,
+.plataformaamigavel4 {
+    height: 100px;
+    background-color: rgb(5, 112, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000000;
+    margin: 10px;
+}
+/*DIVS Quadrado que é o texto do tramposfacil */
+.texto2,
+.texto3,
+.texto4 {
+    height: 150px;
+    background-color: rgb(5, 112, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+    margin: 10px;
+}
+/*DIVS Principal para fazer o texto Nossos Parceiros */
+.nossosparceiros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*DIVS filha do nossosparceiros contendo o texto*/
+.nossosparceirosh1 {
+    align-items: center;
+    justify-content: center;
+}
+/*DIVS Principal para fazer AS 4 Imagens */
+.quatroimagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/*DIVS filha do quatroimagens contendo o texto*/
+.quatroimagens1,
+.quatroimagens2,
+.quatroimagens3,
+.quatroimagens4 {
+    flex-direction: column;
+    height: 250px;
+    width: 250px;
+    background-color: #6a1b9a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Aqui para deixar responsivo nesse formato 1200px */
+@media (max-width: 1200px) {
+    .quadrado2, .quadrado3, .quadrado4 {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+/* Aqui para deixar responsivo nesse formato 768px */
+@media (max-width: 768px) {
+    .paracontainer1 {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .paraimagem1 {
+        width: 100%;
+        height: auto;
+    }
+    .porquenos {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .quadrado2, .quadrado3, .quadrado4 {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .quatroimagens {
+        flex-direction: column;
+    }
+    .quatroimagens1, .quatroimagens2, .quatroimagens3, .quatroimagens4 {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+}
+/* Aqui para deixar responsivo nesse formato 480px */
+@media (max-width: 480px) {
+    .nossosparceirosh1 {
+        font-size: 30px;
+    }
+    .texto2, .texto3, .texto4 {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+}
