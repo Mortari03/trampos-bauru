@@ -10,10 +10,7 @@ import { Link } from "react-router-dom";
 
 import "../../estilo/cabecalho.css";
 
-
-
 function Cabecalho() {
-
   // Estado para controlar a visibilidade do drop-down
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -21,108 +18,66 @@ function Cabecalho() {
   // Função para alternar a visibilidade do drop-down
 
   const toggleDropdown = () => {
-
     setDropdownVisible(!dropdownVisible);
-
   };
 
-
   return (
-
     <div className="div-conteiner">
-
       <div className="imagem">
-
         <img className="Logo" src="/img/Logo.png" alt="Logo" />
 
         <div>
-
           <div className="tags-li">
-
             <nav>
-
               <ul className="infos-cab">
-
                 <li>
-
                   <strong>
-
                     <Link to="/">TRAMPOS</Link>
-
                   </strong>
-
                 </li>
 
                 <li>
-
                   <strong>
-
                     <Link to="/carreiras">CARREIRAS</Link>
-
                   </strong>
-
                 </li>
 
                 <li className="dropdown">
-
                   <strong onClick={toggleDropdown}>
-
                     <Link to="#">POR QUE NÓS ?</Link>
-
                   </strong>
 
                   {dropdownVisible && (
-
                     <div className="dropdown-content">
-
                       <Link to="/quemsomos">Quem Somos</Link>
 
-                      <Link to="/valores">Valores</Link>
+                      <Link to="/paraempresas">Para Empresas</Link>
 
-                      <Link to="/historia">História</Link>
-
+                      <Link to="/paracandidatos">Para Candidatos</Link>
                     </div>
-
                   )}
-
                 </li>
 
                 <li>
-
                   <strong>
-
                     <Link to="/suporte">SUPORTE</Link>
-
                   </strong>
-
                 </li>
-
               </ul>
-
             </nav>
-
           </div>
-
         </div>
 
         <div className="botao-config">
-
           <Link to="/prelogin">
-
             <button className="botao-cabecalho">LOGIN/CADASTRO</button>
-
           </Link>
-          
         </div>
-
       </div>
 
       <div className="wave-bar"></div>
-
     </div>
-
   );
-
 }
 
 export default Cabecalho;
