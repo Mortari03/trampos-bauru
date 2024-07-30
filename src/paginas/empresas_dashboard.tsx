@@ -18,22 +18,23 @@ import Cabecalho_Empresa from "../componentes/cabecalho_empresa";
 import EmpresasCadastrarVagas from "./empresas_cadastrar_vagas";
 import EmpresasPerfil from "./empresas_perfil";
 import EmpresasConfiguracao from "./empresas_configuracao";
-import EmpresasVagas from "./empresas_vagas";
+import EmpresasVerVagas from "./empresas_ver_vagas";
+import Rodape from "../componentes/rodape";
 
-const Empresas_Dashboard: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<string>("perfil");
-  const [submenuVisible, setSubmenuVisible] = useState<string | null>(null);
+function EmpresaDashboard() {
+  const [SessaoAtiva, setSessaoAtiva] = useState<string>("perfil");
+  const [submenuVisivel, setsubmenuVisivel] = useState<string | null>(null);
 
-  const toggleSubmenu = (menu: string) => {
-    setSubmenuVisible(submenuVisible === menu ? null : menu);
+  const alternarSubmenu = (menu: string) => {
+    setsubmenuVisivel(submenuVisivel === menu ? null : menu);
   };
 
-  const renderContent = () => {
-    switch (activeSection) {
+  const rendeConteudo = () => {
+    switch (SessaoAtiva) {
       case "cadastrar":
         return <EmpresasCadastrarVagas />;
       case "verVagas":
-        return <EmpresasVagas />;
+        return <EmpresasVerVagas />;
       case "perfil":
         return <EmpresasPerfil />;
       case "verCandidatos":
@@ -61,54 +62,49 @@ const Empresas_Dashboard: React.FC = () => {
           </div>
           <nav className="menu">
             <div className="menu-group">
-              <button onClick={() => toggleSubmenu("perfil")}>
+              <button onClick={() => alternarSubmenu("perfil")}>
                 <FontAwesomeIcon icon={faUser} /> Perfil
               </button>
-              {submenuVisible === "perfil" && (
+              {submenuVisivel === "perfil" && (
                 <div className="submenu">
-                  <button onClick={() => setActiveSection("perfil")}>
+                  <button onClick={() => setSessaoAtiva("perfil")}>
                     Perfil da Empresa
-                  </button>
-                  <button onClick={() => setActiveSection("cadastrarRH")}>
-                    Cadastrar Membros do RH
                   </button>
                 </div>
               )}
             </div>
             <div className="menu-group">
-              <button onClick={() => toggleSubmenu("vagas")}>
+              <button onClick={() => alternarSubmenu("vagas")}>
                 <FontAwesomeIcon icon={faClipboardList} /> Vagas
               </button>
-              {submenuVisible === "vagas" && (
+              {submenuVisivel === "vagas" && (
                 <div className="submenu">
-                  <button onClick={() => setActiveSection("cadastrar")}>
+                  <button onClick={() => setSessaoAtiva("cadastrar")}>
                     Cadastrar Vagas
                   </button>
-                  <button onClick={() => setActiveSection("verVagas")}>
+                  <button onClick={() => setSessaoAtiva("verVagas")}>
                     Ver Vagas Cadastradas
                   </button>
                 </div>
               )}
             </div>
             <div className="menu-group">
-              <button onClick={() => toggleSubmenu("candidatos")}>
+              <button onClick={() => alternarSubmenu("candidatos")}>
                 <FontAwesomeIcon icon={faUsers} /> Candidatos
               </button>
-              {submenuVisible === "candidatos" && (
+              {submenuVisivel === "candidatos" && (
                 <div className="submenu">
-                  <button onClick={() => setActiveSection("verCandidatos")}>
+                  <button onClick={() => setSessaoAtiva("verCandidatos")}>
                     Ver Candidatos
                   </button>
-                  <button
-                    onClick={() => setActiveSection("agendarEntrevistas")}
-                  >
+                  <button onClick={() => setSessaoAtiva("agendarEntrevistas")}>
                     Agendar Entrevistas
                   </button>
                 </div>
               )}
             </div>
 
-            <button onClick={() => setActiveSection("configuracoes")}>
+            <button onClick={() => setSessaoAtiva("configuracoes")}>
               <FontAwesomeIcon icon={faCog} /> Configurações
             </button>
             <Link to="/" className="logout-button">
@@ -116,10 +112,11 @@ const Empresas_Dashboard: React.FC = () => {
             </Link>
           </nav>
         </aside>
-        <main className="content">{renderContent()}</main>
+        <main className="content">{rendeConteudo()}</main>
       </div>
+      <Rodape />
     </div>
   );
-};
+}
 
-export default Empresas_Dashboard;
+export default EmpresaDashboard;

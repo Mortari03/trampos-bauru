@@ -4,7 +4,7 @@ import "../../estilo/menu_candidato.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 
-function Cabecalho_Candidato() {
+function CabecalhoCandidato() {
   return (
     <div className="conteiner_barra_candidato">
       <div className="imagem">
@@ -56,4 +56,4 @@ function Cabecalho_Candidato() {
   );
 }
 
-export default Cabecalho_Candidato;
+export default CabecalhoCandidato;

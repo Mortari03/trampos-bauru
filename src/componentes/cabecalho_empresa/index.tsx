@@ -4,7 +4,7 @@ import "../../estilo/menu_empresa.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
-function Cabecalho_Empresa() {
+function CabecalhoEmpresa() {
   return (
     <div className="conteiner_barra_empresa">
       <div className="imagem">
@@ -44,4 +44,4 @@ function Cabecalho_Empresa() {
   );
 }
 
-export default Cabecalho_Empresa;
+export default CabecalhoEmpresa;

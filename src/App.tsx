@@ -18,17 +18,17 @@ import LoginCandidato from "./paginas/login_candidato";
 import CadastroCandidatos from "./paginas/cadastro_candidato";
 import CadastroEmpresa from "./paginas/cadastro_empresa";
 import Senha from "./paginas/esqueci_senha";
-import CandidatoVagas from "./paginas/candidato_vagas";
+import CandidatoVagas from "./paginas/candidato_minhas_vagas";
 import CandidatoPerfil from "./paginas/candidato_perfil";
 import CandidatoConfiguracao from "./paginas/candidato_configuracao";
-import EmpresasCadastrarVagas from "./paginas/empresas_cadastrar_vagas";
+import CandidatoEntrevistasAgendadas from "./paginas/candidato_entrevistas_agendadas";
 import EmpresasPerfil from "./paginas/empresas_perfil";
-import EmpresasVagas from "./paginas/empresas_vagas";
 import EmpresasConfiguracao from "./paginas/empresas_configuracao";
-import Cabecalho_Empresa from "./componentes/cabecalho_empresa";
-import Cabecalho_Candidato from "./componentes/cabecalho_candidato";
-import Candidato_Dashboard from "./paginas/candidato_dashboard";
-import Empresas_Dashboard from "./paginas/empresas_dashboard";
+import CabecalhoEmpresa from "./componentes/cabecalho_empresa";
+import CabecalhoCandidato from "./componentes/cabecalho_candidato";
+import CandidatoDashboard from "./paginas/candidato_dashboard";
+import EmpresasDashboard from "./paginas/empresas_dashboard";
+import EmpresasVerVagas from "./paginas/empresas_ver_vagas";
 
 function App() {
   return (
@@ -57,9 +57,13 @@ function App() {
         <Route path="/esqueci_senha" element={<Senha />} />
 
         {/* Rota de Perfil Candidatos */}
-        <Route path="cabecalho_candidato" element={<Cabecalho_Candidato />} />
-        <Route path="/candidato_dashboard" element={<Candidato_Dashboard />} />
+        <Route path="cabecalho_candidato" element={<CabecalhoCandidato />} />
+        <Route path="/candidato_dashboard" element={<CandidatoDashboard />} />
         <Route path="/candidato_vagas" element={<CandidatoVagas />} />
+        <Route
+          path="/candidato_entrevistas"
+          element={<CandidatoEntrevistasAgendadas />}
+        />
         <Route path="/candidato_perfil" element={<CandidatoPerfil />} />
         <Route
           path="/candidato_configuracao"
@@ -67,14 +71,13 @@ function App() {
         />
 
         {/* Rota de Perfil Empresa */}
-        <Route path="/cabecalho_empresa" element={<Cabecalho_Empresa />} />
-        <Route path="/empresa_dashboard" element={<Empresas_Dashboard />} />
-        <Route
-          path="/empresa_cadastrar_vagas"
-          element={<EmpresasCadastrarVagas />}
-        />
+        <Route path="/cabecalho_empresa" element={<CabecalhoEmpresa />} />
+        <Route path="/empresa_dashboard" element={<EmpresasDashboard />} />
         <Route path="/empresa_perfil" element={<EmpresasPerfil />} />
-        <Route path="/empresa_vagas" element={<EmpresasVagas />} />
+        <Route
+          path="/empresa_vagas_cadastradas"
+          element={<EmpresasVerVagas />}
+        />
         <Route
           path="/empresa_configuracao"
           element={<EmpresasConfiguracao />}

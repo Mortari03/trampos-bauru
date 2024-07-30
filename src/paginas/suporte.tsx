@@ -11,14 +11,12 @@ import { Link } from "react-router-dom";
 import Rodape from "../componentes/rodape";
 //importes do Router-Dom
 
-
-const Suporte: React.FC = () => {
+function Suporte() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleDropdown = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
 
   const faqs = [
     { question: "Como fazer meu cadastro?", answer: "Lorem ipsum sit amet." },
@@ -55,58 +53,58 @@ const Suporte: React.FC = () => {
   ];
 
   return (
-
     <div>
       <div className="Sup">
         <h1 className="TagSup">Suporte</h1>
-          <br />
+        <br />
 
-        <h3 className="TagPrincipal">Estamos aqui para te ajudar! Se você tiver alguma
-          dúvida, entre em contato conosco</h3>
-          <br />
+        <h3 className="TagPrincipal">
+          Estamos aqui para te ajudar! Se você tiver alguma dúvida, entre em
+          contato conosco
+        </h3>
+        <br />
         <div className="ContainerSup">
-
           <div className="DadosSup">
-
-
-            <div className="Nomebarra"> <input type="Text" placeholder="Digite seu nome " /> </div>
+            <div className="Nomebarra">
+              {" "}
+              <input type="Text" placeholder="Digite seu nome " />{" "}
+            </div>
 
             <br />
 
             <input className="BarraEmail" type="Email" placeholder="Email" />
             <br />
-            
-            <input placeholder="Digite sua mensagem" className="BarraMensagem"></input> 
+
+            <input
+              placeholder="Digite sua mensagem"
+              className="BarraMensagem"
+            ></input>
             <br />
             <div className="botao_login">
               <button>ENVIAR</button>
             </div>
-
           </div>
 
           <div className="AreaImagem">
             <h2>Imagem a ser colocada</h2>
           </div>
         </div>
-
       </div>
       <div className="Faq">
-
         <br />
         <br />
 
         <h1 className="TagPrincipal">Perguntas frequentes FAQ</h1>
-          <br />
-          <br />
+        <br />
+        <br />
         <div className="ContainerFaq">
-          
-            <div><h2 className="ImgCandidatos">imagem candidatos</h2>
-            </div>
-            <div><h2 className="imgEmpresas">imagem empresa</h2> 
-            </div>
-          
+          <div>
+            <h2 className="ImgCandidatos">imagem candidatos</h2>
+          </div>
+          <div>
+            <h2 className="imgEmpresas">imagem empresa</h2>
+          </div>
         </div>
-
       </div>
 
       <div className="DivCentro">
@@ -167,9 +165,9 @@ const Suporte: React.FC = () => {
           <img className="Voltar" src="/img/Voltar.png" alt="Voltar" />
         </Link>
       </div>
-      < Rodape />
+      <Rodape />
     </div>
   );
-};
+}
 
 export default Suporte;

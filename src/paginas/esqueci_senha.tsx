@@ -10,44 +10,44 @@ import "../estilo/esqueci_senha.css";
 //Importes de Paginas
 
 function Senha() {
-  const [inputType, setInputType] = useState<string>("");
+  const [tipoEntrada, settipoEntrada] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [cpf, setCpf] = useState<string>("");
-  const [emailError, setEmailError] = useState<string>("");
-  const [cpfError, setCpfError] = useState<string>("");
+  const [erroEmail, seterroEmail] = useState<string>("");
+  const [erroCPF, seterroCPF] = useState<string>("");
 
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleMudarEmail = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
-    if (!validateEmail(e.target.value)) {
-      setEmailError("Por favor, insira um e-mail válido.");
+    if (!validarEmail(e.target.value)) {
+      seterroEmail("Por favor, insira um e-mail válido.");
     } else {
-      setEmailError("");
+      seterroEmail("");
     }
   };
 
-  const handleCpfChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleMudarCPF = (e: ChangeEvent<HTMLInputElement>) => {
     const cpfValue = e.target.value.replace(/\D/g, "");
     setCpf(cpfValue);
-    if (!validateCpf(cpfValue)) {
-      setCpfError("Por favor, insira um CPF válido.");
+    if (!validarCPF(cpfValue)) {
+      seterroCPF("Por favor, insira um CPF válido.");
     } else {
-      setCpfError("");
+      seterroCPF("");
     }
   };
 
-  const validateEmail = (email: string) => {
+  const validarEmail = (email: string) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
   };
 
-  const validateCpf = (cpf: string) => {
+  const validarCPF = (cpf: string) => {
     return cpf.length === 11;
   };
 
   const handleEnviar = () => {
-    if (inputType === "email") {
+    if (tipoEntrada === "email") {
       console.log(`Enviando link para ${email}`);
-    } else if (inputType === "cpf") {
+    } else if (tipoEntrada === "cpf") {
       console.log(`Enviando link para CPF ${cpf}`);
     }
   };
@@ -74,19 +74,19 @@ function Senha() {
           </div>
           <div className="senha_botoes">
             <button
-              onClick={() => setInputType("email")}
-              className={inputType === "email" ? "selected" : ""}
+              onClick={() => settipoEntrada("email")}
+              className={tipoEntrada === "email" ? "selected" : ""}
             >
               E-mail
             </button>
             <button
-              onClick={() => setInputType("cpf")}
-              className={inputType === "cpf" ? "selected" : ""}
+              onClick={() => settipoEntrada("cpf")}
+              className={tipoEntrada === "cpf" ? "selected" : ""}
             >
               Não lembro o e-mail
             </button>
           </div>
-          {inputType === "email" && (
+          {tipoEntrada === "email" && (
             <div className="input-container">
               <label htmlFor="email"></label>
               <p>
@@ -99,16 +99,16 @@ function Senha() {
                 id="email"
                 placeholder="Digite seu e-mail"
                 value={email}
-                onChange={handleEmailChange}
-                className={emailError ? "input-error" : ""}
+                onChange={handleMudarEmail}
+                className={erroEmail ? "input-error" : ""}
               />
-              {emailError && <p className="error-message">{emailError}</p>}
+              {erroEmail && <p className="error-message">{erroEmail}</p>}
               <button onClick={handleEnviar} className="enviar-button">
                 Enviar
               </button>
             </div>
           )}
-          {inputType === "cpf" && (
+          {tipoEntrada === "cpf" && (
             <div className="input-container">
               <label htmlFor="cpf"></label>
               <p>
@@ -120,10 +120,10 @@ function Senha() {
                 id="cpf"
                 placeholder="Digite seu CPF | CNPJ"
                 value={cpf}
-                onChange={handleCpfChange}
-                className={cpfError ? "input-error" : ""}
+                onChange={handleMudarCPF}
+                className={erroCPF ? "input-error" : ""}
               />
-              {cpfError && <p className="error-message">{cpfError}</p>}
+              {erroCPF && <p className="error-message">{erroCPF}</p>}
               <button onClick={handleEnviar} className="enviar-button">
                 Enviar
               </button>
