@@ -56,7 +56,7 @@ function Senha() {
     <div className="senha_corpo">
       <div className="senha_container">
         <div className="senha_topo">
-          <Link to="/" className="senha_voltar_btn">
+          <Link to="/prelogin" className="senha_voltar_btn">
             <FontAwesomeIcon icon={faCircleArrowLeft} />
             <span className="senha_voltar">Voltar</span>
           </Link>
@@ -65,7 +65,9 @@ function Senha() {
           </div>
         </div>
         <div className="senha_conteudo">
-          <h1>Esqueceu a senha?</h1>
+          <h1>
+            Esqueceu a <span className="senha_cordif">senha?</span>
+          </h1>
           <p>Não se preocupe, acontece com todo mundo</p>
           <div className="senha_imagem">
             <img src="/img/Senha.png" alt="Cadeado" />
@@ -88,8 +90,9 @@ function Senha() {
             <div className="input-container">
               <label htmlFor="email"></label>
               <p>
-                Escreva seu e-mail cadastrado no Trampos Fácil e lhe enviaremos
-                um link para definir sua nova senha
+                Escreva seu e-mail cadastrado no{" "}
+                <strong className="trampofacil_cor">Trampos Fácil</strong> e lhe
+                enviaremos um link para definir sua nova senha
               </p>
               <input
                 type="email"
