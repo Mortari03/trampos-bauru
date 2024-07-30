@@ -1,0 +1,134 @@
+.senha_corpo {
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
+}
+
+.senha_container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 11px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+  min-height: 400px;
+  width: 400px; /* Ajuste a largura conforme necessário */
+}
+
+.senha_topo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.senha_voltar_btn {
+  font-size: 15px;
+  color: #007bff;
+  text-decoration: none;
+}
+.senha_voltar {
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.senha_voltar:hover {
+  color: #0056b3;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.senha_conteudo h1 {
+  color: #0056b3;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.senha_conteudo p {
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.senha_imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.senha_imagem img {
+  height: 150px; /* Ajuste conforme necessário */
+}
+
+.senha_botoes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.senha_botoes button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.senha_botoes button:hover {
+  background-color: #0056b3;
+}
+
+.senha_botoes .selected {
+  background-color: #0056b3;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-container input {
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  margin: 0;
+}
+
+.enviar-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.enviar-button:hover {
+  background-color: #0056b3;
+}
