@@ -1,0 +1,73 @@
+.dashboard-usuario {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.menu-lateral-usuario {
+  width: 250px;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  flex-shrink: 0; /* Evita que o menu lateral encolha */
+}
+
+.logo-container-usuario {
+  margin-bottom: 30px;
+}
+
+.logo-container-usuario .logo {
+  width: 150px;
+  height: auto;
+}
+
+.menu-usuario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-usuario button,
+.menu-usuario .botao-logout-usuario {
+  background: none;
+  border: none;
+  color: #ffffff;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.menu-usuario button:hover,
+.menu-usuario .botao-logout-usuario:hover {
+  background-color: #3a0558;
+}
+
+.menu-usuario .botao-logout-usuario {
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.menu-usuario button svg,
+.menu-usuario .botao-logout-usuario svg {
+  margin-right: 10px;
+}
+
+.conteudo {
+  flex: 1;
+  padding: 40px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.conteudo h2 {
+  font-size: 24px;
+  color: #333;
+}
