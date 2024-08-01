@@ -20,12 +20,12 @@
   margin-bottom: 20px;
 }
 
-.NomeCompleto{
+.NomeCompleto {
   color: #184175;
   text-align: center;
 }
 
-.InfoContatos{
+.InfoContatos {
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -33,7 +33,7 @@
 
 }
 
-.InfoContatosH2{
+.InfoContatosH2 {
   color: #184175;
   text-align: center;
 }
@@ -50,4 +50,80 @@
   text-align: center;
   color: #184175;
 
+}
+
+.UltimoEmprego {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+
+}
+
+.UltimoEmpregoH2 {
+  color: #184175;
+  text-align: center;
+}
+
+.Educação {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.EducaçãoH2 {
+  color: #184175;
+  text-align: center;
+}
+
+.Habilidades {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+
+}
+
+.HabilidadesH2 {
+  color: #184175;
+  text-align: center;
+}
+
+
+.Certificações {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.CertificaçãoH2 {
+  color: #184175;
+  text-align: center;
+}
+
+
+.Cursos {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.CursosH2 {
+  color: #184175;
+  text-align: center;
+}
+
+.ÁreasInteresse {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.InteressesH2 {
+  color: #184175;
+  text-align: center;
 }
