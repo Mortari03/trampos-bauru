@@ -79,7 +79,7 @@ function CandidatoPerfil() {
 
           <div className="ÁreasInteresse">
             <h2 className="InteressesH2">Áreas de Interesse</h2>
-            <textarea id="BioEmprego" name="" placeholder="Descreva seu ultimo emprego..."></textarea>
+            <textarea id="BioInteresse" name="" placeholder="Qual a sua área de interesse?"></textarea>
           </div>
         </div>
       </div>
