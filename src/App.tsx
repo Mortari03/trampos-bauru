@@ -29,6 +29,7 @@ import CabecalhoCandidato from "./componentes/cabecalho_candidato";
 import CandidatoDashboard from "./paginas/candidato_dashboard";
 import EmpresasDashboard from "./paginas/empresas_dashboard";
 import EmpresasVerVagas from "./paginas/empresas_ver_vagas";
+import EmpresaPerfilEditar from "./paginas/empresa_perfil_editar";
 
 function App() {
   return (
@@ -74,10 +75,11 @@ function App() {
         <Route path="/cabecalho_empresa" element={<CabecalhoEmpresa />} />
         <Route path="/empresa_dashboard" element={<EmpresasDashboard />} />
         <Route path="/empresa_perfil" element={<EmpresasPerfil />} />
-        <Route
-          path="/empresa_vagas_cadastradas"
-          element={<EmpresasVerVagas />}
-        />
+        <Route path="/empresa_vagas_cadastradas" element={<EmpresasVerVagas />} />
+        <Route path="/empresa_perfil_editar" element={<EmpresaPerfilEditar />} />
+          
+          
+       
         <Route
           path="/empresa_configuracao"
           element={<EmpresasConfiguracao />}
