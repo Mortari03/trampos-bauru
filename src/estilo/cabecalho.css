@@ -1,9 +1,6 @@
 /* Cabeçalho fixo */
 .div-conteiner {
   width: 100%;
-  position: flex;
-  top: 0;
-  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -12,16 +9,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 2% 5%;
-  /* Use porcentagens para o padding */
 }
 
 .Logo {
   height: auto;
-  /* Alterado para auto */
   max-height: 10vh;
-  /* Ajusta a altura máxima conforme necessário */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para transformações e filtro */
+}
+
+.Logo:hover {
+  transform: scale(1.1); /* Aumenta a escala da logo ao passar o mouse */
+  filter: brightness(1.1); /* Aumenta o brilho da logo ao passar o mouse */
 }
 
 .tags-li {
@@ -38,150 +37,112 @@
 }
 
 .infos-cab li {
-  margin: 0 2%;
+  position: relative; /* Para o efeito de hover */
+  margin: 0 15px; /* Espaço entre os itens do menu */
 }
 
 .infos-cab li a {
   text-decoration: none;
-  color: black;
+  display: flex; /* Utiliza flexbox para alinhar ícone e texto */
+  align-items: center; /* Alinha verticalmente o ícone e o texto */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* Montserrat Bold */
+  font-size: 15px;
+  color: #132144;
+  gap: 10px;
 }
 
-.botao-config {
-  padding-right: 5%;
-  /* Use porcentagens para o padding */
-  display: flex;
-  align-items: center;
+/* Adiciona espaço entre ícone e texto */
+.infos-cab strong .fa {
+  margin-right: 100px; /* Espaço entre ícone e texto */
 }
 
-.botao-cabecalho {
-  padding: 2% 5%;
-  /* Use porcentagens para o padding */
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.botao-cabecalho:hover {
-  background-color: #0056b3;
-}
-
-.cor-cabecalho {
+/* Efeito de hover moderno */
+.infos-cab li a::after {
+  content: "";
+  display: block;
   width: 100%;
-  height: 1.5vh;
-  /* Use vh para altura flexível */
-  background: linear-gradient(to right, #d2d6f3, #8e83ec, #392ca7, #da2afd);
+  height: 2px; /* Altura da linha */
+  background: #005bb3; /* Cor da linha */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: 5px; /* Distância da linha em relação ao texto */
 }
 
-
-/* Estiliza o botão do menu */
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+.infos-cab li a:hover::after {
+  transform: scaleX(1);
 }
 
-/* Container para o dropdown */
+/* Estilos para o dropdown */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Estiliza o conteúdo do dropdown */
 .dropdown-content {
-  border-radius: 20px;
-  display: none;
+  border-radius: 5px;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgb(0, 60, 255);
+  background-color: #f0f4f8;
+  min-width: 205px;
+  box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.8);
   z-index: 1;
+  display: none; /* Inicialmente oculto */
+}
+
+/* Mostrar dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Links dentro do dropdown */
 .dropdown-content a {
   border-radius: 20px;
-  color: black;
   padding: 12px 16px;
   text-decoration: none;
+  display: flex; /* Utiliza flexbox para alinhar ícone e texto */
+  align-items: center; /* Alinha verticalmente o ícone e o texto */
+  position: relative; /* Para o efeito de hover */
+}
+
+/* Adiciona espaço entre ícone e texto no dropdown */
+.dropdown-content a .fa {
+  margin-right: 10px; /* Espaço entre ícone e texto */
+}
+
+/* Efeito hover nos links do dropdown */
+.dropdown-content a::after {
+  content: "";
   display: block;
+  width: 100%;
+  height: 4px; /* Altura da linha */
+  background: #005bb3; /* Cor da linha */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: 5px; /* Distância da linha em relação ao texto */
 }
 
-/* Muda a cor dos links quando passamos o mouse sobre eles */
-.dropdown-content a:hover {background-color: #ffffff}
-
-/* Mostra o dropdown ao passar o mouse sobre o botão */
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown-content a:hover::after {
+  transform: scaleX(1);
 }
 
-/* Muda a cor do botão ao passar o mouse sobre ele */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-/*****************************FIM DO CABEÇALHO******************************************/
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  .imagem {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .infos-cab {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .infos-cab li {
-    margin: 5px 0;
-    /* Ajustado para porcentagens */
-  }
-
-  .Logo {
-    max-height: 5vh;
-    /* Ajusta a altura máxima conforme necessário */
-  }
-
-  .Logo-cadastro {
-    max-width: 10vw;
-    /* Ajuste conforme necessário */
-    top: 1%;
-    right: 1%;
-  }
-
-  .Titulo-Cadastro {
-    margin-top: 8%;
-    /* Ajustado para porcentagens */
-  }
-
-  .Botao-Cadastro {
-    width: 15vw;
-    /* Use vw para largura flexível */
-    height: 15vw;
-    /* Use vw para altura flexível */
-  }
-
-  .Candidato,
-  .Empresas {
-    font-size: 3vw;
-    /* Ajuste conforme necessário */
-  }
+.botao-config {
+  padding-left: 25px;
+  padding-right: -25px;
+  display: flex;
+  align-items: center;
 }
 
 /* Parte do projeto onde faz a onda no cabeçalho */
-
-
 .wave-bar {
   width: 100%;
-  height: 2vh; /* Aumenta a altura para melhor visibilidade */
+  height: 2vh;
   background: linear-gradient(70deg, #7debff, #1495ff, #c300ff);
-  animation: wave 3s linear infinite; /* Ajusta a animação para repetir continuamente */
-  background-size: 200% 100%; /* Ajusta o tamanho do fundo para criar o efeito de onda */
+  animation: wave 3s linear infinite;
+  background-size: 200% 100%;
 }
 
 @keyframes wave {

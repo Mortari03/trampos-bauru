@@ -1,139 +1,141 @@
 /* div do TITULO SOBRE O*/
 .sobreo {
-    color: rgb(3, 135, 250);
-    display: flex;
-    padding-top: 50px;
-    justify-content: center;
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
 }
 /* Continuação da div do TITULO tramposfacil */
 .tramposfacil {
-    color: #2422af;
+  color: #2422af;
 }
 /* Div Principal do Container 1, contendo 2 divis Filhas */
 .sobrenoscontainer1 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
 }
 /* Div filha do textobemvindos (sobrenoscontainer1)  */
 .textobemvindos {
-    color: #000;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    padding: 20px;
-    width: 500px;
-    height: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #000;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  width: 500px;
+  height: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 /* Div filha imagemsobrenos (sobrenoscontainer1) */
 .imagemsobrenos {
-    background-color: aqua;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    width: 500px;
-    height:400px;
+  background-color: aqua;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  width: 500px;
+  height: 400px;
 }
 /* Div Principal do Container 2, contendo 2 divis Filhas */
 .sobrenoscontainer2 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
 }
 /* Div Nossa missao (sobrenoscontainer2)  */
-.nossamissao, .nossavisao {
-    background-color: #f5f5f5;
-    color: #000;
-    margin: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    height: 400px;
+.nossamissao,
+.nossavisao {
+  background-color: #f5f5f5;
+  color: #000;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 400px;
 }
 /* Div TITULO Nossos Valores */
 .sobrenostitulo2 {
-    color: #6a0dad;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  color: #6a0dad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* Continuação da div do TITULO Nossos Valores*/
 .valores {
-    color: #2422af;
+  color: #2422af;
 }
 /* Div Principal do Container 3, contendo 3 divis Filhas */
 .sobrenoscontainer3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
 }
 /* Div inovacao (sobrenoscontainer3) */
-.inovacao, .transparencia, .inclusao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    padding: 20px;
-    width: 300px;
-    height: 300px;
-    border: 2px dashed rgb(12, 0, 24);
-    border-radius: 50px;
+.inovacao,
+.transparencia,
+.inclusao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  border: 2px dashed rgb(12, 0, 24);
+  border-radius: 50px;
 }
 /* Div inovacao (sobrenoscontainer3) */
 .inovacao {
-    color: purple;
+  color: purple;
 }
 /* Div transparencia (sobrenoscontainer3) */
 .transparencia {
-    color: purple;
+  color: purple;
 }
 /* Div inclusao (sobrenoscontainer3) */
 .inclusao {
-    color: #000;
+  color: #000;
 }
 /* Div TITULO Nossa Equipe */
 .sobrenostitulo3 {
-    margin: 10px;
-    padding: 20px;
-    color: #6a0dad;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  color: #6a0dad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* Continuação da div do TITULO Nossa EQUIPE*/
 .equipe {
-    color: #2422af;
+  color: #2422af;
 }
 /* Div TITULO Impacto Esperado */
 .sobrenostitulo4 {
-    color: #6a0dad;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
+  color: #6a0dad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
 }
 /* Continuação da div do TITULO Nossa EQUIPE*/
 .esperado {
-    color: #2422af;
+  color: #2422af;
 }
 /* Div Principal Impacto Esperado */
 .textoimpacto {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
 }
 /* Div do Texto Impacto Esperado */
 .textoimpacto1 {
-    color: #000;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-size: 30px;
+  color: #000;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 30px;
 }
