@@ -1,13 +1,73 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Roboto:wght@700&display=swap");
+/*RESET de pagina*/
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Estilo global para o corpo do texto */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f0f4f8;
+}
+
+/* Títulos principais */
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900; /* Montserrat Black */
+  font-size: 70px;
+  color: #3354a8;
+}
+
+/* Subtítulos */
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800; /* Montserrat ExtraBold */
+  font-size: 30px;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800; /* Montserrat ExtraBold */
+  font-size: 20px;
+}
+
+/* Texto e outros */
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; /* Montserrat Medium */
+  font-size: 10px;
+}
+
+/* TAGs */
+.tag {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700; /* Roboto Bold */
+}
+
+/* Menus e botões */
+.menu {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* Montserrat Bold */
+  font-size: 15px;
+  color: #132144;
+}
+
+.botoes-principais {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* Montserrat Bold */
+  font-size: 15px;
+  padding: 12px 24px; /*Ajuste o padding conforme necessário */
+  background-color: #3354a8;
+  color: #fff;
+  border: none;
+  border-radius: 5px; /* Aumenta o raio da borda para deixar o botão mais arredondado */
+  cursor: pointer;
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.botoes-principais:hover {
+  background-color: #005bb3;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra no hover */
 }

@@ -1,80 +1,104 @@
-// Importes do React
-
 import React, { useState } from "react";
-
-// Importes do Router-Dom
-
 import { Link } from "react-router-dom";
-
-// Importes de CSS
-
 import "../../estilo/cabecalho.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSuitcase,
+  faHome,
+  faQuestionCircle,
+  faHeadset,
+  faPeopleArrows,
+  faBuilding,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Cabecalho() {
-  // Estado para controlar a visibilidade do drop-down
-
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
-  // Função para alternar a visibilidade do drop-down
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
 
-  const toggleDropdown = () => {
-    setDropdownVisible(!dropdownVisible);
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
   };
 
   return (
     <div className="div-conteiner">
       <div className="imagem">
         <img className="Logo" src="/img/Logo.png" alt="Logo" />
-
         <div>
-          <div className="tags-li">
+          <div className="tags-li menu">
             <nav>
               <ul className="infos-cab">
                 <li>
-                  <strong>
-                    <Link to="/">TRAMPOS</Link>
+                  <strong className="menu">
+                    <Link to="/">
+                      <FontAwesomeIcon icon={faHome} className="icone" />
+                      TRAMPOS
+                    </Link>
                   </strong>
                 </li>
-
                 <li>
-                  <strong>
-                    <Link to="/carreiras">CARREIRAS</Link>
+                  <strong className="menu">
+                    <Link to="/carreiras">
+                      <FontAwesomeIcon icon={faSuitcase} className="icone" />
+                      CARREIRAS
+                    </Link>
                   </strong>
                 </li>
-
-                <li className="dropdown">
-                  <strong onClick={toggleDropdown}>
-                    <Link to="#">POR QUE NÓS ?</Link>
+                <li
+                  className="dropdown"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <strong>
+                    <Link to="#">
+                      <FontAwesomeIcon
+                        icon={faQuestionCircle}
+                        className="icone"
+                      />
+                      POR QUE NÓS ?
+                    </Link>
                   </strong>
-
                   {dropdownVisible && (
-                    <div className="dropdown-content">
-                      <Link to="/quemsomos">Quem Somos</Link>
-
-                      <Link to="/paraempresas">Para Empresas</Link>
-
-                      <Link to="/paracandidatos">Para Candidatos</Link>
+                    <div className="dropdown-content menu">
+                      <Link to="/quemsomos">
+                        <FontAwesomeIcon
+                          icon={faPeopleArrows}
+                          className="icone"
+                        />
+                        Quem Somos
+                      </Link>
+                      <Link to="/paraempresas">
+                        <FontAwesomeIcon icon={faBuilding} className="icone" />
+                        Para Empresas
+                      </Link>
+                      <Link to="/paracandidatos">
+                        <FontAwesomeIcon icon={faUser} className="icone" />
+                        Para Candidatos
+                      </Link>
                     </div>
                   )}
                 </li>
-
                 <li>
-                  <strong>
-                    <Link to="/suporte">SUPORTE</Link>
+                  <strong className="menu">
+                    <Link to="/suporte">
+                      <FontAwesomeIcon icon={faHeadset} className="icone" />
+                      SUPORTE
+                    </Link>
                   </strong>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
-
         <div className="botao-config">
           <Link to="/prelogin">
-            <button className="botao-cabecalho">LOGIN/CADASTRO</button>
+            <button className="botoes-principais">LOGIN | CADASTRO</button>
           </Link>
         </div>
       </div>
-
       <div className="wave-bar"></div>
     </div>
   );
