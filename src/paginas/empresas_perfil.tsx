@@ -1,6 +1,9 @@
 //Importes do React
 //Importes do Router-Dom
 //Importes de Icones
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faBullseye, faIndustry, faUsers, faCalendar, faEnvelope, faPhone, faMapMarkerAlt, faGlobe, faEdit} from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faLinkedin, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 //Importes de CSS
 import "../estilo/empresas_perfil.css";
 //Importes de Paginas

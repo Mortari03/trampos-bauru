@@ -1,6 +1,8 @@
 //Importes do React
 //Importes do Router-Dom
 //Importes de Icones
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
 //Importes de CSS
 import "../estilo/empresa-perfil-editar.css";
 
@@ -13,15 +15,18 @@ function EmpresaPerfilEditar() {
       <div className="nome_empresa">
         <div id="logo"></div>
         <div className="h1_empresa">
-          <h1>Nome da empresa</h1> 
+          <h1>Nome da empresa </h1> 
         </div>
-        <div className="icone_empresa">icone</div>
+        <div>
+          <FontAwesomeIcon icon={faFloppyDisk} />
+        </div>
       </div>
 
       <div className="wave-bar"></div>
 
       <div>
         <h1>Foto da empresa</h1>
+        <input type="file"/>
       </div>
 
       <div>
