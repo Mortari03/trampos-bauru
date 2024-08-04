@@ -1,0 +1,49 @@
+/* Contêiner principal da página */
+.aviso_container {
+  text-align: center;
+  margin: 30px auto;
+  color: #132144;
+  background-color: #f0f4f8; /* Fundo claro para uma leitura mais agradável */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+  min-width: 500px; /* Limita a largura para melhor legibilidade */
+}
+
+/* Título principal da página */
+.aviso_titulo {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #005bb3; /* Cor principal do site */
+  margin-bottom: 30px;
+}
+
+/* Subtítulos das seções */
+.aviso_subtitulo {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #00b3b3; /* Cor secundária para consistência */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00b3b3; /* Linha abaixo do subtítulo para destaque */
+  padding-bottom: 10px; /* Espaço entre o texto e a linha */
+}
+
+/* Texto das seções */
+.aviso_texto {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333; /* Cor de texto escura para melhor legibilidade */
+  margin-bottom: 30px;
+}
+
+/* Links de contato */
+.aviso_texto a {
+  color: #005bb3; /* Cor do link */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  font-weight: bold; /* Destaca o link */
+}
+
+.aviso_texto a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}

@@ -31,6 +31,8 @@ import EmpresasDashboard from "./paginas/empresas_dashboard";
 import EmpresasVerVagas from "./paginas/empresas_ver_vagas";
 import EmpresaPerfilEditar from "./paginas/empresa_perfil_editar";
 import Quemsomos from "./paginas/quemsomos";
+import PoliticaDePrivacidade from "./paginas/politicadeprivacidade";
+import AvisoLegal from "./paginas/avisolegal";
 
 function App() {
   return (
@@ -84,11 +86,16 @@ function App() {
           path="/empresa_perfil_editar"
           element={<EmpresaPerfilEditar />}
         />
-
         <Route
           path="/empresa_configuracao"
           element={<EmpresasConfiguracao />}
         />
+        {/* Rota de Politicas de Privacidades e outras leis */}
+        <Route
+          path="/politica_privacidade"
+          element={<PoliticaDePrivacidade />}
+        />
+        <Route path="/aviso_legal" element={<AvisoLegal />} />
       </Routes>
     </div>
   );

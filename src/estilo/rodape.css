@@ -1,38 +1,60 @@
-html, body {
-    height: 100%;
-    margin: 0;
+.rodape_padrao {
+  background-color: #f5f5f5; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto */
+  padding: 40px 0; /* Espaçamento vertical */
 }
 
-.pagina {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.container_rodape {
+  max-width: 1200px; /* Largura máxima do rodapé */
+  margin: 0 auto; /* Centralizar o rodapé */
+  display: grid; /* Layout em grid */
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+  gap: 40px; /* Espaçamento entre colunas */
 }
 
-.conteudo {
-    flex: 1;
+.coluna_rodape {
+  display: flex;
+  flex-direction: column; /* Layout vertical */
 }
 
-.rodape_padrao{
-    background-color: #132144;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Mudei para center para centralizar verticalmente */
+.coluna_rodape h4 {
+  font-size: 18px; /* Tamanho da fonte do título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
 
-.twitter{
-    width: 100px;
-    height: 50px;
+.coluna_rodape a {
+  color: #333; /* Cor do texto dos links */
+  text-decoration: none; /* Remover sublinhado dos links */
+  font-size: 14px; /* Tamanho da fonte dos links */
+  margin-bottom: 10px; /* Espaçamento abaixo dos links */
+  transition: color 0.3s ease; /* Transição suave da cor */
 }
 
-.facebook{
-    width: 100px;
-    height: 50px;
+.coluna_rodape a:hover {
+  color: #00b3b3; /* Cor do link ao passar o mouse */
 }
 
-.instagram{
-    width: 100px;
-    height: 50px;
+.coluna_social {
+  align-items: center; /* Centralizar ícones sociais */
+}
+
+.icones_sociais {
+  display: flex; /* Layout horizontal para ícones */
+  gap: 20px; /* Espaçamento entre ícones */
+}
+
+.icone {
+  color: #333; /* Cor dos ícones */
+  font-size: 24px; /* Tamanho dos ícones */
+  transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+.icone:hover {
+  color: #00b3b3; /* Cor dos ícones ao passar o mouse */
+}
+
+.secao_direitos {
+  text-align: center; /* Centralizar o texto */
+  font-size: 12px; /* Tamanho da fonte do copyright */
+  margin-top: 20px; /* Espaçamento acima do copyright */
 }
