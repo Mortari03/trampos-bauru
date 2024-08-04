@@ -1,29 +1,27 @@
-/* CSS Geral */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
 /* Container Geral */
 .container-cadastro {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   height: 100vh;
   background-color: #f0f4f8;
 }
 
-/* Estilização da Tela de Cadastro */
-.tela-cadastro {
+/* Card de Cadastro */
+.card-cadastro {
   background: white;
   padding: 20px;
-  border-radius: 10px;
- box-shadow: 10px 10px 20px rgba( 0 , 0 , 0 , 0.8);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 500px;
-  width: 100%;
-  position: relative;
+  width: 500px; /* Largura fixa para garantir que o card seja quadrado */
+  height: 500px; /* Altura fixa para garantir que o card seja quadrado */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Cabeçalho de Cadastro */
@@ -47,57 +45,59 @@ body {
 
 /* Logo */
 .logo-cadastro {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 
 /* Título Cadastro */
 .titulo-cadastro {
-  font-size: 1.5em;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .palavra-destaque {
-  color:  #005bb3;
+  color: #005bb3;
 }
 
 /* Centro Cadastro */
 .centro-cadastro {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .botao-cadastro {
   background-color: #ffffff;
-  color:  #3354a8;
+  color: #3354a8;
   text-decoration: none;
-  width: 170px;
-  height: 160px;
+  width: 45%;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .icone-cadastro {
-  padding: 20px;
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .texto-cadastro {
   color: black;
   text-decoration: none;
   margin: 0;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 /* Título Final */
 .titulo-final {
-  margin-top: 20px;
+  margin-top: 1rem;
 }
 
 .classe-mudavel a {
@@ -107,4 +107,12 @@ body {
 
 .classe-mudavel a:hover {
   text-decoration: underline;
+}
+
+.conteiner-final{
+  background: white;
+  border-top-right-radius:10px ;
+  border-bottom-right-radius:10px ;
+  width: 500px;
+  height: 500px;
 }
