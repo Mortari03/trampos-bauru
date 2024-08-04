@@ -1,58 +1,64 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleArrowLeft,
+  faUser,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
 import "../estilo/prelogin.css";
 
 function PreLogin() {
-  // Hook para navegação
-  const navigate = useNavigate();
-
-  // Função para voltar à página anterior
-  const handleBackClick = () => {
-    navigate(-1);
-  };
   return (
-    <div className="container-cadastro">
-      <div className="card-cadastro">
-        <div className="cabecalho-cadastro">
-          <button className="botao-voltar" onClick={handleBackClick}>
-            <FontAwesomeIcon icon={faArrowLeft} className="icone-voltar" />
-          </button>
-          <img className="logo-cadastro" src="/img/Logo.png" alt="Logo" />
-        </div>
-        <h1 className="titulo-cadastro">
-          Faça seu Login No <span className="palavra-destaque">TRAMPOS FÁCIL</span>
-        </h1>
-        <div className="centro-cadastro">
-          <Link to="/login_candidato" className="botao-cadastro">
-            <FontAwesomeIcon icon={faUser} className="icone-cadastro" />
-            <span className="texto-cadastro">Candidato</span>
+    <div className="prelogin_container">
+      <div className="prelogin_card">
+        <div className="prelogin_card_cabecalho">
+          <Link to="/" className="btn_voltar">
+            <FontAwesomeIcon icon={faCircleArrowLeft} />
+            <span className="texto_voltar">Voltar</span>
           </Link>
-          <Link to="/login_empresa" className="botao-cadastro">
-            <FontAwesomeIcon icon={faUsers} className="icone-cadastro" />
-            <span className="texto-cadastro">Empresa</span>
+          <img className="Logo" src="/img/Logo.png" alt="Logo" />
+        </div>
+        <h3>
+          Faça seu login no <br />
+          <span className="texto_alternativo_ciano">TRAMPOS FÁCIL</span>
+        </h3>
+        <div className="prelogin_centro">
+          <Link to="/login_candidato" className="prelogin_botao">
+            <FontAwesomeIcon icon={faUser} className="prelogin_icone" />
+            <span className="texto_alternativo_azulvivo">Candidato</span>
+          </Link>
+          <Link to="/login_empresa" className="prelogin_botao">
+            <FontAwesomeIcon icon={faUsers} className="prelogin_icone" />
+            <span className="texto_alternativo_azulvivo  ">Empresa</span>
           </Link>
         </div>
-
       </div>
-
-      <div className="conteiner-final">
-
-        <div className="titulo-final">
-          <h1>
-            Você é novo no Trampos <span className="palavra-destaque">Fácil</span>
-          </h1>
-
-          <h2 className="classe-mudavel">
-            Cadastre-se como <Link to="/cadastro_candidatos">Candidato</Link><br /> ou{" "}
-            <Link to="/cadastro_empresas">Empresa</Link>
-          </h2>
-
+      <div className="prelogin_container_final">
+        <div className="prelogin_titulo_final">
+          <h3>
+            Você é novo no{" "}
+            <span className="texto_alternativo_ciano">Trampos Fácil</span>
+          </h3>
+          <p>
+            Cadastre-se como
+            <br />
+            <Link
+              to="/cadastro_candidatos"
+              className="texto_alternativo_azulvivo pre_candidato"
+            >
+              Candidato
+            </Link>
+            ou
+            <Link
+              to="/cadastro_empresas"
+              className="texto_alternativo_azulvivo  pre_candidato"
+            >
+              Empresa
+            </Link>
+          </p>
         </div>
-
       </div>
-
     </div>
   );
 }

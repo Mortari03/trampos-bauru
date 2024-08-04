@@ -1,23 +1,23 @@
 /* Container Geral */
-.container-cadastro {
+.prelogin_container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #dfd9ca;
+  background-color: #f0f4f8;
+  gap: 10px; /* Espaçamento entre os dois cards */
 }
 
 /* Card de Cadastro */
-.card-cadastro {
-  background: white;
-  padding: 20px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.prelogin_card {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  width: 500px; /* Largura fixa para garantir que o card seja quadrado */
-  height: 500px; /* Altura fixa para garantir que o card seja quadrado */
+  width: 450px;
+  height: 400px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -25,50 +25,28 @@
 }
 
 /* Cabeçalho de Cadastro */
-.cabecalho-cadastro {
+.prelogin_card_cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-/* Botão Voltar */
-.botao-voltar {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.voltar {
-  width: 30px;
-  height: 30px;
-}
-
-/* Logo */
-.logo-cadastro {
-  width: 80px;
-  height: auto;
-}
-
 /* Título Cadastro */
-.titulo-cadastro {
+.prelogin_titulo {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.palavra-destaque {
-  color: #005bb3;
-}
-
 /* Centro Cadastro */
-.centro-cadastro {
+.prelogin_centro {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-around;
   margin-bottom: 1rem;
 }
 
-.botao-cadastro {
-  background-color: #ffffff;
+.prelogin_botao {
+  background: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
   color: #3354a8;
   text-decoration: none;
   width: 45%;
@@ -77,44 +55,47 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  padding: 1rem;
+  padding: 10px;
   box-sizing: border-box;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 10); /* Adiciona sombra */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
 }
 
+.prelogin_botao:hover {
+  color: #005bb3;
+  transform: translateY(-5px); /* Eleva o botão ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
 
-.icone-cadastro {
-  font-size: 2rem;
+.prelogin_icone {
+  font-size: 50px;
   margin-bottom: 0.5rem;
 }
 
-.texto-cadastro {
-  color: black;
-  text-decoration: none;
-  margin: 0;
-  font-size: 1rem;
-}
-
 /* Título Final */
-.titulo-final {
-  margin-top: 1rem;
+.prelogin_titulo_final {
+  margin-top: 40px;
+  text-align: center;
 }
 
-.classe-mudavel a {
-  color: #005bb3;
-  text-decoration: none;
-}
-
-.classe-mudavel a:hover {
-  text-decoration: underline;
-}
-
-.conteiner-final{
+/* Container Final */
+.prelogin_container_final {
   background: white;
-  border-top-right-radius:10px ;
-  border-bottom-right-radius:10px ;
-  width: 500px;
-  height: 500px;
+  border-radius: 5px;
+  width: 450px;
+  height: 400px;
+  padding: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.pre_candidato:hover {
+  border-bottom: 2px solid #00b3b3;
 }

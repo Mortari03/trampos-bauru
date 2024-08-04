@@ -1,24 +1,17 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "../estilo/login_candidato.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function LoginCandidato() {
-    // Hook para navegação
-    const navigate = useNavigate();
-
-    // Função para voltar à página anterior
-    const handleBackClick = () => {
-      navigate(-1);
-    };
   return (
     <div className="Conteiner_Login_cand">
       <div className="Box_Login_cand">
         <div className="header-login">
-        <button className="botao-voltar" onClick={handleBackClick}>
-            <FontAwesomeIcon icon={faArrowLeft} className="icone-voltar" />
-          </button>
+          <Link to="/prelogin" className="botao-voltar">
+            <img className="voltar" src="/img/Voltar.png" alt="Voltar" />
+          </Link>
           <img className="logo-cadastro" src="/img/Logo.png" alt="Logo" />
         </div>
         <FontAwesomeIcon icon={faUser} className="icone_cand"></FontAwesomeIcon>

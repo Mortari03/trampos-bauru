@@ -1,26 +1,18 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faUsers } from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from "react-router-dom";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import "../estilo/login_empresa.css";
 import Rodape from "../componentes/rodape";
 
 function LoginEmpresa() {
-    // Hook para navegação
-    const navigate = useNavigate();
-
-    // Função para voltar à página anterior
-    const handleBackClick = () => {
-      navigate(-1);
-    };
-  
   return (
     <div className="Conteiner_Login_Empre">
       <div className="Box_Login_Empre">
         <div className="header-login">
-        <button className="botao-voltar" onClick={handleBackClick}>
-            <FontAwesomeIcon icon={faArrowLeft} className="icone-voltar" />
-          </button>
+          <Link to="/prelogin" className="botao-voltar">
+            <img className="voltar" src="/img/Voltar.png" alt="Voltar" />
+          </Link>
           <img className="logo-cadastro" src="/img/Logo.png" alt="Logo" />
         </div>
         <FontAwesomeIcon icon={faUsers} className="icone-cadastro" />
