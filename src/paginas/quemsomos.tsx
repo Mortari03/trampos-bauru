@@ -61,26 +61,29 @@ function Quemsomos() {
         </h1>
       </div>
 
-      <div className="qs_container1">
+      <div className="qs_container_principal">
         <div className="qs_texto_bemvindos">
           <p>
-            Bem-vindo ao Trampos Fácil! Somos uma equipe de estudantes do curso
-            de Desenvolvimento Full Stack do Senac Bauru, unindo esforços para
-            criar uma plataforma inovadora que facilita a busca por empregos na
-            nossa cidade. Nosso objetivo é conectar candidatos a oportunidades
-            de trabalho de forma eficiente e segura.
+            Bem-vindo ao{" "}
+            <strong className="texto_alternativo_ciano"> Trampos Fácil!</strong>{" "}
+            Somos uma equipe de estudantes do curso de Desenvolvimento Full
+            Stack do{" "}
+            <strong className="texto_alternativo_senac">Senac Bauru</strong>,
+            unindo esforços para criar uma plataforma inovadora que facilita a
+            busca por empregos na nossa cidade. Nosso objetivo é conectar
+            candidatos a oportunidades de trabalho de forma eficiente e segura.
           </p>
         </div>
         <div className="qs_imagem_sobrenos"></div>
       </div>
 
-      <div className="qs_container2">
-        <div className="qs_container2_item">
-          <div className="qs_imagem_container2"></div>
-          <div className="qs_missao_container2">
+      <div className="qs_mv_princial">
+        <div className="qs_item_missao">
+          <div className="qs_imagem_missao"></div>
+          <div className="qs_titulo_mv">
             <h2 className="texto_alternativo_azul">Nossa Missão</h2>
           </div>
-          <div className="qs_texto_container2">
+          <div className="qs_texto_mv">
             <p>
               Facilitar o acesso a oportunidades de emprego para os cidadãos,
               promovendo uma experiência intuitiva e segura tanto para os
@@ -88,13 +91,12 @@ function Quemsomos() {
             </p>
           </div>
         </div>
-
-        <div className="qs_container2_item">
-          <div className="qs_imagem_container2"></div>
-          <div className="qs_visao_container2">
+        <div className="qs_item_visao">
+          <div className="qs_imagem_visao"></div>
+          <div className="qs_titulo_mv">
             <h2 className="texto_alternativo_azul">Nossa Visão</h2>
           </div>
-          <div className="qs_texto_container2">
+          <div className="qs_texto_mv">
             <p>
               Ser a principal plataforma de busca de emprego em Bauru,
               reconhecida pela sua eficácia e impacto positivo na comunidade.
@@ -109,34 +111,34 @@ function Quemsomos() {
         </h1>
       </div>
 
-      <div className="qs_container3">
-        <div className="qs_container3_item">
-          <div className="qs_imagem_container3"></div>
-          <div className="qs_missao_container3">
+      <div className="qs_valores_container">
+        <div className="qs_item_valorespadrao">
+          <div className="qs_imagem_inovacao"></div>
+          <div className="qs_titulo_valorespadrao">
             <h3 className="texto_alternativo_ciano">Inovação</h3>
           </div>
-          <div className="qs_texto_container3">
+          <div className="qs_texto_valorespadrao">
             <p>Buscamos constantemente melhorias e soluções criativas.</p>
           </div>
         </div>
 
-        <div className="qs_container3_item">
-          <div className="qs_imagem_container3"></div>
-          <div className="qs_missao_container3">
+        <div className="qs_item_valorespadrao">
+          <div className="qs_imagem_transparencia"></div>
+          <div className="qs_titulo_valorespadrao">
             <h3 className="texto_alternativo_ciano">Transparência</h3>
           </div>
-          <div className="qs_texto_container3">
+          <div className="qs_texto_valorespadrao">
             <p>Valorizamos a honestidade e a clareza em todas as interações.</p>
           </div>
         </div>
 
-        <div className="qs_container3_item">
-          <div className="qs_imagem_container3"></div>
-          <div className="qs_missao_container3">
-            <h3 className="texto_alternativo_ciano">Compromisso</h3>
+        <div className="qs_item_valorespadrao">
+          <div className="qs_imagem_compromisso"></div>
+          <div className="qs_titulo_valorespadrao">
+            <h3 className="texto_alternativo_ciano">Inclusão</h3>
           </div>
-          <div className="qs_texto_container3">
-            <p>Estamos dedicados ao sucesso e satisfação de nossos usuários.</p>
+          <div className="qs_texto_valorespadrao">
+            <p>Acreditamos que todos merecem acesso a oportunidades justas</p>
           </div>
         </div>
       </div>
@@ -154,7 +156,7 @@ function Quemsomos() {
               <Card className="qs_card">
                 <CardMedia
                   component="img"
-                  height="140"
+                  height="150"
                   image={membro.imagem}
                   alt={membro.nome}
                   className="qs_card_imagem"
@@ -195,9 +197,10 @@ function Quemsomos() {
 
       <div className="qs_texto_impacto">
         <p>
-          O Trampos Fácil tem o potencial de revolucionar a forma como os
-          bauruenses encontram emprego, contribuindo para a redução do
-          desemprego local e promovendo o desenvolvimento econômico da região.
+          O <strong className="texto_alternativo_ciano">Trampos Fácil</strong>{" "}
+          tem o potencial de revolucionar a forma como os bauruenses encontram
+          emprego, contribuindo para a redução do desemprego local e promovendo
+          o desenvolvimento econômico da região.
         </p>
       </div>
 
