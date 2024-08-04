@@ -1,17 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 import "../estilo/prelogin.css";
 
 function PreLogin() {
+  // Hook para navegação
+  const navigate = useNavigate();
+
+  // Função para voltar à página anterior
+  const handleBackClick = () => {
+    navigate(-1);
+  };
   return (
     <div className="container-cadastro">
       <div className="card-cadastro">
         <div className="cabecalho-cadastro">
-          <Link to="/" className="botao-voltar">
-            <img className="voltar" src="/img/Voltar.png" alt="Voltar" />
-          </Link>
+          <button className="botao-voltar" onClick={handleBackClick}>
+            <FontAwesomeIcon icon={faArrowLeft} className="icone-voltar" />
+          </button>
           <img className="logo-cadastro" src="/img/Logo.png" alt="Logo" />
         </div>
         <h1 className="titulo-cadastro">
@@ -36,14 +43,16 @@ function PreLogin() {
           <h1>
             Você é novo no Trampos <span className="palavra-destaque">Fácil</span>
           </h1>
+
           <h2 className="classe-mudavel">
-            Cadastre-se como <Link to="/cadastro_candidatos">Candidato</Link> ou{" "}
+            Cadastre-se como <Link to="/cadastro_candidatos">Candidato</Link><br /> ou{" "}
             <Link to="/cadastro_empresas">Empresa</Link>
           </h2>
+
         </div>
 
       </div>
-      
+
     </div>
   );
 }

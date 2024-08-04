@@ -1,13 +1,18 @@
-//Importes do React
 import React from "react";
-//Importes do Router-Dom
-import { Link } from "react-router-dom";
-//Importes de Icones
-//Importes de CSS
+import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "../estilo/cadastro_candidato.css";
-//Importes de Paginas
 
 function CadastroCandidatos() {
+  // Hook para navegação
+  const navigate = useNavigate();
+
+  // Função para voltar à página anterior
+  const handleBackClick = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="tela_cad">
       <div className="conteiner">
@@ -16,12 +21,12 @@ function CadastroCandidatos() {
         </div>
 
         <div className="card_cad">
-          <div>
-            <Link to="/prelogin" className="Botao-Voltar_cand">
-              <img className="Voltar_Cand" src="/img/Voltar.png" alt="Voltar" />
-            </Link>
+          <div className="topo-card">
+            <button className="botao-voltar" onClick={handleBackClick}>
+              <FontAwesomeIcon icon={faArrowLeft} className="icone-voltar" />
+            </button>
           </div>
-
+          
           <h1 className="t1">O Seu Novo Próximo Emprego Está Aqui!</h1>
           <h2 className="t2">
             Crie sua conta para acessar e candidate-se à milhares de vagas.

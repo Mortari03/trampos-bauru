@@ -5,7 +5,7 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #f0f4f8;
+  background-color: #dfd9ca;
 }
 
 /* Card de Cadastro */
@@ -81,7 +81,9 @@
   border: 1px solid #ddd;
   padding: 1rem;
   box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 10); /* Adiciona sombra */
 }
+
 
 .icone-cadastro {
   font-size: 2rem;

@@ -1,153 +1,153 @@
-/* AQUI COMEÇA A PARTE DE CADASTRO DE CANDIDATO E ALGUMAS FUNÇÕES COMPARTILHAS NA CLASSNAME COM EMPRESA*/
-/*-------------------------------------------------------*/
+/* Reseta margens, preenchimentos e define box-sizing globalmente */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .tela_cad {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-    padding: 20px;
-    overflow: hidden;
-    /* Remover a barra de rolagem */
-  }
-  
-  .conteiner {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 90vw;
-    max-height: 90vh;
-    /* Limitar a altura para caber na tela */
-    width: 100%;
-    height: 100%;
-  }
-  
-  .imagem_cad {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-  }
-  
-  .img_ilus {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .card_cad {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow-y: auto;
-    height: 100vh;
-    height: auto;
-    /* Permitir rolagem no card se necessário */
-  }
-  
-  .Botao-Voltar_cand {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-  
-  .Voltar_Cand {
-    background-color: black;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-  }
-  
-  .accept_checkbox_cand {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    transform: scale(1);
-    /* Ajusta o tamanho do checkbox */
-  }
-  
-  .t1,
-  .t2,
-  .t3,
-  .box_button {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .Button_Cad {
-    margin: 20px;
-  }
-  
-  .box_button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .box_input {
-    margin: 15px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  
-  .box_input input,
-  .box_input select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  .cad_conta_google {
-    background-color: #4285f4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .cad_conta_google:hover {
-    background-color: #357ae8;
-  }
-  
-  .accept_button {
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  .Button_Cad {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .Button_Cad:hover {
-    background-color: #0056b3;
-  }
-  
-  .text_bot_cand {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configura a tela de cadastro para centralizar o conteúdo */
+.tela_cad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Define o contêiner principal */
+.conteiner {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 100%;
+  height: 100%;
+  position: relative; /* Permite o posicionamento absoluto de elementos internos */
+}
+
+/* Estiliza a imagem à esquerda */
+.imagem_cad {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+/* Ajusta o tamanho da imagem */
+.img_ilus {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estiliza o card de cadastro */
+.card_cad {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto; /* Permite que a altura do card se ajuste ao conteúdo */
+  position: relative; /* Necessário para o posicionamento absoluto do topo-card */
+}
+
+/* Posiciona o botão de voltar no topo à esquerda */
+.topo-card {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10; /* Garante que o botão esteja acima dos outros elementos */
+}
+
+/* Estiliza o botão de voltar */
+.botao-voltar {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Ajusta o tamanho do ícone de voltar */
+.icone-voltar {
+  font-size: 24px;
+}
+
+/* Estiliza os checkboxes */
+.accept_checkbox_cand {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Configura os títulos e o botão centralizados */
+.t1, .t2, .t3, .box_button {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estiliza o botão de cadastro */
+.Button_Cad {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Button_Cad:hover {
+  background-color: #0056b3;
+}
+
+/* Estiliza o botão do Google */
+.cad_conta_google {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cad_conta_google:hover {
+  background-color: #357ae8;
+}
+
+/* Configura o layout dos inputs e select */
+.box_input {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.box_input input, 
+.box_input select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Configura o layout do botão Google e o botão de cadastro */
+.box_button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estiliza a seção de texto com checkboxes */
+.text_bot_cand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
