@@ -56,9 +56,9 @@ function Senha() {
     <div className="senha_corpo">
       <div className="senha_container">
         <div className="senha_topo">
-          <Link to="/prelogin" className="senha_voltar_btn">
+          <Link to="/prelogin" className="btn_voltar">
             <FontAwesomeIcon icon={faCircleArrowLeft} />
-            <span className="senha_voltar">Voltar</span>
+            <span className="texto_voltar">Voltar</span>
           </Link>
           <div className="logo">
             <img src="/img/logo.png" alt="Logo" />

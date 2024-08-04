@@ -225,7 +225,7 @@
 
 .qs_card {
   width: 400px;
-  height: 350px;
+  height: 400px;
   margin: 10px;
   padding: 5px;
 }
@@ -245,4 +245,16 @@
   margin: 0 10px;
   font-size: 25px;
   text-decoration: none;
+}
+.qs_card_imagem {
+  object-fit: contain; /* A imagem será redimensionada para cobrir o conteúdo do elemento */
+  width: 100%; /* Largura total do contêiner do card */
+  height: 200px; /* Altura definida para a imagem */
+  transition: transform 0.3s; /* Adiciona uma transição suave ao efeito de transformação */
+}
+
+.qs_card:hover .qs_card_imagem {
+  transform: scale(
+    1.05
+  ); /* Amplia a imagem em 5% ao passar o mouse sobre o card */
 }

@@ -10,43 +10,39 @@ import Rodape from "../componentes/rodape";
 const membros = [
   {
     nome: "Lucas Lima",
-    cargo: "UX|UI Designer | Desenvolvedor FullStack",
-    imagem:
-      "https://wp-content.bluebus.com.br/wp-content/uploads/2017/03/31142426/twitter-novo-avatar-padrao-2017-bluebus.png",
-    linkedin: "https://www.linkedin.com/in/lucaslima",
-    github: "https://github.com/lucaslima",
+    cargo: "Desenvolvedor FullStack | Designer | ADS",
+    imagem: "/img/equipe/lucas.png",
+    linkedin: "https://www.linkedin.com/in/lucaslimna/",
+    github: "https://www.linkedin.com/in/lucaslimna/",
   },
   {
     nome: "Luiz Gustavo",
-    cargo: "Desenvolvedor FullStack",
+    cargo: "Desenvolvedor FullStack | ADS  ",
     imagem:
       "https://wp-content.bluebus.com.br/wp-content/uploads/2017/03/31142426/twitter-novo-avatar-padrao-2017-bluebus.png",
-    linkedin: "https://www.linkedin.com/in/luizgustavo",
-    github: "https://github.com/luizgustavo",
+    linkedin: "#",
+    github: "https://github.com/LGustavoDev",
   },
   {
-    nome: "Matheus",
+    nome: "Matheus Mariano",
     cargo: "Desenvolvedor FullStack",
-    imagem:
-      "https://wp-content.bluebus.com.br/wp-content/uploads/2017/03/31142426/twitter-novo-avatar-padrao-2017-bluebus.png",
-    linkedin: "https://www.linkedin.com/in/matheus",
-    github: "https://github.com/matheus",
+    imagem: "/img/equipe/Matheus.png",
+    linkedin: "https://www.linkedin.com/in/matheus-mariano-59262027a/",
+    github: "https://github.com/Mdellen39",
   },
   {
     nome: "Vitor Mortari",
-    cargo: "Desenvolvedor FullStack",
-    imagem:
-      "https://wp-content.bluebus.com.br/wp-content/uploads/2017/03/31142426/twitter-novo-avatar-padrao-2017-bluebus.png",
-    linkedin: "https://www.linkedin.com/feed/?trk=public_profile_not-found-log-in_google-one-tap-submit",
+    cargo: "Desenvolvedor FullStack | Sistemas de Informação",
+    imagem: "/img/equipe/Mortari.png",
+    linkedin: "https://www.linkedin.com/in/vitor-mortari-a3a5011a7/",
     github: "https://github.com/Mortari03",
   },
   {
-    nome: "Vitor",
-    cargo: "Desenvolvedor FullStack",
-    imagem:
-      "https://wp-content.bluebus.com.br/wp-content/uploads/2017/03/31142426/twitter-novo-avatar-padrao-2017-bluebus.png",
-    linkedin: "https://www.linkedin.com/in/vitor",
-    github: "https://github.com/vitor",
+    nome: "Vitor Aluisio",
+    cargo: "Desenvolvedor FullStack | Sistemas de Informação",
+    imagem: "/img/equipe/vitor.png",
+    linkedin: "https://www.linkedin.com/in/vitoraluisio20",
+    github: "https://github.com/VitorAluisio",
   },
 ];
 
@@ -152,11 +148,11 @@ function Quemsomos() {
       <div className="qs_equipe_container">
         <Grid container spacing={3} justifyContent="center">
           {membros.map((membro) => (
-            <Grid item xs={12} sm={6} md={4} key={membro.nome}>
+            <Grid item xs={12} sm={2} md={4} key={membro.nome}>
               <Card className="qs_card">
                 <CardMedia
                   component="img"
-                  height="150"
+                  height="300"
                   image={membro.imagem}
                   alt={membro.nome}
                   className="qs_card_imagem"

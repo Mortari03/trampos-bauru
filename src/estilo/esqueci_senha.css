@@ -28,21 +28,6 @@
   margin-bottom: 20px;
 }
 
-.senha_voltar_btn {
-  font-size: 15px;
-  color: #007bff;
-  text-decoration: none;
-}
-.senha_voltar {
-  font-size: 15px;
-  text-decoration: none;
-  margin-left: 5px;
-}
-
-.senha_voltar:hover {
-  color: #0056b3;
-}
-
 .logo img {
   height: 50px;
 }

@@ -55,15 +55,15 @@ p {
   margin: 10px;
   padding: 10px;
 }
-
+/*Texto destaque Ciano*/
 .texto_alternativo_ciano {
   color: #00b3b3;
 }
-
-.texto_alternativo_senac {
-  color: #003399;
+/*Texto destaque Azul Vivo*/
+.texto_alternativo_azulvivo {
+  color: #005bb3;
 }
-
+/*Texto destaque Azul Claro*/
 .texto_alternativo_azul {
   color: #5a7fbf;
 }
@@ -96,6 +96,23 @@ p {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra no hover */
 }
 
+/*Botão Voltar*/
+.btn_voltar {
+  font-size: 15px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.texto_voltar {
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.texto_voltar:hover {
+  color: #0056b3;
+}
+
 /* TAGs */
 .tag {
   font-family: "Roboto", sans-serif;
@@ -105,4 +122,16 @@ p {
 
 .tag:hover {
   background-color: #00b3b3;
+}
+
+/*Logo*/
+.Logo {
+  height: auto;
+  max-height: 10vh;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para transformações e filtro */
+}
+
+.Logo:hover {
+  transform: scale(1.1); /* Aumenta a escala da logo ao passar o mouse */
+  filter: brightness(1.1); /* Aumenta o brilho da logo ao passar o mouse */
 }
