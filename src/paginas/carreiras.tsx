@@ -6,12 +6,23 @@ import React from "react";
 //Importes de Paginas
 import "../estilo/carreira.css";
 import Rodape from "../componentes/rodape";
+import Cabecalho from "../componentes/cabecalho";
 
 function Carreiras() {
   return (
     <div>
-      <h1>Pagina De Carreiras</h1>
-      < Rodape />
+      <Cabecalho />
+      <div>
+        <h1>
+          Pagina De <span className="texto_alternativo_ciano">Carreiras</span>
+        </h1>
+        <h2>
+          Pagina De <span className="texto_alternativo_azul">Carreiras</span>
+        </h2>
+        <h3>Pagina De Carreiras</h3>
+        <p>Pagina De Carreiras</p>
+      </div>
+      <Rodape />
     </div>
   );
 }

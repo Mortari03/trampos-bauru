@@ -96,10 +96,11 @@
   color: white;
   margin: 15px 0;
   padding: 20px;
+  width: 560px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .suporte_faq_item:hover {
@@ -122,4 +123,21 @@
 
 .suporte_faq_item_icon {
   margin-right: 10px;
+}
+
+.sucesso-alerta {
+  background-color: #00b3b3;
+  color: white;
+  padding: 15px;
+  position: fixed;
+  top: 50px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.sucesso-alerta span {
+  margin-left: 10px;
 }

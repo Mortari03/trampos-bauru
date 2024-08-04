@@ -1,7 +1,5 @@
 // Importes do React
 import React, { useState } from "react";
-// Importes do Router-Dom
-import { Link } from "react-router-dom";
 // Importes de Icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,6 +8,8 @@ import {
   faUser,
   faEnvelope,
   faQuestionCircle,
+  faBuilding,
+  faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 // Importes de CSS
 import "../estilo/suporte.css";
@@ -19,9 +19,26 @@ import Cabecalho from "../componentes/cabecalho";
 
 function Suporte() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [mensagem, setMensagem] = useState("");
+  const [sucesso, setSucesso] = useState(false);
 
   const toggleDropdown = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Aqui você pode adicionar a lógica de envio do formulário (e.g., enviar para um servidor)
+    // Exibe a mensagem de sucesso
+    setSucesso(true);
+    // Limpa os campos de entrada
+    setNome("");
+    setEmail("");
+    setMensagem("");
+    // Remove a mensagem de sucesso após 5 segundos
+    setTimeout(() => setSucesso(false), 3000);
   };
 
   const faqsCandidatos = [
@@ -53,26 +70,28 @@ function Suporte() {
 
   const faqsEmpresas = [
     {
-      question: "Como posso cadastrar uma vaga?",
-      answer: "Acesse sua conta e clique em 'Cadastrar Vaga'.",
-      iconLeft: faUser,
+      question: "Como posso anunciar uma vaga?",
+      answer:
+        "Após se cadastrar como empresa, você pode acessar o painel e clicar em 'Anunciar Vaga'.",
+      iconLeft: faBuilding,
     },
     {
-      question: "Como posso gerenciar minhas vagas?",
-      answer: "Vá até a seção 'Minhas Vagas' em sua conta.",
+      question: "Como posso visualizar as candidaturas?",
+      answer:
+        "No painel de controle, você encontrará todas as candidaturas enviadas para suas vagas.",
       iconLeft: faQuestionCircle,
     },
     {
-      question: "Como posso entrar em contato com o suporte?",
+      question: "Posso editar uma vaga já publicada?",
       answer:
-        "Você pode entrar em contato conosco através do formulário nesta página.",
-      iconLeft: faEnvelope,
+        "Sim, você pode editar ou remover suas vagas a qualquer momento através do painel.",
+      iconLeft: faBuilding,
     },
     {
-      question: "Terei algum custo adicional?",
+      question: "Como funciona o sistema de avaliação de candidatos?",
       answer:
-        "Não combramos nada pelos serviços utilizados em nossa plataforma !.",
-      iconLeft: faQuestionCircle,
+        "Você pode avaliar candidatos diretamente no painel, deixando feedback e notas sobre cada um.",
+      iconLeft: faBuilding,
     },
   ];
 
@@ -80,37 +99,54 @@ function Suporte() {
     <div>
       <Cabecalho />
       <div className="suporte_container">
-        <div className="suporte_titulo_principal">
+        {sucesso && (
+          <div className="sucesso-alerta">
+            <FontAwesomeIcon icon={faCheckCircle} />
+            <span>Mensagem enviada com sucesso!</span>
+          </div>
+        )}
+        <div>
           <h1>SUPORTE</h1>
-          <h3>
+          <p>
             Estamos aqui para ajudar! Se você tiver alguma dúvida, entre em
             contato conosco.
-          </h3>
+          </p>
         </div>
 
         <div className="suporte_formulario_container">
-          <div className="suporte_formulario">
+          <form className="suporte_formulario" onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Nome"
               className="suporte_formulario_input"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
             />
             <input
               type="email"
               placeholder="Email"
               className="suporte_formulario_input"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
               placeholder="Digite sua mensagem"
               className="suporte_formulario_textarea"
+              value={mensagem}
+              onChange={(e) => setMensagem(e.target.value)}
             ></textarea>
-            <button className="botões-principais">ENVIAR</button>
-          </div>
+            <button type="submit" className="botoes-principais">
+              ENVIAR
+            </button>
+          </form>
           <div className="suporte_formulario_imagem" />
         </div>
 
         <div className="suporte_faq_container">
-          <h1>Perguntas Frequentes (FAQ)</h1>
+          <h1>
+            Perguntas Frequentes{" "}
+            <span className="texto_alternativo_ciano">(FAQ)</span>
+          </h1>
           <div className="suporte_faq_sections">
             <div className="suporte_faq_section">
               <img
@@ -118,7 +154,7 @@ function Suporte() {
                 alt="Para Candidatos"
                 className="suporte_faq_section_imagem"
               />
-              <h2 className="suporte_faq_section_titulo">Para Candidatos</h2>
+              <h2>Para Candidatos</h2>
               {faqsCandidatos.map((faq, index) => (
                 <div className="suporte_faq_item" key={index}>
                   <div

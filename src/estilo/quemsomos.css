@@ -1,249 +1,204 @@
-/* Div do TÍTULO SOBRE O */
-.sobreo {
-    color: rgb(3, 135, 250);
-    display: flex;
-    padding-top: 50px;
-    justify-content: center;
+/* Título Principal */
+.qs_sobre_titulo {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
 }
 
-/* Continuação da div do TÍTULO tramposfacil */
-.tramposfacil {
-    color: #2422af;
+/* Container Principal 1 */
+.qs_container1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-/* Div Principal do Container 1, contendo 2 divis Filhas */
-.sobrenoscontainer1 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
+/* Texto de Boas-Vindas */
+.qs_texto_bemvindos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  width: 500px;
+  height: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  text-align: center;
 }
 
-/* Div filha do textobemvindos (sobrenoscontainer1) */
-.textobemvindos {
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    padding: 20px;
-    width: 500px; 
-    height: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Imagem Sobre Nós */
+.qs_imagem_sobrenos {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  width: 500px;
+  height: 400px;
+  border-radius: 8px;
 }
 
-/* Div filha imagemsobrenos (sobrenoscontainer1) */
-.imagemsobrenos {
-    background-color: aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    width: 500px; 
-    height: 400px;
+/* Container Principal 2 */
+.qs_container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 
-/* Div Principal do Container 2 */
-.sobrenoscontainer2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+/* Itens do Container 2 */
+.qs_container2_item {
+  width: 600px;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px hsla(103, 100%, 33%, 0.1);
+  overflow: hidden;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Div Principal do Container 3 */
-.sobrenoscontainer3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+/* Imagens do Container 2 */
+.qs_imagem_container2 {
+  height: 500px;
+  width: 500px;
+  background-color: rgb(142, 127, 196);
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Div Filhas do Container 2 */
-.container-2-1,
-.container-2-2 {
-    width: 500px; 
-    height: 450px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px hsla(103, 100%, 33%, 0.1);
-    overflow: hidden;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Missão e Visão do Container 2 */
+.qs_missao_container2,
+.qs_visao_container2 {
+  height: 150px;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  display: flex;
 }
 
-/* Div Filhas do Container 3 */
-.container-3-1,
-.container-3-2,
-.container-3-3 {
-    width: 500px;
-    height: 450px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px hsla(103, 100%, 33%, 0.1);
-    overflow: hidden;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Texto do Container 2 */
+.qs_texto_container2 {
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  display: flex;
+  text-align: center;
 }
 
-/* Div Filhas do Container 2 - Imagens */
-.imagemcontainer-2-1,
-.imagemcontainer-2-2 {
-    height: 150px;
-    width: 250px;
-    background-color: rgb(142, 127, 196);
-    color: white;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Título Nossos Valores */
+.qs_titulo_valores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Div Filhas do Container 3 - Imagens */
-.imagemcontainer-3-1,
-.imagemcontainer-3-2,
-.imagemcontainer-3-3 {
-    height: 150px;
-    width: 250px;
-    background-color: rgb(142, 127, 196);
-    color: white;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Container Principal 3 */
+.qs_container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
-/* Div Filhas do Container 2 - Nossamissao */
-.nossamissao-2-1,
-.nossamissao-2-2 {
-    height: 150px;
-    width: 250px;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    display: flex;
+/* Itens do Container 3 */
+.qs_container3_item {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px hsla(103, 100%, 33%, 0.1);
+  overflow: hidden;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Div Filhas do Container 3 - Nossamissao */
-.nossamissao-3-1,
-.nossamissao-3-2,
-.nossamissao-3-3 {
-    height: 150px;
-    width: 250px;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    display: flex;
+/* Imagens do Container 3 */
+.qs_imagem_container3 {
+  height: 200px;
+  width: 250px;
+  background-color: rgb(142, 127, 196);
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Span dos textos nossamissao e nossavisao */
-.missao,
-.visao {
-    color: #2422af;
+/* Missão do Container 3 */
+.qs_missao_container3 {
+  height: 150px;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  display: flex;
 }
 
-/* Div Filhas do Container 2 - Texto */
-.textocontainer-2-1,
-.textocontainer-2-2 {
-    height: 100px;
-    background-color: rgb(255, 251, 0);
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    display: flex;
+/* Texto do Container 3 */
+.qs_texto_container3 {
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
 }
 
-/* Div Filhas do Container 3 - Texto */
-.textocontainer-3-1,
-.textocontainer-3-2,
-.textocontainer-3-3 {
-    height: 100px;
-    background-color: rgb(255, 251, 0);
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    display: flex;
+/* Títulos da Equipe e Impacto */
+.qs_titulo_equipe,
+.qs_titulo_impacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Div TÍTULO Nossos Valores */
-.sobrenostitulo2 {
-    color: #6a0dad;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Texto do Impacto Esperado */
+.qs_texto_impacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Card da Equipe */
+.qs_card {
+  max-width: 400px;
+  height: 350px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* Continuação da div do TÍTULO Nossos Valores */
-.valores {
-    color: #2422af;
+.qs_card_conteudo {
+  text-align: center;
 }
 
-/* Div inovacao (sobrenoscontainer3) */
-.inovacao,
-.transparencia,
-.inclusao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    padding: 20px;
-    width: 300px;
-    height: 300px;
-    border: 2px dashed rgb(12, 0, 24);
-    border-radius: 50px;
+.qs_card_links {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 }
 
-/* Div TÍTULO Nossa Equipe */
-.sobrenostitulo3 {
-    margin: 10px;
-    padding: 20px;
-    color: #6a0dad;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Continuação da div do TÍTULO Nossa EQUIPE */
-.equipe {
-    color: #2422af;
-}
-
-/* Div TÍTULO Impacto Esperado */
-.sobrenostitulo4 {
-    color: #6a0dad;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-}
-
-/* Continuação da div do TÍTULO Nossa EQUIPE */
-.esperado {
-    color: #2422af;
-}
-
-/* Div Principal Impacto Esperado */
-.textoimpacto {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    align-items: center;
-}
-
-/* Div do Texto Impacto Esperado */
-.textodoimpacto {
-    color: #000;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-size: 30px;
+.qs_link {
+  color: #00b3b3;
+  margin: 0 10px;
+  font-size: 25px;
+  text-decoration: none;
 }

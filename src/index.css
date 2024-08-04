@@ -15,33 +15,53 @@ body {
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 900; /* Montserrat Black */
-  font-size: 70px;
-  color: #3354a8;
+  font-size: 60px;
+  color: #132144;
+  margin: 10px;
+  padding: 10px;
 }
 
 /* Subtítulos */
 h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 800; /* Montserrat ExtraBold */
-  font-size: 30px;
+  font-size: 45px;
+  color: #132144;
+  margin: 10px;
+  padding: 10px;
 }
 h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 800; /* Montserrat ExtraBold */
+  font-size: 35px;
+  color: #202538;
+  margin: 10px;
+  padding: 10px;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800; /* Montserrat ExtraBold */
   font-size: 20px;
+  color: #5a7fbf;
 }
 
 /* Texto e outros */
 p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500; /* Montserrat Medium */
-  font-size: 10px;
+  font-size: 25px;
+  color: #202538;
+  margin: 10px;
+  padding: 10px;
 }
 
-/* TAGs */
-.tag {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700; /* Roboto Bold */
+.texto_alternativo_ciano {
+  color: #00b3b3;
+}
+
+.texto_alternativo_azul {
+  color: #5a7fbf;
 }
 
 /* Menus e botões */
@@ -70,4 +90,15 @@ p {
 .botoes-principais:hover {
   background-color: #005bb3;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra no hover */
+}
+
+/* TAGs */
+.tag {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700; /* Roboto Bold */
+  background-color: #50808c;
+}
+
+.tag:hover {
+  background-color: #00b3b3;
 }

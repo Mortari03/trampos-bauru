@@ -30,6 +30,7 @@ import CandidatoDashboard from "./paginas/candidato_dashboard";
 import EmpresasDashboard from "./paginas/empresas_dashboard";
 import EmpresasVerVagas from "./paginas/empresas_ver_vagas";
 import EmpresaPerfilEditar from "./paginas/empresa_perfil_editar";
+import Quemsomos from "./paginas/quemsomos";
 
 function App() {
   return (
@@ -41,7 +42,7 @@ function App() {
         <Route path="/suporte" element={<Suporte />} />
 
         {/* Rotas do Porque Nos ? */}
-        <Route path="/quemsomos" element={<QuemSomos />} />
+        <Route path="/quemsomos" element={<Quemsomos />} />
         <Route path="/paraempresas" element={<ParaEmpresas />} />
         <Route path="/paracandidatos" element={<ParaCandidato />} />
 
@@ -75,11 +76,15 @@ function App() {
         <Route path="/cabecalho_empresa" element={<CabecalhoEmpresa />} />
         <Route path="/empresa_dashboard" element={<EmpresasDashboard />} />
         <Route path="/empresa_perfil" element={<EmpresasPerfil />} />
-        <Route path="/empresa_vagas_cadastradas" element={<EmpresasVerVagas />} />
-        <Route path="/empresa_perfil_editar" element={<EmpresaPerfilEditar />} />
-          
-          
-       
+        <Route
+          path="/empresa_vagas_cadastradas"
+          element={<EmpresasVerVagas />}
+        />
+        <Route
+          path="/empresa_perfil_editar"
+          element={<EmpresaPerfilEditar />}
+        />
+
         <Route
           path="/empresa_configuracao"
           element={<EmpresasConfiguracao />}
