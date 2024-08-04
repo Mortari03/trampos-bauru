@@ -37,8 +37,8 @@ const membros = [
     cargo: "Desenvolvedor FullStack",
     imagem:
       "https://wp-content.bluebus.com.br/wp-content/uploads/2017/03/31142426/twitter-novo-avatar-padrao-2017-bluebus.png",
-    linkedin: "https://www.linkedin.com/in/vitormortari",
-    github: "https://github.com/vitormortari",
+    linkedin: "https://www.linkedin.com/feed/?trk=public_profile_not-found-log-in_google-one-tap-submit",
+    github: "https://github.com/Mortari03",
   },
   {
     nome: "Vitor",
