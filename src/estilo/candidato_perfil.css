@@ -22,7 +22,7 @@
 }
 
 .NomeCompleto {
-  color: #184175;
+  color: #1f4980;
   text-align: center;
   width: 400px;
   height: 50px;
@@ -33,6 +33,14 @@
   text-transform: uppercase;
 }
 
+.FotoPerfil{
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
 .InfoContatos {
   padding: 20px;
   background-color: #ffffff;
@@ -40,6 +48,12 @@
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
 
 }
+
+/* Barra Email esta editando a largura do email dentro da informações de contato (div InfoConatos */
+.BarraEmail{
+  width: 250px;
+}
+
 
 .InfoContatosH2 {
   color: #184175;
@@ -132,6 +146,19 @@
 }
 
 .InteressesH2 {
+  color: #184175;
+  text-align: center;
+}
+
+.RedesSocias{
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+
+}
+
+.RedesSociaisH2{
   color: #184175;
   text-align: center;
 }

@@ -12,24 +12,36 @@ function CandidatoPerfil() {
         <div className="MainContent">
 
           <div className="AreaBio">
-            <input type="name" className="NomeCompleto" placeholder="Nome completo"/>
+
+            <input type="name" className="NomeCompleto" placeholder="Nome completo" />
+
 
             <br />
             <textarea id="biografia" name="bio" placeholder="Escreva sua biografia aqui..."></textarea>
           </div>
 
+          <div className="FotoPerfil">
+
+            <h2>Foto de Perfil</h2>
+            <label htmlFor="profilePicture">Selecione sua foto de perfil:</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*" />
+            <br /><br />
+
+          </div>
+          <br />
           <div className="InfoContatos">
             <h2 className="InfoContatosH2">Informações de Contato</h2>
 
-            <label htmlFor="email">Email:</label> <input type="email" id="email" />
+            <label htmlFor="email"> <br />Email: </label> <input className="BarraEmail" type="email" id="email" />
 
-            <label htmlFor="phone">Telefone:</label> <input   type="tel"/>
+            <label htmlFor="phone"> <br /> Telefone:</label> <input type="tel" />
 
+            <label htmlFor="address"> <br />Endereço:</label> <input type="text" id="address" />
 
-            <label htmlFor="address">Endereço:</label> <input
-              type="text"
-              id="address"
-            />
+            <label htmlFor="City">Cidade:</label> <input type="text" placeholder="Digite o nome da sua cidade" />
+
+            <label htmlFor="State">Estado</label> <input type="text" placeholder="Digite o seu estado" />
+
           </div>
 
           <br />
@@ -81,7 +93,20 @@ function CandidatoPerfil() {
             <h2 className="InteressesH2">Áreas de Interesse</h2>
             <textarea id="BioInteresse" name="" placeholder="Qual a sua área de interesse?"></textarea>
           </div>
+          <br />
+          <br />
+          <div className="RedesSocias"> <h2 className="RedesSociaisH2">Redes Socias</h2>
+          
+            <label className="BarraRedeSocial" htmlFor="github">GitHub:</label>
+            <input type="url" id="github" name="github" placeholder="https://github.com/seu-usuario" />
+
+            <label className="BarraRedeSocial">LinkedIn:</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/seu-usuario" />
+          </div>
+
+
         </div>
+
       </div>
     </div>
   );
