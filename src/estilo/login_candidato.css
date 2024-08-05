@@ -1,12 +1,12 @@
-.lc-container {
+.Conteiner_Login_cand {
   background-color: #f0f4f8;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
 }
 
-.lc-caixa-login {
+.Box_Login_cand {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   min-width: 200px; /* Reduzi de 300px para 200px */
 }
 
-.lc-cabecalho-login {
+.header-login {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,19 @@ input[type="password"] {
   margin: 5px 0; /* Reduzi de 10px para 5px */
   padding: 5px; /* Reduzi de 10px para 5px */
   width: 100%;
-  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 .botao-voltar img {
@@ -82,16 +94,19 @@ button:hover {
 
 .esqueci_senha {
   text-decoration: none;
-  padding: -50px;
-}
-.lc_esqueci-senha:hover {
-  border-bottom: 1px solid #007bff;
+  color: #007bff;
 }
 
-.lc-info-cadastro {
-  text-align: center;
-  margin-top: 10px;
-  padding: 0;
+.esqueci_senha:hover {
+  text-decoration: underline;
+}
+
+.texto_email {
+  color: #0056b3;
+}
+
+.texto_final_cand {
+  color: #0056b3;
 }
 
 .texto_email {

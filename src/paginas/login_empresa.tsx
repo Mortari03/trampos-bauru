@@ -1,3 +1,4 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -42,7 +43,6 @@ function LoginEmpresa() {
           </h2>
         </div>
       </div>
-      <Rodape />
     </div>
   );
 }
