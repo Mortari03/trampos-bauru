@@ -3,8 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh; /* Ajuste para usar height em vez de min-height */
   padding: 30px;
+  box-sizing: border-box; /* Garantir que o padding seja incluído na altura total */
+  overflow: hidden; /* Garantir que não haja overflow */
 }
 
 .ce-content {
