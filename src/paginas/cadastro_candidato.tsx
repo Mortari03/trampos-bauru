@@ -1,39 +1,29 @@
-//Importes do React
 import React from "react";
-//Importes do Router-Dom
 import { Link } from "react-router-dom";
-//Importes de Icones
-//Importes de CSS
 import "../estilo/cadastro_candidato.css";
-//Importes de Paginas
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function CadastroCandidatos() {
   return (
     <div className="tela_cad">
       <div className="conteiner">
         <div className="imagem_cad">
+          <Link to="/prelogin" className="botao-voltar">
+            <FontAwesomeIcon icon={faArrowLeft} className="icone-voltar" />
+          </Link>
           <img className="img_ilus" src="/img/imgint.png" alt="ilustração" />
         </div>
-
         <div className="card_cad">
-          <div>
-            <Link to="/prelogin" className="Botao-Voltar_cand">
-              <img className="Voltar_Cand" src="/img/Voltar.png" alt="Voltar" />
-            </Link>
-          </div>
-
           <h1 className="t1">O Seu Novo Próximo Emprego Está Aqui!</h1>
           <h2 className="t2">
             Crie sua conta para acessar e candidate-se à milhares de vagas.
           </h2>
           <h3 className="t3">Entre e comece a se candidatar</h3>
-
           <div className="box_button">
             <button className="cad_conta_google">Google</button>
           </div>
-
           <h3>Ou Continue seu Cadastro Aqui!</h3>
-
           <div className="box_input">
             <input type="text" placeholder="Nome Completo" />
             <input type="email" placeholder="Email" />
@@ -50,9 +40,8 @@ function CadastroCandidatos() {
               <option value="engenharia">Engenharia</option>
             </select>
           </div>
-
           <div className="text_bot_cand">
-            <h3>
+            <div className="checkbox-container">
               <input
                 type="checkbox"
                 className="accept_checkbox_cand"
@@ -62,11 +51,8 @@ function CadastroCandidatos() {
                 Li e concordo com as condições legais e a política de
                 privacidade.
               </label>
-            </h3>
-
-            <br />
-            <br />
-            <h3>
+            </div>
+            <div className="checkbox-container">
               <input
                 type="checkbox"
                 className="accept_checkbox_cand"
@@ -76,9 +62,8 @@ function CadastroCandidatos() {
                 Autorizo o Trampos Facil a enviar comunicações comerciais sobre
                 produtos, serviços e eventos dos seus parceiros e colaboradores.
               </label>
-            </h3>
+            </div>
           </div>
-
           <div>
             <input className="Button_Cad" type="button" value="Cadastre-se" />
           </div>

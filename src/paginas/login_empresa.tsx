@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "../estilo/login_empresa.css";
 import Rodape from "../componentes/rodape";
@@ -10,8 +10,8 @@ function LoginEmpresa() {
     <div className="Conteiner_Login_Empre">
       <div className="Box_Login_Empre">
         <div className="header-login">
-          <Link to="/prelogin" className="botao-voltar">
-            <img className="voltar" src="/img/Voltar.png" alt="Voltar" />
+        <Link to="/prelogin" className="botao-voltar">
+            <FontAwesomeIcon icon={faArrowLeft} className="icone-voltar" />
           </Link>
           <img className="logo-cadastro" src="/img/Logo.png" alt="Logo" />
         </div>

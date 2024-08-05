@@ -115,3 +115,8 @@ button:hover {
 .texto_final_empr {
   color: #0056b3;
 }
+
+.icone-voltar {
+  font-size: 1.5rem; /* Ajuste conforme necessário */
+  color: #007bff; /* Ajuste conforme necessário */
+}

@@ -1,66 +1,125 @@
+/* Define a altura total da tela e centraliza o conteúdo */
+.tela_cad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;;
+  background-color: #f0f4f8;
+}
 
+/* Define a altura total da tela e centraliza o conteúdo */
+.tela_cad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;;
+  background-color: #f0f4f8;
+}
+/* Contêiner da imagem */
+.imagem_cad {
+  position: relative;
+  flex: 1;
+  background-color: #f0f4f8;
+}
 
-/*AQUI COMEÇA A TELA DE CADASTRO DE EMPRESAS*/
-/*tela de cadastro da empresa*/
+.img_ilus {
+  height: 700px;
+  object-fit: inherit;
+}
+
+/* Botão de voltar */
+.botao-voltar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.icone-voltar {
+  font-size: 1.5rem;
+}
+
+/* Cartão de cadastro */
+.card_cad {
+  flex: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  width: 100vh;
+}
+
+/* Texto de introdução */
+.texto_emp {
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+.T1_emp {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.texto_emp h2 {
+  font-size: 1.2rem;
+}
+
+/* Inputs de cadastro */
+.box_input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilização dos textos e checkboxes */
+.text_bot_emp {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.text_bot_emp h3 {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
 .accept_checkbox_emp {
-    display: flex;
-    justify-content: left;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    transform: scale(1.5);
-    /* Ajusta o tamanho do checkbox */
-  }
-  .texto_emp {
-    justify-content: flex-start;
-    margin: 100px;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start; /* Alinha o próprio item no início do eixo cruzado */
-    margin-bottom: 20px; /* Adiciona um espaço entre o texto e os inputs */
-  }
-  
-  .T1_emp {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: -60px;
-    text-align: start;
-    align-self: flex-start;
-  }
-  
-  .box_input {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  
-  .text_bot_emp {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-  }
-  
-  .Button_Cad_emp {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .Button_Cad_emp:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Estilização para o rodapé */
-  .text_bot_emp {
-    display: flex;
-    flex-direction: column;
-    padding: 29px;
-    background-color: #f8f9fa;
-    text-align: center;
-  }
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Botão de cadastro */
+.Button_Cad_emp {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Button_Cad_emp:hover {
+  background-color: #0056b3;
+}

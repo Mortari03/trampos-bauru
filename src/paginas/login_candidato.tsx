@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faUser } from "@fortawesome/free-solid-svg-icons";
 import "../estilo/login_candidato.css";
 import { Link } from "react-router-dom";
 
@@ -9,8 +9,8 @@ function LoginCandidato() {
     <div className="Conteiner_Login_cand">
       <div className="Box_Login_cand">
         <div className="header-login">
-          <Link to="/prelogin" className="botao-voltar">
-            <img className="voltar" src="/img/Voltar.png" alt="Voltar" />
+        <Link to="/prelogin" className="botao-voltar">
+            <FontAwesomeIcon icon={faArrowLeft} className="icone-voltar" />
           </Link>
           <img className="logo-cadastro" src="/img/Logo.png" alt="Logo" />
         </div>

@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../estilo/cadastro_empresa.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function CadastroEmpresa() {
   return (
     <div className="tela_cad">
       <div className="conteiner">
-        <Link to="/prelogin" className="Botao-Voltar_cand">
-          <img className="Voltar_Cand" src="/img/Voltar.png" alt="Voltar" />
-        </Link>
         <div className="imagem_cad">
+          <Link to="/prelogin" className="botao-voltar">
+            <FontAwesomeIcon icon={faArrowLeft} className="icone-voltar" />
+          </Link>
           <img className="img_ilus" src="/img/imgint.png" alt="ilustração" />
         </div>
         <div className="card_cad">
@@ -38,8 +40,7 @@ function CadastroEmpresa() {
                 Li e concordo com as condições legais e a política de privacidade.
               </label>
             </h3>
-            <br />
-            <br />
+
             <h3>
               <input
                 type="checkbox"
