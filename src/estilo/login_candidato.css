@@ -1,67 +1,98 @@
-.lc-container {
+.Conteiner_Login_cand {
   background-color: #f0f4f8;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
 }
 
-.lc-caixa-login {
+.Box_Login_cand {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 11px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  width: 650px;
-  height: 600px;
+  border: 1px solid #ccc; /* Apenas para visualização, pode ser removido */
+  border-radius: 11px; /* Apenas para visualização, pode ser removido */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8); /* Apenas para visualização, pode ser removido */
+  min-height: 300px; /* Define uma altura mínima */
+  min-width: 300px; /* Define uma largura mínima */
 }
 
-.lc-cabecalho-login {
+.header-login {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Ajuste conforme necessário */
 }
 
-.lc-icone-usuario {
-  font-size: 70px;
-  color: #3354a8;
-  padding: 10px;
+.icone_cand {
+  font-size: 2rem; /* Ajuste conforme necessário */
+  color: #007bff; /* Ajuste conforme necessário */
+  margin-bottom: 10px; /* Ajuste conforme necessário */
 }
-.lc-icone-usuario:hover {
-  color: #005bb3;
-}
-.lc-icone-google {
-  margin-right: 8px;
-}
-.lc-input {
-  border-radius: 5px;
-  border: 2px solid #005bb3;
+
+input[type="text"],
+input[type="password"] {
+  border-radius: 7px;
+  border-color: #0056b3;
   margin: 10px 0;
   padding: 10px;
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
 }
 
-.lc-link-esqueci-senha {
+.botao-voltar img {
+  height: 40px; /* Ajuste conforme necessário */
+}
+
+.logo-cadastro {
+  height: 50px; /* Ajuste conforme necessário */
+}
+
+.botao_login {
+  padding: 10px;
+  margin-top: auto; /* Garante que o botão fique no final */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.link-esqueci-senha {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin-top: -15px;
-  text-decoration: none;
-  padding: -50px;
-}
-.lc_esqueci-senha:hover {
-  border-bottom: 1px solid #007bff;
+  margin-top: 10px;
 }
 
-.lc-info-cadastro {
-  text-align: center;
-  margin-top: 10px;
-  padding: 0;
+.esqueci_senha {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.esqueci_senha:hover {
+  text-decoration: underline;
+}
+
+.texto_email{
+  color: #0056b3;
+}
+
+.texto_final_cand{
+  color: #0056b3;
 }
