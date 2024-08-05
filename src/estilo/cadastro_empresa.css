@@ -1,125 +1,118 @@
-/* Define a altura total da tela e centraliza o conteúdo */
-.tela_cad {
+/* Estilos para a tela de cadastro */
+.ce-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;;
-  background-color: #f0f4f8;
+  min-height: 100vh;
+  padding: 30px;
 }
 
-/* Define a altura total da tela e centraliza o conteúdo */
-.tela_cad {
+.ce-content {
+  background-color: #ffffff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;;
-  background-color: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
 }
-/* Contêiner da imagem */
-.imagem_cad {
-  position: relative;
+
+.ce-image {
   flex: 1;
-  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.img_ilus {
-  height: 700px;
-  object-fit: inherit;
+.ce-image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: 100% 100%;
+  border-radius: 10px 0 0 10px;
 }
 
-/* Botão de voltar */
-.botao-voltar {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  text-decoration: none;
-  color: #007bff;
-}
-
-.icone-voltar {
-  font-size: 1.5rem;
-}
-
-/* Cartão de cadastro */
-.card_cad {
-  flex: 2;
+.ce-form {
+  margin-top: -150px;
+  flex: 1;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 600px;
-  width: 100vh;
 }
 
-/* Texto de introdução */
-.texto_emp {
-  margin-bottom: 20px;
-  text-align: start;
+.ce-title {
+  font-size: 35px;
+  margin: 0 0 5px;
+  text-align: center;
 }
 
-.T1_emp {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+.ce-subtitle {
+  font-size: 15px;
+  text-align: center;
 }
 
-.texto_emp h2 {
-  font-size: 1.2rem;
+.ce-section-title {
+  font-size: 20px;
+  text-align: center;
 }
 
-/* Inputs de cadastro */
-.box_input {
+.ce-form-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 100%;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  border-radius: 7px;
-  border: 1px solid #ccc;
-  padding: 10px;
+.ce-input {
+  border-radius: 5px;
+  border: 1px solid #005bb3;
+  margin-bottom: 15px;
+  padding: 12px;
   width: 100%;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
-/* Estilização dos textos e checkboxes */
-.text_bot_emp {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+.ce-input:focus {
+  outline: none;
+  border-color: #003a6b;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.text_bot_emp h3 {
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
+.ce-terms {
+  margin-bottom: 20px;
 }
 
-.checkbox-container {
+.ce-checkbox-label {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
 }
 
-.accept_checkbox_emp {
-  width: 20px;
-  height: 20px;
+.ce-checkbox {
   margin-right: 10px;
 }
 
-/* Botão de cadastro */
-.Button_Cad_emp {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.ce-buttons {
+  display: flex;
+  flex-direction: column;
 }
 
-.Button_Cad_emp:hover {
-  background-color: #0056b3;
+.ce-google-btn,
+.ce-submit-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.ce-google-btn {
+  background-color: #db4437;
+  color: white;
+}
+
+.ce-submit-btn {
+  background-color: #005bb3;
+  color: white;
 }

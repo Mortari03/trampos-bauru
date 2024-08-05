@@ -14,7 +14,7 @@ function CadastroCandidatos() {
     <div className="cc-container">
       <div className="cc-content">
         <div className="cc-image">
-          <img src="/img/imgint.png" alt="Imagem de Cadastro" />
+          <img src="/img/cadastrocandidato.png" alt="Imagem de Cadastro" />
         </div>
         <div className="cc-form">
           <Link to="/prelogin" className="btn_voltar">
