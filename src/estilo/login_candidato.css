@@ -1,30 +1,40 @@
-.Conteiner_Login_cand {
+.lc-container {
   background-color: #f0f4f8;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
+  height: 100vh;
 }
 
-.Box_Login_cand {
+.lc-caixa-login {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   padding: 10px; /* Reduzi de 20px para 10px */
   border: 1px solid #ccc; /* Apenas para visualização, pode ser removido */
   border-radius: 11px; /* Apenas para visualização, pode ser removido */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); /* Reduzi de 10px 10px 20px para 5px 5px 10px */
   min-height: 200px; /* Reduzi de 300px para 200px */
   min-width: 200px; /* Reduzi de 300px para 200px */
+=======
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 11px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 650px;
+  height: 600px;
+>>>>>>> 4f6cae8539aa8e01a680882b31db67ca599cd4b3
 }
 
-.header-login {
+.lc-cabecalho-login {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   margin-bottom: 10px; /* Reduzi de 20px para 10px */
 }
 
@@ -40,10 +50,32 @@ input[type="password"] {
   border-color: #0056b3;
   margin: 5px 0; /* Reduzi de 10px para 5px */
   padding: 5px; /* Reduzi de 10px para 5px */
-  width: 100%;
-  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+=======
+  margin-bottom: 20px;
 }
 
+.lc-icone-usuario {
+  font-size: 70px;
+  color: #3354a8;
+  padding: 10px;
+}
+.lc-icone-usuario:hover {
+  color: #005bb3;
+}
+.lc-icone-google {
+  margin-right: 8px;
+}
+.lc-input {
+  border-radius: 5px;
+  border: 2px solid #005bb3;
+  margin: 10px 0;
+  padding: 10px;
+>>>>>>> 4f6cae8539aa8e01a680882b31db67ca599cd4b3
+  width: 100%;
+  box-sizing: border-box;
+}
+
+<<<<<<< HEAD
 .botao-voltar img {
   height: 30px; /* Reduzi de 40px para 30px */
 }
@@ -81,13 +113,26 @@ button:hover {
 }
 
 .esqueci_senha {
+=======
+.lc-link-esqueci-senha {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -15px;
+>>>>>>> 4f6cae8539aa8e01a680882b31db67ca599cd4b3
   text-decoration: none;
-  color: #007bff;
+  padding: -50px;
+}
+.lc_esqueci-senha:hover {
+  border-bottom: 1px solid #007bff;
 }
 
-.esqueci_senha:hover {
-  text-decoration: underline;
+.lc-info-cadastro {
+  text-align: center;
+  margin-top: 10px;
+  padding: 0;
 }
+<<<<<<< HEAD
 
 .texto_email{
   color: #0056b3;
@@ -101,3 +146,5 @@ button:hover {
   font-size: 1.5rem; /* Ajuste conforme necessário */
   color: #007bff; /* Ajuste conforme necessário */
 }
+=======
+>>>>>>> 4f6cae8539aa8e01a680882b31db67ca599cd4b3

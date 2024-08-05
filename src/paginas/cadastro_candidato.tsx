@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../estilo/cadastro_candidato.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+<<<<<<< HEAD
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function CadastroCandidatos() {
@@ -30,6 +31,42 @@ function CadastroCandidatos() {
             <input type="password" placeholder="Senha" />
             <input type="text" placeholder="CPF" />
             <select className="box_select">
+=======
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
+function CadastroCandidatos() {
+  return (
+    <div className="cc-container">
+      <div className="cc-content">
+        <div className="cc-image">
+          <img className="cc-img" src="/img/imgint.png" alt="Ilustração" />
+        </div>
+        <div className="cc-form">
+          <Link to="/prelogin" className="cc-back-btn">
+            <FontAwesomeIcon icon={faCircleArrowLeft} />
+            <span className="cc-back-text">Voltar</span>
+          </Link>
+          <h1 className="cc-title">Seu Novo Emprego Está Aqui!</h1>
+          <p className="cc-subtitle">
+            Crie sua conta para acessar e candidatar-se a milhares de vagas.
+          </p>
+          <h3 className="cc-section-title">Entre e comece a se candidatar</h3>
+
+          <button className="cc-google-btn">Cadastrar com Google</button>
+
+          <h3 className="cc-section-title">Ou continue seu cadastro aqui</h3>
+
+          <form className="cc-input-group">
+            <input
+              type="text"
+              placeholder="Nome Completo"
+              className="cc-input"
+            />
+            <input type="email" placeholder="Email" className="cc-input" />
+            <input type="password" placeholder="Senha" className="cc-input" />
+            <input type="text" placeholder="CPF" className="cc-input" />
+            <select className="cc-input cc-select">
+>>>>>>> 4f6cae8539aa8e01a680882b31db67ca599cd4b3
               <option value="" disabled selected>
                 Área de Atuação
               </option>
@@ -39,7 +76,20 @@ function CadastroCandidatos() {
               <option value="administracao">Administração</option>
               <option value="engenharia">Engenharia</option>
             </select>
+          </form>
+
+          <div className="cc-terms">
+            <label className="cc-checkbox-label">
+              <input type="checkbox" className="cc-checkbox" />
+              Li e concordo com as condições legais e a política de privacidade.
+            </label>
+            <label className="cc-checkbox-label">
+              <input type="checkbox" className="cc-checkbox" />
+              Autorizo o Trampos Facil a enviar comunicações comerciais sobre
+              produtos, serviços e eventos dos seus parceiros e colaboradores.
+            </label>
           </div>
+<<<<<<< HEAD
           <div className="text_bot_cand">
             <div className="checkbox-container">
               <input
@@ -67,6 +117,10 @@ function CadastroCandidatos() {
           <div>
             <input className="Button_Cad" type="button" value="Cadastre-se" />
           </div>
+=======
+
+          <button className="cc-submit-btn">Cadastre-se</button>
+>>>>>>> 4f6cae8539aa8e01a680882b31db67ca599cd4b3
         </div>
       </div>
     </div>
