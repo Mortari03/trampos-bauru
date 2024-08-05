@@ -1,19 +1,20 @@
+/* Estilos para a tela de cadastro */
 .cc-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 30px;
 }
 
 .cc-content {
+  background-color: #ffffff;
   display: flex;
-  background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  max-width: 900px; /* Reduz a largura máxima */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
   width: 100%;
-  margin: 20px;
+  overflow: hidden;
 }
 
 .cc-image {
@@ -23,91 +24,94 @@
   align-items: center;
 }
 
-.cc-img {
+.cc-image img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: 100% 100%;
+  border-radius: 10px 0 0 10px;
 }
 
 .cc-form {
   flex: 1;
-  padding: 30px; /* Reduz o padding */
-}
-
-.cc-back-btn {
+  padding: 45px;
   display: flex;
-  align-items: center;
-  color: #666;
-  text-decoration: none;
-  margin-bottom: 15px; /* Reduz a margem inferior */
-}
-
-.cc-back-text {
-  margin-left: 5px;
-  font-size: 14px; /* Reduz o tamanho da fonte */
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cc-title {
-  font-size: 20px; /* Reduz o tamanho da fonte */
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin: 0 0 5px;
+  text-align: center;
 }
 
 .cc-subtitle {
-  color: #666;
-  margin-bottom: 15px; /* Reduz a margem inferior */
-  font-size: 14px; /* Reduz o tamanho da fonte */
+  font-size: 15px;
+  text-align: center;
 }
 
 .cc-section-title {
-  font-size: 16px; /* Reduz o tamanho da fonte */
-  font-weight: bold;
-  margin-top: 15px; /* Reduz a margem superior */
+  font-size: 20px;
+  text-align: center;
+}
+
+.cc-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.cc-input {
+  border-radius: 5px;
+  border: 1px solid #005bb3;
+  margin-bottom: 15px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.cc-input:focus {
+  outline: none;
+  border-color: #003a6b;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.cc-terms {
+  margin-bottom: 20px;
+}
+
+.cc-checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.cc-checkbox {
+  margin-right: 10px;
+}
+
+.cc-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.cc-google-btn,
+.cc-submit-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
 .cc-google-btn {
-  width: 100%;
-  background-color: #4285f4;
+  background-color: #db4437;
   color: white;
-  padding: 8px 16px; /* Reduz o padding */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px; /* Reduz o tamanho da fonte */
-}
-
-.cc-input-group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px; /* Reduz o espaçamento entre os campos */
-}
-
-.cc-input {
-  width: 100%;
-  padding: 8px; /* Reduz o padding */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px; /* Reduz o tamanho da fonte */
-}
-
-.cc-terms {
-  margin-top: 15px; /* Reduz a margem superior */
-}
-
-.cc-checkbox-label {
-  display: block;
-  margin-bottom: 8px; /* Reduz a margem inferior */
-  font-size: 12px; /* Reduz o tamanho da fonte */
-  color: #666;
 }
 
 .cc-submit-btn {
-  width: 100%;
-  background-color: #4caf50;
+  background-color: #005bb3;
   color: white;
-  padding: 8px 16px; /* Reduz o padding */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px; /* Reduz o tamanho da fonte */
 }

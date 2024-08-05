@@ -9,24 +9,21 @@ function CadastroCandidatos() {
     <div className="cc-container">
       <div className="cc-content">
         <div className="cc-image">
-          <img className="cc-img" src="/img/imgint.png" alt="Ilustração" />
+          <img src="/img/imgint.png" alt="Imagem de Cadastro" />
         </div>
         <div className="cc-form">
-          <Link to="/prelogin" className="cc-back-btn">
+          <Link to="/prelogin" className="btn_voltar">
             <FontAwesomeIcon icon={faCircleArrowLeft} />
-            <span className="cc-back-text">Voltar</span>
+            <span className="texto_voltar">Voltar</span>
           </Link>
           <h1 className="cc-title">Seu Novo Emprego Está Aqui!</h1>
           <p className="cc-subtitle">
             Crie sua conta para acessar e candidatar-se a milhares de vagas.
           </p>
           <h3 className="cc-section-title">Entre e comece a se candidatar</h3>
-
-          <button className="cc-google-btn">Cadastrar com Google</button>
-
+          <button className="botoes-principais">Cadastrar com Google</button>
           <h3 className="cc-section-title">Ou continue seu cadastro aqui</h3>
-
-          <form className="cc-input-group">
+          <form className="cc-form-group">
             <input
               type="text"
               placeholder="Nome Completo"
@@ -34,32 +31,32 @@ function CadastroCandidatos() {
             />
             <input type="email" placeholder="Email" className="cc-input" />
             <input type="password" placeholder="Senha" className="cc-input" />
+            <input
+              type="password"
+              placeholder="Confirmar Senha"
+              className="cc-input"
+            />
             <input type="text" placeholder="CPF" className="cc-input" />
-            <select className="cc-input cc-select">
-              <option value="" disabled selected>
-                Área de Atuação
-              </option>
-              <option value="tecnologia">Tecnologia</option>
-              <option value="saude">Saúde</option>
-              <option value="educacao">Educação</option>
-              <option value="administracao">Administração</option>
-              <option value="engenharia">Engenharia</option>
-            </select>
           </form>
-
           <div className="cc-terms">
             <label className="cc-checkbox-label">
               <input type="checkbox" className="cc-checkbox" />
-              Li e concordo com as condições legais e a política de privacidade.
+              Li e concordo com as condições legais e a{" "}
+              <Link
+                to="/politica_privacidade"
+                className="texto_alternativo_azulvivo"
+              >
+                {" "}
+                política de privacidade.
+              </Link>
             </label>
             <label className="cc-checkbox-label">
               <input type="checkbox" className="cc-checkbox" />
-              Autorizo o Trampos Facil a enviar comunicações comerciais sobre
+              Autorizo o Trampos Fácil a enviar comunicações comerciais sobre
               produtos, serviços e eventos dos seus parceiros e colaboradores.
             </label>
           </div>
-
-          <button className="cc-submit-btn">Cadastre-se</button>
+          <button className="botoes-principais">Cadastre-se</button>
         </div>
       </div>
     </div>
