@@ -12,12 +12,21 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
+  padding: 10px; /* Reduzi de 20px para 10px */
+  border: 1px solid #ccc; /* Apenas para visualização, pode ser removido */
+  border-radius: 11px; /* Apenas para visualização, pode ser removido */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); /* Reduzi de 10px 10px 20px para 5px 5px 10px */
+  min-height: 200px; /* Reduzi de 300px para 200px */
+  min-width: 200px; /* Reduzi de 300px para 200px */
+=======
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 11px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   width: 650px;
   height: 600px;
+>>>>>>> 4f6cae8539aa8e01a680882b31db67ca599cd4b3
 }
 
 .lc-cabecalho-login {
@@ -25,6 +34,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
+  margin-bottom: 10px; /* Reduzi de 20px para 10px */
+}
+
+.icone_cand {
+  font-size: 1.5rem; /* Reduzi de 2rem para 1.5rem */
+  color: #007bff; /* Ajuste conforme necessário */
+  margin-bottom: 5px; /* Reduzi de 10px para 5px */
+}
+
+input[type="text"],
+input[type="password"] {
+  border-radius: 7px;
+  border-color: #0056b3;
+  margin: 5px 0; /* Reduzi de 10px para 5px */
+  padding: 5px; /* Reduzi de 10px para 5px */
+=======
   margin-bottom: 20px;
 }
 
@@ -44,15 +70,56 @@
   border: 2px solid #005bb3;
   margin: 10px 0;
   padding: 10px;
+>>>>>>> 4f6cae8539aa8e01a680882b31db67ca599cd4b3
   width: 100%;
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+.botao-voltar img {
+  height: 30px; /* Reduzi de 40px para 30px */
+}
+
+.logo-cadastro {
+  height: 40px; /* Reduzi de 50px para 40px */
+}
+
+.botao_login {
+  padding: 5px; /* Reduzi de 10px para 5px */
+  margin-top: auto; /* Garante que o botão fique no final */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  padding: 5px 10px; /* Reduzi de 10px 20px para 5px 10px */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.link-esqueci-senha {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5px; /* Reduzi de 10px para 5px */
+}
+
+.esqueci_senha {
+=======
 .lc-link-esqueci-senha {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   margin-top: -15px;
+>>>>>>> 4f6cae8539aa8e01a680882b31db67ca599cd4b3
   text-decoration: none;
   padding: -50px;
 }
@@ -65,3 +132,19 @@
   margin-top: 10px;
   padding: 0;
 }
+<<<<<<< HEAD
+
+.texto_email{
+  color: #0056b3;
+}
+
+.texto_final_cand{
+  color: #0056b3;
+}
+
+.icone-voltar {
+  font-size: 1.5rem; /* Ajuste conforme necessário */
+  color: #007bff; /* Ajuste conforme necessário */
+}
+=======
+>>>>>>> 4f6cae8539aa8e01a680882b31db67ca599cd4b3
