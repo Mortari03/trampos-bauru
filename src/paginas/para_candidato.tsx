@@ -11,18 +11,32 @@ function ParaCandidato() {
   return (
     <div>
       <Cabecalho />
+
       <div className="paracontainer1">
+
+      <div className="porquenos2">
+        <h3>Dentre tantas opções por aí, por que nós?</h3>
+      </div>
+
         <div className="porqueeu">
           <h1> Por que eu, <span className="candidato">candidato(a)</span>, devo escolher o
             <span className="tramposfacil"> Trampos Fácil ?</span></h1>
-
-          <h2>Tá afim de dar um UP na sua carreira ?  <br />
-            Então vem pro Trampo Fácil! Aqui, nós entendemos que a busca por emprego pode ser um desafio,
-            e estamos aqui para tornar essa jornada mais simples, rápida e eficaz.</h2>
         </div>
 
-        <div className="paraimagem1"></div>
+        <div className="upcarreira"><h2>Tá afim de dar um UP na sua carreira ?  <br />
+          Então vem pro Trampo Fácil! Aqui, nós entendemos que a busca por emprego pode ser um desafio,
+          e estamos aqui para tornar essa jornada mais simples, rápida e eficaz.</h2>
+        </div>
+
+
+        <div className="paraimagem1">
+          <p>IMAGEM</p>
+        </div>
       </div>
+
+
+
+
 
       <div className="paracontainer2">
 

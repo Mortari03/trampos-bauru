@@ -1,32 +1,55 @@
-/*Div ParaContainer1 contendo 2 filhas*/
+/* AQUI ESSE BLOCO DEU TUDO ERRADO */
 .paracontainer1 {
     display: flex;
-    margin-top: 150px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    height: 1000px;
+    background-color: aqua;
+    max-width: 1000px;
+    margin: auto;
+    position: relative; /* Para que a imagem possa ser posicionada absolutamente dentro deste contêiner */
 }
-/*Div Porquenos texto*/
+
+.porquenos,
+.seunegocio,
+.notrampofacil {
+    background-color: #6a1b9a;
+    margin: 10px 0; /* Margem entre os blocos */
+    padding: 20px; /* Preenchimento interno */
+    color: white; /* Cor do texto */
+    position: relative; /* Garante que o texto se sobreponha à imagem */
+}
+
 .porquenos {
-    max-width: 700px;
-    margin: 0 10px;
-    justify-content: center;
-    align-items: center;
+    height: 150px;
+    max-width: 500px;
 }
-/*Span da div Porquenos texto*/
-.maisfacilidade {
-    color: blueviolet;
+
+.seunegocio {
+    height: 300px;
+    max-width: 1000px;
 }
-/*Div Paraimagem 1 ao lado do texto*/
-.paraimagem1 {
-    margin: 10px;
+
+.notrampofacil {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.imagem1 {
     width: 350px;
-    height: 400px;
-    background-color: blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 700px;
+    background-color: #1b9a1b;
+    color: white; /* Cor do texto */
+    position: absolute; /* Posiciona a imagem de forma absoluta */
+    top: 2; /* Ajuste conforme necessário */
+    bottom: 0; /* Ajuste conforme necessário */
+    right: 0; /* Ajuste conforme necessário */
+    z-index: 0; /* Garante que a imagem esteja atrás dos outros elementos */
 }
+
+/* AQUI FINALIZA ESSE BLOCO DEU TUDO ERRADO */
+
+
+
 /*DIVS dos Containers que Vão ter 5 Divs Filhas*/
 .paracontainer2,
 .paracontainer3,
@@ -36,6 +59,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
 /*DIVS Quadrado dos Containers que Vão ter 4 Divs Filhas*/
 .quadrado2,
 .quadrado3,
@@ -51,6 +75,7 @@
     margin: 10px;
     padding: 10px;
 }
+
 /*DIVS Quadrado que é a IMAGEM */
 .paraimagem2,
 .paraimagem3,
@@ -65,6 +90,7 @@
     color: white;
     margin: 10px;
 }
+
 /*DIVS Quadrado que é o Icone */
 .paraicone2,
 .paraicone3,
@@ -80,6 +106,7 @@
     color: white;
     margin: 10px;
 }
+
 /*DIVS Quadrado que é o texto plataformaamigavel */
 .plataformaamigavel2,
 .plataformaamigavel3,
@@ -93,6 +120,7 @@
     color: #000000;
     margin: 10px;
 }
+
 /*DIVS Quadrado que é o texto do tramposfacil */
 .texto2,
 .texto3,
@@ -107,17 +135,20 @@
     color: #000000;
     margin: 10px;
 }
+
 /*DIVS Principal para fazer o texto Nossos Parceiros */
 .nossosparceiros {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 /*DIVS filha do nossosparceiros contendo o texto*/
 .nossosparceirosh1 {
     align-items: center;
     justify-content: center;
 }
+
 /*DIVS Principal para fazer AS 4 Imagens */
 .quatroimagens {
     display: flex;
@@ -125,6 +156,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
 /*DIVS filha do quatroimagens contendo o texto*/
 .quatroimagens1,
 .quatroimagens2,
@@ -145,44 +177,62 @@
 
 /* Aqui para deixar responsivo nesse formato 1200px */
 @media (max-width: 1200px) {
-    .quadrado2, .quadrado3, .quadrado4 {
+
+    .quadrado2,
+    .quadrado3,
+    .quadrado4 {
         width: 100%;
         margin: 10px 0;
     }
 }
+
 /* Aqui para deixar responsivo nesse formato 768px */
 @media (max-width: 768px) {
     .paracontainer1 {
         flex-direction: column;
         margin-top: 50px;
     }
+
     .paraimagem1 {
         width: 100%;
         height: auto;
     }
+
     .porquenos {
         max-width: 100%;
         padding: 0 10px;
     }
-    .quadrado2, .quadrado3, .quadrado4 {
+
+    .quadrado2,
+    .quadrado3,
+    .quadrado4 {
         width: 100%;
         margin: 10px 0;
     }
+
     .quatroimagens {
         flex-direction: column;
     }
-    .quatroimagens1, .quatroimagens2, .quatroimagens3, .quatroimagens4 {
+
+    .quatroimagens1,
+    .quatroimagens2,
+    .quatroimagens3,
+    .quatroimagens4 {
         width: 100%;
         height: auto;
         margin: 10px 0;
     }
 }
+
 /* Aqui para deixar responsivo nesse formato 480px */
 @media (max-width: 480px) {
     .nossosparceirosh1 {
         font-size: 30px;
     }
-    .texto2, .texto3, .texto4 {
+
+    .texto2,
+    .texto3,
+    .texto4 {
         font-size: 16px;
         padding: 0 10px;
     }

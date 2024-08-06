@@ -14,20 +14,26 @@ function ParaEmpresas() {
 
       <Cabecalho />
       <div className="paracontainer1">
-        <div className="porquenos">
-          <h3>Dentre tantas opções por ai, por que nós?</h3><br />
-
-          <h1>Seu negócio se conecta com<span className="maisfacilidade"> mais facilidade </span>
-          aos candidatos que sua empresa procura!</h1><br />
-
-
-          <h3>No Trampo Fácil, entendemos que encontrar o candidato ideal pode ser um desafio.
-            Por isso, criamos uma plataforma que não apenas facilita o processo de recrutamento,
-            mas também proporciona uma experiência enriquecedora para os empregadores.</h3>
-        </div>
-
-        <div className="paraimagem1"></div>
+      <div className="porquenos">
+        <h3>Dentre tantas opções por aí, por que nós?</h3>
       </div>
+
+      <div className="seunegocio">
+        <h1>Seu negócio se conecta com <span className="maisfacilidade">mais facilidade</span> aos candidatos que sua empresa procura!</h1>
+        <br />
+      </div>
+
+      <div className="notrampofacil">
+        <h3>No Trampo Fácil, entendemos que encontrar o candidato ideal pode ser um desafio.
+          Por isso, criamos uma plataforma que não apenas facilita o processo de recrutamento,
+          mas também proporciona uma experiência enriquecedora para os empregadores.</h3>
+      </div>
+
+      <div className="imagem1">
+        <p>IMAGEM</p>
+      </div>
+
+    </div>
 
       <div className="paracontainer2">
 
