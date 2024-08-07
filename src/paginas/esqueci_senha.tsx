@@ -53,26 +53,35 @@ function Senha() {
   };
 
   return (
-    <div className="senha_corpo">
-      <div className="senha_container">
-        <div className="senha_topo">
-          <Link to="/prelogin" className="btn_voltar">
+    <div className='senha_corpo'>
+      <div className='senha_container'>
+        <div className='senha_topo'>
+          <Link
+            to='/prelogin'
+            className='btn_voltar'
+          >
             <FontAwesomeIcon icon={faCircleArrowLeft} />
-            <span className="texto_voltar">Voltar</span>
+            <span className='texto_voltar'>Voltar</span>
           </Link>
-          <div className="logo">
-            <img src="/img/logo.png" alt="Logo" />
+          <div className='logo'>
+            <img
+              src='/img/logo.png'
+              alt='Logo'
+            />
           </div>
         </div>
-        <div className="senha_conteudo">
+        <div className='senha_conteudo'>
           <h1>
-            Esqueceu a <span className="senha_cordif">senha?</span>
+            Esqueceu a <span className='senha_cordif'>senha?</span>
           </h1>
           <p>Não se preocupe, acontece com todo mundo</p>
-          <div className="senha_imagem">
-            <img src="/img/Senha.png" alt="Cadeado" />
+          <div className='senha_imagem'>
+            <img
+              src='/img/Senha.png'
+              alt='Cadeado'
+            />
           </div>
-          <div className="senha_botoes">
+          <div className='senha_botoes'>
             <button
               onClick={() => settipoEntrada("email")}
               className={tipoEntrada === "email" ? "selected" : ""}
@@ -87,44 +96,50 @@ function Senha() {
             </button>
           </div>
           {tipoEntrada === "email" && (
-            <div className="input-container">
-              <label htmlFor="email"></label>
+            <div className='input-container'>
+              <label htmlFor='email'></label>
               <p>
                 Escreva seu e-mail cadastrado no{" "}
-                <strong className="trampofacil_cor">Trampos Fácil</strong> e lhe
+                <strong className='trampofacil_cor'>Trampos Fácil</strong> e lhe
                 enviaremos um link para definir sua nova senha
               </p>
               <input
-                type="email"
-                id="email"
-                placeholder="Digite seu e-mail"
+                type='email'
+                id='email'
+                placeholder='Digite seu e-mail'
                 value={email}
                 onChange={handleMudarEmail}
                 className={erroEmail ? "input-error" : ""}
               />
-              {erroEmail && <p className="error-message">{erroEmail}</p>}
-              <button onClick={handleEnviar} className="enviar-button">
+              {erroEmail && <p className='error-message'>{erroEmail}</p>}
+              <button
+                onClick={handleEnviar}
+                className='enviar-button'
+              >
                 Enviar
               </button>
             </div>
           )}
           {tipoEntrada === "cpf" && (
-            <div className="input-container">
-              <label htmlFor="cpf"></label>
+            <div className='input-container'>
+              <label htmlFor='cpf'></label>
               <p>
-                Digite o seu CPF e enviaremos o link para definir sua nova senha
-                ao e-mail ou telefone associado ao seu CPF
+                Digite o seu CPF e enviaremos o link para definir sua nova senha ao e-mail
+                ou telefone associado ao seu CPF
               </p>
               <input
-                type="text"
-                id="cpf"
-                placeholder="Digite seu CPF | CNPJ"
+                type='text'
+                id='cpf'
+                placeholder='Digite seu CPF | CNPJ'
                 value={cpf}
                 onChange={handleMudarCPF}
                 className={erroCPF ? "input-error" : ""}
               />
-              {erroCPF && <p className="error-message">{erroCPF}</p>}
-              <button onClick={handleEnviar} className="enviar-button">
+              {erroCPF && <p className='error-message'>{erroCPF}</p>}
+              <button
+                onClick={handleEnviar}
+                className='enviar-button'
+              >
                 Enviar
               </button>
             </div>

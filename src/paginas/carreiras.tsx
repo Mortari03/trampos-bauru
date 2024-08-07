@@ -14,10 +14,10 @@ function Carreiras() {
       <Cabecalho />
       <div>
         <h1>
-          Pagina De <span className="texto_alternativo_ciano">Carreiras</span>
+          Pagina De <span className='texto_alternativo_ciano'>Carreiras</span>
         </h1>
         <h2>
-          Pagina De <span className="texto_alternativo_azul">Carreiras</span>
+          Pagina De <span className='texto_alternativo_azul'>Carreiras</span>
         </h2>
         <h3>Pagina De Carreiras</h3>
         <p>Pagina De Carreiras</p>

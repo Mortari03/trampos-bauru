@@ -8,7 +8,6 @@ import "./estilo/cabecalho.css";
 //Importes de Paginas
 import Trampos from "./paginas/trampos";
 import Carreiras from "./paginas/carreiras";
-import QuemSomos from "./paginas/quemsomos";
 import ParaEmpresas from "./paginas/para_empresa";
 import ParaCandidato from "./paginas/para_candidato";
 import Suporte from "./paginas/suporte";
@@ -39,63 +38,123 @@ function App() {
     <div>
       <Routes>
         {/* Rotas do Menu */}
-        <Route path="/" element={<Trampos />} />
-        <Route path="/carreiras" element={<Carreiras />} />
-        <Route path="/suporte" element={<Suporte />} />
+        <Route
+          path='/'
+          element={<Trampos />}
+        />
+        <Route
+          path='/carreiras'
+          element={<Carreiras />}
+        />
+        <Route
+          path='/suporte'
+          element={<Suporte />}
+        />
 
         {/* Rotas do Porque Nos ? */}
-        <Route path="/quemsomos" element={<Quemsomos />} />
-        <Route path="/paraempresas" element={<ParaEmpresas />} />
-        <Route path="/paracandidatos" element={<ParaCandidato />} />
+        <Route
+          path='/quemsomos'
+          element={<Quemsomos />}
+        />
+        <Route
+          path='/paraempresas'
+          element={<ParaEmpresas />}
+        />
+        <Route
+          path='/paracandidatos'
+          element={<ParaCandidato />}
+        />
 
         {/* Rotas de Login */}
-        <Route path="/prelogin" element={<PreLogin />} />
-        <Route path="/login_empresa" element={<LoginEmpresa />} />
-        <Route path="/login_candidato" element={<LoginCandidato />} />
+        <Route
+          path='/prelogin'
+          element={<PreLogin />}
+        />
+        <Route
+          path='/login_empresa'
+          element={<LoginEmpresa />}
+        />
+        <Route
+          path='/login_candidato'
+          element={<LoginCandidato />}
+        />
 
         {/* Rotas de Cadastro */}
-        <Route path="/cadastro_candidatos" element={<CadastroCandidatos />} />
-        <Route path="/cadastro_empresas" element={<CadastroEmpresa />} />
+        <Route
+          path='/cadastro_candidatos'
+          element={<CadastroCandidatos />}
+        />
+        <Route
+          path='/cadastro_empresas'
+          element={<CadastroEmpresa />}
+        />
 
         {/* Rota de Esqueci a Senha */}
-        <Route path="/esqueci_senha" element={<Senha />} />
+        <Route
+          path='/esqueci_senha'
+          element={<Senha />}
+        />
 
         {/* Rota de Perfil Candidatos */}
-        <Route path="cabecalho_candidato" element={<CabecalhoCandidato />} />
-        <Route path="/candidato_dashboard" element={<CandidatoDashboard />} />
-        <Route path="/candidato_vagas" element={<CandidatoVagas />} />
         <Route
-          path="/candidato_entrevistas"
+          path='cabecalho_candidato'
+          element={<CabecalhoCandidato />}
+        />
+        <Route
+          path='/candidato_dashboard'
+          element={<CandidatoDashboard />}
+        />
+        <Route
+          path='/candidato_vagas'
+          element={<CandidatoVagas />}
+        />
+        <Route
+          path='/candidato_entrevistas'
           element={<CandidatoEntrevistasAgendadas />}
         />
-        <Route path="/candidato_perfil" element={<CandidatoPerfil />} />
         <Route
-          path="/candidato_configuracao"
+          path='/candidato_perfil'
+          element={<CandidatoPerfil />}
+        />
+        <Route
+          path='/candidato_configuracao'
           element={<CandidatoConfiguracao />}
         />
 
         {/* Rota de Perfil Empresa */}
-        <Route path="/cabecalho_empresa" element={<CabecalhoEmpresa />} />
-        <Route path="/empresa_dashboard" element={<EmpresasDashboard />} />
-        <Route path="/empresa_perfil" element={<EmpresasPerfil />} />
         <Route
-          path="/empresa_vagas_cadastradas"
+          path='/cabecalho_empresa'
+          element={<CabecalhoEmpresa />}
+        />
+        <Route
+          path='/empresa_dashboard'
+          element={<EmpresasDashboard />}
+        />
+        <Route
+          path='/empresa_perfil'
+          element={<EmpresasPerfil />}
+        />
+        <Route
+          path='/empresa_vagas_cadastradas'
           element={<EmpresasVerVagas />}
         />
         <Route
-          path="/empresa_perfil_editar"
+          path='/empresa_perfil_editar'
           element={<EmpresaPerfilEditar />}
         />
         <Route
-          path="/empresa_configuracao"
+          path='/empresa_configuracao'
           element={<EmpresasConfiguracao />}
         />
         {/* Rota de Politicas de Privacidades e outras leis */}
         <Route
-          path="/politica_privacidade"
+          path='/politica_privacidade'
           element={<PoliticaDePrivacidade />}
         />
-        <Route path="/aviso_legal" element={<AvisoLegal />} />
+        <Route
+          path='/aviso_legal'
+          element={<AvisoLegal />}
+        />
       </Routes>
     </div>
   );

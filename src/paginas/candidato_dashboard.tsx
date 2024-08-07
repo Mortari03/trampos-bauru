@@ -42,16 +42,16 @@ function CandidatoDashboard() {
   return (
     <div>
       <CabecalhoCandidato />
-      <div className="dashboard-usuario">
-        <aside className="menu-lateral-usuario">
-          <div className="logo-container-usuario">
+      <div className='dashboard-usuario'>
+        <aside className='menu-lateral-usuario'>
+          <div className='logo-container-usuario'>
             <img
-              src="/img/Logo.png"
-              alt="Logo Trampos Facil"
-              className="logo"
+              src='/img/Logo.png'
+              alt='Logo Trampos Facil'
+              className='logo'
             />
           </div>
-          <nav className="menu-usuario">
+          <nav className='menu-usuario'>
             <button onClick={() => setSecaoAtiva("perfil")}>
               <FontAwesomeIcon icon={faUser} /> Meu Perfil
             </button>
@@ -64,12 +64,15 @@ function CandidatoDashboard() {
             <button onClick={() => setSecaoAtiva("configuracoes")}>
               <FontAwesomeIcon icon={faCog} /> Configurações
             </button>
-            <Link to="/" className="botao-logout-usuario">
+            <Link
+              to='/'
+              className='botao-logout-usuario'
+            >
               <FontAwesomeIcon icon={faSignOutAlt} /> Sair
             </Link>
           </nav>
         </aside>
-        <main className="conteudo">{renderizarConteudo()}</main>
+        <main className='conteudo'>{renderizarConteudo()}</main>
       </div>
       <Rodape />
     </div>

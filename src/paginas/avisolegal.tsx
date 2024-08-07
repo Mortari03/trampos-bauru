@@ -1,148 +1,145 @@
+// Importes do React
 import React from "react";
+// Importe do FontAwesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  Container,
-  Typography,
-  Box,
-  List,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
-import "../estilo/avisolegal.css"; // Certifique-se de criar este arquivo CSS
+  faListAlt,
+  faUserShield,
+  faUpload,
+  faGavel,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+// Importes de CSS
+import "../estilo/avisolegal.css";
+// Importes de Componentes
 import Cabecalho from "../componentes/cabecalho";
 import Rodape from "../componentes/rodape";
-import { url } from "inspector";
 
-const AvisoLegal: React.FC = () => {
+const AvisoLegal = () => {
   return (
     <div>
       <Cabecalho />
-      <Container className="aviso_container">
-        <Typography variant="h1" className="aviso_titulo">
-          Aviso Legal para Candidatos do Trampos Fácil
-        </Typography>
+      <div className='aviso_legal_container'>
+        <div className='aviso_content'>
+          <h1 className='aviso_titulo'>Aviso Legal para Candidatos do Trampos Fácil</h1>
 
-        <Typography variant="body1" className="aviso_texto">
-          Este documento estabelece as Condições Gerais de Uso do portal Trampos
-          Fácil
-          <a
-            href="https://www.tramposfacil.com.br"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            (https://www.tramposfacil.com.br)
-          </a>
-          e todos os websites pertencentes à Trampos Fácil Ltda. (doravante
-          denominada “Trampos Fácil”).
-        </Typography>
-
-        <Section title="Sumário">
-          <List>
-            <ListItem>
-              <ListItemText primary="Aviso Legal para Candidatos" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Obrigações dos Usuários no Portal" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Publicação do Conteúdo no Portal" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Condições Legais para Candidatos" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Informação de Contato" />
-            </ListItem>
-          </List>
-        </Section>
-
-        <Section title="Aviso Legal para Candidatos">
-          <Typography variant="body1" className="aviso_texto">
-            A finalidade do Trampos Fácil é disponibilizar uma plataforma que
-            conecta Recrutadores e Candidatos em um ambiente online. O portal
-            permite que as empresas registradas:
-          </Typography>
-          <List>
-            <ListItem>
-              <ListItemText primary="Acessem a base de dados de Candidatos registrados." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Publiquem vagas de emprego." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Gerenciem o processo de seleção de candidatos." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Utilizem outros serviços relacionados à otimização de candidaturas e recrutamento." />
-            </ListItem>
-          </List>
-          <Typography variant="body1" className="aviso_texto">
-            O Trampos Fácil se reserva o direito de modificar as Condições
-            Gerais de Uso a qualquer momento, sem aviso prévio.
-          </Typography>
-        </Section>
-
-        <Section title="Obrigações dos Usuários">
-          <Typography variant="body1" className="aviso_texto">
-            O Usuário concorda em:
-          </Typography>
-          <List>
-            <ListItem>
-              <ListItemText primary="Utilizar o Portal de forma diligente e apenas para os fins a que se destinam." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Respeitar os direitos de terceiros ao usar os serviços do Portal." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Não reproduzir, distribuir ou modificar o conteúdo do Portal sem autorização." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Manter atualizadas suas informações no Portal." />
-            </ListItem>
-          </List>
-        </Section>
-
-        <Section title="Publicação do Conteúdo no Portal">
-          <Typography variant="body1" className="aviso_texto">
-            O Usuário é o único responsável pelo Conteúdo que publica no Portal,
-            garantindo que possui os direitos necessários para utilizar o
-            Conteúdo.
-          </Typography>
-        </Section>
-
-        <Section title="Condições Legais para Candidatos">
-          <Typography variant="body1" className="aviso_texto">
-            O Usuário deve ter 14 anos ou mais para acessar o Portal. A
-            utilização de certos serviços pode estar sujeita a condições
-            particulares, que devem ser lidas e aceitas antes do uso.
-          </Typography>
-        </Section>
-
-        <Section title="Informação de Contato">
-          <Typography variant="body1" className="aviso_texto">
-            Para dúvidas ou mais informações, entre em contato conosco pelo
-            e-mail:{" "}
-            <a href="mailto:contato@tramposfacil.com.br">
-              contato@tramposfacil.com.br
+          <p className='aviso_texto'>
+            Este documento estabelece as Condições Gerais de Uso do portal Trampos Fácil (
+            <a
+              href='https://www.tramposfacil.com.br'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='link_trampos'
+            >
+              www.tramposfacil.com.br
             </a>
-            .
-          </Typography>
-        </Section>
-      </Container>
+            ) e todos os websites pertencentes à Trampos Fácil Ltda.
+          </p>
+          <div className='aviso_section'>
+            <h2 className='aviso_subtitulo'>
+              <FontAwesomeIcon
+                icon={faListAlt}
+                className='icon'
+              />{" "}
+              Sumário
+            </h2>
+            <ul>
+              <li>
+                <p>Aviso Legal para Candidatos</p>
+              </li>
+
+              <li>
+                <p>Obrigações dos Usuários no Portal</p>
+              </li>
+              <li>
+                <p>Publicação do Conteúdo no Portal</p>
+              </li>
+              <li>
+                <p>Condições Legais para Candidatos</p>
+              </li>
+              <li>
+                <p>Informação de Contato</p>
+              </li>
+            </ul>
+          </div>
+          <div className='aviso_section'>
+            <h2 className='aviso_subtitulo'>
+              <FontAwesomeIcon
+                icon={faUserShield}
+                className='icon'
+              />{" "}
+              Aviso Legal para Candidatos
+            </h2>
+            <p className='aviso_texto'>
+              O Trampos Fácil conecta Recrutadores e Candidatos em um ambiente online,
+              permitindo que empresas acessem a base de dados de candidatos, publiquem
+              vagas, gerenciem processos de seleção e utilizem outros serviços
+              relacionados.
+            </p>
+            <p className='aviso_texto'>
+              Reservamo-nos o direito de modificar as Condições Gerais de Uso a qualquer
+              momento, sem aviso prévio.
+            </p>
+          </div>
+          <div className='aviso_section'>
+            <h2 className='aviso_subtitulo'>
+              <FontAwesomeIcon
+                icon={faGavel}
+                className='icon'
+              />{" "}
+              Obrigações dos Usuários
+            </h2>
+            <p className='aviso_texto'>
+              Os usuários concordam em utilizar o portal de forma diligente e apenas para
+              os fins a que se destinam, respeitando os direitos de terceiros e mantendo
+              suas informações atualizadas.
+            </p>
+          </div>
+          <div className='aviso_section'>
+            <h2 className='aviso_subtitulo'>
+              <FontAwesomeIcon
+                icon={faUpload}
+                className='icon'
+              />{" "}
+              Publicação do Conteúdo no Portal
+            </h2>
+            <p className='aviso_texto'>
+              Os usuários são responsáveis pelo conteúdo que publicam, garantindo possuir
+              os direitos necessários.
+            </p>
+          </div>
+          <div className='aviso_section'>
+            <h2 className='aviso_subtitulo'>
+              <FontAwesomeIcon
+                icon={faUserShield}
+                className='icon'
+              />{" "}
+              Condições Legais para Candidatos
+            </h2>
+            <p className='aviso_texto'>
+              Os usuários devem ter 14 anos ou mais para acessar o portal. A utilização de
+              certos serviços pode estar sujeita a condições particulares, que devem ser
+              lidas e aceitas antes do uso.
+            </p>
+          </div>
+          <div className='aviso_section'>
+            <h2 className='aviso_subtitulo'>
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className='icon'
+              />{" "}
+              Informação de Contato
+            </h2>
+            <p className='aviso_texto'>
+              Para dúvidas ou mais informações, entre em contato conosco pelo e-mail:{" "}
+              <a href='mailto:contato@tramposfacil.com.br'>contato@tramposfacil.com.br</a>
+            </p>
+          </div>
+        </div>
+      </div>
       <Rodape />
     </div>
   );
 };
-
-const Section: React.FC<{ title: string; children: React.ReactNode }> = ({
-  title,
-  children,
-}) => (
-  <Box mt={4}>
-    <Typography variant="h4" className="aviso_subtitulo">
-      {title}
-    </Typography>
-    {children}
-  </Box>
-);
 
 export default AvisoLegal;

@@ -62,8 +62,7 @@ function Suporte() {
     },
     {
       question: "Como posso entrar em contato com o suporte?",
-      answer:
-        "Você pode entrar em contato conosco através do formulário nesta página.",
+      answer: "Você pode entrar em contato conosco através do formulário nesta página.",
       iconLeft: faEnvelope,
     },
   ];
@@ -98,9 +97,9 @@ function Suporte() {
   return (
     <div>
       <Cabecalho />
-      <div className="suporte_container">
+      <div className='suporte_container'>
         {sucesso && (
-          <div className="sucesso-alerta">
+          <div className='sucesso-alerta'>
             <FontAwesomeIcon icon={faCheckCircle} />
             <span>Mensagem enviada com sucesso!</span>
           </div>
@@ -108,62 +107,70 @@ function Suporte() {
         <div>
           <h1>SUPORTE</h1>
           <p>
-            Estamos aqui para ajudar! Se você tiver alguma dúvida, entre em
-            contato conosco.
+            Estamos aqui para ajudar! Se você tiver alguma dúvida, entre em contato
+            conosco.
           </p>
         </div>
 
-        <div className="suporte_formulario_container">
-          <form className="suporte_formulario" onSubmit={handleSubmit}>
+        <div className='suporte_formulario_container'>
+          <form
+            className='suporte_formulario'
+            onSubmit={handleSubmit}
+          >
             <input
-              type="text"
-              placeholder="Nome"
-              className="suporte_formulario_input"
+              type='text'
+              placeholder='Nome'
+              className='suporte_formulario_input'
               value={nome}
               onChange={(e) => setNome(e.target.value)}
             />
             <input
-              type="email"
-              placeholder="Email"
-              className="suporte_formulario_input"
+              type='email'
+              placeholder='Email'
+              className='suporte_formulario_input'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
-              placeholder="Digite sua mensagem"
-              className="suporte_formulario_textarea"
+              placeholder='Digite sua mensagem'
+              className='suporte_formulario_textarea'
               value={mensagem}
               onChange={(e) => setMensagem(e.target.value)}
             ></textarea>
-            <button type="submit" className="botoes-principais">
+            <button
+              type='submit'
+              className='botoes-principais'
+            >
               ENVIAR
             </button>
           </form>
-          <div className="suporte_formulario_imagem" />
+          <div className='suporte_formulario_imagem' />
         </div>
 
-        <div className="suporte_faq_container">
+        <div className='suporte_faq_container'>
           <h1>
-            Perguntas Frequentes{" "}
-            <span className="texto_alternativo_ciano">(FAQ)</span>
+            Perguntas Frequentes <span className='texto_alternativo_ciano'>(FAQ)</span>
           </h1>
-          <div className="suporte_faq_sections">
-            <div className="suporte_faq_section">
+          <div className='suporte_faq_sections'>
+            <div className='suporte_faq_section'>
               <img
-                src="/img/sup/ParaCandidatos.jpg"
-                alt="Para Candidatos"
-                className="suporte_faq_section_imagem"
+                src='/img/sup/ParaCandidatos.jpg'
+                alt='Para Candidatos'
+                className='suporte_faq_section_imagem'
               />
               <h2>Para Candidatos</h2>
               {faqsCandidatos.map((faq, index) => (
-                <div className="suporte_faq_item" key={index}>
+                <div
+                  className='suporte_faq_item'
+                  key={index}
+                >
                   <div
-                    className="suporte_faq_item_pergunta"
+                    className='suporte_faq_item_pergunta'
                     onClick={() => toggleDropdown(index)}
                   >
                     <FontAwesomeIcon
                       icon={faq.iconLeft}
-                      className="suporte_faq_item_icon"
+                      className='suporte_faq_item_icon'
                     />
                     {faq.question}
                     <FontAwesomeIcon
@@ -171,32 +178,31 @@ function Suporte() {
                     />
                   </div>
                   {activeIndex === index && (
-                    <div className="suporte_faq_item_resposta">
-                      {faq.answer}
-                    </div>
+                    <div className='suporte_faq_item_resposta'>{faq.answer}</div>
                   )}
                 </div>
               ))}
             </div>
 
-            <div className="suporte_faq_section">
+            <div className='suporte_faq_section'>
               <img
-                src="/img/sup/ParaEmpresas.jpg"
-                alt="Para Empresas"
-                className="suporte_faq_section_imagem"
+                src='/img/sup/ParaEmpresas.jpg'
+                alt='Para Empresas'
+                className='suporte_faq_section_imagem'
               />
               <h2>Para Empresas</h2>
               {faqsEmpresas.map((faq, index) => (
-                <div className="suporte_faq_item" key={index}>
+                <div
+                  className='suporte_faq_item'
+                  key={index}
+                >
                   <div
-                    className="suporte_faq_item_pergunta"
-                    onClick={() =>
-                      toggleDropdown(index + faqsCandidatos.length)
-                    }
+                    className='suporte_faq_item_pergunta'
+                    onClick={() => toggleDropdown(index + faqsCandidatos.length)}
                   >
                     <FontAwesomeIcon
                       icon={faq.iconLeft}
-                      className="suporte_faq_item_icon"
+                      className='suporte_faq_item_icon'
                     />
                     {faq.question}
                     <FontAwesomeIcon
@@ -208,9 +214,7 @@ function Suporte() {
                     />
                   </div>
                   {activeIndex === index + faqsCandidatos.length && (
-                    <div className="suporte_faq_item_resposta">
-                      {faq.answer}
-                    </div>
+                    <div className='suporte_faq_item_resposta'>{faq.answer}</div>
                   )}
                 </div>
               ))}

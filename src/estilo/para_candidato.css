@@ -1,225 +1,115 @@
-/*Div Principal paracontainer1 contendo 2 filhas*/
-.paracontainer1 {
-    display: flex;
-    flex-direction: row; /* Alinha os itens horizontalmente */
-    height: 1000px;
-    background-color: aqua;
-    max-width: 1100px;
-    margin: auto;
-    position: relative; /* Para que a imagem possa ser posicionada absolutamente dentro deste contêiner */
+/* Estilos gerais da página */
+/* Título Principal */
+.pc_candidato_titulo {
+  margin-bottom: -35px;
+  justify-content: flex-start;
+  font-size: 20px;
 }
 
-/*Div Filha paracontainer1 Porqueeu texto*/
-.porquenos2,
-.porqueeu,
-.upcarreira
-{
-    background-color: #6a1b9a;
-    margin: 10px 0; /* Margem entre os blocos */
-    padding: 20px; /* Preenchimento interno */
-    color: white; /* Cor do texto */
-    position: relative; /* Garante que o texto se sobreponha à imagem */
-}
-.porquenos2 {
-    height: 100px;
-    max-width: 1000px;
-}
-.porqueeu {
-    height: 300px;
-    max-width: 1000px;
-
-}
-.upcarreia {
-    width: 100%;
-    max-width: 1000px;
+.pc_candidato_chamada {
+  font-size: 70px;
 }
 
-
-/*Span da div Porqueeu texto*/
-.candidato {
-    color: blueviolet;
+.pc_candidato_p {
+  font-size: 30px;
 }
 
-/*Span da div Porqueeu texto*/
-.tramposfacil {
-    color: brown;
+/* Container Principal  */
+.pc_container_principal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  margin-top: 30px;
 }
 
-/*Div Filha paracontainer1 Paraimagen1 texto*/
-.paraimagem1 {
-    width: 500px;
-    height: 600px;
-    background-color: #1b9a1b;
-    color: white; /* Cor do texto */
-    position: absolute; /* Posiciona a imagem de forma absoluta */
-    top: 3; /* Ajuste conforme necessário */
-    bottom: 0;
-    right: 0; /* Ajuste conforme necessário */
-    z-index: 0; /* Garante que a imagem esteja atrás dos outros elementos */
+/* Texto de Boas-Vindas */
+.pc_candidato_texto {
+  flex: 2;
 }
 
-/*DIV Principal dos paracontainers que Vão ter 5 Divs Filhas*/
-.paracontainer2,
-.paracontainer3,
-.paracontainer4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+/* Imagem Para Candidatos */
+.pc_imagem_sobrenos {
+  flex: 1;
+  background-image: url("../../public/img/paraempresas/paraempresas.png"); /* Imagem a ser definida */
+  background-position: center;
+  background-size: cover; /* Preenche todo o espaço da div */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  min-height: 600px;
+  border-radius: 5px;
 }
 
-/*DIVS Quadrado dos paracontainers que Vão ter 4 Divs Filhas*/
-.quadrado2,
-.quadrado3,
-.quadrado4 {
-    width: 500px;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    background-color: #fff;
-    margin: 10px;
-    padding: 10px;
+.pc-cards-container {
+  margin-top: 150px;
 }
 
-/*DIVS Quadrado que é a IMAGEM */
-.paraimagem2,
-.paraimagem3,
-.paraimagem4 {
-    height: 100px;
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    margin: 10px;
+.pc-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-/*DIVS Quadrado que é o Icone */
-.paraicone2,
-.paraicone3,
-.paraicone4 {
-    font-size: 32px;
-    color: #6a1b9a;
-    height: 100px;
-    background-color: rgb(5, 39, 112);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: white;
-    margin: 10px;
+.pc-card {
+  width: 400px;
+  height: 500px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
 }
 
-/*DIVS Quadrado que é o texto plataformaamigavel */
-.plataformaamigavel2,
-.plataformaamigavel3,
-.plataformaamigavel4 {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: #000000;
-    margin: 10px;
+.pc-card-imagem img {
+  width: 100%;
+  height: 300px; /* Ajuste conforme necessário */
+  object-fit: cover;
 }
 
-/*DIVS Quadrado que é o texto do tramposfacil */
-.texto2,
-.texto3,
-.texto4 {
-    height: 150px;
-    background-color: rgb(107, 2, 90);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: #000000;
-    margin: 10px;
+.pc-card-icone {
+  margin-top: 10px;
+  font-size: 32px;
+  color: #3354ab;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease; /* Adiciona uma transição suave para cor e transformação */
 }
 
-/*DIV Principal do nossaprioridade que Vão ter 1 Div Filha*/
-.nossaprioridade {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
+.pc-card-icone:hover {
+  color: #005bb3;
+  transform: scale(1.1); /* Aumenta o tamanho do ícone ao passar o mouse */
 }
 
-/*DIV filha do nossaprioridade*/
-.nossaprioridadeh1 {
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
+.pc-card-titulo {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #132144;
 }
 
-/*DIV Principal do texto5*/
-.texto5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
+.pc-card-descricao {
+  font-size: 16px;
+  color: #202538;
+  padding: 0 10px;
 }
 
-/*Classname H2 do texto5*/
-.textorodape {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 30px;
-}
-
-/* Aqui para deixar responsivo nesse formato 1200px */
-@media (max-width: 1200px) {
-
-    .quadrado2,
-    .quadrado3,
-    .quadrado4 {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
-/* Aqui para deixar responsivo nesse formato 768px */
+/* Adicionando a media query para ajustar o layout em telas menores */
 @media (max-width: 768px) {
-    .paracontainer1 {
-        flex-direction: column;
-        margin-top: 50px;
-    }
+  .pc_container_principal {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .paraimagem1 {
-        width: 100%;
-        height: auto;
-    }
+  .pc_candidato_texto {
+    flex: none;
+    margin-bottom: 20px;
+  }
 
-    .porqueeu {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-
-    .quadrado2,
-    .quadrado3,
-    .quadrado4 {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
-/* Aqui para deixar responsivo nesse formato 480px */
-@media (max-width: 480px) {
-    .nossaprioridadeh1 {
-        font-size: 30px;
-    }
-
-    .texto5,
-    .textorodape {
-        font-size: 20px;
-        padding: 0 10px;
-    }
+  .pc_imagem_sobrenos {
+    width: 100%;
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+    min-height: 300px; /* Ajuste a altura mínima conforme necessário */
+  }
 }

@@ -21,7 +21,7 @@
   justify-content: center;
   flex: 1;
   width: 500px;
-  height: 400px;
+  min-height: 400px;
   border-radius: 8px;
 }
 
@@ -36,8 +36,8 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
-  width: 500px;
-  height: 400px;
+  min-width: 500px;
+  min-height: 400px;
   border-radius: 8px;
 }
 
@@ -53,11 +53,11 @@
 .qs_item_missao,
 .qs_item_visao {
   flex: 1;
-  width: 600px;
-  height: 700px;
-  border: 1px solid #ccc;
+  min-width: 600px;
+  min-height: 700px;
+  background-color: #f2f2f2;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
   overflow: hidden;
   margin: 10px;
   padding: 10px;
@@ -80,7 +80,7 @@
   justify-content: center;
 }
 .qs_imagem_visao {
-  height: 600px;
+  height: 620px;
   width: 600px;
   background-image: url("../../public/img/quemsomos/visao.png");
   background-position: center;
@@ -129,11 +129,11 @@
 
 .qs_item_valorespadrao {
   width: 500px;
-  flex: 1;
+  background-color: #f2f2f2;
   height: 500px;
   border: 1px;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
   overflow: hidden;
   margin: 10px;
   padding: 10px;
@@ -147,6 +147,7 @@
 .qs_imagem_inovacao {
   height: 300px;
   width: 300px;
+  flex: 1;
   background-image: url("../../public/img/quemsomos/inovacao.png");
   background-position: center;
   background-size: cover; /* Preenche todo o espaço da div */
@@ -159,6 +160,7 @@
 .qs_imagem_transparencia {
   height: 300px;
   width: 300px;
+  flex: 1;
   background-image: url("../../public/img/quemsomos/transparencia.png");
   background-position: center;
   background-size: contain; /* Preenche todo o espaço da div */
@@ -172,6 +174,7 @@
 .qs_imagem_compromisso {
   height: 300px;
   width: 300px;
+  flex: 1;
   background-image: url("../../public/img/quemsomos/iunclusao.png");
   background-position: center;
   background-size: contain; /* Preenche todo o espaço da div */
@@ -228,6 +231,7 @@
   height: 400px;
   margin: 10px;
   padding: 5px;
+ 
 }
 
 .qs_card_conteudo {
@@ -254,7 +258,5 @@
 }
 
 .qs_card:hover .qs_card_imagem {
-  transform: scale(
-    1.05
-  ); /* Amplia a imagem em 5% ao passar o mouse sobre o card */
+  transform: scale(1.05); /* Amplia a imagem em 5% ao passar o mouse sobre o card */
 }

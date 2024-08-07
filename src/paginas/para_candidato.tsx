@@ -1,124 +1,123 @@
-//Importes do React
-import React from "react";
-import { Link } from "react-router-dom";
-//Importes de Icones
+// Importes do React
+// Importes do Router-Dom (se necessário)
+// Importes de Icones e Outros
+// Importes de CSS
 import "../estilo/para_candidato.css";
+// Importes de Paginas
 import Rodape from "../componentes/rodape";
 import Cabecalho from "../componentes/cabecalho";
-//Importes de Paginas
 
-function ParaCandidato() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faThumbsUp,
+  faClock,
+  faBookOpen,
+  faUsers,
+  faStar,
+  faHandsHelping,
+} from "@fortawesome/free-solid-svg-icons";
+
+function ParaCandidatos() {
+  const cards = [
+    {
+      icone: faThumbsUp,
+      titulo: "Plataforma Amigável e Acolhedora",
+      descricao:
+        "No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, projetada pra você encontrar as oportunidades perfeitas pro seu perfil.",
+      imagem:
+        "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      icone: faClock,
+      titulo: "Feedback Rápido e Transparente",
+      descricao:
+        "Sabemos que aquela espera depois de se candidatar pode ser um porre. Por isso, garantimos que você receba um feedback rapidinho das empresas.",
+      imagem:
+        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      icone: faBookOpen,
+      titulo: "Recursos pra Turbinar sua Carreira",
+      descricao:
+        "Além de vagas, nossa seção 'Carreiras' tem um blog recheado de dicas e novidades sobre o mercado de trabalho e RH.",
+      imagem:
+        "https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      icone: faUsers,
+      titulo: "Comunidade Maneira e Networking",
+      descricao:
+        "Ao se inscrever no Trampo Fácil, você faz parte de uma comunidade maneira de profissionais.",
+      imagem:
+        "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      icone: faStar,
+      titulo: "Vagas Exclusivas e Perfeitas pra Você",
+      descricao:
+        "Trabalhamos com várias empresas locais, então você tem acesso a oportunidades que não estão em outros lugares.",
+      imagem:
+        "https://images.pexels.com/photos/3184318/pexels-photo-3184318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      icone: faHandsHelping,
+      titulo: "Apoio e Orientação",
+      descricao:
+        "Estamos aqui pra te ajudar em cada passo da sua jornada. Queremos que você se sinta confiante e preparado.",
+      imagem:
+        "https://images.pexels.com/photos/3184401/pexels-photo-3184401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+  ];
+
   return (
     <div>
       <Cabecalho />
-
-      <div className="paracontainer1">
-
-      <div className="porquenos2">
-        <h3>Dentre tantas opções por aí, por que nós?</h3>
+      {/* Introdução */}
+      <div className='pc_container_principal'>
+        <div className='pc_candidato_texto'>
+          <h3 className='pc_candidato_titulo'>
+            POR QUE VOCÊ, CANDIDATO(A), DEVE ESCOLHER O TRAMPO FÁCIL?
+          </h3>
+          <h2 className='pc_candidato_chamada'>
+            Tá afim de dar um{" "}
+            <span className='texto_alternativo_ciano'>UP na sua carreira?</span> Então vem
+            pro <span className='texto_alternativo_azulvivo'>Trampos Fácil!</span>
+          </h2>
+          <p className='pc_candidato_p'>
+            Aqui, nós entendemos que a busca por emprego pode ser um desafio, e estamos
+            aqui pra tornar essa jornada mais simples, rápida e eficaz.
+          </p>
+        </div>
+        <div className='pc_imagem_sobrenos'></div>
       </div>
 
-        <div className="porqueeu">
-          <h1> Por que eu, <span className="candidato">candidato(a)</span>, devo escolher o
-            <span className="tramposfacil"> Trampos Fácil ?</span></h1>
-        </div>
-
-        <div className="upcarreira"><h2>Tá afim de dar um UP na sua carreira ?  <br />
-          Então vem pro Trampo Fácil! Aqui, nós entendemos que a busca por emprego pode ser um desafio,
-          e estamos aqui para tornar essa jornada mais simples, rápida e eficaz.</h2>
-        </div>
-
-
-        <div className="paraimagem1">
-          <p>IMAGEM</p>
+      {/* Cards */}
+      <div className='pc-cards-container'>
+        <div className='pc-cards'>
+          {cards.map((card, index) => (
+            <div
+              className='pc-card'
+              key={index}
+            >
+              <div className='pc-card-imagem'>
+                <img
+                  src={card.imagem}
+                  alt={card.titulo}
+                />
+              </div>
+              <div className='pc-card-icone'>
+                <FontAwesomeIcon icon={card.icone} />
+              </div>
+              <div className='pc-card-titulo'>{card.titulo}</div>
+              <div className='pc-card-descricao'>{card.descricao}</div>
+            </div>
+          ))}
         </div>
       </div>
 
-
-
-
-
-      <div className="paracontainer2">
-
-        <div className="quadrado2">
-          <div className="paraimagem2"> IMAGEM </div>
-          <div className="paraicone2"> ICONE DE JOINHA </div>
-          <div className="plataformaamigavel2"> Plataforma Amigável E Acolhedora </div>
-          <div className="texto2"> No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil. </div>
-        </div>
-
-        <div className="quadrado2">
-
-          <div className="paraimagem2">IMAGEM</div>
-          <div className="paraicone2">ICONE DE JOINHA</div>
-          <div className="plataformaamigavel2">Plataforma Amigável E Acolhedora</div>
-          <div className="texto2">No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil.</div>
-
-        </div>
-
-      </div>
-
-
-      <div className="paracontainer3">
-
-        <div className="quadrado3">
-          <div className="paraimagem3"> IMAGEM </div>
-          <div className="paraicone3"> ICONE DE JOINHA </div>
-          <div className="plataformaamigavel3"> Plataforma Amigável E Acolhedora </div>
-          <div className="texto3"> No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil. </div>
-        </div>
-
-        <div className="quadrado3">
-
-          <div className="paraimagem3">IMAGEM</div>
-          <div className="paraicone3">ICONE DE JOINHA</div>
-          <div className="plataformaamigavel3">Plataforma Amigável E Acolhedora</div>
-          <div className="texto3">No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil.</div>
-
-        </div>
-
-      </div>
-
-      <div className="paracontainer4">
-
-        <div className="quadrado4">
-          <div className="paraimagem4"> IMAGEM </div>
-          <div className="paraicone4"> ICONE DE JOINHA </div>
-          <div className="plataformaamigavel4"> Plataforma Amigável E Acolhedora </div>
-          <div className="texto4"> No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil. </div>
-        </div>
-
-        <div className="quadrado4">
-
-          <div className="paraimagem4">IMAGEM</div>
-          <div className="paraicone4">ICONE DE JOINHA</div>
-          <div className="plataformaamigavel4">Plataforma Amigável E Acolhedora</div>
-          <div className="texto4">No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil.</div>
-
-        </div>
-
-      </div>
-
-
-      <div className="nossaprioridade">
-        <h1 className="nossaprioridadeh1"> Nossa Prioridade </h1>
-      </div>
-
-      <div className="texto5">
-        <h2 className="textorodape">No Trampo Fácil, sua carreira é nossa prioridade. <br />
-          Entra nessa com a gente e descobre como podemos te ajudar a alcançar seus
-          <br /> objetivos de um jeito descontraído e eficiente! </h2>
-      </div>
-
-      < Rodape />
+      <Rodape />
     </div>
   );
 }
 
-export default ParaCandidato;
+export default ParaCandidatos;

@@ -10,13 +10,17 @@
   font-size: 55px;
 }
 
+.pe_empresa_p {
+  font-size: 30px;
+}
+
 /* Container Principal  */
 .pe_container_principal {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  min-height: 500px;
   margin-top: 30px;
 }
 
@@ -28,12 +32,12 @@
 /* Imagem Para Empresas */
 .pe_imagem_sobrenos {
   flex: 1;
-  background-image: url("../../public/img/paraempresas/paraempresas.jpg");
+  background-image: url("../../public/img/paraempresas/paraempresas.png");
   background-position: center;
   background-size: cover; /* Preenche todo o espaço da div */
   background-repeat: no-repeat; /* Evita a repetição da imagem */
-  height: 500px;
-  border-radius: 8px;
+  min-height: 600px;
+  border-radius: 5px;
 }
 
 .pe-cards-container {
@@ -44,14 +48,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .pe-card {
   width: 400px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
   overflow: hidden;
   text-align: center;
   padding: 10px;
@@ -67,7 +72,9 @@
   margin-top: 10px;
   font-size: 32px;
   color: #3354ab;
-  transition: color 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave para cor e transformação */
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease; /* Adiciona uma transição suave para cor e transformação */
 }
 
 .pe-card-icone:hover {
@@ -79,11 +86,12 @@
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0;
+  color: #132144;
 }
 
 .pe-card-descricao {
   font-size: 16px;
-  color: #555;
+  color: #202538;
   padding: 0 10px;
 }
 
@@ -111,4 +119,23 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 12px;
   margin-bottom: 100px;
+}
+
+/* Adicionando a media query para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+  .pe_container_principal {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pe_empresa_texto {
+    flex: none;
+    margin-bottom: 20px;
+  }
+
+  .pe_imagem_sobrenos {
+    width: 100%;
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+    min-height: 300px; /* Ajuste a altura mínima conforme necessário */
+  }
 }

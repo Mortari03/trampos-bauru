@@ -24,67 +24,86 @@ function Cabecalho() {
   };
 
   return (
-    <div className="div-conteiner">
-      <div className="imagem">
-        <img className="Logo" src="/img/Logo.png" alt="Logo" />
+    <div className='div-conteiner'>
+      <div className='imagem'>
+        <img
+          className='Logo'
+          src='/img/Logo.png'
+          alt='Logo'
+        />
         <div>
-          <div className="tags-li menu">
+          <div className='tags-li menu'>
             <nav>
-              <ul className="infos-cab">
+              <ul className='infos-cab'>
                 <li>
-                  <strong className="menu">
-                    <Link to="/">
-                      <FontAwesomeIcon icon={faHome} className="icone" />
+                  <strong className='menu'>
+                    <Link to='/'>
+                      <FontAwesomeIcon
+                        icon={faHome}
+                        className='icone'
+                      />
                       TRAMPOS
                     </Link>
                   </strong>
                 </li>
                 <li>
-                  <strong className="menu">
-                    <Link to="/carreiras">
-                      <FontAwesomeIcon icon={faSuitcase} className="icone" />
+                  <strong className='menu'>
+                    <Link to='/carreiras'>
+                      <FontAwesomeIcon
+                        icon={faSuitcase}
+                        className='icone'
+                      />
                       CARREIRAS
                     </Link>
                   </strong>
                 </li>
                 <li
-                  className="dropdown"
+                  className='dropdown'
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
                   <strong>
-                    <Link to="#">
+                    <Link to='#'>
                       <FontAwesomeIcon
                         icon={faQuestionCircle}
-                        className="icone"
+                        className='icone'
                       />
                       POR QUE NÓS ?
                     </Link>
                   </strong>
                   {dropdownVisible && (
-                    <div className="dropdown-content menu">
-                      <Link to="/quemsomos">
+                    <div className='dropdown-content menu'>
+                      <Link to='/quemsomos'>
                         <FontAwesomeIcon
                           icon={faPeopleArrows}
-                          className="icone"
+                          className='icone'
                         />
                         Quem Somos
                       </Link>
-                      <Link to="/paraempresas">
-                        <FontAwesomeIcon icon={faBuilding} className="icone" />
+                      <Link to='/paraempresas'>
+                        <FontAwesomeIcon
+                          icon={faBuilding}
+                          className='icone'
+                        />
                         Para Empresas
                       </Link>
-                      <Link to="/paracandidatos">
-                        <FontAwesomeIcon icon={faUser} className="icone" />
+                      <Link to='/paracandidatos'>
+                        <FontAwesomeIcon
+                          icon={faUser}
+                          className='icone'
+                        />
                         Para Candidatos
                       </Link>
                     </div>
                   )}
                 </li>
                 <li>
-                  <strong className="menu">
-                    <Link to="/suporte">
-                      <FontAwesomeIcon icon={faHeadset} className="icone" />
+                  <strong className='menu'>
+                    <Link to='/suporte'>
+                      <FontAwesomeIcon
+                        icon={faHeadset}
+                        className='icone'
+                      />
                       SUPORTE
                     </Link>
                   </strong>
@@ -93,13 +112,13 @@ function Cabecalho() {
             </nav>
           </div>
         </div>
-        <div className="botao-config">
-          <Link to="/prelogin">
-            <button className="botoes-principais">LOGIN | CADASTRO</button>
+        <div className='botao-config'>
+          <Link to='/prelogin'>
+            <button className='botoes-principais'>LOGIN | CADASTRO</button>
           </Link>
         </div>
       </div>
-      <div className="wave-bar"></div>
+      <div className='wave-bar'></div>
     </div>
   );
 }

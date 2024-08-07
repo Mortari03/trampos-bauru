@@ -1,5 +1,5 @@
 //Importes do React
-import React, { useState } from "react";
+import { useState } from "react";
 //Importes do Router-Dom
 import { Link } from "react-router-dom";
 //Importes de Icones
