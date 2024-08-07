@@ -3,10 +3,10 @@ import React from "react";
 //Importes do Router-Dom
 import { Link } from "react-router-dom";
 //Importes de Icones
-//Importes de CSS
-import "../estilo/cadastro_candidato.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+//Importes de CSS
+import "../estilo/cadastro_candidato.css";
 //Importes de Paginas
 
 function CadastroCandidatos() {

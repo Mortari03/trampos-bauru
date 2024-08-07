@@ -9,6 +9,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f0f4f8;
+  overflow: visible;
 }
 
 /* Títulos principais */
@@ -134,4 +135,10 @@ p {
 .Logo:hover {
   transform: scale(1.1); /* Aumenta a escala da logo ao passar o mouse */
   filter: brightness(1.1); /* Aumenta o brilho da logo ao passar o mouse */
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+  width: 0px; /* Largura da barra de rolagem vertical */
+  height: 10px; /* Altura da barra de rolagem horizontal */
 }

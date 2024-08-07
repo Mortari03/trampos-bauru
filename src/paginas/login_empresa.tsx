@@ -36,7 +36,7 @@ function LoginEmpresa() {
             <span className="texto_alternativo_azul">TRAMPOS FÁCIL</span>?
             Cadastre-se como
             <Link to="/cadastro_empresas" className="texto_alternativo_ciano">
-              Candidato
+              Empresa
             </Link>
           </div>
         </div>

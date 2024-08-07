@@ -1,239 +1,114 @@
-/* AQUI ESSE BLOCO DEU TUDO ERRADO */
-.paracontainer1 {
-    display: flex;
-    flex-direction: row; /* Alinha os itens horizontalmente */
-    height: 1000px;
-    background-color: aqua;
-    max-width: 1000px;
-    margin: auto;
-    position: relative; /* Para que a imagem possa ser posicionada absolutamente dentro deste contêiner */
+/* Estilos gerais da página */
+/* Título Principal */
+.pe_empresa_titulo {
+  margin-bottom: -35px;
+  justify-content: flex-start;
+  font-size: 25px;
 }
 
-.porquenos,
-.seunegocio,
-.notrampofacil {
-    background-color: #6a1b9a;
-    margin: 10px 0; /* Margem entre os blocos */
-    padding: 20px; /* Preenchimento interno */
-    color: white; /* Cor do texto */
-    position: relative; /* Garante que o texto se sobreponha à imagem */
+.pe_empresa_chamada {
+  font-size: 55px;
 }
 
-.porquenos {
-    height: 150px;
-    max-width: 500px;
+/* Container Principal  */
+.pe_container_principal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  margin-top: 30px;
 }
 
-.seunegocio {
-    height: 300px;
-    max-width: 1000px;
+/* Texto de Boas-Vindas */
+.pe_empresa_texto {
+  flex: 2;
 }
 
-.notrampofacil {
-    width: 100%;
-    max-width: 1000px;
+/* Imagem Para Empresas */
+.pe_imagem_sobrenos {
+  flex: 1;
+  background-image: url("../../public/img/paraempresas/paraempresas.jpg");
+  background-position: center;
+  background-size: cover; /* Preenche todo o espaço da div */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  height: 500px;
+  border-radius: 8px;
 }
 
-.imagem1 {
-    width: 350px;
-    height: 700px;
-    background-color: #1b9a1b;
-    color: white; /* Cor do texto */
-    position: absolute; /* Posiciona a imagem de forma absoluta */
-    top: 2; /* Ajuste conforme necessário */
-    bottom: 0; /* Ajuste conforme necessário */
-    right: 0; /* Ajuste conforme necessário */
-    z-index: 0; /* Garante que a imagem esteja atrás dos outros elementos */
+.pe-cards-container {
+  margin-top: 150px;
 }
 
-/* AQUI FINALIZA ESSE BLOCO DEU TUDO ERRADO */
-
-
-
-/*DIVS dos Containers que Vão ter 5 Divs Filhas*/
-.paracontainer2,
-.paracontainer3,
-.paracontainer4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.pe-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/*DIVS Quadrado dos Containers que Vão ter 4 Divs Filhas*/
-.quadrado2,
-.quadrado3,
-.quadrado4 {
-    width: 500px;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    background-color: #fff;
-    margin: 10px;
-    padding: 10px;
+.pe-card {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
 }
 
-/*DIVS Quadrado que é a IMAGEM */
-.paraimagem2,
-.paraimagem3,
-.paraimagem4 {
-    height: 100px;
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    margin: 10px;
+.pe-card-imagem img {
+  width: 100%;
+  height: 300px; /* Ajuste conforme necessário */
+  object-fit: cover;
 }
 
-/*DIVS Quadrado que é o Icone */
-.paraicone2,
-.paraicone3,
-.paraicone4 {
-    font-size: 32px;
-    color: #6a1b9a;
-    height: 100px;
-    background-color: rgb(5, 39, 112);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: white;
-    margin: 10px;
+.pe-card-icone {
+  margin-top: 10px;
+  font-size: 32px;
+  color: #3354ab;
+  transition: color 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave para cor e transformação */
 }
 
-/*DIVS Quadrado que é o texto plataformaamigavel */
-.plataformaamigavel2,
-.plataformaamigavel3,
-.plataformaamigavel4 {
-    height: 100px;
-    background-color: rgb(5, 112, 5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #000000;
-    margin: 10px;
+.pe-card-icone:hover {
+  color: #005bb3;
+  transform: scale(1.1); /* Aumenta o tamanho do ícone ao passar o mouse */
 }
 
-/*DIVS Quadrado que é o texto do tramposfacil */
-.texto2,
-.texto3,
-.texto4 {
-    height: 150px;
-    background-color: rgb(5, 112, 5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 20px;
-    color: #000000;
-    margin: 10px;
+.pe-card-titulo {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
-/*DIVS Principal para fazer o texto Nossos Parceiros */
-.nossosparceiros {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.pe-card-descricao {
+  font-size: 16px;
+  color: #555;
+  padding: 0 10px;
 }
 
-/*DIVS filha do nossosparceiros contendo o texto*/
-.nossosparceirosh1 {
-    align-items: center;
-    justify-content: center;
+.pe-parceiros {
+  text-align: center;
+  margin-top: 40px;
 }
 
-/*DIVS Principal para fazer AS 4 Imagens */
-.quatroimagens {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.pe-logos-parceiros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 
-/*DIVS filha do quatroimagens contendo o texto*/
-.quatroimagens1,
-.quatroimagens2,
-.quatroimagens3,
-.quatroimagens4 {
-    flex-direction: column;
-    height: 250px;
-    width: 250px;
-    background-color: #6a1b9a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Aqui para deixar responsivo nesse formato 1200px */
-@media (max-width: 1200px) {
-
-    .quadrado2,
-    .quadrado3,
-    .quadrado4 {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
-/* Aqui para deixar responsivo nesse formato 768px */
-@media (max-width: 768px) {
-    .paracontainer1 {
-        flex-direction: column;
-        margin-top: 50px;
-    }
-
-    .paraimagem1 {
-        width: 100%;
-        height: auto;
-    }
-
-    .porquenos {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-
-    .quadrado2,
-    .quadrado3,
-    .quadrado4 {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .quatroimagens {
-        flex-direction: column;
-    }
-
-    .quatroimagens1,
-    .quatroimagens2,
-    .quatroimagens3,
-    .quatroimagens4 {
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
-    }
-}
-
-/* Aqui para deixar responsivo nesse formato 480px */
-@media (max-width: 480px) {
-    .nossosparceirosh1 {
-        font-size: 30px;
-    }
-
-    .texto2,
-    .texto3,
-    .texto4 {
-        font-size: 16px;
-        padding: 0 10px;
-    }
+.pe-logo-parceiro {
+  width: 100px;
+  height: 100px;
+  background-color: #353535;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  margin-bottom: 100px;
 }

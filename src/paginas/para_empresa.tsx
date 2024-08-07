@@ -1,130 +1,130 @@
-//Importes do React
+// Importes do React
 import React from "react";
-import { Link } from "react-router-dom";
-//Importes de Icones
-//Importes de CSS
 import "../estilo/para_empresa.css";
 import Rodape from "../componentes/rodape";
 import Cabecalho from "../componentes/cabecalho";
-//Importes de Paginas
+
+// Importando os ícones do FontAwesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faThumbsUp,
+  faClock,
+  faBookOpen,
+  faUsers,
+  faStar,
+  faHandsHelping,
+} from "@fortawesome/free-solid-svg-icons";
 
 function ParaEmpresas() {
+  const cards = [
+    {
+      icone: faThumbsUp,
+      titulo: "Acesso a Talentos Qualificados",
+      descricao:
+        "Nossa plataforma conecta você a um pool diversificado de candidatos, permitindo que você encontre profissionais que se alinhem perfeitamente às suas necessidades.",
+      imagem: "/img/paraempresas/AcessoTalentos.webp",
+    },
+    {
+      icone: faClock,
+      titulo: "Feedback e Avaliação",
+      descricao:
+        "Oferecemos ferramentas que permitem que você receba feedbacks sobre suas vagas e processos seletivos, ajudando a aprimorar continuamente suas estratégias de recrutamento.",
+      imagem: "/img/paraempresas/FeedbackAvaliação.webp",
+    },
+    {
+      icone: faBookOpen,
+      titulo: "Visibilidade Aumentada",
+      descricao:
+        "Ao anunciar suas vagas no Trampo Fácil, sua empresa ganha visibilidade em uma plataforma moderna e acessível, atraindo candidatos que estão realmente interessados em fazer parte do seu time.",
+      imagem: "/img/paraempresas/VisibilidadeAumentada.webp",
+    },
+    {
+      icone: faUsers,
+      titulo: "Recursos de RH",
+      descricao:
+        "Aproveite nosso blog e seções de dicas para se manter atualizado sobre as melhores práticas de recrutamento e tendências do mercado, ajudando sua empresa a se destacar.",
+      imagem: "/img/paraempresas/RecursosRH.webp",
+    },
+    {
+      icone: faStar,
+      titulo: "Facilidade no Agendamento de Entrevistas",
+      descricao:
+        "Facilite a comunicação e o agendamento de entrevistas com candidatos, tornando o processo mais eficiente e transparente.",
+      imagem: "AgendamentoEntrevistas.avif",
+    },
+    {
+      icone: faHandsHelping,
+      titulo: "Sistema de Avaliação de Candidatos",
+      descricao:
+        "Permita que sua equipe avalie candidatos de forma organizada, ajudando a tomar decisões mais informadas.",
+      imagem: "/img/paraempresas/",
+    },
+  ];
+
   return (
     <div>
-
       <Cabecalho />
-      <div className="paracontainer1">
-      <div className="porquenos">
-        <h3>Dentre tantas opções por aí, por que nós?</h3>
-      </div>
-
-      <div className="seunegocio">
-        <h1>Seu negócio se conecta com <span className="maisfacilidade">mais facilidade</span> aos candidatos que sua empresa procura!</h1>
-        <br />
-      </div>
-
-      <div className="notrampofacil">
-        <h3>No Trampo Fácil, entendemos que encontrar o candidato ideal pode ser um desafio.
-          Por isso, criamos uma plataforma que não apenas facilita o processo de recrutamento,
-          mas também proporciona uma experiência enriquecedora para os empregadores.</h3>
-      </div>
-
-      <div className="imagem1">
-        <p>IMAGEM</p>
-      </div>
-
-    </div>
-
-      <div className="paracontainer2">
-
-        <div className="quadrado2">
-          <div className="paraimagem2"> IMAGEM </div>
-          <div className="paraicone2"> ICONE DE JOINHA </div>
-          <div className="plataformaamigavel2"> Plataforma Amigável E Acolhedora </div>
-          <div className="texto2"> No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil. </div>
+      {/* Introdução */}
+      <div className="pe_container_principal">
+        <div className="pe_empresa_texto">
+          <h3 className="pe_empresa_titulo">
+            Dentre tantas opções por ai, por que nós ?
+          </h3>
+          <h2 className="pe_empresa_chamada">
+            Seu negócio se conecta com{" "}
+            <span className="texto_alternativo_azulvivo">mais facilidade</span>{" "}
+            {""}
+            aos candidatos que sua empresa procura !
+          </h2>
+          <p>
+            No <span className="texto_alternativo_ciano">Trampo Fácil</span>,
+            entendemos que encontrar o candidato ideal pode ser um desafio. Por
+            isso, criamos uma plataforma que não apenas facilita o processo de
+            recrutamento, mas também proporciona uma experiência enriquecedora
+            para os empregadores.
+          </p>
         </div>
-
-        <div className="quadrado2">
-
-          <div className="paraimagem2">IMAGEM</div>
-          <div className="paraicone2">ICONE DE JOINHA</div>
-          <div className="plataformaamigavel2">Plataforma Amigável E Acolhedora</div>
-          <div className="texto2">No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil.</div>
-
-        </div>
-
+        <div className="pe_imagem_sobrenos"></div>
       </div>
 
-      {/* <div className="paracontainer3">  */}
-
-      <div className="paracontainer3">
-
-        <div className="quadrado3">
-          <div className="paraimagem3"> IMAGEM </div>
-          <div className="paraicone3"> ICONE DE JOINHA </div>
-          <div className="plataformaamigavel3"> Plataforma Amigável E Acolhedora </div>
-          <div className="texto3"> No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil. </div>
+      {/* Cards */}
+      <div className="pe-cards-container">
+        <div className="pe-cards">
+          {cards.map((card, index) => (
+            <div className="pe-card" key={index}>
+              <div className="pe-card-imagem">
+                <img src={card.imagem} alt={card.titulo} />
+              </div>
+              <div className="pe-card-icone">
+                <FontAwesomeIcon icon={card.icone} />
+              </div>
+              <div className="pe-card-titulo">{card.titulo}</div>
+              <div className="pe-card-descricao">{card.descricao}</div>
+            </div>
+          ))}
         </div>
-
-        <div className="quadrado3">
-
-          <div className="paraimagem3">IMAGEM</div>
-          <div className="paraicone3">ICONE DE JOINHA</div>
-          <div className="plataformaamigavel3">Plataforma Amigável E Acolhedora</div>
-          <div className="texto3">No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil.</div>
-
-        </div>
-
       </div>
 
-
-      {/* <div className="paracontainer4">  */}
-
-
-      <div className="paracontainer4">
-
-        <div className="quadrado4">
-          <div className="paraimagem4"> IMAGEM </div>
-          <div className="paraicone4"> ICONE DE JOINHA </div>
-          <div className="plataformaamigavel4"> Plataforma Amigável E Acolhedora </div>
-          <div className="texto4"> No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil. </div>
+      {/* Parceiros */}
+      <div className="pe-parceiros">
+        <h1>Nossos Parceiros</h1>
+        <div className="pe-logos-parceiros">
+          <div className="pe-logo-parceiro">
+            100x100 px <br /> logo Empresa
+          </div>
+          <div className="pe-logo-parceiro">
+            100x100 px <br /> logo Empresa
+          </div>
+          <div className="pe-logo-parceiro">
+            100x100 px <br /> logo Empresa
+          </div>
+          <div className="pe-logo-parceiro">
+            100x100 px <br /> logo Empresa
+          </div>
         </div>
-
-        <div className="quadrado4">
-
-          <div className="paraimagem4">IMAGEM</div>
-          <div className="paraicone4">ICONE DE JOINHA</div>
-          <div className="plataformaamigavel4">Plataforma Amigável E Acolhedora</div>
-          <div className="texto4">No Trampo Fácil, oferecemos uma interface moderna e super fácil de usar, <br />
-            projetada pra você encontrar as oportunidades perfeitas pro seu perfil.</div>
-
-        </div>
-
       </div>
 
-
-      <div className="nossosparceiros">
-        <h1 className="nossosparceirosh1"> Nossos Parceiros </h1>
-      </div>
-
-      <div className="quatroimagens">
-
-        <div className="quatroimagens1">100x100 px <br /> logo Empresa </div>
-        <div className="quatroimagens2">100x100 px <br /> logo Empresa </div>
-        <div className="quatroimagens3">100x100 px <br /> logo Empresa </div>
-        <div className="quatroimagens4">100x100 px <br /> logo Empresa </div>
-      </div>
-
-
-
-
-
-      < Rodape />
+      <Rodape />
     </div>
   );
 }
