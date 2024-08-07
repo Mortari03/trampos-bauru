@@ -45,11 +45,6 @@ function CandidatoDashboard() {
       <div className='dashboard-usuario'>
         <aside className='menu-lateral-usuario'>
           <div className='logo-container-usuario'>
-            <img
-              src='/img/Logo.png'
-              alt='Logo Trampos Facil'
-              className='logo'
-            />
           </div>
           <nav className='menu-usuario'>
             <button onClick={() => setSecaoAtiva("perfil")}>
