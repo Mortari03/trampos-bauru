@@ -13,7 +13,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Cabecalho() {
+  const [menuVisible, setMenuVisible] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
@@ -31,91 +36,95 @@ function Cabecalho() {
           src='/img/Logo.png'
           alt='Logo'
         />
-        <div>
-          <div className='tags-li menu'>
-            <nav>
-              <ul className='infos-cab'>
-                <li>
-                  <strong className='menu'>
-                    <Link to='/'>
+        <button
+          className='menu-toggle'
+          onClick={toggleMenu}
+        >
+          &#9776; {/* Ícone de menu hamburger */}
+        </button>
+        <div className={`tags-li ${menuVisible ? "active" : ""}`}>
+          <nav>
+            <ul className='infos-cab'>
+              <li>
+                <strong className='menu'>
+                  <Link to='/'>
+                    <FontAwesomeIcon
+                      icon={faHome}
+                      className='icone'
+                    />
+                    TRAMPOS
+                  </Link>
+                </strong>
+              </li>
+              <li>
+                <strong className='menu'>
+                  <Link to='/carreiras'>
+                    <FontAwesomeIcon
+                      icon={faSuitcase}
+                      className='icone'
+                    />
+                    CARREIRAS
+                  </Link>
+                </strong>
+              </li>
+              <li
+                className='dropdown'
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <strong className='menu'>
+                  <Link to='#'>
+                    <FontAwesomeIcon
+                      icon={faQuestionCircle}
+                      className='icone'
+                    />
+                    POR QUE NÓS ?
+                  </Link>
+                </strong>
+                {dropdownVisible && (
+                  <div className='dropdown-content menu'>
+                    <Link to='/quemsomos'>
                       <FontAwesomeIcon
-                        icon={faHome}
+                        icon={faPeopleArrows}
                         className='icone'
                       />
-                      TRAMPOS
+                      Quem Somos
                     </Link>
-                  </strong>
-                </li>
-                <li>
-                  <strong className='menu'>
-                    <Link to='/carreiras'>
+                    <Link to='/paraempresas'>
                       <FontAwesomeIcon
-                        icon={faSuitcase}
+                        icon={faBuilding}
                         className='icone'
                       />
-                      CARREIRAS
+                      Para Empresas
                     </Link>
-                  </strong>
-                </li>
-                <li
-                  className='dropdown'
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <strong>
-                    <Link to='#'>
+                    <Link to='/paracandidatos'>
                       <FontAwesomeIcon
-                        icon={faQuestionCircle}
+                        icon={faUser}
                         className='icone'
                       />
-                      POR QUE NÓS ?
+                      Para Candidatos
                     </Link>
-                  </strong>
-                  {dropdownVisible && (
-                    <div className='dropdown-content menu'>
-                      <Link to='/quemsomos'>
-                        <FontAwesomeIcon
-                          icon={faPeopleArrows}
-                          className='icone'
-                        />
-                        Quem Somos
-                      </Link>
-                      <Link to='/paraempresas'>
-                        <FontAwesomeIcon
-                          icon={faBuilding}
-                          className='icone'
-                        />
-                        Para Empresas
-                      </Link>
-                      <Link to='/paracandidatos'>
-                        <FontAwesomeIcon
-                          icon={faUser}
-                          className='icone'
-                        />
-                        Para Candidatos
-                      </Link>
-                    </div>
-                  )}
-                </li>
-                <li>
-                  <strong className='menu'>
-                    <Link to='/suporte'>
-                      <FontAwesomeIcon
-                        icon={faHeadset}
-                        className='icone'
-                      />
-                      SUPORTE
-                    </Link>
-                  </strong>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div className='botao-config'>
-          <Link to='/prelogin'>
-            <button className='botoes-principais'>LOGIN | CADASTRO</button>
-          </Link>
+                  </div>
+                )}
+              </li>
+              <li>
+                <strong className='menu'>
+                  <Link to='/suporte'>
+                    <FontAwesomeIcon
+                      icon={faHeadset}
+                      className='icone'
+                    />
+                    SUPORTE
+                  </Link>
+                </strong>
+              </li>
+              <div className='botao-config'>
+                <Link to='/prelogin'>
+                  <button className='botoes-principais'>LOGIN | CADASTRO</button>
+                </Link>
+              </div>
+            </ul>
+          </nav>
         </div>
       </div>
       <div className='wave-bar'></div>

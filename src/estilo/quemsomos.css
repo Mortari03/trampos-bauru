@@ -1,60 +1,54 @@
-/* Título Principal */
-.qs_sobre_titulo {
-  display: flex;
-  padding-top: 50px;
-  justify-content: center;
-}
+/* Estilos gerais para dispositivos móveis (mobile-first) */
 
-/* Container Principal  */
+/* Container Principal */
 .qs_container_principal {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
+  margin: 30px;
 }
 
 /* Texto de Boas-Vindas */
 .qs_texto_bemvindos {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  width: 500px;
-  min-height: 400px;
+  width: 90%;
+  max-width: 700px;
+  min-height: 300px;
   border-radius: 8px;
+  padding: 20px;
 }
 
 /* Imagem Sobre Nós */
 .qs_imagem_sobrenos {
   flex: 1;
+  max-width: 700px;
+  min-width: 50%;
   background-image: url("../../public/img/quemsomos/quemsomos.png");
   background-position: center;
-  background-size: cover; /* Preenche todo o espaço da div */
-  background-repeat: no-repeat; /* Evita a repetição da imagem */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 10px;
-  min-width: 500px;
-  min-height: 400px;
-  border-radius: 8px;
+  padding: 50px;
 }
 
 /* Container Missão e Visão Principal */
 .qs_mv_princial {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   margin: 10px;
 }
 
-/* Itens de visão e missão */
+/* Itens de Visão e Missão */
 .qs_item_missao,
 .qs_item_visao {
   flex: 1;
-  min-width: 600px;
-  min-height: 700px;
+  width: 30%;
+  min-width: 300px;
   background-color: #f2f2f2;
   border-radius: 8px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
@@ -63,175 +57,159 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 /* Imagens de Visão e Missão */
 .qs_imagem_missao {
-  height: 600px;
-  width: 600px;
+  width: 45%;
+  min-height: 40vh;
   background-image: url("../../public/img/quemsomos/missao.png");
   background-position: center;
-  background-size: contain; /* Preenche todo o espaço da div */
-  background-repeat: no-repeat; /* Evita a repetição da imagem */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.qs_imagem_visao {
-  height: 620px;
-  width: 600px;
-  background-image: url("../../public/img/quemsomos/visao.png");
-  background-position: center;
-  background-size: contain; /* Preenche todo o espaço da div */
-  background-repeat: no-repeat; /* Evita a repetição da imagem */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
 }
 
-/* Titulos de Visão e Missão */
+.qs_imagem_visao {
+  width: 45%;
+  min-height: 40vh;
+  background-image: url("../../public/img/quemsomos/visao.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+
+/* Títulos de Visão e Missão */
 .qs_titulo_mv {
-  height: 150px;
-  width: 400px;
-  align-items: center;
-  justify-content: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 10px;
   display: flex;
+  justify-content: center;
 }
 
 /* Texto de Visão e Missão */
 .qs_texto_mv {
-  max-height: 150px;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  display: flex;
+  width: 90%;
+  max-width: 600px;
   text-align: center;
+  margin: 10px;
 }
 
 /* Título Nossos Valores */
 .qs_titulo_valores {
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin: 20px 0;
 }
 
-/* Container Principal 3 */
+/* Container de Valores */
 .qs_valores_container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   margin: 20px;
 }
 
-/* Itens do Container 3 */
-
+/* Itens do Container de Valores */
 .qs_item_valorespadrao {
-  width: 500px;
+  width: 100%;
+  min-width: 200px;
+  height: auto;
   background-color: #f2f2f2;
-  height: 500px;
-  border: 1px;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
   overflow: hidden;
   margin: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-/* Imagens dos card de valores */
-.qs_imagem_inovacao {
-  height: 300px;
-  width: 300px;
-  flex: 1;
-  background-image: url("../../public/img/quemsomos/inovacao.png");
+/* Imagens dos Cards de Valores */
+.qs_imagem_inovacao,
+.qs_imagem_transparencia,
+.qs_imagem_compromisso {
+  width: 100%;
+  height: auto;
   background-position: center;
-  background-size: cover; /* Preenche todo o espaço da div */
-  background-repeat: no-repeat; /* Evita a repetição da imagem */
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
 }
+
+.qs_imagem_inovacao,
+.qs_imagem_transparencia,
+.qs_imagem_compromisso {
+  width: 200px;
+  min-height: 50vh;
+}
+
+.qs_imagem_inovacao {
+  background-image: url("../../public/img/quemsomos/inovacao.png");
+}
+
 .qs_imagem_transparencia {
-  height: 300px;
-  width: 300px;
-  flex: 1;
   background-image: url("../../public/img/quemsomos/transparencia.png");
-  background-position: center;
-  background-size: contain; /* Preenche todo o espaço da div */
-  background-repeat: no-repeat; /* Evita a repetição da imagem */
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .qs_imagem_compromisso {
-  height: 300px;
-  width: 300px;
-  flex: 1;
   background-image: url("../../public/img/quemsomos/iunclusao.png");
-  background-position: center;
-  background-size: contain; /* Preenche todo o espaço da div */
-  background-repeat: no-repeat; /* Evita a repetição da imagem */
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-/* Titulos dos card de valores */
+/* Títulos dos Cards de Valores */
 .qs_titulo_valorespadrao {
-  height: 150px;
-  width: 250px;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  display: flex;
+  width: 100%;
+  max-width: 200px;
 }
 
-/* Texto dos card de valores */
+/* Texto dos Cards de Valores */
 .qs_texto_valorespadrao {
-  height: 100px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  padding: 10px;
+  width: 100%;
+  max-width: 500px;
   text-align: center;
-  display: flex;
+  margin-bottom: 20px;
 }
 
 /* Títulos da Equipe e Impacto */
 .qs_titulo_equipe,
 .qs_titulo_impacto {
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin: 20px 0;
 }
 
 /* Texto do Impacto Esperado */
 .qs_texto_impacto {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
   margin: 10px;
   padding: 20px;
-  text-align: center;
 }
 
 /* Card da Equipe */
-
 .qs_card {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   margin: 10px;
   padding: 5px;
- 
+}
+
+.qs_card_imagem {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  transition: transform 0.3s;
+}
+
+.qs_card:hover .qs_card_imagem {
+  transform: scale(1.05);
 }
 
 .qs_card_conteudo {
@@ -250,13 +228,73 @@
   font-size: 25px;
   text-decoration: none;
 }
-.qs_card_imagem {
-  object-fit: contain; /* A imagem será redimensionada para cobrir o conteúdo do elemento */
-  width: 100%; /* Largura total do contêiner do card */
-  height: 200px; /* Altura definida para a imagem */
-  transition: transform 0.3s; /* Adiciona uma transição suave ao efeito de transformação */
+@media (min-width: 768px) {
+  /* Container Principal */
+  .qs_container_principal {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Texto de Boas-Vindas */
+  .qs_texto_bemvindos {
+    width: 45%;
+    min-height: 400px;
+  }
+
+  /* Imagem Sobre Nós */
+  .qs_imagem_sobrenos {
+    width: 45%;
+    min-height: 400px;
+  }
+
+  /* Container Missão e Visão Principal */
+  .qs_mv_princial {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Itens de Visão e Missão */
+  .qs_item_missao,
+  .qs_item_visao {
+    width: 50vw;
+    min-height: 600px;
+  }
+
+  /* Imagens de Visão e Missão */
+  .qs_imagem_missao,
+  .qs_imagem_visao {
+    max-height: 400px;
+  }
+
+  /* Container de Valores */
+  .qs_valores_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Itens do Container de Valores */
+  .qs_item_valorespadrao {
+    width: 30%;
+    min-height: 300px;
+  }
+
+  /* Imagens dos Cards de Valores */
+  .qs_imagem_inovacao,
+  .qs_imagem_transparencia,
+  .qs_imagem_compromisso {
+    max-height: 400px;
+  }
 }
 
-.qs_card:hover .qs_card_imagem {
-  transform: scale(1.05); /* Amplia a imagem em 5% ao passar o mouse sobre o card */
+@media (min-width: 1024px) {
+  /* Card da Equipe */
+  .qs_card {
+    width: 300px;
+  }
+
+  /* Imagem do Card da Equipe */
+  .qs_card_imagem {
+    max-height: 250px;
+  }
 }

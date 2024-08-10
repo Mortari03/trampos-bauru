@@ -89,7 +89,9 @@ p {
   cursor: pointer;
   text-transform: uppercase; /* Transforma o texto em maiúsculas */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Adiciona uma transição suave */
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease; /* Adiciona uma transição suave */
 }
 
 .botoes-principais:hover {
@@ -129,7 +131,9 @@ p {
 .Logo {
   height: auto;
   max-height: 10vh;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para transformações e filtro */
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease; /* Transição suave para transformações e filtro */
 }
 
 .Logo:hover {

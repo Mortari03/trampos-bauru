@@ -1,3 +1,4 @@
+/* Estilos gerais para o rodapé */
 .rodape_padrao {
   background-color: #f5f5f5; /* Cor de fundo mais clara */
   color: #333; /* Cor do texto */
@@ -7,9 +8,9 @@
 .container_rodape {
   max-width: 1200px; /* Largura máxima do rodapé */
   margin: 0 auto; /* Centralizar o rodapé */
-  display: grid; /* Layout em grid */
-  grid-template-columns: repeat(5, 1fr); /* 5 colunas */
-  gap: 40px; /* Espaçamento entre colunas */
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Layout vertical por padrão */
+  gap: 40px; /* Espaçamento entre seções */
 }
 
 .coluna_rodape {
@@ -35,11 +36,13 @@
 }
 
 .coluna_social {
+  display: flex;
+  flex-direction: column; /* Layout vertical para ícones sociais */
   align-items: center; /* Centralizar ícones sociais */
 }
 
 .icones_sociais {
-  display: flex; /* Layout horizontal para ícones */
+  display: flex; /* Layout horizontal para ícones sociais */
   gap: 20px; /* Espaçamento entre ícones */
 }
 
@@ -57,4 +60,21 @@
   text-align: center; /* Centralizar o texto */
   font-size: 12px; /* Tamanho da fonte do copyright */
   margin-top: 20px; /* Espaçamento acima do copyright */
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 768px) {
+  .container_rodape {
+    flex-direction: row; /* Disposição das colunas lado a lado em telas maiores */
+    flex-wrap: wrap; /* Permite que as colunas se movam para a linha seguinte, se necessário */
+  }
+
+  .coluna_rodape {
+    flex: 1; /* Permite que as colunas se expandam igualmente */
+    min-width: 200px; /* Define uma largura mínima para as colunas */
+  }
+
+  .coluna_social {
+    flex-direction: row; /* Layout horizontal para ícones sociais */
+  }
 }

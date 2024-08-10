@@ -1,158 +1,241 @@
-/* Cabeçalho fixo */
+/* Estilos para dispositivos móveis (default) */
 .div-conteiner {
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  position: relative; /* Necessário para o posicionamento absoluto do menu */
 }
 
 .imagem {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2% 5%;
+  padding: 4% 5%;
 }
 
 .Logo {
   height: auto;
-  max-height: 10vh;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para transformações e filtro */
+  max-height: 8vh;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
 .Logo:hover {
-  transform: scale(1.1); /* Aumenta a escala da logo ao passar o mouse */
-  filter: brightness(1.1); /* Aumenta o brilho da logo ao passar o mouse */
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
+.menu-toggle {
+  display: block; /* Exibe o botão hamburger em telas pequenas */
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  color: #005bb3; /* Cor mais visível para o ícone */
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease; /* Adiciona transições suaves */
+}
+
+.menu-toggle:hover {
+  background: none;
+  color: #00b3b3; /* Cor mais escura para o hover */
+  transform: scale(1.1); /* Efeito de aumento no hover */
+}
 .tags-li {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
+  display: none; /* Oculta o menu por padrão */
+  flex-direction: column; /* Menu vertical em telas menores */
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f0f4f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.tags-li.active {
+  display: flex; /* Mostra o menu quando a classe 'active' está presente */
+}
+
+.botao-config {
+  display: flex; /* Mantém o botão visível em todas as telas */
+  align-items: center;
+}
+
+.botoes-principais {
+  background-color: #005bb3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botoes-principais:hover {
+  background-color: #004494;
+}
+
+.wave-bar {
+  height: 1vh;
 }
 
 .infos-cab {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.infos-cab li {
-  position: relative; /* Para o efeito de hover */
-  margin: 0 15px; /* Espaço entre os itens do menu */
+  list-style: none; /* Remove pontos de lista */
+  padding: 0; /* Remove padding default de lista */
 }
 
 .infos-cab li a {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre ícone e texto */
   text-decoration: none;
-  display: flex; /* Utiliza flexbox para alinhar ícone e texto */
-  align-items: center; /* Alinha verticalmente o ícone e o texto */
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700; /* Montserrat Bold */
-  font-size: 15px;
   color: #132144;
-  gap: 10px;
+  position: relative; /* Necessário para o posicionamento do ::after */
 }
 
-/* Adiciona espaço entre ícone e texto */
-.infos-cab strong .fa {
-  margin-right: 100px; /* Espaço entre ícone e texto */
-}
-
-/* Efeito de hover moderno */
 .infos-cab li a::after {
   content: "";
   display: block;
-  width: 100%;
-  height: 2px; /* Altura da linha */
-  background: #005bb3; /* Cor da linha */
+  width: 30%;
+  height: 2px;
+  background: #005bb3;
   transform: scaleX(0);
   transition: transform 0.3s ease;
   position: absolute;
   left: 0;
-  bottom: 5px; /* Distância da linha em relação ao texto */
+  top: 30px;
 }
 
 .infos-cab li a:hover::after {
   transform: scaleX(1);
 }
 
-/* Estilos para o dropdown */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  border-radius: 5px;
-  position: absolute;
-  background-color: #f0f4f8;
-  min-width: 205px;
-  box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.8);
-  z-index: 1;
-  display: none; /* Inicialmente oculto */
-}
-
-/* Mostrar dropdown ao passar o mouse */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Links dentro do dropdown */
-.dropdown-content a {
-  border-radius: 20px;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: flex; /* Utiliza flexbox para alinhar ícone e texto */
-  align-items: center; /* Alinha verticalmente o ícone e o texto */
-  position: relative; /* Para o efeito de hover */
-}
-
-/* Adiciona espaço entre ícone e texto no dropdown */
-.dropdown-content a .fa {
-  margin-right: 10px; /* Espaço entre ícone e texto */
-}
-
-/* Efeito hover nos links do dropdown */
-.dropdown-content a::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px; /* Altura da linha */
-  background: #005bb3; /* Cor da linha */
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  position: absolute;
-  left: 0;
-  bottom: 5px; /* Distância da linha em relação ao texto */
-}
-
-.dropdown-content a:hover::after {
-  transform: scaleX(1);
-}
-
-.botao-config {
-  padding-left: 25px;
-  padding-right: -25px;
-  display: flex;
-  align-items: center;
-}
-
-/* Parte do projeto onde faz a onda no cabeçalho */
-.wave-bar {
-  width: 100%;
-  height: 2vh;
-  background: linear-gradient(70deg, #7debff, #1495ff, #c300ff);
-  animation: wave 3s linear infinite;
-  background-size: 200% 100%;
-}
-
-@keyframes wave {
-  0% {
-    background-position: 0% 50%;
+/* Estilos para tablets e desktops */
+@media (min-width: 768px) {
+  .imagem {
+    padding: 2% 5%;
   }
-  50% {
-    background-position: 100% 50%;
+
+  .Logo {
+    max-height: 10vh;
   }
-  100% {
-    background-position: 0% 50%;
+
+  .menu-toggle {
+    display: none; /* Oculta o botão hamburger em telas maiores */
+  }
+
+  .tags-li {
+    display: flex; /* Exibe o menu como um flexbox horizontal em telas maiores */
+    justify-content: center;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    box-shadow: none;
+  }
+
+  .botao-config {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: -25px;
+  }
+
+  .wave-bar {
+    height: 2vh;
+  }
+
+  .infos-cab {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .infos-cab li {
+    position: relative;
+    margin: 0 15px;
+  }
+
+  .infos-cab li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #132144;
+    gap: 10px; /* Espaçamento entre ícone e texto */
+  }
+
+  .infos-cab strong .fa {
+    margin-right: 100px;
+  }
+
+  .infos-cab li a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #005bb3;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 0;
+    top: 30px;
+  }
+
+  .infos-cab li a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    border-radius: 5px;
+    position: absolute;
+    background-color: #f0f4f8;
+    min-width: 205px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    border-radius: 20px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .dropdown-content a .fa {
+    margin-right: 10px;
+  }
+
+  .dropdown-content a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #005bb3;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+  }
+
+  .dropdown-content a:hover::after {
+    transform: scaleX(1);
   }
 }

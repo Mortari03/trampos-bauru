@@ -55,14 +55,11 @@ function Quemsomos() {
     <div>
       <Cabecalho />
 
-      <div className='qs_sobre_titulo'>
-        <h1>
-          Sobre o <span className='texto_alternativo_azul'>Trampos Fácil</span>
-        </h1>
-      </div>
-
       <div className='qs_container_principal'>
         <div className='qs_texto_bemvindos'>
+          <h1>
+            Sobre o <span className='texto_alternativo_azul'>Trampos Fácil</span>
+          </h1>
           <p>
             Bem-vindo ao{" "}
             <strong className='texto_alternativo_ciano'> Trampos Fácil!</strong> Somos uma
@@ -123,8 +120,8 @@ function Quemsomos() {
 
         <div className='qs_item_valorespadrao'>
           <div className='qs_imagem_transparencia'></div>
-          <div className='qs_titulo_valorespadrao'>
-            <h3 className='texto_alternativo_ciano'>Transparência</h3>
+          <div>
+            <h3 className='texto_alternativo_ciano'>Transparencia</h3>
           </div>
           <div className='qs_texto_valorespadrao'>
             <p>Valorizamos a honestidade e a clareza em todas as interações.</p>
@@ -157,15 +154,18 @@ function Quemsomos() {
           {membros.map((membro) => (
             <Grid
               item
-              xs={12}
-              sm={2}
-              md={4}
+              xs={1}
+              sm={5}
+              md={3}
               key={membro.nome}
             >
-              <Card className='qs_card'>
+              <Card
+                sx={{ maxWidth: 345 }}
+                className='qs_card'
+              >
                 <CardMedia
                   component='img'
-                  height='300'
+                  height='500'
                   image={membro.imagem}
                   alt={membro.nome}
                   className='qs_card_imagem'
