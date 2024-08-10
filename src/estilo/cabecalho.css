@@ -183,7 +183,7 @@
     transition: transform 0.3s ease;
     position: absolute;
     left: 0;
-    top: 30px;
+    top: 40px;
   }
 
   .infos-cab li a:hover::after {
@@ -199,7 +199,7 @@
     border-radius: 5px;
     position: absolute;
     background-color: #f0f4f8;
-    min-width: 205px;
+    min-width: 215px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
     z-index: 1;
     display: none;
@@ -226,13 +226,12 @@
     content: "";
     display: block;
     width: 100%;
-    height: 4px;
+    height: 1px;
     background: #005bb3;
     transform: scaleX(0);
     transition: transform 0.3s ease;
     position: absolute;
     left: 0;
-    bottom: 5px;
   }
 
   .dropdown-content a:hover::after {
