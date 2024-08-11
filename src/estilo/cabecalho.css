@@ -26,6 +26,7 @@
   filter: brightness(1.1);
 }
 
+.alternar-Menu-principal {
   display: block; /* Exibe o botão hamburger em telas pequenas */
   font-size: 24px;
   cursor: pointer;
@@ -38,6 +39,7 @@
     transform 0.3s ease; /* Adiciona transições suaves */
 }
 
+.alternar-Menu-principal:hover {
   background: none;
   color: #00b3b3; /* Cor mais escura para o hover */
   transform: scale(1.1); /* Efeito de aumento no hover */
