@@ -49,6 +49,11 @@ function CadastroEmpresa() {
               className='ce-input'
             />
             <input
+              type='password'
+              placeholder='Confirme a Senha'
+              className='ce-input'
+            />
+            <input
               type='text'
               placeholder='CNPJ'
               className='ce-input'

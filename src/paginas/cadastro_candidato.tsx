@@ -66,12 +66,11 @@ function CadastroCandidatos() {
                 type='checkbox'
                 className='cc-checkbox'
               />
-              Li e concordo com as condições legais e a{" "}
+              Li e concordo com as condições legais e a
               <Link
                 to='/politica_privacidade'
                 className='texto_alternativo_azulvivo'
               >
-                {" "}
                 política de privacidade.
               </Link>
             </label>
