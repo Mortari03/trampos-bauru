@@ -1,40 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../../estilo/menu_candidato.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function CabecalhoCandidato() {
   return (
-    <div className="conteiner_barra_candidato">
-      <div className="imagem">
-        <img className="Logo" src="/img/Logo.png" alt="Logo" />
+    <div className='conteiner_barra_candidato'>
+      <div className='imagem'>
+        <img
+          className='Logo'
+          src='/img/Logo.png'
+          alt='Logo'
+        />
 
         <div>
-          <div className="tag_barra">
+          <div className='tag_barra'>
             <nav>
-              <ul className="cabecalho_candidato_infor">
+              <ul className='cabecalho_candidato_infor'>
                 <li>
                   <strong>
-                    <Link to="/">TRAMPOS</Link>
+                    <Link to='/'>TRAMPOS</Link>
                   </strong>
                 </li>
 
                 <li>
                   <strong>
-                    <Link to="/carreiras">CARREIRAS</Link>
+                    <Link to='/carreiras'>CARREIRAS</Link>
                   </strong>
                 </li>
 
                 <li>
                   <strong>
-                    <Link to="/quemsomos">QUEM SOMOS</Link>
+                    <Link to='/quemsomos'>QUEM SOMOS</Link>
                   </strong>
                 </li>
 
                 <li>
                   <strong>
-                    <Link to="/suporte">SUPORTE</Link>
+                    <Link to='/suporte'>SUPORTE</Link>
                   </strong>
                 </li>
               </ul>
@@ -43,15 +47,18 @@ function CabecalhoCandidato() {
         </div>
 
         <div>
-          <Link to="/candidato_dashboard">
-            <button className="config_perfil_candidato">
-              <FontAwesomeIcon icon={faUser} className="icone_candidato" />
+          <Link to='/candidato_dashboard'>
+            <button className='config_perfil_candidato'>
+              <FontAwesomeIcon
+                icon={faUser}
+                className='icone_candidato'
+              />
             </button>
           </Link>
         </div>
       </div>
 
-      <div className="wave-bar"></div>
+      <div className='wave-bar'></div>
     </div>
   );
 }

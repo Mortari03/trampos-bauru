@@ -1,37 +1,80 @@
-.dashboard-usuario {
+/* Estilos Gerais para Mobile-First */
+
+/* Dashboard do Candidato */
+.cd-dashboard {
   display: flex;
-  height: 100vh;
+  flex-direction: column; /* Coluna para mobile */
+  min-height: 100vh;
   background-color: #f4f4f4;
 }
 
-.menu-lateral-usuario {
-  width: 250px;
+/* Overlay (fundo escuro) */
+.cd-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Sobrepõe o conteúdo */
+}
+
+.cd-overlay.cd-show {
+  display: block;
+}
+
+/* Menu Lateral do Candidato */
+.cd-menu-lateral {
   background-color: #000000;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  flex-shrink: 0; /* Evita que o menu lateral encolha */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  z-index: 1000; /* Sobrepõe o conteúdo */
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); /* Escondido fora da tela */
 }
 
-.logo-container-usuario {
+/* Botão de Fechar Menu Lateral */
+.cd-menu-lateral .cd-fechar-menu {
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+/* Mostrar Menu Lateral */
+.cd-menu-lateral.cd-open {
+  transform: translateX(0); /* Traz o menu para dentro da tela */
+}
+
+.cd-logo-container {
   margin-bottom: 30px;
 }
 
-.logo-container-usuario .logo {
+.cd-logo {
   width: 150px;
   height: auto;
 }
 
-.menu-usuario {
+.cd-menu {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.menu-usuario button,
-.menu-usuario .botao-logout-usuario {
+/* Botões do Menu Lateral */
+.cd-menu-botao {
   background: none;
   border: none;
   color: #ffffff;
@@ -43,31 +86,80 @@
   align-items: center;
   width: 100%;
   transition: background 0.3s ease;
+  overflow: hidden; /* Oculta qualquer transbordamento */
+  white-space: nowrap; /* Impede quebra de linha */
+  text-overflow: ellipsis; /* Adiciona reticências quando necessário */
+  box-sizing: border-box; /* Garante que o padding não expanda o elemento */
+  margin-bottom: 10px; /* Adiciona espaço entre os botões */
+  border-radius: 5px; /* Adiciona bordas arredondadas para um visual consistente */
+  text-decoration: none; /* Remove o sublinhado padrão do link */
 }
 
-.menu-usuario button:hover,
-.menu-usuario .botao-logout-usuario:hover {
-  background-color: #3a0558;
+/* Hover para Botões do Menu Lateral */
+.cd-menu-botao:hover {
+  background-color: #3a0558; /* Cor original para hover */
 }
 
-.menu-usuario .botao-logout-usuario {
-  margin-top: auto;
+/* Botão de Sair */
+.cd-menu-botao.cd-sair {
+  font-size: 18px;
+  padding: 15px 15px;
+  margin-bottom: 10px; /* Adiciona espaço entre os botões */
+  border-radius: 5px; /* Adiciona bordas arredondadas para um visual consistente */
   text-decoration: none;
+  background: none;
+  color: #f0f4f8;
 }
 
-.menu-usuario button svg,
-.menu-usuario .botao-logout-usuario svg {
+/* Hover para Botão de Sair */
+.cd-menu-botao.cd-sair:hover {
+  background-color: #b30000; /* Cor vermelha para o hover do botão de sair */
+}
+
+/* Ícones dos Botões */
+.cd-menu-botao svg {
   margin-right: 10px;
 }
 
-.conteudo {
+/* Conteúdo Principal */
+.cd-conteudo {
   flex: 1;
-  padding: 40px;
+  padding: 20px;
+  margin-top: 60px; /* Espaço para o cabeçalho */
+  margin-bottom: 40px; /* Espaço para o rodapé */
   background-color: #ffffff;
   overflow-y: auto;
 }
 
-.conteudo h2 {
-  font-size: 24px;
+/* Botão de Menu Hambúrguer */
+.cd-alternar-menu {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
   color: #333;
+  font-size: 24px;
+  padding: 15px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.cd-alternar-menu svg {
+  margin-right: 10px;
+}
+
+/* Estilos para Telas Maiores (Mínimo 768px) */
+@media (min-width: 768px) {
+  .cd-dashboard {
+    flex-direction: row; /* Linha para tablets e desktops */
+  }
+
+  .cd-menu-lateral {
+    width: 250px; /* Largura fixa */
+  }
+
+  .cd-conteudo {
+    margin-left: 0; /* Remove a margem esquerda extra */
+    padding: 40px;
+  }
 }

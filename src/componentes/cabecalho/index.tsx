@@ -16,7 +16,7 @@ function Cabecalho() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
-  const toggleMenu = () => {
+  const alterarMenu = () => {
     setMenuVisible(!menuVisible);
   };
 
@@ -37,8 +37,8 @@ function Cabecalho() {
           alt='Logo'
         />
         <button
-          className='menu-toggle'
-          onClick={toggleMenu}
+          className='alternar-Menu-principal'
+          onClick={alterarMenu}
         >
           &#9776; {/* Ícone de menu hamburger */}
         </button>

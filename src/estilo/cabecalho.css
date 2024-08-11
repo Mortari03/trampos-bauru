@@ -26,7 +26,6 @@
   filter: brightness(1.1);
 }
 
-.menu-toggle {
   display: block; /* Exibe o botão hamburger em telas pequenas */
   font-size: 24px;
   cursor: pointer;
@@ -39,7 +38,6 @@
     transform 0.3s ease; /* Adiciona transições suaves */
 }
 
-.menu-toggle:hover {
   background: none;
   color: #00b3b3; /* Cor mais escura para o hover */
   transform: scale(1.1); /* Efeito de aumento no hover */
@@ -125,7 +123,7 @@
     max-height: 10vh;
   }
 
-  .menu-toggle {
+  .alternar-Menu-principal {
     display: none; /* Oculta o botão hamburger em telas maiores */
   }
 

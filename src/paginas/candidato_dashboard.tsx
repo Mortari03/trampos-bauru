@@ -1,8 +1,5 @@
-//Importes do React
 import React, { useState } from "react";
-//Importes do Router-Dom
 import { Link } from "react-router-dom";
-//Importes de Icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -10,10 +7,10 @@ import {
   faCog,
   faSignOutAlt,
   faCalendarAlt,
+  faBars,
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-//Importes de CSS
 import "../estilo/candidato_dashboard.css";
-//Importes de Paginas
 import CabecalhoCandidato from "../componentes/cabecalho_candidato";
 import Rodape from "../componentes/rodape";
 import CandidatoPerfil from "./candidato_perfil";
@@ -23,6 +20,7 @@ import CandidatoConfiguracao from "./candidato_configuracao";
 
 function CandidatoDashboard() {
   const [secaoAtiva, setSecaoAtiva] = useState<string>("perfil");
+  const [menuAberto, setMenuAberto] = useState<boolean>(false);
 
   const renderizarConteudo = () => {
     switch (secaoAtiva) {
@@ -39,35 +37,78 @@ function CandidatoDashboard() {
     }
   };
 
+  const alternarMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
+
   return (
     <div>
       <CabecalhoCandidato />
-      <div className='dashboard-usuario'>
-        <aside className='menu-lateral-usuario'>
-          <div className='logo-container-usuario'>
-          </div>
-          <nav className='menu-usuario'>
-            <button onClick={() => setSecaoAtiva("perfil")}>
+      <button
+        className='cd-alternar-menu'
+        onClick={alternarMenu}
+      >
+        <FontAwesomeIcon icon={menuAberto ? faTimes : faBars} />
+      </button>
+      <div
+        className={`cd-overlay ${menuAberto ? "cd-show" : ""}`}
+        onClick={alternarMenu}
+      ></div>
+      <div className='cd-dashboard'>
+        <aside className={`cd-menu-lateral ${menuAberto ? "cd-open" : ""}`}>
+          <button
+            className='cd-fechar-menu'
+            onClick={alternarMenu}
+          >
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
+          <nav className='cd-menu'>
+            <button
+              className='cd-menu-botao'
+              onClick={() => {
+                setSecaoAtiva("perfil");
+                alternarMenu();
+              }}
+            >
               <FontAwesomeIcon icon={faUser} /> Meu Perfil
             </button>
-            <button onClick={() => setSecaoAtiva("minhasVagas")}>
+            <button
+              className='cd-menu-botao'
+              onClick={() => {
+                setSecaoAtiva("minhasVagas");
+                alternarMenu();
+              }}
+            >
               <FontAwesomeIcon icon={faClipboardList} /> Minhas Vagas
             </button>
-            <button onClick={() => setSecaoAtiva("entrevistas")}>
+            <button
+              className='cd-menu-botao'
+              onClick={() => {
+                setSecaoAtiva("entrevistas");
+                alternarMenu();
+              }}
+            >
               <FontAwesomeIcon icon={faCalendarAlt} /> Entrevistas Agendadas
             </button>
-            <button onClick={() => setSecaoAtiva("configuracoes")}>
+            <button
+              className='cd-menu-botao'
+              onClick={() => {
+                setSecaoAtiva("configuracoes");
+                alternarMenu();
+              }}
+            >
               <FontAwesomeIcon icon={faCog} /> Configurações
             </button>
             <Link
               to='/'
-              className='botao-logout-usuario'
+              className='cd-menu-botao cd-sair'
+              onClick={alternarMenu}
             >
               <FontAwesomeIcon icon={faSignOutAlt} /> Sair
             </Link>
           </nav>
         </aside>
-        <main className='conteudo'>{renderizarConteudo()}</main>
+        <main className='cd-conteudo'>{renderizarConteudo()}</main>
       </div>
       <Rodape />
     </div>
