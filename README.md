@@ -1,46 +1,116 @@
-# Getting Started with Create React App
+# Trampo Fácil
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📝 Descrição do Projeto
 
-## Available Scripts
+O **Trampo Fácil** é uma plataforma de busca de emprego desenvolvida com o objetivo de
+resolver as lacunas no mercado de trabalho de Bauru. Atualmente, a cidade enfrenta uma
+carência significativa de sites de busca de emprego bem estruturados e intuitivos. O
+Trampo Fácil visa fornecer uma solução robusta para candidatos e empregadores, oferecendo
+uma experiência de busca e recrutamento simplificada e eficiente.
 
-In the project directory, you can run:
+## 📈 Problema Identificado
 
-### `npm start`
+A cidade de Bauru enfrenta problemas como:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Falta de opções abrangentes e bem estruturadas de busca de emprego.
+- Falhas graves na arquitetura dos sites existentes.
+- Pouca segurança nas vagas publicadas e falta de um sistema eficaz de filtragem por área.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🌟 Área de Aplicação
 
-### `npm test`
+O Trampo Fácil abrange diversas áreas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Logística de Recrutamento:** Facilitando a organização e gestão de processos
+  seletivos.
+- **Recursos Humanos (RH):** Proporcionando ferramentas avançadas para avaliação e
+  feedback de candidatos.
+- **Desenvolvimento de Carreira e Relações Pessoais:** Oferecendo recursos para
+  desenvolvimento profissional e networking.
 
-### `npm run build`
+## 👥 Pessoas Impactadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Impactados Diretamente:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Desempregados em Bauru**
+2. **Empregadores na Região de Bauru**
+3. **Pessoas em Busca de Mudança de Emprego em Bauru**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Impactados Indiretamente:
 
-### `npm run eject`
+1. **Famílias dos Desempregados**
+2. **Comunidade Local de Bauru**
+3. **Setor Educacional**
+4. **Empresas de Serviços**
+5. **Governo e Políticas Públicas**
+6. **Outros Candidatos de Fora da Região**
+7. **Organizações e ONGs de Apoio ao Trabalhador**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 💡 Solução Proposta
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A solução é a criação de um site intuitivo e seguro com:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Categorizações claras por setor, função e localização.
+- Verificação e validação de vagas.
+- Ferramentas avançadas de busca e sistema de recomendação de vagas.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🛠 Requisitos Funcionais
 
-## Learn More
+- **Filtros de Busca:** Por área, localização, tipo de contrato, nível de experiência,
+  entre outros.
+- **Cadastro de Usuário e Empresa**
+- **Anúncio e Gestão de Vagas**
+- **Currículos Online e Gestão de Documentos**
+- **Histórico de Atividades**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Requisitos Não Funcionais
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Desempenho:** Site responsivo e rápido.
+- **Segurança:** Proteção de dados pessoais e informações sensíveis.
+- **Usabilidade:** Interface intuitiva.
+- **Compatibilidade:** Navegadores e dispositivos móveis.
+- **Escalabilidade:** Suporte a aumento de usuários.
+
+## 🛠 Tecnologias Utilizadas
+
+- **Frontend:** React JS (HTML, CSS, JavaScript,TypeScript)
+- **Backend (API):** Nest.js (JavaScript,TypeScript)
+- **Banco de Dados:** A definir
+- **Servidores e Hospedagem:** A definir
+
+## 📜 Documentação
+
+Para mais informações sobre o desenvolvimento do projeto, consulte os seguintes
+documentos:
+
+- [Projeto Integrador Completo](#): Documento geral do projeto.
+- [Documentação de Alterações do Projeto Integrador](#): Registro das alterações feitas no
+  projeto.
+- [Justificativas para os Nomes](#): Documento que explica a escolha do nome
+
+## 🔗 Links Úteis
+
+- [GitHub do Projeto](#)
+- [Documentação](#)
+
+## 🧑‍💻 Equipe de Desenvolvimento
+
+- **Lucas Mateus Soares de Lima**
+- **Luiz Gustavo Oliveira de Lima**
+- **Matheus Mariano Rodrigues**
+- **Vitor Aluisio Souza Lopes**
+- **Vitor Venancio Mortari**
+
+## 📆 Próximos Passos
+
+- Definir tecnologias a serem utilizadas.
+- Desenvolver wireframes e protótipos.
+- Realizar pesquisas adicionais.
+- Estabelecer cronograma e distribuir tarefas.
+
+## 📫 Contato
+
+Para dúvidas e informações adicionais, entre em contato pelo **GitHub**
+
+---
+
+Obrigado por visitar o projeto Trampo Fácil! 🚀
