@@ -1,15 +1,91 @@
-/* Estilos Gerais para Mobile-First */
+/* Estilos Gerais para o Dashboard do Candidato */
 
-/* Dashboard do Candidato */
-.cd-dashboard {
+.CD-dashboard {
   display: flex;
-  flex-direction: column; /* Coluna para mobile */
+  flex-direction: column;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #f8f8f8;
 }
 
-/* Overlay (fundo escuro) */
-.cd-overlay {
+.CD-header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.CD-headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.CD-logo {
+  width: 120px;
+  height: auto;
+}
+
+.CD-menuToggle {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  display: none; /* Mostrado apenas em mobile */
+}
+
+.CD-navContainer {
+  display: flex;
+  align-items: center;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0; /* Escondido por padrão */
+}
+
+.CD-navContainer.CD-active {
+  max-height: 300px; /* Altura máxima ao ser ativado */
+}
+
+.CD-headerNav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.CD-headerNav li {
+  padding: 10px 0;
+}
+
+.CD-headerNav a {
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.CD-headerNav a:hover {
+  color: #007bff;
+}
+
+.CD-profileButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.CD-profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.CD-overlay {
   display: none;
   position: fixed;
   top: 0;
@@ -17,67 +93,77 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999; /* Sobrepõe o conteúdo */
+  z-index: 999;
 }
 
-.cd-overlay.cd-show {
+.CD-overlay.CD-show {
   display: block;
 }
 
-/* Menu Lateral do Candidato */
-.cd-menu-lateral {
-  background-color: #000000;
-  color: #ffffff;
+.CD-main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px; /* Espaço para o cabeçalho fixo */
+}
+
+.CD-sidebar {
+  background-color: #333;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 250px;
-  z-index: 1000; /* Sobrepõe o conteúdo */
+  transform: translateX(-100%);
   transition: transform 0.3s ease;
-  transform: translateX(-100%); /* Escondido fora da tela */
+  z-index: 1000;
+  padding: 20px;
 }
 
-/* Botão de Fechar Menu Lateral */
-.cd-menu-lateral .cd-fechar-menu {
+.CD-sidebar.CD-open {
+  transform: translateX(0);
+}
+
+.CD-closeSidebar {
   align-self: flex-end;
-  cursor: pointer;
-  margin-bottom: 20px;
   background: none;
   border: none;
-  color: #ffffff;
+  color: #fff;
   font-size: 24px;
+  cursor: pointer;
 }
 
-/* Mostrar Menu Lateral */
-.cd-menu-lateral.cd-open {
-  transform: translateX(0); /* Traz o menu para dentro da tela */
+.CD-userInfo {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.cd-logo-container {
-  margin-bottom: 30px;
+.CD-sidebarProfileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
-.cd-logo {
-  width: 150px;
-  height: auto;
+.CD-username {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.cd-menu {
+.CD-sidebarNav {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-/* Botões do Menu Lateral */
-.cd-menu-botao {
+.CD-sidebarButton {
   background: none;
   border: none;
-  color: #ffffff;
+  color: #fff;
   text-align: left;
   padding: 15px 20px;
   font-size: 18px;
@@ -86,80 +172,58 @@
   align-items: center;
   width: 100%;
   transition: background 0.3s ease;
-  overflow: hidden; /* Oculta qualquer transbordamento */
-  white-space: nowrap; /* Impede quebra de linha */
-  text-overflow: ellipsis; /* Adiciona reticências quando necessário */
-  box-sizing: border-box; /* Garante que o padding não expanda o elemento */
-  margin-bottom: 10px; /* Adiciona espaço entre os botões */
-  border-radius: 5px; /* Adiciona bordas arredondadas para um visual consistente */
-  text-decoration: none; /* Remove o sublinhado padrão do link */
-}
-
-/* Hover para Botões do Menu Lateral */
-.cd-menu-botao:hover {
-  background-color: #3a0558; /* Cor original para hover */
-}
-
-/* Botão de Sair */
-.cd-menu-botao.cd-sair {
-  font-size: 18px;
-  padding: 15px 15px;
-  margin-bottom: 10px; /* Adiciona espaço entre os botões */
-  border-radius: 5px; /* Adiciona bordas arredondadas para um visual consistente */
   text-decoration: none;
-  background: none;
-  color: #f0f4f8;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-/* Hover para Botão de Sair */
-.cd-menu-botao.cd-sair:hover {
-  background-color: #b30000; /* Cor vermelha para o hover do botão de sair */
+.CD-sidebarButton:hover {
+  background-color: #444;
 }
 
-/* Ícones dos Botões */
-.cd-menu-botao svg {
+.CD-logout:hover {
+  background-color: #b30000;
+}
+
+.CD-sidebarButton svg {
   margin-right: 10px;
 }
 
-/* Conteúdo Principal */
-.cd-conteudo {
+.CD-content {
   flex: 1;
   padding: 20px;
-  margin-top: 60px; /* Espaço para o cabeçalho */
-  margin-bottom: 40px; /* Espaço para o rodapé */
-  background-color: #ffffff;
-  overflow-y: auto;
+  margin-left: 250px; /* Espaço para o menu lateral */
+  background-color: #fff;
 }
 
-/* Botão de Menu Hambúrguer */
-.cd-alternar-menu {
-  display: flex;
-  align-items: center;
-  background: none;
-  border: none;
-  color: #333;
-  font-size: 24px;
-  padding: 15px;
-  cursor: pointer;
-  margin-left: 20px;
-}
-
-.cd-alternar-menu svg {
-  margin-right: 10px;
-}
-
-/* Estilos para Telas Maiores (Mínimo 768px) */
-@media (min-width: 768px) {
-  .cd-dashboard {
-    flex-direction: row; /* Linha para tablets e desktops */
+@media (max-width: 767px) {
+  .CD-main {
+    flex-direction: column;
+    margin-left: 0;
   }
 
-  .cd-menu-lateral {
-    width: 250px; /* Largura fixa */
+  .CD-content {
+    margin-left: 0;
   }
 
-  .cd-conteudo {
-    margin-left: 0; /* Remove a margem esquerda extra */
-    padding: 40px;
+  .CD-menuToggle {
+    display: block; /* Mostra o botão de alternar menu em telas menores */
+  }
+
+  .CD-navContainer {
+    display: none;
+  }
+
+  .CD-navContainer.CD-active {
+    display: flex;
+  }
+
+  .CD-sidebar {
+    width: 100%;
+    transform: translateY(-100%);
+  }
+
+  .CD-sidebar.CD-open {
+    transform: translateY(0);
   }
 }

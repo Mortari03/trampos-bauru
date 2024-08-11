@@ -14,7 +14,6 @@ import {
 // Importes de CSS
 import "../estilo/suporte.css";
 // Importes de Paginas
-import Rodape from "../componentes/rodape";
 import Cabecalho from "../componentes/cabecalho";
 
 function Suporte() {
@@ -222,7 +221,6 @@ function Suporte() {
           </div>
         </div>
       </div>
-      <Rodape />
     </div>
   );
 }

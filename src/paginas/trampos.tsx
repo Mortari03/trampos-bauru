@@ -6,16 +6,13 @@ import React from "react";
 import "../estilo/trampos.css";
 // Importes de Paginas
 import Cabecalho from "../componentes/cabecalho";
-import Rodape from "../componentes/rodape";
 
 function Trampos() {
   return (
-    <div className="pagina">
+    <div className='pagina'>
       <Cabecalho />
 
-      <div className="conteudo"></div>
-
-      <Rodape />
+      <div className='conteudo'></div>
     </div>
   );
 }

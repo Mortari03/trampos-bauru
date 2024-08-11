@@ -4,7 +4,7 @@
 // Importes de CSS
 import "../estilo/para_candidato.css";
 // Importes de Paginas
-import Rodape from "../componentes/rodape";
+
 import Cabecalho from "../componentes/cabecalho";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -114,8 +114,6 @@ function ParaCandidatos() {
           ))}
         </div>
       </div>
-
-      <Rodape />
     </div>
   );
 }

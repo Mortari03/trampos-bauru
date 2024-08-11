@@ -287,6 +287,10 @@
   }
 }
 
+.qs_texto_impacto {
+  max-width: 100%;
+}
+
 @media (min-width: 1024px) {
   /* Card da Equipe */
   .qs_card {

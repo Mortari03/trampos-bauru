@@ -1,20 +1,16 @@
-//Importes do React
 import { ChangeEvent, useState } from "react";
-//Importes do Router-Dom
 import { Link } from "react-router-dom";
-//Importes de Icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
-//Importes de CSS
 import "../estilo/esqueci_senha.css";
-//Importes de Paginas
 
 function Senha() {
-  const [tipoEntrada, settipoEntrada] = useState<string>("");
+  const [tipoEntrada, settipoEntrada] = useState<string>("email");
   const [email, setEmail] = useState<string>("");
   const [cpf, setCpf] = useState<string>("");
   const [erroEmail, seterroEmail] = useState<string>("");
   const [erroCPF, seterroCPF] = useState<string>("");
+  const [alerta, setAlerta] = useState<string | null>(null);
 
   const handleMudarEmail = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -46,104 +42,125 @@ function Senha() {
 
   const handleEnviar = () => {
     if (tipoEntrada === "email") {
-      console.log(`Enviando link para ${email}`);
+      if (erroEmail === "") {
+        setAlerta(`Um link para redefinir a senha foi enviado para ${email}`);
+      }
     } else if (tipoEntrada === "cpf") {
-      console.log(`Enviando link para CPF ${cpf}`);
+      if (erroCPF === "") {
+        setAlerta(
+          `Um link para redefinir a senha foi enviado para o e-mail ou telefone associado ao CPF ${cpf}`
+        );
+      }
     }
   };
 
+  const handleCloseAlert = () => {
+    setAlerta(null); // Fecha o pop-up quando clicamos fora ou no botão de fechar
+  };
+
   return (
-    <div className='senha_corpo'>
-      <div className='senha_container'>
-        <div className='senha_topo'>
-          <Link
-            to='/prelogin'
-            className='btn_voltar'
-          >
-            <FontAwesomeIcon icon={faCircleArrowLeft} />
-            <span className='texto_voltar'>Voltar</span>
-          </Link>
-          <div className='logo'>
-            <img
-              src='/img/logo.png'
-              alt='Logo'
-            />
-          </div>
-        </div>
-        <div className='senha_conteudo'>
-          <h1>
-            Esqueceu a <span className='senha_cordif'>senha?</span>
-          </h1>
-          <p>Não se preocupe, acontece com todo mundo</p>
-          <div className='senha_imagem'>
-            <img
-              src='/img/Senha.png'
-              alt='Cadeado'
-            />
-          </div>
-          <div className='senha_botoes'>
-            <button
-              onClick={() => settipoEntrada("email")}
-              className={tipoEntrada === "email" ? "selected" : ""}
+    <div>
+      <div className='senha_corpo'>
+        <div className='senha_container'>
+          <div className='senha_topo'>
+            <Link
+              to='/prelogin'
+              className='btn_voltar'
             >
-              E-mail
-            </button>
-            <button
-              onClick={() => settipoEntrada("cpf")}
-              className={tipoEntrada === "cpf" ? "selected" : ""}
-            >
-              Não lembro o e-mail
-            </button>
-          </div>
-          {tipoEntrada === "email" && (
-            <div className='input-container'>
-              <label htmlFor='email'></label>
-              <p>
-                Escreva seu e-mail cadastrado no{" "}
-                <strong className='trampofacil_cor'>Trampos Fácil</strong> e lhe
-                enviaremos um link para definir sua nova senha
-              </p>
-              <input
-                type='email'
-                id='email'
-                placeholder='Digite seu e-mail'
-                value={email}
-                onChange={handleMudarEmail}
-                className={erroEmail ? "input-error" : ""}
+              <FontAwesomeIcon icon={faCircleArrowLeft} />
+              <span className='texto_voltar'>Voltar</span>
+            </Link>
+            <div className='logo'>
+              <img
+                src='/img/logo.png'
+                alt='Logo'
               />
-              {erroEmail && <p className='error-message'>{erroEmail}</p>}
+            </div>
+          </div>
+          <div className='senha_conteudo'>
+            <h1>
+              Esqueceu a <span className='texto_alternativo_ciano'>senha?</span>
+            </h1>
+            <p>Não se preocupe, acontece com todo mundo</p>
+            <div className='senha_imagem'>
+              <img
+                src='/img/Senha.png'
+                alt='Cadeado'
+              />
+            </div>
+            <div className='senha_botoes'>
+              <button
+                onClick={() => settipoEntrada("email")}
+                className={tipoEntrada === "email" ? "selected" : ""}
+              >
+                E-mail
+              </button>
+              <button
+                onClick={() => settipoEntrada("cpf")}
+                className={tipoEntrada === "cpf" ? "selected" : ""}
+              >
+                Não lembro o e-mail
+              </button>
+            </div>
+            <div className='input-container'>
+              {tipoEntrada === "email" && (
+                <>
+                  <label htmlFor='email'></label>
+                  <p>
+                    Escreva seu e-mail cadastrado no{" "}
+                    <strong className='texto_alternativo_azulvivo'>Trampos Fácil</strong>{" "}
+                    e lhe enviaremos um link para definir sua nova senha
+                  </p>
+                  <input
+                    type='email'
+                    id='email'
+                    placeholder='Digite seu e-mail'
+                    value={email}
+                    onChange={handleMudarEmail}
+                    className={erroEmail ? "input-error" : ""}
+                  />
+                  {erroEmail && <p className='erro-email'>{erroEmail}</p>}
+                </>
+              )}
+              {tipoEntrada === "cpf" && (
+                <>
+                  <label htmlFor='cpf'></label>
+                  <p>
+                    Digite o seu CPF e enviaremos o link para definir sua nova senha ao
+                    e-mail ou telefone associado ao seu CPF
+                  </p>
+                  <input
+                    type='text'
+                    id='cpf'
+                    placeholder='Digite seu CPF | CNPJ'
+                    value={cpf}
+                    onChange={handleMudarCPF}
+                    className={erroCPF ? "input-error" : ""}
+                  />
+                  {erroCPF && <p className='error-message'>{erroCPF}</p>}
+                </>
+              )}
               <button
                 onClick={handleEnviar}
-                className='enviar-button'
+                className='botoes-principais'
               >
                 Enviar
               </button>
             </div>
-          )}
-          {tipoEntrada === "cpf" && (
-            <div className='input-container'>
-              <label htmlFor='cpf'></label>
-              <p>
-                Digite o seu CPF e enviaremos o link para definir sua nova senha ao e-mail
-                ou telefone associado ao seu CPF
-              </p>
-              <input
-                type='text'
-                id='cpf'
-                placeholder='Digite seu CPF | CNPJ'
-                value={cpf}
-                onChange={handleMudarCPF}
-                className={erroCPF ? "input-error" : ""}
-              />
-              {erroCPF && <p className='error-message'>{erroCPF}</p>}
-              <button
-                onClick={handleEnviar}
-                className='enviar-button'
-              >
-                Enviar
-              </button>
-            </div>
-          )}
+            {alerta && (
+              <div className='modal'>
+                <div className='modal-content'>
+                  <span
+                    className='close'
+                    onClick={handleCloseAlert}
+                  >
+                    &times;
+                  </span>
+                  <p>{alerta}</p>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

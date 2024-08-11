@@ -14,7 +14,6 @@ import {
 import "../estilo/politicadeprivacidade.css";
 // Importes de Componentes
 import Cabecalho from "../componentes/cabecalho";
-import Rodape from "../componentes/rodape";
 
 const PoliticaDePrivacidade: React.FC = () => {
   return (
@@ -133,12 +132,10 @@ const PoliticaDePrivacidade: React.FC = () => {
           </h2>
           <p className='politica_texto'>
             Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato
-            pelo e-mail:{" "}
-            <a href='mailto:contato@tramposfacil.com.br'>contato@tramposfacil.com.br</a>.
+            pelo e-mail: <a href='mailto:contato@tramposfacil.com.br'>Clicando AQUI</a>.
           </p>
         </div>
       </div>
-      <Rodape />
     </div>
   );
 };

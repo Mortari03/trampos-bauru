@@ -4,7 +4,7 @@
 // Importes de CSS
 import "../estilo/para_empresa.css";
 // Importes de Paginas
-import Rodape from "../componentes/rodape";
+
 import Cabecalho from "../componentes/cabecalho";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -129,8 +129,6 @@ function ParaEmpresas() {
           </div>
         </div>
       </div>
-
-      <Rodape />
     </div>
   );
 }

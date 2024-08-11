@@ -8,7 +8,6 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../estilo/quemsomos.css";
 // Importes de Paginas
 import Cabecalho from "../componentes/cabecalho";
-import Rodape from "../componentes/rodape";
 
 // Dados dos membros da equipe
 const membros = [
@@ -154,13 +153,13 @@ function Quemsomos() {
           {membros.map((membro) => (
             <Grid
               item
-              xs={1}
+              xs={12}
               sm={5}
-              md={3}
+              md={4}
               key={membro.nome}
             >
               <Card
-                sx={{ maxWidth: 345 }}
+                sx={{ maxWidth: 400 }}
                 className='qs_card'
               >
                 <CardMedia
@@ -212,8 +211,6 @@ function Quemsomos() {
           econômico da região.
         </p>
       </div>
-
-      <Rodape />
     </div>
   );
 }

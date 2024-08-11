@@ -23,8 +23,7 @@ import CandidatoConfiguracao from "./paginas/candidato_configuracao";
 import CandidatoEntrevistasAgendadas from "./paginas/candidato_entrevistas_agendadas";
 import EmpresasPerfil from "./paginas/empresas_perfil";
 import EmpresasConfiguracao from "./paginas/empresas_configuracao";
-import CabecalhoEmpresa from "./componentes/cabecalho_empresa";
-import CabecalhoCandidato from "./componentes/cabecalho_candidato";
+
 import CandidatoDashboard from "./paginas/candidato_dashboard";
 import EmpresasDashboard from "./paginas/empresas_dashboard";
 import EmpresasVerVagas from "./paginas/empresas_ver_vagas";
@@ -32,6 +31,7 @@ import EmpresaPerfilEditar from "./paginas/empresa_perfil_editar";
 import Quemsomos from "./paginas/quemsomos";
 import PoliticaDePrivacidade from "./paginas/politicadeprivacidade";
 import AvisoLegal from "./paginas/avisolegal";
+import Rodape from "./componentes/rodape";
 
 function App() {
   return (
@@ -97,10 +97,6 @@ function App() {
 
         {/* Rota de Perfil Candidatos */}
         <Route
-          path='cabecalho_candidato'
-          element={<CabecalhoCandidato />}
-        />
-        <Route
           path='/candidato_dashboard'
           element={<CandidatoDashboard />}
         />
@@ -122,10 +118,7 @@ function App() {
         />
 
         {/* Rota de Perfil Empresa */}
-        <Route
-          path='/cabecalho_empresa'
-          element={<CabecalhoEmpresa />}
-        />
+
         <Route
           path='/empresa_dashboard'
           element={<EmpresasDashboard />}
@@ -156,6 +149,10 @@ function App() {
           element={<AvisoLegal />}
         />
       </Routes>
+
+      <div>
+        <Rodape />
+      </div>
     </div>
   );
 }

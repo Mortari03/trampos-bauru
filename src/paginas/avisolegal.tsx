@@ -13,7 +13,6 @@ import {
 import "../estilo/avisolegal.css";
 // Importes de Componentes
 import Cabecalho from "../componentes/cabecalho";
-import Rodape from "../componentes/rodape";
 
 const AvisoLegal = () => {
   return (
@@ -137,7 +136,6 @@ const AvisoLegal = () => {
           </div>
         </div>
       </div>
-      <Rodape />
     </div>
   );
 };

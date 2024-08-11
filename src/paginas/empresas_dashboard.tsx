@@ -14,12 +14,11 @@ import {
 //Importes de CSS
 import "../estilo/empresa_dashboard.css";
 //Importes de Paginas
-import Cabecalho_Empresa from "../componentes/cabecalho_empresa";
+
 import EmpresasCadastrarVagas from "./empresas_cadastrar_vagas";
 import EmpresasPerfil from "./empresas_perfil";
 import EmpresasConfiguracao from "./empresas_configuracao";
 import EmpresasVerVagas from "./empresas_ver_vagas";
-import Rodape from "../componentes/rodape";
 
 function EmpresaDashboard() {
   const [SessaoAtiva, setSessaoAtiva] = useState<string>("perfil");
@@ -50,35 +49,34 @@ function EmpresaDashboard() {
 
   return (
     <div>
-      <Cabecalho_Empresa />
-      <div className="company-dashboard">
-        <aside className="sidebar">
-          <div className="logo-container">
+      <div className='company-dashboard'>
+        <aside className='sidebar'>
+          <div className='logo-container'>
             <img
-              src="/img/Logo.png"
-              alt="Logo Trampos Facil"
-              className="logo"
+              src='/img/Logo.png'
+              alt='Logo Trampos Facil'
+              className='logo'
             />
           </div>
-          <nav className="menu">
-            <div className="menu-group">
+          <nav className='menu'>
+            <div className='menu-group'>
               <button onClick={() => alternarSubmenu("perfil")}>
                 <FontAwesomeIcon icon={faUser} /> Perfil
               </button>
               {submenuVisivel === "perfil" && (
-                <div className="submenu">
+                <div className='submenu'>
                   <button onClick={() => setSessaoAtiva("perfil")}>
                     Perfil da Empresa
                   </button>
                 </div>
               )}
             </div>
-            <div className="menu-group">
+            <div className='menu-group'>
               <button onClick={() => alternarSubmenu("vagas")}>
                 <FontAwesomeIcon icon={faClipboardList} /> Vagas
               </button>
               {submenuVisivel === "vagas" && (
-                <div className="submenu">
+                <div className='submenu'>
                   <button onClick={() => setSessaoAtiva("cadastrar")}>
                     Cadastrar Vagas
                   </button>
@@ -88,12 +86,12 @@ function EmpresaDashboard() {
                 </div>
               )}
             </div>
-            <div className="menu-group">
+            <div className='menu-group'>
               <button onClick={() => alternarSubmenu("candidatos")}>
                 <FontAwesomeIcon icon={faUsers} /> Candidatos
               </button>
               {submenuVisivel === "candidatos" && (
-                <div className="submenu">
+                <div className='submenu'>
                   <button onClick={() => setSessaoAtiva("verCandidatos")}>
                     Ver Candidatos
                   </button>
@@ -107,14 +105,16 @@ function EmpresaDashboard() {
             <button onClick={() => setSessaoAtiva("configuracoes")}>
               <FontAwesomeIcon icon={faCog} /> Configurações
             </button>
-            <Link to="/" className="logout-button">
+            <Link
+              to='/'
+              className='logout-button'
+            >
               <FontAwesomeIcon icon={faSignOutAlt} /> Sair
             </Link>
           </nav>
         </aside>
-        <main className="content">{rendeConteudo()}</main>
+        <main className='content'>{rendeConteudo()}</main>
       </div>
-      <Rodape />
     </div>
   );
 }
