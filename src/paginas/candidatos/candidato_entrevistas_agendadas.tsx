@@ -2,7 +2,7 @@
 //Importes do Router-Dom
 //Importes de Icones
 //Importes de CSS
-import "../estilo/candidato_entrevistas_agendadas.css";
+import "../../estilo/candidato_entrevistas_agendadas.css";
 //Importes de Paginas
 
 function CandidatoEntrevistasAgendadas() {

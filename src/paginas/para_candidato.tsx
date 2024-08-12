@@ -114,6 +114,7 @@ function ParaCandidatos() {
           ))}
         </div>
       </div>
+      
     </div>
   );
 }

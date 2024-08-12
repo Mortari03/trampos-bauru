@@ -2,7 +2,7 @@
 //Importes do Router-Dom
 //Importes de Icones
 //Importes de CSS
-import "../estilo/candidato_minhas_vagas.css";
+import "../../estilo/candidato_minhas_vagas.css";
 //Importes de Paginas
 
 function CandidatoVagas() {

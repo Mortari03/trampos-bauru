@@ -1,7 +1,4 @@
-// Importes do React
 import React, { useState } from "react";
-// Importes do Router-Dom
-// Importes de Icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEdit,
@@ -15,11 +12,9 @@ import {
   faLightbulb,
   faGears,
 } from "@fortawesome/free-solid-svg-icons";
-// Importes de CSS
-import "../estilo/candidato_perfil.css";
-// Importes de Interfaces
-import { Usuario } from "../types/interfaces"; // Ajuste o caminho conforme a estrutura do projeto
-import { useUsuario } from "../contexts/UsuarioContext";
+import "../../estilo/candidato_perfil.css";
+import { useUsuario } from "../../contexts/UsuarioContext";
+import { Usuario } from "../../types/interfaces";
 
 function CandidatoPerfil() {
   const { userInfo, setUserInfo } = useUsuario();
@@ -66,18 +61,6 @@ function CandidatoPerfil() {
       ...prevInfo,
       [section]: value.split(",").map((item) => item.trim()),
     }));
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      const file = e.target.files[0];
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setFotoPreview(reader.result as string);
-        setUserInfo((prevInfo) => ({ ...prevInfo, curriculo: file }));
-      };
-      reader.readAsDataURL(file);
-    }
   };
 
   const handleEditClick = () => {
@@ -332,54 +315,11 @@ function CandidatoPerfil() {
             <h3>
               <FontAwesomeIcon icon={faProjectDiagram} /> Projetos
             </h3>
-            {userInfo.projetos.map((proj, index) => (
-              <div key={index}>
-                <label>
-                  Nome do Projeto:
-                  <input
-                    type='text'
-                    name='nome'
-                    value={proj.nome}
-                    onChange={(e) =>
-                      setUserInfo((prevInfo) => {
-                        const updatedProjetos = [...prevInfo.projetos];
-                        updatedProjetos[index].nome = e.target.value;
-                        return { ...prevInfo, projetos: updatedProjetos };
-                      })
-                    }
-                  />
-                </label>
-                <label>
-                  Descrição:
-                  <textarea
-                    name='descricao'
-                    value={proj.descricao}
-                    onChange={(e) =>
-                      setUserInfo((prevInfo) => {
-                        const updatedProjetos = [...prevInfo.projetos];
-                        updatedProjetos[index].descricao = e.target.value;
-                        return { ...prevInfo, projetos: updatedProjetos };
-                      })
-                    }
-                  />
-                </label>
-                <label>
-                  Link:
-                  <input
-                    type='text'
-                    name='link'
-                    value={proj.link}
-                    onChange={(e) =>
-                      setUserInfo((prevInfo) => {
-                        const updatedProjetos = [...prevInfo.projetos];
-                        updatedProjetos[index].link = e.target.value;
-                        return { ...prevInfo, projetos: updatedProjetos };
-                      })
-                    }
-                  />
-                </label>
-              </div>
-            ))}
+            <textarea
+              name='projetos'
+              value={userInfo.projetos.join(", ")}
+              onChange={(e) => handleArrayChange(e, "projetos")}
+            />
           </section>
 
           <section className='perfil-section'>
@@ -395,42 +335,49 @@ function CandidatoPerfil() {
 
           <section className='perfil-section'>
             <h3>
-              <FontAwesomeIcon icon={faGears} /> Currículo
+              <FontAwesomeIcon icon={faGears} /> Habilidades
             </h3>
-            <input
-              type='file'
-              accept='.pdf'
-              onChange={handleFileChange}
+            <textarea
+              name='habilidades'
+              value={userInfo.habilidades.join(", ")}
+              onChange={(e) => handleArrayChange(e, "habilidades")}
             />
-            {userInfo.curriculo && (
-              <a
-                href={URL.createObjectURL(userInfo.curriculo)}
-                download
-                className='curriculo-link'
-              >
-                <FontAwesomeIcon icon={faFilePdf} /> Baixar Currículo
-              </a>
-            )}
           </section>
 
-          <div className='form-buttons'>
-            <button
-              type='submit'
-              className='save-button'
-            >
-              <FontAwesomeIcon icon={faSave} /> Salvar
-            </button>
-            <button
-              type='button'
-              onClick={handleEditClick}
-              className='cancel-button'
-            >
-              Cancelar
-            </button>
-          </div>
+          <button
+            type='submit'
+            className='save-button'
+          >
+            <FontAwesomeIcon icon={faSave} /> Salvar
+          </button>
         </form>
       ) : (
-        <div className='perfil-info'>
+        <div className='perfil-informacoes'>
+          <section className='perfil-section'>
+            <h3>Informações Pessoais</h3>
+            <p>
+              <strong>Nome Completo:</strong> {userInfo.nome}
+            </p>
+            <p>
+              <strong>Email:</strong> {userInfo.email}
+            </p>
+            <p>
+              <strong>Telefone:</strong> {userInfo.telefone}
+            </p>
+            <p>
+              <strong>Endereço:</strong> {userInfo.endereco}
+            </p>
+            <p>
+              <strong>Cidade:</strong> {userInfo.cidade}
+            </p>
+            <p>
+              <strong>Estado:</strong> {userInfo.estado}
+            </p>
+            <p>
+              <strong>CEP:</strong> {userInfo.cep}
+            </p>
+          </section>
+
           <section className='perfil-section'>
             <h3>
               <FontAwesomeIcon icon={faBriefcase} /> Último Emprego
@@ -473,8 +420,8 @@ function CandidatoPerfil() {
               <FontAwesomeIcon icon={faCertificate} /> Certificações
             </h3>
             <ul>
-              {userInfo.certificacoes.map((cert, index) => (
-                <li key={index}>{cert}</li>
+              {userInfo.certificacoes.map((certificacao, index) => (
+                <li key={index}>{certificacao}</li>
               ))}
             </ul>
           </section>
@@ -494,26 +441,24 @@ function CandidatoPerfil() {
             <h3>
               <FontAwesomeIcon icon={faProjectDiagram} /> Projetos
             </h3>
-            {userInfo.projetos.map((proj, index) => (
-              <div key={index}>
-                <p>
-                  <strong>Nome:</strong> {proj.nome}
-                </p>
-                <p>
-                  <strong>Descrição:</strong> {proj.descricao}
-                </p>
-                <p>
-                  <strong>Link:</strong>{" "}
-                  <a
-                    href={proj.link}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    {proj.link}
-                  </a>
-                </p>
-              </div>
-            ))}
+            <ul>
+              {userInfo.projetos.map((projeto, index) => (
+                <li key={index}>
+                  <strong>{projeto.nome}</strong> - {projeto.descricao}
+                  {projeto.link && (
+                    <div>
+                      <a
+                        href={projeto.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        Ver mais
+                      </a>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
           </section>
 
           <section className='perfil-section'>
@@ -529,18 +474,28 @@ function CandidatoPerfil() {
 
           <section className='perfil-section'>
             <h3>
-              <FontAwesomeIcon icon={faGears} /> Currículo
+              <FontAwesomeIcon icon={faGears} /> Habilidades
+            </h3>
+            <ul>
+              {userInfo.habilidades.map((habilidade, index) => (
+                <li key={index}>{habilidade}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className='perfil-section'>
+            <h3>
+              <FontAwesomeIcon icon={faFilePdf} /> Currículo
             </h3>
             {userInfo.curriculo ? (
               <a
-                href={URL.createObjectURL(userInfo.curriculo)}
+                href={userInfo.curriculo.toString()}
                 download
-                className='curriculo-link'
               >
-                <FontAwesomeIcon icon={faFilePdf} /> Baixar Currículo
+                Download Currículo
               </a>
             ) : (
-              <p>Currículo não disponível.</p>
+              <p>Nenhum currículo anexado.</p>
             )}
           </section>
         </div>

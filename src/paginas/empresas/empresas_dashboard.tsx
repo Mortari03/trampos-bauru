@@ -12,7 +12,7 @@ import {
   faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 //Importes de CSS
-import "../estilo/empresa_dashboard.css";
+import "../../estilo/empresa_dashboard.css";
 //Importes de Paginas
 
 import EmpresasCadastrarVagas from "./empresas_cadastrar_vagas";

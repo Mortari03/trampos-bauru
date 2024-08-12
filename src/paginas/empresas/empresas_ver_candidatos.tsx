@@ -2,7 +2,7 @@
 //Importes do Router-Dom
 //Importes de Icones
 //Importes de CSS
-import "../estilo/empresas_ver_candidatos.css";
+import "../../estilo/empresas_ver_candidatos.css";
 //Importes de Paginas
 
 function EmpresasVerCandidatos() {

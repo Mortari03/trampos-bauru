@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "../estilo/candidato_configuracao.css";
+import "../../estilo/candidato_configuracao.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faEdit,
   faLock,
   faBell,
   faShieldAlt,
@@ -11,7 +10,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function CandidatoConfiguracao() {
-  const [editarPerfil, setEditarPerfil] = useState(false);
   const [alterarSenha, setAlterarSenha] = useState(false);
   const [preferenciasNotificacao, setPreferenciasNotificacao] = useState(false);
   const [privacidadeSeguranca, setPrivacidadeSeguranca] = useState(false);
@@ -20,9 +18,6 @@ function CandidatoConfiguracao() {
 
   const handleToggle = (section: string) => {
     switch (section) {
-      case "editarPerfil":
-        setEditarPerfil(!editarPerfil);
-        break;
       case "alterarSenha":
         setAlterarSenha(!alterarSenha);
         break;
@@ -47,13 +42,6 @@ function CandidatoConfiguracao() {
     <div className='configuracao-candidato'>
       <h1>Configurações da Conta</h1>
       <div className='configuracao-opcoes'>
-        <button onClick={() => handleToggle("editarPerfil")}>
-          <FontAwesomeIcon icon={faEdit} /> Editar Perfil
-        </button>
-        {editarPerfil && (
-          <div className='configuracao-conteudo'>Aqui você pode editar seu perfil.</div>
-        )}
-
         <button onClick={() => handleToggle("alterarSenha")}>
           <FontAwesomeIcon icon={faLock} /> Alterar Senha
         </button>

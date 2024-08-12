@@ -55,7 +55,9 @@
 
 /* Card Individual */
 .pe-card {
-  width: calc(33.333% - 20px); /* Ajusta o tamanho dos cards para 3 por linha, considerando o gap */
+  width: calc(
+    33.333% - 20px
+  ); /* Ajusta o tamanho dos cards para 3 por linha, considerando o gap */
   height: 500px;
   background-color: #f2f2f2;
   border-radius: 5px;

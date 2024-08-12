@@ -36,6 +36,7 @@ function Cabecalho() {
           src='/img/Logo.png'
           alt='Logo'
         />
+
         <button
           className='alternar-Menu-principal'
           onClick={alterarMenu}

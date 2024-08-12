@@ -6,19 +6,18 @@ import {
   faCog,
   faSignOutAlt,
   faCalendarAlt,
-  faBars,
   faTimes,
   faHome,
   faSuitcase,
   faHeadset,
   faPeopleArrows,
 } from "@fortawesome/free-solid-svg-icons";
-import "../estilo/candidato_dashboard.css";
+import "../../estilo/candidato_dashboard.css";
 import CandidatoPerfil from "./candidato_perfil";
 import CandidatoVagas from "./candidato_minhas_vagas";
 import CandidatoEntrevistasAgendadas from "./candidato_entrevistas_agendadas";
 import CandidatoConfiguracao from "./candidato_configuracao";
-import { useUsuario } from "../contexts/UsuarioContext";
+import { useUsuario } from "../../contexts/UsuarioContext";
 
 function CandidatoDashboard() {
   const [secaoAtiva, setSecaoAtiva] = useState<string>("perfil");
@@ -48,17 +47,15 @@ function CandidatoDashboard() {
     <div className='CD-dashboard'>
       <div className='CD-header'>
         <div className='CD-headerContainer'>
-          <img
+          <Link
             className='CD-logo'
-            src='/img/Logo.png'
-            alt='Logo'
-          />
-          <button
-            className='CD-menuToggle'
-            onClick={alternarMenu}
+            to='/'
           >
-            <FontAwesomeIcon icon={menuAberto ? faTimes : faBars} />
-          </button>
+            <img
+              src='/img/Logo.png'
+              alt='Logo'
+            />
+          </Link>
           <div className={`CD-navContainer ${menuAberto ? "CD-active" : ""}`}>
             <nav>
               <ul className='CD-headerNav'>

@@ -110,7 +110,6 @@ function ParaEmpresas() {
           ))}
         </div>
       </div>
-
       {/* Parceiros */}
       <div className='pe-parceiros'>
         <h1>Nossos Parceiros</h1>
