@@ -15,7 +15,8 @@
 }
 
 /* Divs Quadradas */
-.prelogin_card, .prelogin_container_final {
+.prelogin_card,
+.prelogin_container_final {
   background: #ffffff;
   padding: 1rem;
   border-radius: 0.3125rem;
@@ -89,7 +90,9 @@ h3 {
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(0.625rem);
   -webkit-backdrop-filter: blur(0.625rem);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .prelogin_botao:hover {
@@ -127,13 +130,14 @@ h3 {
   text-decoration: underline;
 }
 
-/* Estilos para Telas Maiores (Mínimo 768px) */
+/* Estilos para Telas Médias a Grandes (Mínimo 768px) */
 @media (min-width: 48em) {
   .prelogin_container {
     flex-direction: row;
   }
 
-  .prelogin_card, .prelogin_container_final {
+  .prelogin_card,
+  .prelogin_container_final {
     width: 40vmin;
     height: 40vmin;
   }
@@ -147,17 +151,28 @@ h3 {
   }
 }
 
-/* Estilos para Telas Muito Maiores (Mínimo 1024px) */
+/* Estilos para Telas Grandes (Mínimo 1024px) */
 @media (min-width: 64em) {
-  .prelogin_card, .prelogin_container_final {
-    width: 35vmin;
-    height: 35vmin;
+  .prelogin_card,
+  .prelogin_container_final {
+    width: 40vmin;
+    height: 40vmin;
   }
 }
 
-/* Estilos para Monitores Widescreen (Mínimo 1440px) */
+/* Estilos para Telas Muito Grandes (Mínimo 1280px) */
+@media (min-width: 80em) {
+  .prelogin_card,
+  .prelogin_container_final {
+    width: 50vmin;
+    height: 50vmin;
+  }
+}
+
+/* Estilos para Telas Ultra Grandes (Mínimo 1440px) */
 @media (min-width: 90em) {
-  .prelogin_card, .prelogin_container_final {
+  .prelogin_card,
+  .prelogin_container_final {
     width: 30vmin;
     height: 30vmin;
   }
@@ -165,7 +180,17 @@ h3 {
 
 /* Estilos para Monitores 4K (Mínimo 2560px) */
 @media (min-width: 160em) {
-  .prelogin_card, .prelogin_container_final {
+  .prelogin_card,
+  .prelogin_container_final {
+    width: 25vmin;
+    height: 25vmin;
+  }
+}
+
+/* Estilos para Monitores Extra Grandes (Mínimo 2560px e maior) */
+@media (min-width: 160em) {
+  .prelogin_card,
+  .prelogin_container_final {
     width: 25vmin;
     height: 25vmin;
   }
