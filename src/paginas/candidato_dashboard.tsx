@@ -18,16 +18,12 @@ import CandidatoPerfil from "./candidato_perfil";
 import CandidatoVagas from "./candidato_minhas_vagas";
 import CandidatoEntrevistasAgendadas from "./candidato_entrevistas_agendadas";
 import CandidatoConfiguracao from "./candidato_configuracao";
+import { useUsuario } from "../contexts/UsuarioContext";
 
 function CandidatoDashboard() {
   const [secaoAtiva, setSecaoAtiva] = useState<string>("perfil");
   const [menuAberto, setMenuAberto] = useState<boolean>(false);
-
-  // Informação do usuário
-  const usuario = {
-    nome: "João Silva",
-    imagemPerfil: "/img/usuario.png", // Caminho da imagem de perfil do usuário
-  };
+  const { userInfo } = useUsuario();
 
   const renderizarConteudo = () => {
     switch (secaoAtiva) {
@@ -118,7 +114,7 @@ function CandidatoDashboard() {
             onClick={alternarMenu}
           >
             <img
-              src={usuario.imagemPerfil}
+              src={userInfo.foto}
               alt='Perfil'
               className='CD-profileImage'
             />
@@ -141,11 +137,11 @@ function CandidatoDashboard() {
           <nav className='CD-sidebarNav'>
             <div className='CD-userInfo'>
               <img
-                src={usuario.imagemPerfil}
+                src={userInfo.foto}
                 alt='Perfil'
                 className='CD-sidebarProfileImage'
               />
-              <p className='CD-username'>{usuario.nome}</p>
+              <p className='CD-username'>{userInfo.nome}</p>
             </div>
             <button
               className='CD-sidebarButton'
@@ -194,7 +190,6 @@ function CandidatoDashboard() {
         </aside>
         <main className='CD-content'>{renderizarConteudo()}</main>
       </div>
-      
     </div>
   );
 }
