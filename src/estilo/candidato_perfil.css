@@ -1,164 +1,168 @@
-.Container {
-  display: flex;
-  height: 100vh;
-}
+/* userProfile.css */
 
-.ContentWrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background-color: #f0f2f5;
-}
-
-.MainContent {
-  flex: 1;
+/* Container principal do perfil do usuário */
+.perfil-usuario {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.AreaBio, .Section {
+/* Header do perfil com foto e informações principais */
+.perfil-header {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
+  border-bottom: 2px solid #4a0876;
+  padding-bottom: 20px;
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.perfil-header-content {
+  flex: 1;
+}
+
+.perfil-header h2 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #333;
+}
+
+.perfil-header p {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #666;
+}
+
+.edit-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #3a065c;
+}
+
+/* Estilos do formulário de edição */
+.perfil-form {
   display: flex;
   flex-direction: column;
 }
 
-.NomeCompleto {
-  color: #1f4980;
-  text-align: center;
-  width: 400px;
-  height: 50px;
-  border: none;
-  outline: none;
-  align-self: center;
+.perfil-form label {
+  margin-bottom: 10px;
   font-weight: bold;
-  text-transform: uppercase;
+  color: #333;
 }
 
-.FotoPerfil{
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-  text-align: center;
+.perfil-form input,
+.perfil-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 4px;
 }
 
-.InfoContatos {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-
+.perfil-form input[type="file"] {
+  border: none;
+  padding: 0;
 }
 
-/* Barra Email esta editando a largura do email dentro da informações de contato (div InfoConatos */
-.BarraEmail{
-  width: 250px;
+.save-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
-
-.InfoContatosH2 {
-  color: #184175;
-  text-align: center;
+.save-button:hover {
+  background-color: #007bff;
 }
 
-.AnexarCurriculo {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-
+/* Estilo para seções do perfil */
+.perfil-section {
+  margin-bottom: 20px;
 }
 
-.AnexarCurriculo h2 {
-  text-align: center;
-  color: #184175;
-
+.perfil-section h3 {
+  margin-top: 0;
+  font-size: 1.8em;
+  color: #007bff;
+  border-bottom: 2px solid #4a0876;
+  padding-bottom: 10px;
 }
 
-.UltimoEmprego {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-
+.perfil-section p,
+.perfil-section div {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #333;
 }
 
-.UltimoEmpregoH2 {
-  color: #184175;
-  text-align: center;
+.perfil-section a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-.Educação {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+.perfil-section a:hover {
+  text-decoration: underline;
 }
 
-.EducaçãoH2 {
-  color: #184175;
-  text-align: center;
+/* Estilo para links de download */
+.download-link {
+  color: #4a0876;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.Habilidades {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-
+.download-link:hover {
+  text-decoration: underline;
 }
 
-.HabilidadesH2 {
-  color: #184175;
-  text-align: center;
+/* Estilos de apresentação de informações */
+.perfil-dados {
+  font-size: 1em;
+  color: #333;
 }
 
-
-.Certificações {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+.perfil-dados p {
+  margin: 10px 0;
 }
 
-.CertificaçãoH2 {
-  color: #184175;
-  text-align: center;
+.perfil-dados a {
+  color: #4a0876;
+  text-decoration: none;
 }
 
-
-.Cursos {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-}
-
-.CursosH2 {
-  color: #184175;
-  text-align: center;
-}
-
-.ÁreasInteresse {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-}
-
-.InteressesH2 {
-  color: #184175;
-  text-align: center;
-}
-
-.RedesSocias{
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
-
-}
-
-.RedesSociaisH2{
-  color: #184175;
-  text-align: center;
+.perfil-dados a:hover {
+  text-decoration: underline;
 }
