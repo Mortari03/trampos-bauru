@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 4% 5%;
+  position: relative; /* Necessário para o posicionamento da wave-bar */
 }
 
 .Logo {
@@ -44,6 +45,7 @@
   color: #00b3b3; /* Cor mais escura para o hover */
   transform: scale(1.1); /* Efeito de aumento no hover */
 }
+
 .tags-li {
   display: none; /* Oculta o menu por padrão */
   flex-direction: column; /* Menu vertical em telas menores */
@@ -80,13 +82,38 @@
   background-color: #004494;
 }
 
+/* Estilos da wave-bar com gradiente e animação */
 .wave-bar {
-  height: 1vh;
+  height: 2vh; /* Ajuste a altura conforme necessário */
+  background: linear-gradient(270deg, #a2d2ff, #b24cff, #f700ff); /* Gradiente de azul, roxo e rosa */
+  background-size: 600% 100%; /* Tamanho da área de fundo para a animação */
+  position: absolute; /* Posiciona a barra em relação ao cabeçalho */
+  bottom: 0; /* Posiciona a barra na parte inferior */
+  left: 0; /* Ajuste conforme necessário para o posicionamento */
+  width: 100%; /* Preenche a largura total do cabeçalho */
+  animation: waveAnimation 10s linear infinite; /* Animação de onda */
 }
 
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
 .infos-cab {
   list-style: none; /* Remove pontos de lista */
   padding: 0; /* Remove padding default de lista */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  flex: 1; /* Permite que a lista ocupe o espaço disponível */
+  margin: 0; /* Remove margem padrão */
+}
+
+.infos-cab li {
+  margin: 0 15px;
 }
 
 .infos-cab li a {
@@ -119,6 +146,7 @@
 @media (min-width: 768px) {
   .imagem {
     padding: 2% 5%;
+    justify-content: space-between; /* Ajusta o espaçamento entre o logo e o menu */
   }
 
   .Logo {
@@ -141,23 +169,22 @@
   .botao-config {
     display: flex;
     align-items: center;
-    padding-left: 25px;
-    padding-right: -25px;
+    padding: 0 25px; /* Ajusta o padding para espaçamento adequado */
   }
 
   .wave-bar {
     height: 2vh;
+    bottom: -2vh; /* Ajusta o posicionamento da barra */
   }
 
   .infos-cab {
     display: flex;
     list-style: none;
-    margin: 0;
+    margin: 0 auto; /* Centraliza horizontalmente o container */
     padding: 0;
   }
 
   .infos-cab li {
-    position: relative;
     margin: 0 15px;
   }
 
