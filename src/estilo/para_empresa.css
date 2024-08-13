@@ -40,24 +40,19 @@
   border-radius: 5px;
 }
 
-/* Container de Cards */
 .pe-cards-container {
   margin-top: 150px;
 }
 
-/* Cards */
 .pe-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Ajuste o espaçamento entre os cards conforme necessário */
+  gap: 30px;
 }
 
-/* Card Individual */
 .pe-card {
-  width: calc(
-    33.333% - 20px
-  ); /* Ajusta o tamanho dos cards para 3 por linha, considerando o gap */
+  width: 400px;
   height: 500px;
   background-color: #f2f2f2;
   border-radius: 5px;
@@ -65,7 +60,6 @@
   overflow: hidden;
   text-align: center;
   padding: 10px;
-  margin-bottom: 20px; /* Margem inferior para o espaçamento entre linhas */
 }
 
 .pe-card-imagem img {

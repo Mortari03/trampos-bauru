@@ -1,31 +1,15 @@
-/* Estilos gerais para o corpo da página */
-html,
-body {
-  height: 100%; /* Garante que o body tenha altura total */
-  margin: 0; /* Remove margens padrão */
-}
-
-/* Container principal da página */
-.container_principal {
-  min-height: 100%; /* Garante que o container principal ocupe a altura total da tela */
-  display: flex;
-  flex-direction: column;
-}
-
-/* Estilos gerais para o rodapé */
 .rodape_padrao {
-  background-color: #f1f1f1; /* Cor de fundo mais discreta */
-  color: #666; /* Cor do texto */
-  padding: 20px; /* Espaçamento vertical */
-  margin-top: auto; /* Empurra o rodapé para o final da coluna flexível */
+  background-color: #f5f5f5; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto */
+  padding: 40px 0; /* Espaçamento vertical */
 }
 
 .container_rodape {
-  display: flex; /* Layout flexível */
-  flex-direction: column; /* Layout vertical por padrão */
-  gap: 20px; /* Espaçamento entre seções */
   max-width: 1200px; /* Largura máxima do rodapé */
-  margin: 0 auto; /* Centraliza o conteúdo */
+  margin: 0 auto; /* Centralizar o rodapé */
+  display: grid; /* Layout em grid */
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+  gap: 40px; /* Espaçamento entre colunas */
 }
 
 .coluna_rodape {
@@ -34,62 +18,43 @@ body {
 }
 
 .coluna_rodape h4 {
-  font-size: 16px; /* Tamanho da fonte do título */
-  margin-bottom: 10px; /* Espaçamento abaixo do título */
+  font-size: 18px; /* Tamanho da fonte do título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
 
 .coluna_rodape a {
-  color: #666; /* Cor do texto dos links */
-  text-decoration: none; /* Remove sublinhado dos links */
+  color: #333; /* Cor do texto dos links */
+  text-decoration: none; /* Remover sublinhado dos links */
   font-size: 14px; /* Tamanho da fonte dos links */
-  margin-bottom: 5px; /* Espaçamento abaixo dos links */
+  margin-bottom: 10px; /* Espaçamento abaixo dos links */
   transition: color 0.3s ease; /* Transição suave da cor */
 }
 
 .coluna_rodape a:hover {
-  color: #007bff; /* Cor do link ao passar o mouse */
+  color: #00b3b3; /* Cor do link ao passar o mouse */
 }
 
 .coluna_social {
-  display: flex;
-  flex-direction: column; /* Layout vertical para ícones sociais */
-  align-items: center; /* Centraliza ícones sociais */
+  align-items: center; /* Centralizar ícones sociais */
 }
 
 .icones_sociais {
-  display: flex; /* Layout horizontal para ícones sociais */
-  gap: 15px; /* Espaçamento entre ícones */
+  display: flex; /* Layout horizontal para ícones */
+  gap: 20px; /* Espaçamento entre ícones */
 }
 
 .icone {
-  color: #666; /* Cor dos ícones */
-  font-size: 20px; /* Tamanho dos ícones */
+  color: #333; /* Cor dos ícones */
+  font-size: 24px; /* Tamanho dos ícones */
   transition: color 0.3s ease; /* Transição suave da cor */
 }
 
 .icone:hover {
-  color: #007bff; /* Cor dos ícones ao passar o mouse */
+  color: #00b3b3; /* Cor dos ícones ao passar o mouse */
 }
 
 .secao_direitos {
-  text-align: center; /* Centraliza o texto */
+  text-align: center; /* Centralizar o texto */
   font-size: 12px; /* Tamanho da fonte do copyright */
-}
-
-/* Estilos para telas maiores */
-@media (min-width: 768px) {
-  .container_rodape {
-    flex-direction: row; /* Disposição das colunas lado a lado em telas maiores */
-    flex-wrap: wrap; /* Permite que as colunas se movam para a linha seguinte, se necessário */
-    gap: 30px; /* Espaçamento entre seções */
-  }
-
-  .coluna_rodape {
-    flex: 1; /* Permite que as colunas se expandam igualmente */
-    min-width: 150px; /* Define uma largura mínima para as colunas */
-  }
-
-  .coluna_social {
-    flex-direction: row; /* Layout horizontal para ícones sociais */
-  }
+  margin-top: 20px; /* Espaçamento acima do copyright */
 }

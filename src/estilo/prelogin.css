@@ -1,197 +1,101 @@
-/* Estilos Gerais para Dispositivos Móveis (Mobile-First) */
-
 /* Container Geral */
 .prelogin_container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
   background-color: #f0f4f8;
-  padding: 0.625rem;
-  box-sizing: border-box;
-  gap: 1rem; /* Espaçamento entre os quadrados */
+  gap: 10px; /* Espaçamento entre os dois cards */
 }
 
-/* Divs Quadradas */
-.prelogin_card,
-.prelogin_container_final {
+/* Card de Cadastro */
+.prelogin_card {
   background: #ffffff;
-  padding: 1rem;
-  border-radius: 0.3125rem;
-  box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  width: 80vmin; /* Largura proporcional à viewport para manter o quadrado */
-  height: 80vmin; /* Altura proporcional à viewport para manter o quadrado */
+  width: 450px;
+  height: 400px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+  justify-content: space-between;
 }
 
-/* Cabeçalho dentro do primeiro quadrado */
+/* Cabeçalho de Cadastro */
 .prelogin_card_cabecalho {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding-bottom: 1rem;
-  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
-.Logo {
-  max-width: 50%;
+/* Título Cadastro */
+.prelogin_titulo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.btn_voltar {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #005bb3;
-}
-
-.texto_voltar {
-  margin-left: 0.5rem;
-}
-
-/* Título */
-h3 {
-  font-size: 1.25rem;
-  margin: 1rem 0;
-  color: #333;
-}
-
-/* Centro dos Botões de Login */
+/* Centro Cadastro */
 .prelogin_centro {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 1rem;
+  justify-content: space-around;
+  margin-bottom: 1rem;
 }
 
 .prelogin_botao {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
   color: #3354a8;
   text-decoration: none;
-  width: 100%;
-  min-height: 3.75rem;
+  width: 45%;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.625rem;
+  padding: 10px;
   box-sizing: border-box;
-  border-radius: 0.625rem;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(0.625rem);
-  -webkit-backdrop-filter: blur(0.625rem);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
 }
 
 .prelogin_botao:hover {
   color: #005bb3;
-  transform: translateY(-0.3125rem);
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Eleva o botão ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
 }
 
 .prelogin_icone {
-  display: flex;
-  font-size: 1.875rem;
+  font-size: 50px;
   margin-bottom: 0.5rem;
 }
 
-/* Título e Links de Cadastro no segundo quadrado */
-.prelogin_titulo_final h3 {
-  margin: 1.25rem 0;
-  color: #333;
-  font-size: 1.25rem;
+/* Título Final */
+.prelogin_titulo_final {
+  margin-top: 40px;
+  text-align: center;
 }
 
-.prelogin_titulo_final p {
-  margin: 0;
-  font-size: 1rem;
-  color: #555;
-}
-
-.pre_candidato {
-  color: #005bb3;
-  text-decoration: none;
-  margin: 0 0.3rem;
+/* Container Final */
+.prelogin_container_final {
+  background: white;
+  border-radius: 5px;
+  width: 450px;
+  height: 400px;
+  padding: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .pre_candidato:hover {
-  text-decoration: underline;
-}
-
-/* Estilos para Telas Médias a Grandes (Mínimo 768px) */
-@media (min-width: 48em) {
-  .prelogin_container {
-    flex-direction: row;
-  }
-
-  .prelogin_card,
-  .prelogin_container_final {
-    width: 40vmin;
-    height: 40vmin;
-  }
-
-  .prelogin_centro {
-    flex-direction: row;
-  }
-
-  .prelogin_botao {
-    width: 45%;
-  }
-}
-
-/* Estilos para Telas Grandes (Mínimo 1024px) */
-@media (min-width: 64em) {
-  .prelogin_card,
-  .prelogin_container_final {
-    width: 40vmin;
-    height: 40vmin;
-  }
-}
-
-/* Estilos para Telas Muito Grandes (Mínimo 1280px) */
-@media (min-width: 80em) {
-  .prelogin_card,
-  .prelogin_container_final {
-    width: 50vmin;
-    height: 50vmin;
-  }
-}
-
-/* Estilos para Telas Ultra Grandes (Mínimo 1440px) */
-@media (min-width: 90em) {
-  .prelogin_card,
-  .prelogin_container_final {
-    width: 30vmin;
-    height: 30vmin;
-  }
-}
-
-/* Estilos para Monitores 4K (Mínimo 2560px) */
-@media (min-width: 160em) {
-  .prelogin_card,
-  .prelogin_container_final {
-    width: 25vmin;
-    height: 25vmin;
-  }
-}
-
-/* Estilos para Monitores Extra Grandes (Mínimo 2560px e maior) */
-@media (min-width: 160em) {
-  .prelogin_card,
-  .prelogin_container_final {
-    width: 25vmin;
-    height: 25vmin;
-  }
+  border-bottom: 3px solid #00b3b3;
 }

@@ -1,6 +1,5 @@
-/* Estilos gerais para dispositivos móveis */
 .politica_container {
-  max-width: 100%; /* Largura total em dispositivos móveis */
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -10,7 +9,7 @@
 
 .politica_titulo {
   text-align: center;
-  font-size: 1.5em; /* Ajustado para telas menores */
+  font-size: 2em;
   margin-bottom: 20px;
   color: #2c3e50;
 }
@@ -20,14 +19,14 @@
 }
 
 .politica_section {
-  margin-bottom: 20px; /* Reduzido para espaço em telas menores */
-  padding: 15px; /* Ajustado para telas menores */
+  margin-bottom: 40px;
+  padding: 20px;
   background-color: #f7f9fb;
   border-radius: 8px;
 }
 
 .politica_subtitulo {
-  font-size: 1.2em; /* Ajustado para telas menores */
+  font-size: 1.5em;
   margin-bottom: 10px;
   color: #2980b9;
   display: flex;
@@ -35,10 +34,8 @@
 }
 
 .icon {
-  margin-right: 10px; /* Reduzido para telas menores */
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
+  margin-right: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .politica_subtitulo:hover .icon {
@@ -47,7 +44,7 @@
 }
 
 ul {
-  padding-left: 15px; /* Reduzido para telas menores */
+  padding-left: 20px;
 }
 
 li {
@@ -65,32 +62,4 @@ a:hover {
 
 .link_trampos {
   font-weight: bold;
-}
-
-/* Estilos para telas maiores */
-@media (min-width: 768px) {
-  .politica_container {
-    max-width: 800px; /* Largura máxima em telas maiores */
-  }
-
-  .politica_titulo {
-    font-size: 2em; /* Tamanho da fonte ajustado para telas maiores */
-  }
-
-  .politica_section {
-    margin-bottom: 40px; /* Espaçamento maior em telas maiores */
-    padding: 20px; /* Ajustado para telas maiores */
-  }
-
-  .politica_subtitulo {
-    font-size: 1.5em; /* Tamanho da fonte ajustado para telas maiores */
-  }
-
-  .icon {
-    margin-right: 15px; /* Espaçamento maior para ícones em telas maiores */
-  }
-
-  ul {
-    padding-left: 20px; /* Espaçamento maior em telas maiores */
-  }
 }
