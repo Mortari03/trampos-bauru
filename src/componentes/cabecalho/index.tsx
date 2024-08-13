@@ -13,12 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Cabecalho() {
-  const [menuVisible, setMenuVisible] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
-
-  const alterarMenu = () => {
-    setMenuVisible(!menuVisible);
-  };
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
@@ -37,13 +32,8 @@ function Cabecalho() {
           alt='Logo'
         />
 
-        <button
-          className='alternar-Menu-principal'
-          onClick={alterarMenu}
-        >
-          &#9776; {/* Ícone de menu hamburger */}
-        </button>
-        <div className={`tags-li ${menuVisible ? "active" : ""}`}>
+      
+        <div className=  'tags-li'>
           <nav>
             <ul className='infos-cab'>
               <li>
