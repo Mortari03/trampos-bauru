@@ -32,90 +32,83 @@ function Cabecalho() {
           alt='Logo'
         />
 
-      
-        <div className=  'tags-li'>
-          <nav>
-            <ul className='infos-cab'>
-              <li>
-                <strong className='menu'>
-                  <Link to='/'>
-                    <FontAwesomeIcon
-                      icon={faHome}
-                      className='icone'
-                    />
-                    TRAMPOS
-                  </Link>
-                </strong>
-              </li>
-              <li>
-                <strong className='menu'>
-                  <Link to='/carreiras'>
-                    <FontAwesomeIcon
-                      icon={faSuitcase}
-                      className='icone'
-                    />
-                    CARREIRAS
-                  </Link>
-                </strong>
-              </li>
-              <li
-                className='dropdown'
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <strong className='menu'>
-                  <Link to='#'>
-                    <FontAwesomeIcon
-                      icon={faQuestionCircle}
-                      className='icone'
-                    />
-                    POR QUE NÓS ?
-                  </Link>
-                </strong>
-                {dropdownVisible && (
-                  <div className='dropdown-content menu'>
-                    <Link to='/quemsomos'>
-                      <FontAwesomeIcon
-                        icon={faPeopleArrows}
-                        className='icone'
-                      />
-                      Quem Somos
-                    </Link>
-                    <Link to='/paraempresas'>
-                      <FontAwesomeIcon
-                        icon={faBuilding}
-                        className='icone'
-                      />
-                      Para Empresas
-                    </Link>
-                    <Link to='/paracandidatos'>
-                      <FontAwesomeIcon
-                        icon={faUser}
-                        className='icone'
-                      />
-                      Para Candidatos
-                    </Link>
-                  </div>
-                )}
-              </li>
-              <li>
-                <strong className='menu'>
-                  <Link to='/suporte'>
-                    <FontAwesomeIcon
-                      icon={faHeadset}
-                      className='icone'
-                    />
-                    SUPORTE
-                  </Link>
-                </strong>
-              </li>
-              <div className='botao-config'>
-                <Link to='/prelogin'>
-                  <button className='botoes-principais'>LOGIN | CADASTRO</button>
+        <div className='tags-conteudo'>
+          <strong className='menu'>
+            <Link to='/'>
+              <FontAwesomeIcon
+                icon={faHome}
+                className='icone'
+              />
+              TRAMPOS
+            </Link>
+          </strong>
+
+          <strong className='menu'>
+            <Link to='/carreiras'>
+              <FontAwesomeIcon
+                icon={faSuitcase}
+                className='icone'
+              />
+              CARREIRAS
+            </Link>
+          </strong>
+
+          <div
+            className='dropdown'
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <strong className='menu'>
+              <Link to='#'>
+                <FontAwesomeIcon
+                  icon={faQuestionCircle}
+                  className='icone'
+                />
+                POR QUE NÓS ?
+              </Link>
+            </strong>
+            {dropdownVisible && (
+              <div className='dropdown-content menu'>
+                <Link to='/quemsomos'>
+                  <FontAwesomeIcon
+                    icon={faPeopleArrows}
+                    className='icone'
+                  />
+                  Quem Somos
+                </Link>
+                <Link to='/paraempresas'>
+                  <FontAwesomeIcon
+                    icon={faBuilding}
+                    className='icone'
+                  />
+                  Para Empresas
+                </Link>
+                <Link to='/paracandidatos'>
+                  <FontAwesomeIcon
+                    icon={faUser}
+                    className='icone'
+                  />
+                  Para Candidatos
                 </Link>
               </div>
-            </ul>
-          </nav>
+            )}
+          </div>
+
+          <strong className='menu'>
+            <Link to='/suporte'>
+              <FontAwesomeIcon
+                icon={faHeadset}
+                className='icone'
+              />
+              SUPORTE
+            </Link>
+          </strong>
+
+          <div className='botao-config'>
+            <Link to='/prelogin'>
+              <button className='botoes-principais'>LOGIN | CADASTRO</button>
+            </Link>
+          </div>
         </div>
       </div>
       <div className='wave-bar'></div>

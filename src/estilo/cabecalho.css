@@ -23,25 +23,17 @@
   filter: brightness(1.1); /* Aumenta o brilho da logo ao passar o mouse */
 }
 
-.tags-li {
+.tags-conteudo {
+  margin: 0px;
+  padding: 0px;
   flex-grow: 1;
   display: flex;
   justify-content: center;
 }
 
-.infos-cab {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.infos-cab li {
-  position: relative; /* Para o efeito de hover */
+.menu {
+  position: relative;
   margin: 0 15px; /* Espaço entre os itens do menu */
-}
-
-.infos-cab li a {
   text-decoration: none;
   display: flex; /* Utiliza flexbox para alinhar ícone e texto */
   align-items: center; /* Alinha verticalmente o ícone e o texto */
@@ -52,13 +44,8 @@
   gap: 10px;
 }
 
-/* Adiciona espaço entre ícone e texto */
-.infos-cab strong .fa {
-  margin-right: 100px; /* Espaço entre ícone e texto */
-}
-
 /* Efeito de hover moderno */
-.infos-cab li a::after {
+.menu::after {
   content: "";
   display: block;
   width: 100%;
@@ -71,7 +58,7 @@
   bottom: 5px; /* Distância da linha em relação ao texto */
 }
 
-.infos-cab li a:hover::after {
+.menu:hover::after {
   transform: scaleX(1);
 }
 
@@ -104,6 +91,7 @@
   display: flex; /* Utiliza flexbox para alinhar ícone e texto */
   align-items: center; /* Alinha verticalmente o ícone e o texto */
   position: relative; /* Para o efeito de hover */
+  color: #132144;
 }
 
 /* Adiciona espaço entre ícone e texto no dropdown */
