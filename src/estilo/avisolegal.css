@@ -35,7 +35,9 @@
 
 .icon {
   margin-right: 15px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .aviso_subtitulo:hover .icon {
@@ -53,11 +55,6 @@ li {
 
 a {
   color: #3498db;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 .link_trampos {

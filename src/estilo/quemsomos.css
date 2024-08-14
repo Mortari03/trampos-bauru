@@ -17,12 +17,16 @@
 /* Texto de Boas-Vindas */
 .qs_texto_bemvindos {
   display: flex;
+  flex-direction: column; /* Adiciona esta linha para empilhar verticalmente */
   align-items: center;
   justify-content: center;
   flex: 1;
   width: 500px;
   min-height: 400px;
   border-radius: 8px;
+}
+.qs_texto-h1 {
+  margin-bottom: 0.1em; /* Espaçamento entre o título e o parágrafo */
 }
 
 /* Imagem Sobre Nós */
@@ -231,7 +235,6 @@
   height: 400px;
   margin: 10px;
   padding: 5px;
- 
 }
 
 .qs_card_conteudo {

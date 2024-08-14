@@ -24,7 +24,6 @@
 
 .coluna_rodape a {
   color: #333; /* Cor do texto dos links */
-  text-decoration: none; /* Remover sublinhado dos links */
   font-size: 14px; /* Tamanho da fonte dos links */
   margin-bottom: 10px; /* Espaçamento abaixo dos links */
   transition: color 0.3s ease; /* Transição suave da cor */
@@ -41,16 +40,6 @@
 .icones_sociais {
   display: flex; /* Layout horizontal para ícones */
   gap: 20px; /* Espaçamento entre ícones */
-}
-
-.icone {
-  color: #333; /* Cor dos ícones */
-  font-size: 24px; /* Tamanho dos ícones */
-  transition: color 0.3s ease; /* Transição suave da cor */
-}
-
-.icone:hover {
-  color: #00b3b3; /* Cor dos ícones ao passar o mouse */
 }
 
 .secao_direitos {

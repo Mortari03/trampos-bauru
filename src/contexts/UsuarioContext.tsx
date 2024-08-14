@@ -58,7 +58,7 @@ export const UsuarioProvider: React.FC<{ children: ReactNode }> = ({ children })
 export const useUsuario = () => {
   const context = useContext(UsuarioContext);
   if (!context) {
-    throw new Error("useUsuario must be used within a UsuarioProvider");
+    throw new Error("useUsuario deve ser usado dentro de um UsuarioProvider");
   }
   return context;
 };

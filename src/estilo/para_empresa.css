@@ -1,17 +1,17 @@
 /* Estilos gerais da página */
 /* Título Principal */
 .pe_empresa_titulo {
-  margin-bottom: -35px;
+  margin-bottom: -0.7em;
   justify-content: flex-start;
-  font-size: 25px;
+  font-size: 2.1em;
 }
 
 .pe_empresa_chamada {
-  font-size: 55px;
+  font-size: 3.5em;
 }
 
 .pe_empresa_p {
-  font-size: 30px;
+  font-size: 2em;
 }
 
 /* Container Principal  */
@@ -20,8 +20,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  min-height: 500px;
-  margin-top: 30px;
+  min-height: 100vh;
+  margin-top: 1em;
 }
 
 /* Texto de Boas-Vindas */
@@ -36,24 +36,25 @@
   background-position: center;
   background-size: cover; /* Preenche todo o espaço da div */
   background-repeat: no-repeat; /* Evita a repetição da imagem */
-  min-height: 600px;
-  border-radius: 5px;
+  min-height: 80vh;
+  border-radius: 0.5em;
+  margin-right: 1em;
 }
 
 .pe-cards-container {
-  margin-top: 150px;
+  margin-top: 1em;
 }
 
 .pe-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 3em;
 }
 
 .pe-card {
-  width: 400px;
-  height: 500px;
+  width: 25vw;
+  height: 80vh;
   background-color: #f2f2f2;
   border-radius: 5px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);

@@ -53,13 +53,12 @@ function Quemsomos() {
   return (
     <div>
       <Cabecalho />
-
       <div className='qs_container_principal'>
         <div className='qs_texto_bemvindos'>
-          <h1>
+          <h1 className='qs_texto-h1'>
             Sobre o <span className='texto_alternativo_azul'>Trampos Fácil</span>
           </h1>
-          <p>
+          <p className='qs_texto-p'>
             Bem-vindo ao{" "}
             <strong className='texto_alternativo_ciano'> Trampos Fácil!</strong> Somos uma
             equipe de estudantes do curso de Desenvolvimento Full Stack do{" "}

@@ -10,40 +10,42 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #f0f4f8;
   overflow: visible;
+  font-size: 1rem; /* Definindo base de tamanho de fonte */
 }
 
 /* Títulos principais */
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 900; /* Montserrat Black */
-  font-size: 60px;
+  font-size: 3.75rem; /* 60px */
   color: #132144;
-  margin: 10px;
-  padding: 10px;
+  margin: 0.625rem;
+  padding: 0.625rem;
 }
 
 /* Subtítulos */
 h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 800; /* Montserrat ExtraBold */
-  font-size: 45px;
+  font-size: 2.8125rem; /* 45px */
   color: #132144;
-  margin: 10px;
-  padding: 10px;
+  margin: 0.625rem;
+  padding: 0.625rem;
 }
+
 h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 800; /* Montserrat ExtraBold */
-  font-size: 35px;
+  font-size: 2.1875rem; /* 35px */
   color: #202538;
-  margin: 10px;
-  padding: 10px;
+  margin: 0.625rem;
+  padding: 0.625rem;
 }
 
 h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 800; /* Montserrat ExtraBold */
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
   color: #5a7fbf;
 }
 
@@ -51,20 +53,23 @@ h4 {
 p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500; /* Montserrat Medium */
-  font-size: 25px;
+  font-size: 1.5625rem; /* 25px */
   color: #202538;
-  margin: 10px;
-  padding: 10px;
+  margin: 0.625rem;
+  padding: 0.625rem;
 }
-/*Texto destaque Ciano*/
+
+/* Texto destaque Ciano */
 .texto_alternativo_ciano {
   color: #00b3b3;
 }
-/*Texto destaque Azul Vivo*/
+
+/* Texto destaque Azul Vivo */
 .texto_alternativo_azulvivo {
   color: #005bb3;
 }
-/*Texto destaque Azul Claro*/
+
+/* Texto destaque Azul Claro */
 .texto_alternativo_azul {
   color: #5a7fbf;
 }
@@ -73,22 +78,32 @@ p {
 .menu {
   font-family: "Montserrat", sans-serif;
   font-weight: 700; /* Montserrat Bold */
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px */
   color: #132144;
+}
+
+.icone {
+  color: #333; /* Cor dos ícones */
+  font-size: 1.3rem; /* Tamanho dos ícones */
+  transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+.icone:hover {
+  color: #00b3b3; /* Cor dos ícones ao passar o mouse */
 }
 
 .botoes-principais {
   font-family: "Montserrat", sans-serif;
   font-weight: 700; /* Montserrat Bold */
-  font-size: 15px;
-  padding: 12px 24px; /*Ajuste o padding conforme necessário */
+  font-size: 0.9375rem; /* 15px */
+  padding: 0.75rem 1.5rem; /* 12px 24px */
   background-color: #3354a8;
   color: #fff;
   border: none;
-  border-radius: 5px; /* Aumenta o raio da borda para deixar o botão mais arredondado */
+  border-radius: 0.3125rem; /* 5px */
   cursor: pointer;
   text-transform: uppercase; /* Transforma o texto em maiúsculas */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* 4px 6px */
   transition:
     background-color 0.3s ease,
     box-shadow 0.3s ease; /* Adiciona uma transição suave */
@@ -96,20 +111,20 @@ p {
 
 .botoes-principais:hover {
   background-color: #005bb3;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra no hover */
+  box-shadow: 0 0.375rem 0.5rem rgba(0, 0, 0, 0.15); /* 6px 8px */
 }
 
-/*Botão Voltar*/
+/* Botão Voltar */
 .btn_voltar {
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px */
   color: #007bff;
   text-decoration: none;
 }
 
 .texto_voltar {
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px */
   text-decoration: none;
-  margin-left: 5px;
+  margin-left: 0.3125rem; /* 5px */
 }
 
 .texto_voltar:hover {
@@ -127,10 +142,10 @@ p {
   background-color: #00b3b3;
 }
 
-/*Logo*/
+/* Logo */
 .Logo {
   height: auto;
-  max-height: 10vh;
+  max-height: 10vh; /* Altura máxima baseada na altura da viewport */
   transition:
     transform 0.3s ease,
     filter 0.3s ease; /* Transição suave para transformações e filtro */
@@ -143,6 +158,14 @@ p {
 
 /* Estilo da barra de rolagem */
 ::-webkit-scrollbar {
-  width: 0px; /* Largura da barra de rolagem vertical */
-  height: 10px; /* Altura da barra de rolagem horizontal */
+  width: 0; /* Largura da barra de rolagem vertical */
+  height: 0.625rem; /* Altura da barra de rolagem horizontal */
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }

@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import "../../estilo/cabecalho.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faSuitcase,
   faHome,
   faQuestionCircle,
   faHeadset,
-  faPeopleArrows,
   faBuilding,
   faUser,
+  faCircleInfo,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Cabecalho() {
@@ -24,66 +23,68 @@ function Cabecalho() {
   };
 
   return (
-    <div className='div-conteiner'>
-      <div className='imagem'>
-        <img
-          className='Logo'
-          src='/img/Logo.png'
-          alt='Logo'
-        />
-
-        <div className='tags-conteudo'>
-          <strong className='menu'>
-            <Link to='/'>
-              <FontAwesomeIcon
-                icon={faHome}
-                className='icone'
-              />
-              TRAMPOS
-            </Link>
-          </strong>
-
-          <strong className='menu'>
-            <Link to='/carreiras'>
-              <FontAwesomeIcon
-                icon={faSuitcase}
-                className='icone'
-              />
-              CARREIRAS
-            </Link>
-          </strong>
+    <div>
+      <div className='menu-container'>
+        <div className='menu-logo'>
+          <img
+            src='/img/logo.png'
+            alt='Logo do site'
+            className='Logo'
+          />
+        </div>
+        <nav className='menu-conteudo'>
+          <Link
+            to='/'
+            className='menu-link'
+          >
+            <FontAwesomeIcon
+              icon={faHome}
+              className='icone'
+            />
+            <span className='menu-text'>Trampos</span>
+          </Link>
 
           <div
             className='dropdown'
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <strong className='menu'>
-              <Link to='#'>
-                <FontAwesomeIcon
-                  icon={faQuestionCircle}
-                  className='icone'
-                />
-                POR QUE NÓS ?
-              </Link>
-            </strong>
+            <Link
+              to='#'
+              className='menu-link'
+            >
+              <FontAwesomeIcon
+                icon={faQuestionCircle}
+                className='icone'
+              />
+              <span className='menu-text'>Por que nos?</span>
+            </Link>
             {dropdownVisible && (
-              <div className='dropdown-content menu'>
-                <Link to='/quemsomos'>
+              <div className='dropdown-content'>
+                <Link
+                  to='/quemsomos'
+                  className='dropdown-item'
+                >
                   <FontAwesomeIcon
-                    icon={faPeopleArrows}
+                    icon={faCircleInfo}
                     className='icone'
                   />
                   Quem Somos
                 </Link>
-                <Link to='/paraempresas'>
+                <Link
+                  to='/paraempresas'
+                  className='dropdown-item'
+                >
                   <FontAwesomeIcon
                     icon={faBuilding}
                     className='icone'
                   />
                   Para Empresas
                 </Link>
-                <Link to='/paracandidatos'>
+                <Link
+                  to='/paracandidatos'
+                  className='dropdown-item'
+                >
                   <FontAwesomeIcon
                     icon={faUser}
                     className='icone'
@@ -94,24 +95,24 @@ function Cabecalho() {
             )}
           </div>
 
-          <strong className='menu'>
-            <Link to='/suporte'>
-              <FontAwesomeIcon
-                icon={faHeadset}
-                className='icone'
-              />
-              SUPORTE
-            </Link>
-          </strong>
-
-          <div className='botao-config'>
-            <Link to='/prelogin'>
-              <button className='botoes-principais'>LOGIN | CADASTRO</button>
-            </Link>
-          </div>
+          <Link
+            to='/suporte'
+            className='menu-link'
+          >
+            <FontAwesomeIcon
+              icon={faHeadset}
+              className='icone'
+            />
+            <span className='menu-text '>Suporte</span>
+          </Link>
+        </nav>
+        <div>
+          <Link to='/prelogin'>
+            <button className='botoes-principais menu-btn'>Entrar | Cadastrar</button>
+          </Link>
         </div>
       </div>
-      <div className='wave-bar'></div>
+      <div className='menu-wave'></div>
     </div>
   );
 }

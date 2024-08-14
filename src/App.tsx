@@ -7,7 +7,6 @@ import { Routes, Route } from "react-router-dom";
 import "./estilo/cabecalho.css";
 //Importes de Paginas
 import Trampos from "./paginas/trampos";
-import Carreiras from "./paginas/carreiras";
 import ParaEmpresas from "./paginas/para_empresa";
 import ParaCandidato from "./paginas/para_candidato";
 import Suporte from "./paginas/suporte";
@@ -41,10 +40,7 @@ function App() {
           path='/'
           element={<Trampos />}
         />
-        <Route
-          path='/carreiras'
-          element={<Carreiras />}
-        />
+
         <Route
           path='/suporte'
           element={<Suporte />}
