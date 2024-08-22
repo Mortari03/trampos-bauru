@@ -1,4 +1,4 @@
-// src/types/interfaces.ts
+// Usuario
 
 export interface Projeto {
   nome: string;
@@ -37,4 +37,30 @@ export interface Usuario {
   projetos: Projeto[];
   areasInteresse: string[];
   curriculo: File | null;
+}
+
+
+// Empresas
+
+export interface EmpresaInfo {
+  nome: string;
+  sobre: string;
+  email: string;
+  telefone: string;
+  endereco: string;
+  cidade: string;
+  estado: string;
+  cep: string;
+  website: string;
+  setor: string;
+  tamanho: string;
+  anoFundacao: string;
+  foto: string;
+  missao: string;
+  visao: string;
+  valores: string;
+  facebook: string;
+  twitter: string;
+  linkedin: string;
+  instagram: string;
 }

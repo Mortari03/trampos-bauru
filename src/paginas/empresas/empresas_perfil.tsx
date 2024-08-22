@@ -21,7 +21,7 @@ import {
   faCalendar,
 } from "@fortawesome/free-solid-svg-icons";
 
-interface CompanyInfo {
+interface EmpresaInfo {
   nome: string;
   sobre: string;
   email: string;
@@ -44,9 +44,9 @@ interface CompanyInfo {
   instagram: string;
 }
 
-const PerfilEmpresa: React.FC = () => {
+function EmpresaPerfil() {
   const [editMode, setEditMode] = useState(false);
-  const [companyInfo, setCompanyInfo] = useState<CompanyInfo>({
+  const [EmpresaInfo, setEmpresaInfo] = useState<EmpresaInfo>({
     nome: "Nome da Empresa",
     sobre: "Sobre a Empresa",
     email: "email@empresa.com",
@@ -68,13 +68,13 @@ const PerfilEmpresa: React.FC = () => {
     linkedin: "https://www.linkedin.com/company/empresa",
     instagram: "https://www.instagram.com/empresa",
   });
-  const [fotoPreview, setFotoPreview] = useState(companyInfo.foto);
+  const [fotoPreview, setFotoPreview] = useState(EmpresaInfo.foto);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setCompanyInfo({ ...companyInfo, [name]: value });
+    setEmpresaInfo({ ...EmpresaInfo, [name]: value });
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -83,7 +83,7 @@ const PerfilEmpresa: React.FC = () => {
       const reader = new FileReader();
       reader.onloadend = () => {
         setFotoPreview(reader.result as string);
-        setCompanyInfo({ ...companyInfo, foto: reader.result as string });
+        setEmpresaInfo({ ...EmpresaInfo, foto: reader.result as string });
       };
       reader.readAsDataURL(file);
     }
@@ -108,7 +108,7 @@ const PerfilEmpresa: React.FC = () => {
           className='perfil-foto'
         />
         <div className='perfil-header-content'>
-          <h1>{companyInfo.nome}</h1>
+          <h1>{EmpresaInfo.nome}</h1>
           <button
             className='edit-button'
             onClick={handleEditClick}
@@ -146,11 +146,11 @@ const PerfilEmpresa: React.FC = () => {
             <textarea
               id='sobre'
               name='sobre'
-              value={companyInfo.sobre}
+              value={EmpresaInfo.sobre}
               onChange={handleChange}
             ></textarea>
           </div>
-          {Object.keys(companyInfo).map(
+          {Object.keys(EmpresaInfo).map(
             (key) =>
               key !== "foto" &&
               key !== "sobre" && (
@@ -166,7 +166,7 @@ const PerfilEmpresa: React.FC = () => {
                     <select
                       id={key}
                       name={key}
-                      value={companyInfo[key as keyof CompanyInfo]}
+                      value={EmpresaInfo[key as keyof EmpresaInfo]}
                       onChange={
                         handleChange as React.ChangeEventHandler<HTMLSelectElement>
                       }
@@ -182,7 +182,7 @@ const PerfilEmpresa: React.FC = () => {
                       type={key === "email" ? "email" : "text"}
                       id={key}
                       name={key}
-                      value={companyInfo[key as keyof CompanyInfo]}
+                      value={EmpresaInfo[key as keyof EmpresaInfo]}
                       onChange={handleChange}
                     />
                   )}
@@ -203,26 +203,26 @@ const PerfilEmpresa: React.FC = () => {
         <div className='perfil-info'>
           <div className='perfil-sobre card'>
             <h2>Sobre</h2>
-            <p>{companyInfo.sobre}</p>
+            <p>{EmpresaInfo.sobre}</p>
           </div>
           <div className='cards-container'>
             <div className='card perfil-missao'>
               <h2>
                 <FontAwesomeIcon icon={faBullseye} /> Missão
               </h2>
-              <p>{companyInfo.missao}</p>
+              <p>{EmpresaInfo.missao}</p>
             </div>
             <div className='card perfil-visao'>
               <h2>
                 <FontAwesomeIcon icon={faEye} /> Visão
               </h2>
-              <p>{companyInfo.visao}</p>
+              <p>{EmpresaInfo.visao}</p>
             </div>
             <div className='card perfil-valores'>
               <h2>
                 <FontAwesomeIcon icon={faIndustry} /> Valores
               </h2>
-              <p>{companyInfo.valores}</p>
+              <p>{EmpresaInfo.valores}</p>
             </div>
           </div>
           <div className='cards-container'>
@@ -230,67 +230,67 @@ const PerfilEmpresa: React.FC = () => {
               <h2>
                 <FontAwesomeIcon icon={faIndustry} /> Setor
               </h2>
-              <p>{companyInfo.setor}</p>
+              <p>{EmpresaInfo.setor}</p>
             </div>
             <div className='card perfil-tamanho'>
               <h2>
                 <FontAwesomeIcon icon={faUsers} /> Tamanho
               </h2>
-              <p>{companyInfo.tamanho}</p>
+              <p>{EmpresaInfo.tamanho}</p>
             </div>
             <div className='card perfil-ano-fundacao'>
               <h2>
                 <FontAwesomeIcon icon={faCalendar} /> Ano de Fundação
               </h2>
-              <p>{companyInfo.anoFundacao}</p>
+              <p>{EmpresaInfo.anoFundacao}</p>
             </div>
           </div>
           <div className='perfil-contato-redes card'>
             <h2>Informações de Contato</h2>
             <p>
-              <FontAwesomeIcon icon={faEnvelope} /> {companyInfo.email}
+              <FontAwesomeIcon icon={faEnvelope} /> {EmpresaInfo.email}
             </p>
             <p>
-              <FontAwesomeIcon icon={faPhone} /> {companyInfo.telefone}
+              <FontAwesomeIcon icon={faPhone} /> {EmpresaInfo.telefone}
             </p>
             <p>
-              <FontAwesomeIcon icon={faMapMarkerAlt} /> {companyInfo.endereco},{" "}
-              {companyInfo.cidade} - {companyInfo.estado}, {companyInfo.cep}
+              <FontAwesomeIcon icon={faMapMarkerAlt} /> {EmpresaInfo.endereco},{" "}
+              {EmpresaInfo.cidade} - {EmpresaInfo.estado}, {EmpresaInfo.cep}
             </p>
             <p>
               <FontAwesomeIcon icon={faGlobe} />{" "}
               <a
-                href={companyInfo.website}
+                href={EmpresaInfo.website}
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                {companyInfo.website}
+                {EmpresaInfo.website}
               </a>
             </p>
             <div className='social-icons'>
               <a
-                href={companyInfo.facebook}
+                href={EmpresaInfo.facebook}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
               <a
-                href={companyInfo.twitter}
+                href={EmpresaInfo.twitter}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
               <a
-                href={companyInfo.linkedin}
+                href={EmpresaInfo.linkedin}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
               <a
-                href={companyInfo.instagram}
+                href={EmpresaInfo.instagram}
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -304,4 +304,4 @@ const PerfilEmpresa: React.FC = () => {
   );
 };
 
-export default PerfilEmpresa;
+export default EmpresaPerfil;
