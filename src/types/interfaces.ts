@@ -1,4 +1,4 @@
-// Usuario
+// src/types/interfaces.ts
 
 import { ReactNode } from "react";
 
@@ -42,7 +42,6 @@ export interface Usuario {
 }
 
 
-<<<<<<< HEAD
 export interface Vagas {
   Nomevaga: string;
   Cidade: string[];
@@ -54,29 +53,3 @@ export interface Vagas {
   Beneficios: string[];
   DescricaoVaga: string; 
 }
-=======
-// Empresas
-
-export interface EmpresaInfo {
-  nome: string;
-  sobre: string;
-  email: string;
-  telefone: string;
-  endereco: string;
-  cidade: string;
-  estado: string;
-  cep: string;
-  website: string;
-  setor: string;
-  tamanho: string;
-  anoFundacao: string;
-  foto: string;
-  missao: string;
-  visao: string;
-  valores: string;
-  facebook: string;
-  twitter: string;
-  linkedin: string;
-  instagram: string;
-}
->>>>>>> c4f9e44b84ef4000767c686d0729742f644f9c1a
