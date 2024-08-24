@@ -60,15 +60,20 @@ function PreLogin() {
             Você é novo no <span className='texto_alternativo_ciano'>Trampos Fácil</span>
           </h3>
           <p>
-            Cadastre-se como
+            Cadastre-se como 
+            <br />
             <br />
             <Link
               to='/cadastro_candidatos'
               className='texto_alternativo_azulvivo pre_candidato'
-            >
+            > 
+
               Candidato
+
             </Link>
+            <br />
             ou
+            <br />
             <Link
               to='/cadastro_empresas'
               className='texto_alternativo_azulvivo  pre_candidato'

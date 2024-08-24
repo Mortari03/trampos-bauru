@@ -1,5 +1,7 @@
 // src/types/interfaces.ts
 
+import { ReactNode } from "react";
+
 export interface Projeto {
   nome: string;
   descricao: string;
@@ -37,4 +39,17 @@ export interface Usuario {
   projetos: Projeto[];
   areasInteresse: string[];
   curriculo: File | null;
+}
+
+
+export interface Vagas {
+  Nomevaga: string;
+  Cidade: string[];
+  Estado: string[];
+  Salario: string;
+  Tipocontrato: string[];
+  Modelotrabalho: string[];
+  Turno: string;
+  Beneficios: string[];
+  DescricaoVaga: string; 
 }
