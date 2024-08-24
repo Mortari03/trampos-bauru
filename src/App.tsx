@@ -24,12 +24,12 @@ import EmpresasPerfil from "./paginas/empresas/empresas_perfil";
 import EmpresasConfiguracao from "./paginas/empresas/empresas_configuracao";
 
 import CandidatoDashboard from "./paginas/candidatos/candidato_dashboard";
-import EmpresasDashboard from "./paginas/empresas/empresas_dashboard";
 import EmpresasVerVagas from "./paginas/empresas/empresas_ver_vagas";
 import Quemsomos from "./paginas/quemsomos";
 import PoliticaDePrivacidade from "./paginas/politicadeprivacidade";
 import AvisoLegal from "./paginas/avisolegal";
 import Rodape from "./componentes/rodape";
+import EmpresaDashboard from "./paginas/empresas/empresa_dashboard";
 
 function App() {
   return (
@@ -116,7 +116,7 @@ function App() {
 
         <Route
           path='/empresa_dashboard'
-          element={<EmpresasDashboard />}
+          element={<EmpresaDashboard/>}
         />
         <Route
           path='/empresa_perfil'

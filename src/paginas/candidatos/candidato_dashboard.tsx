@@ -20,12 +20,12 @@ import CandidatoConfiguracao from "./candidato_configuracao";
 import { useUsuario } from "../../contexts/UsuarioContext";
 
 function CandidatoDashboard() {
-  const [secaoAtiva, setSecaoAtiva] = useState<string>("perfil");
+  const [SessaoAtiva, setSessaoAtiva] = useState<string>("perfil");
   const [menuAberto, setMenuAberto] = useState<boolean>(false);
   const { userInfo } = useUsuario();
 
   const renderizarConteudo = () => {
-    switch (secaoAtiva) {
+    switch (SessaoAtiva) {
       case "perfil":
         return <CandidatoPerfil />;
       case "minhasVagas":
@@ -143,7 +143,7 @@ function CandidatoDashboard() {
             <button
               className='CD-sidebarButton'
               onClick={() => {
-                setSecaoAtiva("perfil");
+                setSessaoAtiva("perfil");
                 alternarMenu();
               }}
             >
@@ -152,7 +152,7 @@ function CandidatoDashboard() {
             <button
               className='CD-sidebarButton'
               onClick={() => {
-                setSecaoAtiva("minhasVagas");
+                setSessaoAtiva("minhasVagas");
                 alternarMenu();
               }}
             >
@@ -161,7 +161,7 @@ function CandidatoDashboard() {
             <button
               className='CD-sidebarButton'
               onClick={() => {
-                setSecaoAtiva("entrevistas");
+                setSessaoAtiva("entrevistas");
                 alternarMenu();
               }}
             >
@@ -170,7 +170,7 @@ function CandidatoDashboard() {
             <button
               className='CD-sidebarButton'
               onClick={() => {
-                setSecaoAtiva("configuracoes");
+                setSessaoAtiva("configuracoes");
                 alternarMenu();
               }}
             >
