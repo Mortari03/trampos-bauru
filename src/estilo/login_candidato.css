@@ -65,3 +65,32 @@
   margin-top: 10px;
   padding: 0;
 }
+
+/* Estilo para a mensagem de erro */
+.lc-erro {
+  position: fixed; /* Fixa a mensagem na tela */
+  top: 20px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
+  background-color: #ffefef; /* Fundo leve, sutilmente vermelho */
+  color: #cc0000; /* Texto em vermelho forte */
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #ffb3b3; /* Borda de alerta */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+  font-family: Arial, sans-serif;
+  z-index: 1000; /* Garante que fique sobre outros elementos */
+  opacity: 1; /* Inicialmente visível */
+  transition: opacity 0.5s ease-out; /* Transição para ocultar */
+  display: flex; /* Alinha o ícone e a mensagem na mesma linha */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.lc-erro .icon {
+  margin-right: 8px; /* Espaço entre ícone e mensagem */
+}
+
+/* Animação para ocultar a mensagem */
+.lc-erro.ocultar {
+  opacity: 0; /* Fica invisível */
+}

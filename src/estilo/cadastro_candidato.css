@@ -1,4 +1,3 @@
-/* styles.css */
 .cc-container {
   display: flex;
   justify-content: center;
@@ -117,4 +116,34 @@
 .cc-submit-btn {
   background-color: #005bb3;
   color: white;
+}
+
+.cc-erro,
+.cc-sucesso {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.cc-erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.cc-sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.texto-erro,
+.texto-sucesso {
+  font-size: 16px;
 }

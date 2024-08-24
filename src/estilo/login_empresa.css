@@ -1,122 +1,102 @@
-/* Contêiner principal */
+/* Container principal */
 .le-container {
-  background-color: #f0f4f8;
+  background-color: #f0f4f8; /* Fundo claro */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Altura da viewport */
 }
 
-/* Estrutura do contêiner */
+/* Caixa de login */
 .le-caixa-login {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Fundo branco */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Layout em coluna */
+  justify-content: space-between; /* Espaçamento entre itens */
+  align-items: center; /* Alinhamento central */
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 11px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  width: 550px;
-  height: 550px;
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 11px; /* Cantos arredondados */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  width: 550px; /* Largura da caixa */
+  height: 550px; /* Altura da caixa */
 }
 
-/* Cabeçalho do login */
+/* Cabeçalho de login */
 .le-cabecalho-login {
-  width: 100%;
+  width: 100%; /* Largura completa */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-/* Botão de voltar */
-.btn_voltar {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #007bff;
-}
-
-.texto_voltar {
-  margin-left: 8px;
-}
-
-/* Logo */
-.Logo {
-  height: 50px; /* Ajuste conforme necessário */
+  justify-content: space-between; /* Espaçamento entre itens */
+  align-items: center; /* Alinhamento vertical */
+  margin-bottom: 20px; /* Margem inferior */
 }
 
 /* Ícone de cadastro */
 .le-icone-cadastro {
-  font-size: 70px;
-  color: #3354a8;
-  padding: 10px;
+  font-size: 70px; /* Tamanho do ícone */
+  color: #3354a8; /* Cor do ícone */
+  padding: 10px; /* Preenchimento ao redor do ícone */
 }
 
-.le-icone-cadastro:hover {
-  color: #005bb3;
-}
-
-/* Botão principal */
-.lc-botao-principal {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.lc-botao-principal:hover {
-  background-color: #0056b3;
-}
-
-/* Ícone do botão Google */
+/* Ícone do Google */
 .lc-icone-google {
-  margin-right: 8px;
+  margin-right: 8px; /* Margem direita */
 }
 
-/* Inputs */
+/* Inputs de texto */
 .lc-input {
-  border-radius: 5px;
-  border: 2px solid #005bb3;
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
+  border-radius: 5px; /* Cantos arredondados */
+  border: 2px solid #005bb3; /* Borda azul */
+  margin: 10px 0; /* Margem superior e inferior */
+  padding: 10px; /* Preenchimento interno */
+  width: 100%; /* Largura total */
+  box-sizing: border-box; /* Inclui borda e preenchimento na largura total */
 }
 
-/* Links */
+/* Link de "Esqueci a Senha" */
 .lc-link-esqueci-senha {
-  width: 100%;
+  width: 100%; /* Largura total */
   display: flex;
-  justify-content: flex-start;
-  margin-top: -15px;
+  justify-content: flex-start; /* Alinhamento à esquerda */
+  margin-top: -15px; /* Margem superior negativa */
 }
 
-.lc_esqueci-senha {
-  color: #007bff;
-  text-decoration: none;
+/* Estilo para o botão principal */
+.botoes-principais {
+  background-color: #005bb3; /* Cor de fundo */
+  color: #ffffff; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Cantos arredondados */
+  padding: 10px 20px; /* Preenchimento interno */
+  cursor: pointer; /* Cursor de ponteiro */
+  font-size: 16px; /* Tamanho da fonte */
 }
 
-.lc_esqueci-senha:hover {
-  border-bottom: 1px solid #007bff;
+/* Estilo para a mensagem de erro */
+.lc-erro {
+  position: fixed; /* Fixa a mensagem na tela */
+  top: 20px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
+  background-color: #ffefef; /* Fundo leve, sutilmente vermelho */
+  color: #cc0000; /* Texto em vermelho forte */
+  padding: 12px 16px; /* Preenchimento interno */
+  border-radius: 8px; /* Cantos arredondados */
+  font-size: 14px; /* Tamanho da fonte */
+  border: 1px solid #ffb3b3; /* Borda de alerta */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+  font-family: Arial, sans-serif; /* Fonte */
+  z-index: 1000; /* Garante que fique sobre outros elementos */
+  opacity: 1; /* Inicialmente visível */
+  transition: opacity 0.5s ease-out; /* Transição para ocultar */
 }
 
-/* Informações de cadastro */
+/* Animação para ocultar a mensagem */
+.lc-erro.ocultar {
+  opacity: 0; /* Fica invisível */
+}
+
+/* Estilo para informações de cadastro */
 .le-info-cadastro {
-  text-align: center;
-  margin-top: 10px;
-  padding: 0;
-}
-
-.texto_alternativo_azul {
-  color: #0056b3;
+  text-align: center; /* Alinhamento centralizado */
+  margin-top: 10px; /* Margem superior */
 }

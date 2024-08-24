@@ -1,15 +1,50 @@
-// Importes do React
-// Importes do Router-Dom (se necessário)
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// Importes de Icones e Outros
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowLeft, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleArrowLeft,
+  faUser,
+  faExclamationCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
-// Importes de CSS
 import "../estilo/login_candidato.css";
-// Importes de Paginas
 
 function LoginCandidato() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [erro, setErro] = useState("");
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (erro) {
+      // Configura um timer para ocultar a mensagem após 5 segundos
+      timer = setTimeout(() => setErro(""), 5000);
+    }
+    return () => clearTimeout(timer);
+  }, [erro]);
+
+  const validarLogin = () => {
+    if (!email || !senha) {
+      setErro("Todos os campos são obrigatórios.");
+      return false;
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setErro("Por favor, insira um e-mail válido.");
+      return false;
+    }
+    setErro("");
+    return true;
+  };
+
+  const handleLogin = () => {
+    if (validarLogin()) {
+      // Lógica de login futura
+    }
+    // Limpa os campos de entrada
+    setEmail("");
+    setSenha("");
+  };
+
   return (
     <div className='lc-container'>
       <div className='lc-caixa-login'>
@@ -44,12 +79,29 @@ function LoginCandidato() {
           type='text'
           placeholder='E-MAIL'
           className='lc-input'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type='password'
           placeholder='SENHA'
           className='lc-input'
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
         />
+
+        {/* Exibir mensagem de erro se houver */}
+        {erro && (
+          <div className='lc-erro'>
+            <FontAwesomeIcon
+              icon={faExclamationCircle}
+              className='icon'
+            />
+            <div className='texto-erro'>
+              <strong>Erro:</strong> {erro}
+            </div>
+          </div>
+        )}
 
         <div className='lc-link-esqueci-senha'>
           <Link
@@ -60,7 +112,12 @@ function LoginCandidato() {
           </Link>
         </div>
 
-        <button className='botoes-principais'>CONTINUAR</button>
+        <button
+          className='botoes-principais'
+          onClick={handleLogin}
+        >
+          CONTINUAR
+        </button>
 
         <div className='lc-info-cadastro'>
           Você é novo no <span className='texto_alternativo_azul'>TRAMPOS FÁCIL</span>?
