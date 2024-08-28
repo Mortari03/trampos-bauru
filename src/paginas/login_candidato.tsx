@@ -43,7 +43,7 @@ function LoginCandidato() {
       // Se a autenticação for bem-sucedida, você redireciona para a página desejada.
 
       // Exemplo de redirecionamento após login bem-sucedido
-      navigate('/candidato_logado'); // Substitua '/pagina-destino' pela rota para onde deseja redirecionar
+      navigate('/candidato_dashboard'); // Substitua '/pagina-destino' pela rota para onde deseja redirecionar
     }
 
     // Limpa os campos de entrada
