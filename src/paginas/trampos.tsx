@@ -28,20 +28,6 @@ function Trampos() {
   return (
     <div>
       <Cabecalho />
-      
-      <div className='conteudo'>
-
-          <div className="VagaR">
-          <VagaResumo vaga={vagaExemplo} />
-        </div>
-
-        <div className="VagaD">
-            <DetalheVagas vaga = {vagaExemplo} />
-        </div>
-
-      
-      
-      </div>
     </div>
   );
 }

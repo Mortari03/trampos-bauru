@@ -30,6 +30,7 @@ import PoliticaDePrivacidade from "./paginas/politicadeprivacidade";
 import AvisoLegal from "./paginas/avisolegal";
 import Rodape from "./componentes/rodape";
 import EmpresaDashboard from "./paginas/empresas/empresa_dashboard";
+import Candidato_logado from "./paginas/candidatos/candidato_logado";
 
 function App() {
   return (
@@ -73,6 +74,9 @@ function App() {
           path='/login_candidato'
           element={<LoginCandidato />}
         />
+
+        <Route path="candidato_logado" 
+        element={<Candidato_logado />} />
 
         {/* Rotas de Cadastro */}
         <Route

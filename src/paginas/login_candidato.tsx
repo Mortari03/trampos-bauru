@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Importando useNavigate
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleArrowLeft,
@@ -14,10 +14,11 @@ function LoginCandidato() {
   const [senha, setSenha] = useState("");
   const [erro, setErro] = useState("");
 
+  const navigate = useNavigate(); // Inicializando o hook useNavigate
+
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: string | number | NodeJS.Timeout | undefined;
     if (erro) {
-      // Configura um timer para ocultar a mensagem após 5 segundos
       timer = setTimeout(() => setErro(""), 5000);
     }
     return () => clearTimeout(timer);
@@ -38,8 +39,13 @@ function LoginCandidato() {
 
   const handleLogin = () => {
     if (validarLogin()) {
-      // Lógica de login futura
+      // Aqui você pode adicionar a lógica de autenticação, como enviar as credenciais para um servidor.
+      // Se a autenticação for bem-sucedida, você redireciona para a página desejada.
+
+      // Exemplo de redirecionamento após login bem-sucedido
+      navigate('/candidato_logado'); // Substitua '/pagina-destino' pela rota para onde deseja redirecionar
     }
+
     // Limpa os campos de entrada
     setEmail("");
     setSenha("");
@@ -90,7 +96,6 @@ function LoginCandidato() {
           onChange={(e) => setSenha(e.target.value)}
         />
 
-        {/* Exibir mensagem de erro se houver */}
         {erro && (
           <div className='lc-erro'>
             <FontAwesomeIcon
