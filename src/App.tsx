@@ -22,7 +22,6 @@ import CandidatoConfiguracao from "./paginas/candidatos/candidato_configuracao";
 import CandidatoEntrevistasAgendadas from "./paginas/candidatos/candidato_entrevistas_agendadas";
 import EmpresasPerfil from "./paginas/empresas/empresas_perfil";
 import EmpresasConfiguracao from "./paginas/empresas/empresas_configuracao";
-
 import CandidatoDashboard from "./paginas/candidatos/candidato_dashboard";
 import EmpresasVerVagas from "./paginas/empresas/empresas_ver_vagas";
 import Quemsomos from "./paginas/quemsomos";
@@ -61,7 +60,7 @@ function App() {
           element={<ParaCandidato />}
         />
 
-        {/* Rotas de Login */}
+          {/* Rotas de Login */}
         <Route
           path='/prelogin'
           element={<PreLogin />}
@@ -75,8 +74,8 @@ function App() {
           element={<LoginCandidato />}
         />
 
-        <Route path="candidato_logado" 
-        element={<Candidato_logado />} />
+        <Route path="candidato_logado"
+          element={<Candidato_logado />} />
 
         {/* Rotas de Cadastro */}
         <Route
@@ -120,7 +119,7 @@ function App() {
 
         <Route
           path='/empresa_dashboard'
-          element={<EmpresaDashboard/>}
+          element={<EmpresaDashboard />}
         />
         <Route
           path='/empresa_perfil'
@@ -139,6 +138,7 @@ function App() {
           path='/politica_privacidade'
           element={<PoliticaDePrivacidade />}
         />
+
         <Route
           path='/aviso_legal'
           element={<AvisoLegal />}

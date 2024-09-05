@@ -1,6 +1,4 @@
 import Cabecalho from "../../componentes/cabecalho";
-import DetalheVagas from "../../componentes/DetalheVagas";
-import VagaResumo from "../../componentes/VagaResumo";
 import { Vagas } from "../../types/interfaces";
 import "../../estilo/candidato_logado.css";
 
@@ -15,7 +13,8 @@ function candidato_logado() {
         Modelotrabalho: ["Remoto"],
         Turno: "Diurno",
         Beneficios: ["Vale Refeição", "Assistência Médica", "Home Office"],
-        DescricaoVaga: "Atuar no desenvolvimento de aplicações web usando React e NestJS."
+        DescricaoVaga: "Atuar no desenvolvimento de aplicações web usando React e NestJS.",
+        id: undefined
     };
 
 
@@ -26,12 +25,9 @@ function candidato_logado() {
                
 
                 <div className="VagaR">
-                    <VagaResumo vaga={vagaExemplo} />
+                
                 </div>
 
-                <div className="VagaD">
-                    <DetalheVagas vaga={vagaExemplo} />
-                </div>
             </div>
         </div>
     )

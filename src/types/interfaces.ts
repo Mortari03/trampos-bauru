@@ -1,6 +1,6 @@
 // src/types/interfaces.ts
 
-import { ReactNode } from "react";
+import { Key, ReactNode } from "react";
 
 export interface Projeto {
   nome: string;
@@ -43,6 +43,7 @@ export interface Usuario {
 
 
 export interface Vagas {
+  id: Key | null | undefined;
   Nomevaga: string;
   Cidade: string[];
   Estado: string[];
