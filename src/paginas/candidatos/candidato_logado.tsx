@@ -1,6 +1,6 @@
 import Cabecalho from "../../componentes/cabecalho";
 import { Vagas } from "../../types/interfaces";
-import "../../estilo/candidato_logado.css";
+
 
 function candidato_logado() {
 
