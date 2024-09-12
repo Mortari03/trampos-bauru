@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import "../estilo/login_candidato.css";
+import { ModuloApi } from "../api";
 
 function LoginCandidato() {
   const [email, setEmail] = useState("");
@@ -42,6 +43,9 @@ function LoginCandidato() {
       // Aqui você pode adicionar a lógica de autenticação, como enviar as credenciais para um servidor.
       // Se a autenticação for bem-sucedida, você redireciona para a página desejada.
 
+      //Metodo que chama a API para adicionar o usuário
+      AdicionarUsuarios(); //AQUI TEM QUE CHAMAR NO BOTAO DE CONTINUAR, QUE VAI INSERIR 
+
       // Exemplo de redirecionamento após login bem-sucedido
       navigate('/candidato_dashboard'); // Substitua '/pagina-destino' pela rota para onde deseja redirecionar
     }
@@ -50,6 +54,22 @@ function LoginCandidato() {
     setEmail("");
     setSenha("");
   };
+
+  const AdicionarUsuarios = async () => {
+    if (email && senha) {
+      
+        let json = await ModuloApi.IncluirUsuario(email, senha);
+        if (json.login_candidato) {
+            alert('Post Adicionado com sucesso!')
+          
+        } else {
+            alert('Ocorreu alguma falha')
+        }
+    }
+    else {
+        alert('Prencha as informações');
+    }
+}
 
   return (
     <div className='lc-container'>
@@ -119,7 +139,7 @@ function LoginCandidato() {
 
         <button
           className='botoes-principais'
-          onClick={handleLogin}
+          onClick={AdicionarUsuarios}
         >
           CONTINUAR
         </button>
