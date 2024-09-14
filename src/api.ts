@@ -5,7 +5,7 @@ export const ModuloApi = {
     /*LOGIN_CANDIDATO*/ 
     IncluirUsuario : async (pEmail: String, pSenha: String) => {
         let response = 
-        await fetch(' HTTPS://LOCALHOST/LOGIN  ',
+        await fetch('http://localhost:3001/usuarios/login     ',
             {
                 method: 'POST',
                 body: JSON.stringify
@@ -25,7 +25,7 @@ export const ModuloApi = {
        return json;
 
     },
-
+      /*LOGIN_CANDIDATO*/ 
     IncluirVaga : async (pNome: String, pSalario: String) => {
         let response = 
         await fetch(' HTTPS://LOCALHOST/LOGIN  ',
