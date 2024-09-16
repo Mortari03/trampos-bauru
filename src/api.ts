@@ -50,7 +50,7 @@ export const ModuloApi = {
     },
 
     
-    CarregarUusuarios: async() => {
+    CarregarUsuarios: async() => {
         let response = await
         fetch('https://jsonplaceholder.typicode.com/todos/')
         let json = await response.json();
