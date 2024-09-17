@@ -1,11 +1,34 @@
 
 export const ModuloApi = {
     
+    RealizarLogin : async (pEmail: String, pSenha: String) => {
+        let response = 
+        await fetch('http://localhost:3001/usuarios/login',
+            {
+                method: 'POST',
+                body: JSON.stringify
+                ({
+                    email: pEmail,
+                    senha: pSenha
+                 
+                }),
+                headers: {
+                    'content-Type': 'application/json'
+                }
+            }
+        );
+
+       let json = await response.json();
+
+       return json;
+
+    },
+    
 
     /*LOGIN_CANDIDATO*/ 
     IncluirUsuario : async (pEmail: String, pSenha: String) => {
         let response = 
-        await fetch('http://localhost:3001/usuarios/login     ',
+        await fetch('http://localhost:3001/usuarios/login',
             {
                 method: 'POST',
                 body: JSON.stringify
