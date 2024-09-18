@@ -58,10 +58,9 @@ function LoginCandidato() {
   const AdicionarUsuarios = async () => {
     if (email && senha) {
       
-        let json = await ModuloApi.RealizarLogin(email, senha);
-        if (json.usuario.id) {
-            alert(json.status + ' Seja bem vindo(a) ' + json.usuario.nome);
-            navigate('/candidato_dashboard');
+        let json = await ModuloApi.IncluirUsuario(email, senha);
+        if (json.login_candidato) {
+            alert('Post Adicionado com sucesso!')
           
         } else {
             alert('Ocorreu alguma falha')
@@ -142,7 +141,7 @@ function LoginCandidato() {
           className='botoes-principais'
           onClick={AdicionarUsuarios}
         >
-          CONTINUAR teste
+          CONTINUAR
         </button>
 
         <div className='lc-info-cadastro'>
