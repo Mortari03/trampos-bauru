@@ -59,8 +59,9 @@ function LoginCandidato() {
     if (email && senha) {
       
         let json = await ModuloApi.IncluirUsuario(email, senha);
-        if (json.login_candidato) {
-            alert('Post Adicionado com sucesso!')
+        if (json.usuario.id) {
+            alert('Login Realizado')
+            navigate('/')
           
         } else {
             alert('Ocorreu alguma falha')
