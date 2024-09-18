@@ -12,6 +12,7 @@ export const ModuloApi = {
                 ({
                     email: pEmail,
                     senha: pSenha
+                 
                 }),
                 headers: {
                     'content-Type': 'application/json'
@@ -24,8 +25,7 @@ export const ModuloApi = {
        return json;
 
     },
-
-      /*00000000000000000000*/ 
+      /*LOGIN_CANDIDATO*/ 
     IncluirVaga : async (pNome: String, pSalario: String) => {
         let response = 
         await fetch(' HTTPS://LOCALHOST/LOGIN  ',
@@ -57,33 +57,24 @@ export const ModuloApi = {
         return json;
     },
 
-
-       /*Cadastro Candidato*/ 
     AdicionarUsuarios : 
-            async (pNome: string, pEmail: string, pSenha: string, pCpf: string) => {
-
+            async (title: string, body: string, userID:number) => {
             let response = 
-                await fetch('http://localhost:3001/usuarios/',
+            await fetch('https://jsonplaceholder.typicode.com/posts',
                 {
                     method: 'POST',
                     body: JSON.stringify
                     ({
-                        nome: pNome,
-                        idade: 18,
-                        cidade: '',
-                        doc: pCpf,
-                        telefone: '14991075513',
-                        email: pEmail,
-                        senha: pSenha                        
+                        title,
+                        body,
+                        userID: 1
                     }),
                     headers: {
                         'content-Type': 'application/json'
                     }
                 }
             );
-            
-       let json = await response.json();
-
-       return json;
         },
+
+
 }
