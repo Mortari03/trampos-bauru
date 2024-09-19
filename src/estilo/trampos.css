@@ -47,25 +47,42 @@ body, html {
 .VagaBotao:hover .VagaR {
     background-color: #e0e0e0; /* Efeito de hover */
 }
-
+/* Estilo da seção da esquerda */
 .VagaR {
-    background-color: rgb(0, 255, 242);
-    padding: 10px;
+    background-color: #00aaff; /* Cor da margem azul */
+    padding: 10px; /* Espaço para a margem azul */
     border-radius: 8px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px; /* Margem externa */
 }
 
+.VagaR-interna {
+    background-color: white; /* Cor interna branca */
+    padding: 15px; /* Espaço interno */
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05); /* Sombra interna sutil */
+}
+
+/* Estilo da seção da direita */
 .VagaD {
-    width: 35%; /* Reduz a largura para 25% */
+    background-color: #00aaff; /* Cor da margem azul */
+    padding: 10px; /* Espaço para a margem azul */
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 35%;
     height: 100vh;
     margin: 15px;
-    background-color: rgb(60, 255, 0);
-    flex: 0 0 35%; /* Mantém a largura fixa em 25% */
-    border-radius: 8px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
-    padding: 20px;
-    overflow-y: auto; /* Caso o conteúdo seja maior, pode rolar */
+    flex: 0 0 35%;
+    overflow-y: auto;
 }
+
+.VagaD-interna {
+    background-color: white; /* Cor interna branca */
+    padding: 20px; /* Espaço interno */
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05); /* Sombra interna sutil */
+}
+
 
 .Rodape {
     width: 100%;
