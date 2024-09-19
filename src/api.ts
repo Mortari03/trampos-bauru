@@ -71,7 +71,6 @@ export const ModuloApi = {
  
     },
  
-   
     CarregarUsuarios: async() => {
         let response = await
         fetch('https://jsonplaceholder.typicode.com/todos/')
@@ -79,8 +78,7 @@ export const ModuloApi = {
         return json;
     },
  
- 
-       /*Cadastro Candidato*/
+    /*Cadastro Candidato*/
     AdicionarUsuarios :
             async (pNome: string, pEmail: string, pSenha: string, pCpf: string) => {
  
@@ -91,12 +89,17 @@ export const ModuloApi = {
                     body: JSON.stringify
                     ({
                         nome: pNome,
-                        idade: 18,
-                        cidade: '',
                         doc: pCpf,
-                        telefone: '14991075513',
-                        email: pEmail,
-                        senha: pSenha                        
+                        email: pEmail, 
+                        senha: pSenha
+                        // nome: pNome,
+                        // idade: 18,
+                        // cidade: '',
+                        // doc: pCpf,
+                        // telefone: '14991075513',
+                        // email: pEmail,
+                        // email: pEmail, 
+                        // senha: pSenha    
                     }),
                     headers: {
                         'content-Type': 'application/json'

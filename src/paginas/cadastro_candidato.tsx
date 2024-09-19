@@ -103,6 +103,8 @@ function CadastroCandidatos() {
  
  
   const CadastrarUsuario = async () => {
+
+    if (validarFormulario()) {
  
       let json = await ModuloApi.AdicionarUsuarios(nome, email, senha, cpf);
      
@@ -113,6 +115,7 @@ function CadastroCandidatos() {
         alert('Post Adicionado com sucesso!')
       }
   }
+}
  
 return (
   <div className='cc-container'>
@@ -138,9 +141,9 @@ return (
         <h3 className='cc-section-title'>Entre e comece a se candidatar</h3>
         <button className='botoes-principais'>Cadastrar com Google</button>
         <h3 className='cc-section-title'>Ou continue seu cadastro aqui</h3>
-        <form
+        <div
           className='cc-form-group'
-          onSubmit={handleSubmit}
+         
         >
           <input
             type='text'
@@ -238,7 +241,7 @@ return (
           >
             Cadastre-se
           </button>
-        </form>
+        </div>
       </div>
     </div>
   </div>
