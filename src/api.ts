@@ -1,3 +1,8 @@
+import { json } from "stream/consumers";
+import CadastroCandidatos from "./paginas/cadastro_candidato";
+import Senha from "./paginas/esqueci_senha";
+import { doc } from "prettier";
+
 export const ModuloApi = {
    
     RealizarLogin : async (pEmail: String, pSenha: String) => {
@@ -47,6 +52,23 @@ export const ModuloApi = {
  
     },
  
+
+    CadastroCandidatos : async (pnome: string, pEmail: string, pSenha: string, pCpf: string,) =>  {
+        let response =
+        await fetch('http://localhost:3001/api/cadastro',
+            {
+                method: 'post',
+                body: JSON.stringify
+                ({
+                    nome: pnome,
+                    email: pEmail,
+                    Senha: pSenha,
+                    doc: pCpf,
+                })
+            }
+        )
+    },
+
       /*00000000000000000000*/
     IncluirVaga : async (pNome: String, pSalario: String) => {
         let response =

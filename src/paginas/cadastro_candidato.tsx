@@ -8,7 +8,9 @@ import {
 from "@fortawesome/free-solid-svg-icons";
 import "../estilo/cadastro_candidato.css";
 import { ModuloApi } from "../api";
- 
+
+
+
 function CadastroCandidatos() {
   // Estados para controlar os inputs, erros e sucesso
   const [nome, setNome] = useState("");
@@ -20,7 +22,7 @@ function CadastroCandidatos() {
   const [sucesso, setSucesso] = useState(false);
   const [aceitoTermos, setAceitoTermos] = useState(false);
   const [autorizoComunicar, setAutorizoComunicar] = useState(false);
- 
+ const navigate = useNavigate(); 
   // Hook para ocultar a mensagem de erro ou sucesso após um tempo
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -107,12 +109,12 @@ function CadastroCandidatos() {
     if (validarFormulario()) {
  
       let json = await ModuloApi.AdicionarUsuarios(nome, email, senha, cpf);
-     
       if (json.message) {
         alert('Ocorreu alguma falha ' + json.message);
       }
       else {
-        alert('Post Adicionado com sucesso!')
+        alert('Post Adicionado com sucesso!')   
+        navigate('/candidato_logado')
       }
   }
 }
