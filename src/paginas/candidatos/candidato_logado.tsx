@@ -23,11 +23,11 @@ function candidato_logado() {
             <Cabecalho />
             <div className="conteudo">
                 <div className="VagaR">
-                   <VagaResumida nomeVaga={"gaglahfkjgakfgakfgag"} />
+                
                 </div>
             
                 <div>
-            <VagaDetalhada nomeVaga={"gbabhgapkngalmg[amg"} descricao={"asdghapgaçgh]agsfaas"} />
+           
                 </div>
             </div>
         </div>

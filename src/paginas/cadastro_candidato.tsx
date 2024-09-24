@@ -113,7 +113,7 @@ function CadastroCandidatos() {
         alert('Ocorreu alguma falha ' + json.message);
       }
       else {
-        alert('Post Adicionado com sucesso!')   
+        alert('cadastro realizado com sucesso!')   
         navigate('/candidato_logado')
       }
   }
