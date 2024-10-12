@@ -7,7 +7,7 @@ export const ModuloApi = {
    
     RealizarLogin : async (pEmail: String, pSenha: String) => {
         let response =
-        await fetch('http://localhost:3001/usuarios/login',
+        await fetch('http://localhost:3000/usuarios/login',
             {
                 method: 'POST',
                 body: JSON.stringify
@@ -32,7 +32,7 @@ export const ModuloApi = {
     /*LOGIN_CANDIDATO*/
     IncluirUsuario : async (pEmail: String, pSenha: String) => {
         let response =
-        await fetch('http://localhost:3001/usuarios/login',
+        await fetch('http://localhost:3000/usuarios/login',
             {
                 method: 'POST',
                 body: JSON.stringify
@@ -55,7 +55,7 @@ export const ModuloApi = {
 
     CadastroCandidatos : async (pnome: string, pEmail: string, pSenha: string, pCpf: string,) =>  {
         let response =
-        await fetch('http://localhost:3001/api/cadastro',
+        await fetch('http://localhost:3000/api/cadastro',
             {
                 method: 'post',
                 body: JSON.stringify
@@ -72,7 +72,7 @@ export const ModuloApi = {
       /*00000000000000000000*/
     IncluirVaga : async (pNome: String, pSalario: String) => {
         let response =
-        await fetch(' HTTPS://LOCALHOST/LOGIN  ',
+        await fetch('https://localhost/login',
             {
                 method: 'POST',
                 body: JSON.stringify
@@ -105,7 +105,7 @@ export const ModuloApi = {
             async (pNome: string, pEmail: string, pSenha: string, pCpf: string) => {
  
             let response =
-                await fetch('http://localhost:3001/usuarios/',
+                await fetch('http://localhost:3000/usuarios/',
                 {
                     method: 'POST',
                     body: JSON.stringify
@@ -124,7 +124,7 @@ export const ModuloApi = {
                         // senha: pSenha    
                     }),
                     headers: {
-                        'content-Type': 'application/json'
+                        'Content-Type': 'application/json'
                     }
                 }
             );
