@@ -8,13 +8,35 @@ type Vaga = {
   id: number;
   nomeVaga: string;
   descricao: string;
+  Salario: string;
 };
 
 // Lista de vagas disponíveis
 const vagas: Vaga[] = [
-  { id: 1, nomeVaga: "Desenvolvedor Frontend", descricao: "Vaga para desenvolvedor frontend com experiência em React." },
-  { id: 2, nomeVaga: "Desenvolvedor Backend", descricao: "Vaga para desenvolvedor backend com experiência em Node.js." },
-  { id: 3, nomeVaga: "DevOps", descricao: "Vaga para especialista em DevOps e infraestrutura." },
+  { id: 1, nomeVaga: "Desenvolvedor Frontend", 
+           descricao: "Vaga para desenvolvedor frontend com experiência em React.",
+           Salario:'1.200,00'},
+  { id: 2, nomeVaga: "Desenvolvedor Backend", 
+           descricao: "Vaga para desenvolvedor backend com experiência em Node.js.",
+           Salario:'1.200,00' },
+  { id: 3, nomeVaga: "DevOps", 
+           descricao: "Vaga para especialista em DevOps e infraestrutura.",
+           Salario:'1.200,00' },
+  { id: 4, nomeVaga: "Analista de Sistemas", 
+           descricao: "Vaga para especialista em DevOps e infraestrutura.",
+           Salario:'1.200,00' },
+  { id: 5, nomeVaga: "Product Owner", 
+           descricao: "Vaga para especialista em Requisitos e Gestão de Backlog.",
+           Salario:'1.200,00' },
+  { id: 6, nomeVaga: "Product Manager", 
+           descricao: "Vaga para profissional empenhado em manter seu produto atual e moderno.",
+           Salario:'1.200,00' },
+  { id: 7, nomeVaga: "Head Tech", 
+           descricao: "Vaga para gestor de equipe de TI com ênfase em Pessoas.",
+           Salario:'1.200,00' },
+  { id: 8, nomeVaga: "Desenvolvedor Java",
+           descricao: "Vaga para especialista em desenvolvimento Java",
+           Salario:'1.200,00' },
 ];
 
 function Trampos() {
@@ -28,8 +50,8 @@ function Trampos() {
   return (
     <div>
       <Cabecalho />
-      <div className="Conteiner">
-        <div className="VagasResumo">
+     {/* <div className="Conteiner">
+         <div className="VagasResumo">
           {vagas.map((vaga) => (
             <button
               key={vaga.id}
@@ -46,12 +68,39 @@ function Trampos() {
             <VagaDetalhada
               nomeVaga={vagaSelecionada.nomeVaga}
               descricao={vagaSelecionada.descricao}
+              salario={vagaSelecionada.Salario}
             />
           ) : (
             <p>Selecione uma vaga para ver os detalhes.</p>
           )}
         </div>
       </div>
+    </div> */}
+    <div className="container">
+      <div className="vagas-resumo">
+        {vagas.map((vaga) => (
+          <div
+            key={vaga.id}
+            className="vaga-card"
+            onClick={() => handleVagaClick(vaga)}
+          >
+            <span className="vaga-nome">{vaga.nomeVaga}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="vaga-detalhe">
+        {vagaSelecionada ? (
+          <VagaDetalhada
+            nomeVaga={vagaSelecionada.nomeVaga}
+            descricao={vagaSelecionada.descricao}
+            salario={vagaSelecionada.Salario}
+          />
+        ) : (
+          <p>Selecione uma vaga para ver os detalhes.</p>
+        )}
+      </div>
+    </div>
     </div>
   );
 }

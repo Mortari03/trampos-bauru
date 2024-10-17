@@ -1,0 +1,28 @@
+.vaga-detalhada {
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 600px; /* Largura máxima */
+    margin: 20px auto; /* Centraliza o componente */
+  }
+  
+  .vaga-titulo {
+    font-size: 24px; /* Tamanho da fonte para o título */
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Espaçamento inferior */
+  }
+  
+  .vaga-descricao {
+    font-size: 16px; /* Tamanho da fonte para a descrição */
+    color: #666; /* Cor do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    margin-bottom: 15px; /* Espaçamento inferior */
+  }
+  
+  .vaga-salario {
+    font-size: 18px; /* Tamanho da fonte para o salário */
+    color: #2c3e50; /* Cor do texto */
+    font-weight: bold; /* Negrito */
+  }
+  
