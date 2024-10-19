@@ -7,11 +7,11 @@ import VagaDetalhada from "../componentes/vagadetalhada";
 type Vaga = {
   id: number;
   nomeVaga: string;
-  descricao: string;
   Salario: string;
   homeOffice?: string;
   planoSaude?: string;
   ajudaCusto?: string;
+  descricao: string;
   
 };
 
@@ -19,10 +19,10 @@ type Vaga = {
 const vagas: Vaga[] = [
   {
     id: 1, nomeVaga: "Desenvolvedor Frontend",
-    Salario: "1.200,00",
-    homeOffice: "true",
-    planoSaude: "true",
-    ajudaCusto: "true",
+    Salario: "R$ 2.500,00",
+    homeOffice: "",
+    planoSaude: "",
+    ajudaCusto: "",
     descricao: "Estamos em busca de um Desenvolvedor Frontend com experiência em React para se juntar à nossa equipe em um ambiente colaborativo e dinâmico"+
     "Se você é apaixonado por criar interfaces incríveis e tem experiência em desenvolvimento de aplicações web, queremos te conhecer!",
     
