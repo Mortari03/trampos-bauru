@@ -12,17 +12,20 @@ type Vaga = {
   homeOffice?: string;
   planoSaude?: string;
   ajudaCusto?: string;
+  
 };
 
 // Lista de vagas disponíveis
 const vagas: Vaga[] = [
   {
     id: 1, nomeVaga: "Desenvolvedor Frontend",
-    descricao: "Vaga para desenvolvedor frontend com experiência em React.",
-    Salario: '1.200,00',
-    homeOffice: 'true',
-    planoSaude: 'true',
-    ajudaCusto: 'true',
+    Salario: "1.200,00",
+    homeOffice: "true",
+    planoSaude: "true",
+    ajudaCusto: "true",
+    descricao: "Estamos em busca de um Desenvolvedor Frontend com experiência em React para se juntar à nossa equipe em um ambiente colaborativo e dinâmico"+
+    "Se você é apaixonado por criar interfaces incríveis e tem experiência em desenvolvimento de aplicações web, queremos te conhecer!",
+    
   },
   {
     id: 2, nomeVaga: "Desenvolvedor Backend",
