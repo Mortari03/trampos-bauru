@@ -37,7 +37,7 @@ function App() {
       <Routes>
         {/* Rotas do Menu */}
         <Route
-          path='/login_candidato'
+          path='/'
           element={<LoginCandidato />}
         />
 
