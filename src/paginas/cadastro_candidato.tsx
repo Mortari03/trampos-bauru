@@ -7,6 +7,7 @@ import {
 }
 from "@fortawesome/free-solid-svg-icons";
 import "../estilo/cadastro_candidato.css";
+import "../paginas/candidatos/candidato_perfil"
 import { ModuloApi } from "../api";
 
 
@@ -106,16 +107,23 @@ function CadastroCandidatos() {
  
   const CadastrarUsuario = async () => {
 
+
     if (validarFormulario()) {
+      
+    navigate('/candidato_perfil')
+
  
-      let json = await ModuloApi.AdicionarUsuarios(nome, email, senha, cpf);
-      if (json.message) {
-        alert('Ocorreu alguma falha ' + json.message);
-      }
-      else {
-        alert('cadastro realizado com sucesso!')   
-        navigate('/candidato_logado')
-      }
+      // let json = await ModuloApi.AdicionarUsuarios(nome, email, senha, cpf);
+      // if (json.message) {
+      //   alert('Ocorreu alguma falha ' + json.message);
+      // }
+      // else {
+      //   alert('cadastro realizado com sucesso!')   
+      //   navigate('/candidato_perfil')
+      // }
+
+
+     
   }
 }
  
