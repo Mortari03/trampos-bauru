@@ -28,15 +28,25 @@ const vagas: Vaga[] = [
     
   },
   {
-    id: 2, nomeVaga: "Desenvolvedor Backend",
-    descricao: "Vaga para desenvolvedor backend com experiência em Node.js.",
-    Salario: '1.200,00'
+    id: 2, nomeVaga: "Desenvolvedor Backend (Node.js) - Pleno",
+    descricao: "Estamos em busca de um Desenvolvedor Backend Pleno com sólida experiência em Node.js para"+
+      "Estamos em busca de um Desenvolvedor Backend Pleno com sólida experiência em Node.js para"+
+      "integrar nosso time de tecnologia. Se você possui experiência no desenvolvimento de APIs escaláveis"+
+      "e na integração de sistemas backend, essa oportunidade é para você!",
+    Salario: 'R$ 3.500,00 a R$ 5.000,00'
   },
   {
-    id: 3, nomeVaga: "DevOps",
-    descricao: "Vaga para especialista em DevOps e infraestrutura.",
-    Salario: '1.200,00'
+    id: 3, nomeVaga: "Analista DevOps Jr",
+    descricao: "Estamos contratando um Analista DevOps para o nosso time de Arquitetura. Se"+
+    "você possui experiência com containers e microserviços e valoriza uma cultura de"+
+    "PROXIMIDADE, QUALIDADE e CONFIANÇA, essa vaga é pra você!",
+    Salario: '2.050,00',
+    
+    homeOffice: ""
+
+    
   },
+  
   {
     id: 4, nomeVaga: "Analista de Sistemas",
     descricao: "Vaga para especialista em DevOps e infraestrutura.",
