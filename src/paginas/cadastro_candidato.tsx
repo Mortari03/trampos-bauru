@@ -7,7 +7,7 @@ import {
 }
 from "@fortawesome/free-solid-svg-icons";
 import "../estilo/cadastro_candidato.css";
-import "../paginas/candidatos/candidato_perfil"
+import "../paginas/trampos"
 import { ModuloApi } from "../api";
 
 
@@ -110,7 +110,7 @@ function CadastroCandidatos() {
 
     if (validarFormulario()) {
       
-    navigate('/candidato_perfil')
+    navigate('/trampos')
 
  
       // let json = await ModuloApi.AdicionarUsuarios(nome, email, senha, cpf);

@@ -70,8 +70,8 @@ function App() {
           element={<LoginEmpresa />}
         />
         <Route
-          path='/login_candidato'
-          element={<LoginCandidato />}
+          path='/trampos'
+          element={<Trampos />}
         />
 
         <Route path="candidato_logado"
