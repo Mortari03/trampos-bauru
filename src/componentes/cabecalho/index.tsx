@@ -22,6 +22,8 @@ function Cabecalho() {
     setDropdownVisible(false);
   };
 
+
+
   return (
     <div>
       <div className='menu-container'>
@@ -107,7 +109,7 @@ function Cabecalho() {
           </Link>
         </nav>
         <div>
-          <Link to='/prelogin'>
+          <Link to='/candidato_perfil'>
             <button className='botoes-principais menu-btn'>Meu | Curriculo</button>
           </Link>
         </div>
