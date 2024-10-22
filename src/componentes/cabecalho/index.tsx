@@ -108,7 +108,7 @@ function Cabecalho() {
         </nav>
         <div>
           <Link to='/prelogin'>
-            <button className='botoes-principais menu-btn'>Entrar | Cadastrar</button>
+            <button className='botoes-principais menu-btn'>Meu | Curriculo</button>
           </Link>
         </div>
       </div>
