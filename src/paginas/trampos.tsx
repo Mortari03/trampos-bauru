@@ -65,16 +65,17 @@ const vagas: Vaga[] = [
   },
   {
     id: 5, nomeVaga: "Auxiliar de Obras",
-    descricao: "Vaga para especialista para servente de pedrero, ira bater massa quando o pedreiro estiver com preguiça e carregar caminhão de tijolos."+
-    " Se você gosta de trabalhar no sol e pegar muito peso, essa vaga é destinada a você!",
-    Salario: '1.200,00',
+    
+    descricao: 'Vaga para servente de pedreiro. O profissional atuará no apoio às atividades de construção civil, auxiliando na preparação de materiais e transporte de tijolos'+ 
+      'Procuramos candidatos que estejam dispostos a trabalhar em ambientes externos e que tenham disposição para tarefas que exigem esforço físico.',
+    Salario: '1.800,00',
     homeOffice: "Bauru, SP",
 
-    planoSaude: "Agua da torneira"+ 
+    planoSaude: "Unimed"+ 
     "- Vale transporte"+
-    "- Almoço as 17:00"+
-    "- Auxilio carriola "+
-    "- Auxilio Butéco",
+    "- Auxilio Moradia"+
+    "- Auxilio combustivel "+
+    "- Gympass",
     ajudaCusto: "",
   },
   {
@@ -87,21 +88,24 @@ const vagas: Vaga[] = [
     ajudaCusto: "",
   },
   {
-    id: 7, nomeVaga: "aguardando vaga",
-    descricao: "Vaga para gestor de equipe de TI com ênfase em Pessoas.",
-    Salario: '1.200,00',
-    homeOffice: "",
-    planoSaude: "",
-    ajudaCusto: "",
-  },
-  {
-    id: 8, nomeVaga: "Auxiliar de Biqueira",
-    descricao: "Vaga para especialista em desenvolvimento Java",
-    Salario: '1.200,00',
-    homeOffice: "",
-    planoSaude: "",
-    ajudaCusto: "",
-  },
+    id: 7, nomeVaga: 'Analista de marketing digital',
+    descricao: 'O profissional será responsável por desenvolver e implementar estratégias de marketing online, gerenciar campanhas em redes sociais e analisar métricas de desempenho.'+
+    'Buscamos candidatos criativos, proativos e com experiência em ferramentas de marketing digital.',
+    Salario: 'R$ 1.800,00',
+    homeOffice: 'Disponível',
+    planoSaude: 'Inclusão após período de experiência',
+    ajudaCusto: 'R$ 300,00'
+},
+  
+    {
+      id: 8, nomeVaga: "Desenvolvedor Java",
+      descricao: 'Vaga para auxiliar em desenvolvimento de software, com foco em projetos Java. O candidato ideal deverá ter conhecimentos básicos em programação Java e estar disposto a aprender e se desenvolver na área.',
+      Salario: '11.200,00',
+      homeOffice: 'Disponível,',
+      planoSaude: 'Incluso após período de experiência',
+      ajudaCusto: 'R$ 1.000,00',
+  }
+
 ];
 
 function Trampos() {

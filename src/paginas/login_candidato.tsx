@@ -57,20 +57,36 @@ function LoginCandidato() {
 
   const AdicionarUsuarios = async () => {
     if (email && senha) {
+
+  
+        navigate('/trampos')
+    
+     
+          // let json = await ModuloApi.AdicionarUsuarios(nome, email, senha, cpf);
+          // if (json.message) {
+          //   alert('Ocorreu alguma falha ' + json.message);
+          // }
+          // else {
+          //   alert('cadastro realizado com sucesso!')   
+          //   navigate('/candidato_perfil')
+          // }
+  
+      }
+    }
       
-        let json = await ModuloApi.IncluirUsuario(email, senha);
-        if (json.usuario.id) {
-            alert('Login Realizado')
-            navigate('/')
+//         let json = await ModuloApi.IncluirUsuario(email, senha);
+//         if (json.usuario.id) {
+//             alert('Login Realizado')
+//             navigate('/')
           
-        } else {
-            alert('Ocorreu alguma falha')
-        }
-    }
-    else {
-        alert('Prencha as informações');
-    }
-}
+//         } else {
+//             alert('Ocorreu alguma falha')
+//         }
+//     }
+//     else {
+//         alert('Prencha as informações');
+
+
 
   return (
     <div className='lc-container'>
@@ -80,8 +96,8 @@ function LoginCandidato() {
             to='/prelogin'
             className='btn_voltar'
           >
-            <FontAwesomeIcon icon={faCircleArrowLeft} />
-            <span className='texto_voltar'>Voltar</span>
+            {/* <FontAwesomeIcon icon={faCircleArrowLeft} />
+            <span className='texto_voltar'>Voltar</span> */}
           </Link>
           <img
             className='Logo'
