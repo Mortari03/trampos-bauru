@@ -29,7 +29,7 @@ function Cabecalho() {
       <div className='menu-container'>
         <div className='menu-logo'>
           <img
-            src='/img/logo.png'
+            src='/img/Logo.png'
             alt='Logo do site'
             className='Logo'
           />
