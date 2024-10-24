@@ -36,7 +36,7 @@ function Cabecalho() {
         </div>
         <nav className='menu-conteudo'>
           <Link
-            to='/'
+            to='/trampos'
             className='menu-link'
           >
             <FontAwesomeIcon

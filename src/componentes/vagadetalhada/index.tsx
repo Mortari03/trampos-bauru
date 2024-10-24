@@ -13,10 +13,10 @@ function VagaDetalhada({ nomeVaga,salario, homeOffice, planoSaude, ajudaCusto, d
       <strong>Salário:</strong> <span>{salario}</span>
     </div>
     <div className="vaga-home">
-      <strong>Local:</strong> <span>{homeOffice}</span>
+      <strong>Local: </strong> <span>{homeOffice}</span>
     </div>
     <div className="plano">
-      <strong>Benefícios: Plano de saúde + Ajuda de custo</strong> <span>{planoSaude}</span>
+      <strong>Benefícios:  </strong> <span>{planoSaude}</span>
     </div>
     <div className="vaga-home">
       <strong></strong> <span>{ajudaCusto}</span>
