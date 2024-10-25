@@ -11,21 +11,8 @@ import Cabecalho from "../componentes/cabecalho";
 
 // Dados dos membros da equipe
 const membros = [
-  {
-    nome: "Lucas Lima",
-    cargo: "Desenvolvedor FullStack | Designer | ADS",
-    imagem: "/img/equipe/lucas.png",
-    linkedin: "https://www.linkedin.com/in/lucaslimna/",
-    github: "https://www.linkedin.com/in/lucaslimna/",
-  },
-  {
-    nome: "Luiz Gustavo",
-    cargo: "Desenvolvedor FullStack | ADS  ",
-    imagem:
-      "https://wp-content.bluebus.com.br/wp-content/uploads/2017/03/31142426/twitter-novo-avatar-padrao-2017-bluebus.png",
-    linkedin: "#",
-    github: "https://github.com/LGustavoDev",
-  },
+
+  
   {
     nome: "Matheus Mariano",
     cargo: "Desenvolvedor FullStack",
@@ -33,13 +20,7 @@ const membros = [
     linkedin: "https://www.linkedin.com/in/matheus-mariano-59262027a/",
     github: "https://github.com/Mdellen39",
   },
-  {
-    nome: "Vitor Mortari",
-    cargo: "Desenvolvedor FullStack | Sistemas de Informação",
-    imagem: "/img/equipe/Mortari.png",
-    linkedin: "https://www.linkedin.com/in/vitor-mortari-a3a5011a7/",
-    github: "https://github.com/Mortari03",
-  },
+  
   {
     nome: "Vitor Aluisio",
     cargo: "Desenvolvedor FullStack | Sistemas de Informação",
